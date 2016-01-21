@@ -1,0 +1,113 @@
+\usepackage{tikz}
+\usepackage{pgfplots}
+% tikz block diagram construction
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{arrows,arrows.new}
+\usetikzlibrary{snakes}
+
+\usetikzlibrary{decorations.pathmorphing}
+
+\tikzset{snake it/.style={decorate, decoration=snake}}
+
+\tikzstyle{block} = [draw, rectangle,
+    minimum height=1em, minimum width=2em]
+\tikzstyle{block_no_border} = [fill=blue!20, rectangle,
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, circle, node distance=1cm]
+\tikzstyle{dot} = [draw, fill=black, circle, inner sep=.02cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+\tikzset
+{
+	LinesStyle/.style =
+	{
+		color				= black,	% color
+		line width			= 0.02cm,			% thickness
+		arrows				= -latex',			% starting-ending arrows
+		solid,
+	}
+}	% no semicolons are here required
+
+\tikzset
+{
+	BlocksStyle/.style =
+	{
+		% --------------------- shape properties ---------------------
+		shape			= rectangle,			% shape
+		rounded corners	= 0.0cm,				% radius of the rounded corner
+		minimum height	= 0.7cm,				% | minimum size of the node
+		minimum width	= 0.9cm,				% |
+		rotate			= 0,					% angle of rotation
+		scale			= 1.0,					% scaling factor
+		% --------------------- border properties ---------------------
+		draw			= black,				% draw the border with this color
+		line width		= 0.02cm,				% thickness
+		text			= black,				% color of the fonts
+		font			= \normalsize\normalfont,	% shape and dimension of the font
+		inner xsep		= 0.2cm,				% min. dist. btw text and borders along x dimension
+		inner ysep		= 0.2cm,				% min. dist. btw text and borders along x dimension
+	}
+}
+
+\tikzset
+{
+	WideBlocksStyle/.style =
+	{
+		BlocksStyle,
+		text width		= 2.0cm,				% max. width of the text
+	}
+}
+
+\tikzset
+{
+	HighlightingStyle/.style =
+	{
+		color				= black,	% color
+		line width			= 0.02cm,			% thickness
+		arrows				= -,				% starting-ending arrows
+		dashed,
+	}
+}
+
+\tikzset
+{
+	SumNodesStyle/.style =
+	{
+		shape			= circle,				% shape
+		minimum size	= 0.15cm,				% | minimum size of the node
+		rotate			= 0,					% angle of rotation
+		scale			= 1.0,					% scaling factor
+		draw			= black,				% draw the border with this color
+		line width		= 0.02cm,				% thickness
+		text			= black,				% color of the fonts
+		font			= \normalsize\normalfont,	% shape and dimension of the font
+	}
+}
+\tikzset
+{
+    point/.style={shape=circle,inner sep=0pt, minimum size=0pt}
+}
+
+% tikz plot
+\newcommand{\plotfun}[3][6cm]{
+    \begin{tikzpicture}
+        \begin{axis}
+        [width=#1,grid=major,samples=100,mark=none]
+        \addplot[blue,very thick,domain=#3]
+        {#2};
+        \end{axis}
+    \end{tikzpicture}
+}
+
+% tikz gnu plot (more powerful) needs work: change path and enable Write18
+\newcommand{\gnuplotfun}[3][6cm]{
+    \begin{tikzpicture}
+        \begin{axis}
+        [width=#1,grid=major, samples=100,mark=none]
+        \addplot[blue,very thick,domain=#3]
+        gnuplot{#2};
+        \end{axis}
+    \end{tikzpicture}
+}

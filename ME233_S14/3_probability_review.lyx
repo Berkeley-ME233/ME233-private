@@ -1,0 +1,4870 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes} 
+\usetikzlibrary{arrows,arrows.new}
+
+\usepackage{pgfplots}
+
+%\usepackage{pstricks-add}
+%\usepackage{pst-grad} % For gradients
+%\usepackage{pst-plot} % For axes
+
+\usepackage{filecontents}
+
+\begin{filecontents}{Sp.dat} 
+       l               m             n           p
+   -8.0000    0.1678    0.0576    0.0168
+   -7.0000    0.2097    0.0824    0.0280
+   -6.0000    0.2621    0.1176    0.0467
+   -5.0000    0.3277    0.1681    0.0778
+   -4.0000    0.4096    0.2401    0.1296
+   -3.0000    0.5120    0.3430    0.2160
+   -2.0000    0.6400    0.4900    0.3600
+   -1.0000    0.8000    0.7000    0.6000
+         0    1.0000    1.0000    1.0000
+    1.0000    0.8000    0.7000    0.6000
+    2.0000    0.6400    0.4900    0.3600
+    3.0000    0.5120    0.3430    0.2160
+    4.0000    0.4096    0.2401    0.1296
+    5.0000    0.3277    0.1681    0.0778
+    6.0000    0.2621    0.1176    0.0467
+    7.0000    0.2097    0.0824    0.0280
+    8.0000    0.1678    0.0576    0.0168
+\end{filecontents} 
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzStyle.lyx"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 3: Review of Probability Theory
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Connection with control systems
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Random variable, distribution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Multiple random variables
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Random process, filtering a random process
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+why are we learning this:
+\end_layout
+
+\begin_layout Standard
+We have been very familiar with deterministic systems: 
+\begin_inset Formula 
+\[
+x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right)
+\]
+
+\end_inset
+
+In practice, we commonly have: 
+\begin_inset Formula 
+\[
+x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ is the noise term that we have been neglecting.
+ With the introduction of 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+, we need to equip ourselves with some additional tool sets to understand
+ and analyze the problem.
+ 
+\end_layout
+
+\begin_layout NoteItem
+This is from the state-space perspective.
+ A block-diagram perspective can also be made.
+\end_layout
+
+\begin_layout NoteItem
+more detailly, suppose 
+\begin_inset Formula 
+\begin{align*}
+x\left(k+1\right) & =Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)\\
+y\left(k\right) & =Cx\left(k\right)+v\left(k\right)
+\end{align*}
+
+\end_inset
+
+we can measure only 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ but not the internal states.
+ It is important to know how to obtain, e.g.
+ the best estimate of 
+\begin_inset Formula $x\left(k+1\right)$
+\end_inset
+
+ given 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $y\left(k-1\right)$
+\end_inset
+
+, ..., 
+\begin_inset Formula $y\left(0\right)$
+\end_inset
+
+, which requires the concept of 
+\emph on
+conditional pdf
+\begin_inset Formula 
+\[
+p_{X}\left(x\left(k+1\right)|y\left(0\right),y\left(1\right),\dots,y\left(k\right)\right)
+\]
+
+\end_inset
+
+
+\emph default
+and hence the 
+\emph on
+joint pdf
+\emph default
+ 
+\begin_inset Formula 
+\[
+\frac{p\left(x\left(k+1\right),y\left(0\right),y\left(1\right),\dots,y\left(k\right)\right)}{p\left(y\left(0\right),y\left(1\right),\dots,y\left(k\right)\right)}
+\]
+
+\end_inset
+
+of course we have to understand the simplest case of 
+\begin_inset Formula $p\left(y\left(0\right)\right)$
+\end_inset
+
+ (pdf of a r.v.) and 
+\begin_inset Formula $p\left(x\left(k+1\right),y\left(0\right)\right)$
+\end_inset
+
+ (joint pdf of two correlated random variables), and the basic statistical
+ properties (such as mean and variance) coming out of the pdf.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Basic concepts: sample space, events, probability axioms, random variable,
+ pdf, cdf, probability distributions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sample space, events and probability axioms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+experiment: a situation whose outcome depends on chance
+\end_layout
+
+\begin_layout Itemize
+trial: each time we do an experiment we call that a trial
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Throwing a fair dice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+possible outcomes in one trail: getting a ONE, getting a TWO, ...
+\end_layout
+
+\begin_layout Itemize
+sample space 
+\begin_inset Formula $\Omega$
+\end_inset
+
+: includes all the possible outcomes
+\end_layout
+
+\begin_layout NoteItem
+we denote 
+\begin_inset Formula $\omega$
+\end_inset
+
+ as one outcome
+\end_layout
+
+\begin_layout Itemize
+probability: discusses how likely things, or more formally, events, happen
+\end_layout
+
+\begin_layout Itemize
+an event 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+: includes some (maybe 1, maybe more, maybe none) outcomes of the sample
+ space.
+ e.g., the event that it won't rain tomorrow; the event that getting odd numbers
+ when throwing a dice
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sample space, events and probability axioms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+probability axioms
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{Pr}\left\{ S_{j}\right\} \geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{Pr}\left\{ \Omega\right\} =1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $S_{i}\cap S_{j}=\varnothing$
+\end_inset
+
+ (empty set), then 
+\begin_inset Formula $\text{Pr}\left\{ S_{i}\cup S_{j}\right\} =\text{Pr}\left\{ S_{i}\right\} +\text{Pr}\left\{ S_{j}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $\text{Pr}\left\{ S_{j}\right\} =0$
+\end_inset
+
+: the event is impossible to happen, e.g., we will have a final exam after
+ the third lecture
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $\text{Pr}\left\{ S_{j}\right\} =1$
+\end_inset
+
+: the event is certain to happen, e.g., we will have a final exam in 233
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Throwing a fair dice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+the sample space:
+\begin_inset Formula 
+\[
+\Omega=\{\underbrace{\text{getting a ONE}}_{\omega_{1}},\underbrace{\text{ getting a TWO}}_{\omega_{2}},\dots,\underbrace{\text{ getting a SIX}}_{\omega_{6}}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+the event 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ of observing an even number: 
+\begin_inset Formula 
+\begin{align*}
+S_{1} & =\left\{ \omega_{2},\omega_{4},\omega_{6}\right\} \\
+\text{Pr}\left\{ S_{1}\right\}  & =\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\frac{1}{2}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Example
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Pr}\left\{ S_{1}\right\} =\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+Exercise: describe the sample space of this experiment
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random variables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+to better measure probabilities, we introduce random variables (r.v.'s)
+\end_layout
+
+\begin_layout Itemize
+r.v.: a real valued function 
+\begin_inset Formula $X\left(\omega\right)$
+\end_inset
+
+ defined on 
+\begin_inset Formula $\Omega$
+\end_inset
+
+; 
+\begin_inset Formula $\forall x\in\mathbf{R}$
+\end_inset
+
+ there defined the 
+\emph on
+(probability) cumulative distribution function (cdf)
+\emph default
+
+\begin_inset Formula 
+\[
+F\left(x\right)=\text{Pr}\left\{ X\leq x\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+cdf 
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+: non-decreasing, 
+\begin_inset Formula $0\leq F\left(x\right)\leq1$
+\end_inset
+
+, 
+\begin_inset Formula $F\left(-\infty\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $F\left(\infty\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Throwing a fair dice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+can define 
+\begin_inset Formula $X$
+\end_inset
+
+: the obtained number of the dice 
+\begin_inset Formula 
+\[
+X\left(\omega_{1}\right)=1,\ X\left(\omega_{2}\right)=2,\ X\left(\omega_{3}\right)=3,\ X\left(\omega_{4}\right)=4,\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+can also define 
+\begin_inset Formula $X$
+\end_inset
+
+: indicator of whether the obtained number is even 
+\begin_inset Formula 
+\[
+X\left(\omega_{1}\right)=X\left(\omega_{3}\right)=X\left(\omega_{5}\right)=0,\ X\left(\omega_{2}\right)=X\left(\omega_{4}\right)=X\left(\omega_{6}\right)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Probability density and moments of distributions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+probability density function (pdf):
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+if 
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+ is differentiable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p\left(x\right)=\frac{\d F\left(x\right)}{\d x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{Pr}\left(a<X\leq b\right)=\int_{a}^{b}p\left(x\right)\d x,\ a<b
+\]
+
+\end_inset
+
+sometimes we write 
+\begin_inset Formula $p_{X}\left(x\right)$
+\end_inset
+
+ to emphasize that it is for the r.v.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mean, or expected value (first moment):
+\begin_inset Formula 
+\[
+m_{X}=\mean\left[X\right]=\int_{-\infty}^{\infty}xp_{X}\left(x\right)\d x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+variance (second moment):
+\begin_inset Formula 
+\[
+\var\left[X\right]=\E\left[\left(X-m_{X}\right)^{2}\right]=\int_{-\infty}^{\infty}\left(x-m_{X}\right)^{2}p_{X}\left(x\right)\d x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+standard deviation (std): 
+\begin_inset Formula $\sigma=\sqrt{\var\left[X\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+exercise: prove that 
+\begin_inset Formula $\var\left[X\right]=\E\left[X^{2}\right]-\left(\E\left[X\right]\right)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example distributions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+uniform distribution
+\end_layout
+
+\begin_layout Itemize
+a r.v.
+ uniformly distributed between 
+\begin_inset Formula $x_{\min}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\max}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+probability density function:
+\begin_inset Formula 
+\[
+p\left(x\right)=\frac{1}{x_{\max}-x_{\min}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename src/3_probability_1.pdf
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+cumulative distribution function: 
+\begin_inset Formula 
+\[
+F\left(x\right)=\frac{x-x_{\min}}{x_{\max}-x_{\min}},\ x_{\min}\leq x\leq x_{\max}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mean and variance:
+\begin_inset Formula 
+\[
+\E\left[X\right]=\frac{1}{2}\left(x_{\max}+x_{\min}\right),\ \var\left[X\right]=\frac{\left(x_{\max}-x_{\min}\right)^{2}}{12}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+Var\left[X\right] & =E\left[X^{2}\right]-E\left[X\right]^{2}=\int_{x_{\min}}^{x_{\max}}x^{2}\frac{1}{x_{\max}-x_{\min}}dx-\frac{1}{4}\left(x_{\max}+x_{\min}\right)^{2}\\
+ & =\frac{1}{3}\frac{\left(x_{\max}-x_{\min}\right)^{3}}{x_{\max}-x_{\min}}-\frac{1}{4}\left(x_{\max}+x_{\min}\right)^{2}\\
+ & =\frac{4}{12}\left(x_{\max}^{2}+x_{\max}x_{\min}+x_{\min}^{2}\right)-\frac{3}{12}\left(x_{\max}^{2}+2x_{\max}x_{\min}+x_{\min}^{2}\right)\\
+ & =\frac{1}{12}\left(x_{\max}-x_{\min}\right)^{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+intuition of variance formula: variance is a second-moment quantity; the
+ larger the gap 
+\begin_inset Formula $x_{\max}-x_{\min}$
+\end_inset
+
+ the larger the variance
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example distributions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Gaussian/normal distribution
+\end_layout
+
+\begin_layout Itemize
+importance: sum of independent r.v.s 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ a Gaussian distribution
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+probability density function:
+\begin_inset Formula 
+\[
+p\left(x\right)=\frac{1}{\sigma_{X}\sqrt{2\pi}}\exp\left(-\frac{\left(x-m_{X}\right)^{2}}{2\sigma_{X}^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename src/3_probability_1-7.eps
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+pdf fully characterized by 
+\begin_inset Formula $m_{X}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{X}$
+\end_inset
+
+.
+ Hence a normal distribution is usually denoted as 
+\begin_inset Formula $N\left(m_{X},\sigma_{X}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+cumulative distribution function: no simple formula.
+ Instead, we usually check from tables.
+\end_layout
+
+\begin_layout NoteItem
+MATLAB function: 
+\emph on
+randn
+\end_layout
+
+\begin_layout Itemize
+nice properties: if 
+\begin_inset Formula $X$
+\end_inset
+
+ is Gaussian and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $X$
+\end_inset
+
+, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ is Gaussian
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example distributions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Gaussian/normal distribution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Central Limit Theorem
+\series default
+: if 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, ...
+ are independent identically distributed random variables with mean 
+\begin_inset Formula $m_{X}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{X}^{2}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+Z_{n}=\frac{\sum_{k=1}^{n}\left(X_{k}-m_{X}\right)}{\sqrt{n}\sigma_{X}^{2}}
+\]
+
+\end_inset
+
+converges in distribution to a normal random variable 
+\begin_inset Formula $X\sim N\left(0,1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+example
+\series default
+: sum of uniformly distributed random variables in 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize{
+\end_layout
+
+\end_inset
+
+X1 = rand(1,1e5); 
+\end_layout
+
+\begin_layout Plain Layout
+X2 = rand(1,1e5); 
+\end_layout
+
+\begin_layout Plain Layout
+X3 = rand(1,1e5); 
+\end_layout
+
+\begin_layout Plain Layout
+Z = X1 + X2; 
+\end_layout
+
+\begin_layout Plain Layout
+[fz,x] = hist(Z,100); 
+\end_layout
+
+\begin_layout Plain Layout
+w_fz = x(end)/length(fz); 
+\end_layout
+
+\begin_layout Plain Layout
+fz = fz/sum(fz)/w_fz; 
+\end_layout
+
+\begin_layout Plain Layout
+figure, bar(x,fz) 
+\end_layout
+
+\begin_layout Plain Layout
+xlabel 'x'; ylabel 'p_Z(x))'; 
+\end_layout
+
+\begin_layout Plain Layout
+Y = X1 + X2 + X3; 
+\end_layout
+
+\begin_layout Plain Layout
+% ...
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "36col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename codes/sum2Unif.eps
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "36col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename codes/sum3Unif.eps
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Multiple random variables
+\end_layout
+
+\begin_layout Subsection
+random vector, joint probability and distribution, conditional probability
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multiple random variables 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+joint probability
+\end_layout
+
+\begin_layout Standard
+for the same sample space 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, multiple r.v.'s can be defined
+\end_layout
+
+\begin_layout NoteItem
+example: (throwing a fair dice) 
+\begin_inset Formula $X$
+\end_inset
+
+--obtained number; 
+\begin_inset Formula $Y$
+\end_inset
+
+--indicator of whether the number is even
+\end_layout
+
+\begin_layout Itemize
+joint probability: 
+\begin_inset Formula $\text{Pr}\left(X=x,Y=y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+joint cdf:
+\begin_inset Formula 
+\[
+F\left(x,y\right)=\text{Pr}\left(X\leq x,Y\leq y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+joint pdf: 
+\begin_inset Formula $p\left(x,y\right)=\frac{\partial^{2}}{\partial x\partial y}F\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+covariance:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\cov\left(X,Y\right)=\Sigma_{XY} & =\et\left[\left(X-m_{X}\right)\left(Y-m_{Y}\right)\right]=\et\left[XY\right]-\et\left[X\right]E\left[Y\right]\\
+ & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left(x-m_{X}\right)\left(y-m_{Y}\right)p\left(x,y\right)\d x\d y
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+uncorrelated: 
+\begin_inset Formula $\Sigma_{XY}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+independent random variables satisfy:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+F\left(x,y\right) & =\text{Pr}\left(X\leq x,Y\leq y\right)=\text{Pr}\left(X\leq x\right)\text{Pr}\left(Y\leq y\right)=F_{X}\left(x\right)F_{Y}\left(y\right)\\
+p\left(x,y\right) & =p_{X}\left(x\right)p_{Y}\left(y\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multiple random variables 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+more about correlation
+\end_layout
+
+\begin_layout Standard
+correlation coefficient:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\rho\left(X,Y\right)=\frac{\cov\left(X,Y\right)}{\sqrt{\var\left(X\right)\var\left(Y\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are uncorrelated if 
+\begin_inset Formula $\rho\left(X,Y\right)=0$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (this is a more-easier-to-understand definition than 
+\begin_inset Quotes eld
+\end_inset
+
+covariance being zero
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+independent
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+uncorrelated; uncorrelated
+\begin_inset Formula $\nRightarrow$
+\end_inset
+
+independent
+\end_layout
+
+\begin_layout Itemize
+uncorrelated indicates 
+\begin_inset Formula $\cov\left(X,Y\right)=\et\left[XY\right]-\E\left[X\right]\E\left[Y\right]=0$
+\end_inset
+
+, which is weaker than 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ being independent
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X$
+\end_inset
+
+--uniformly distributed on 
+\begin_inset Formula $\left[-1,1\right]$
+\end_inset
+
+.
+ Construct 
+\begin_inset Formula $Y$
+\end_inset
+
+: if 
+\begin_inset Formula $X\leq0$
+\end_inset
+
+ then 
+\begin_inset Formula $Y=-X$
+\end_inset
+
+; if 
+\begin_inset Formula $X>0$
+\end_inset
+
+ then 
+\begin_inset Formula $Y=X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are uncorrelated due to
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\E\left[X\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[Y\right]=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\E\left[XY\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+however 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are clearly dependent
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multiple random variables 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+random vector
+\end_layout
+
+\begin_layout Itemize
+vector of r.v.'s:
+\begin_inset Formula 
+\[
+Z=\left[\begin{array}{c}
+X\\
+Y
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mean:
+\begin_inset Formula 
+\[
+m_{Z}=\left[\begin{array}{c}
+m_{X}\\
+m_{Y}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+covariance matrix:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\negthickspace\negthickspace\negthickspace\negthickspace\Sigma & =\E\left[\left(Z-m_{Z}\right)\left(Z-m_{Z}\right)^{T}\right]=\left[\begin{array}{cc}
+\Sigma_{XX} & \Sigma_{XY}\\
+\Sigma_{YX} & \Sigma_{YY}
+\end{array}\right]\\
+ & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[\begin{array}{cc}
+\left(X-m_{X}\right)^{2} & \left(X-m_{X}\right)\left(Y-m_{Y}\right)\\
+\left(Y-m_{Y}\right)\left(X-m_{X}\right) & \left(Y-m_{Y}\right)^{2}
+\end{array}\right]p\left(x,y\right)\d x\d y
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conditional distributions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+joint pdf to single pdf:
+\begin_inset Formula 
+\[
+p_{X}\left(x\right)=\int_{-\infty}^{\infty}p\left(x,y\right)\d y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+conditional pdf:
+\begin_inset Formula 
+\[
+p_{X}\left(x|y_{1}\right)=p_{X}\left(x|Y=y_{1}\right)=\frac{p\left(x,y_{1}\right)}{p_{Y}\left(y_{1}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+conditional mean:
+\begin_inset Formula 
+\[
+\E\left[X|y_{1}\right]=\int_{-\infty}^{\infty}xp_{X}\left(x|y_{1}\right)\d x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+note: independent
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $p_{X}\left(x|y_{1}\right)=p_{X}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+properties of conditional mean:
+\begin_inset Formula 
+\[
+\underset{y}{\E}\left[\E\left[X|y\right]\right]=\E\left[X\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Gaussian case
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multiple random variables 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Gaussian random vectors
+\end_layout
+
+\begin_layout Standard
+Gaussian r.v.
+ is particularly important and interesting as its pdf is mathematically
+ sound
+\end_layout
+
+\begin_layout Standard
+Special case: two independent Gaussian r.v.
+ 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+p\left(x_{1},x_{2}\right)=p_{X_{1}}\left(x_{1}\right)p_{X_{2}}\left(x_{2}\right)=\frac{1}{\sigma_{X_{1}}\sqrt{2\pi}}e^{-\left(x_{1}-m_{X_{1}}\right)^{2}/\left(2\sigma_{X_{1}}^{2}\right)}\frac{1}{\sigma_{X_{2}}\sqrt{2\pi}}e^{-\left(x_{2}-m_{X_{2}}\right)^{2}/\left(2\sigma_{X_{2}}^{2}\right)}\\
+=\frac{1}{\sigma_{X_{1}}\sigma_{X_{2}}\left(\sqrt{2\pi}\right)^{2}}\exp\left\{ -\frac{1}{2}\left[\begin{array}{c}
+x_{1}-m_{X_{1}}\\
+x_{2}-m_{X_{2}}
+\end{array}\right]^{T}\left[\begin{array}{cc}
+\sigma_{X_{1}}^{2} & 0\\
+0 & \sigma_{X_{2}}^{2}
+\end{array}\right]^{-1}\left[\begin{array}{c}
+x_{1}-m_{X_{1}}\\
+x_{2}-m_{X_{2}}
+\end{array}\right]\right\} 
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can use the random vector notation: 
+\begin_inset Formula $X=\left[X_{1},X_{2}\right]^{T}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\Sigma=\left[\begin{array}{cc}
+\sigma_{X_{1}}^{2} & 0\\
+0 & \sigma_{X_{2}}^{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+and write 
+\begin_inset Formula 
+\[
+p_{X}\left(x\right)=\frac{1}{\left(\sqrt{2\pi}\right)^{2}\sqrt{\det\mbox{\Sigma}}}\exp\left\{ -\frac{1}{2}\left[X-m_{X}\right]^{T}\Sigma^{-1}\left[X-m_{X}\right]\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General Gaussian random vectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+pdf for a n-dimensional jointly distributed Gaussian random vector 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+p_{X}\left(x\right)=\frac{1}{\left(\sqrt{2\pi}\right)^{n}\sqrt{\det\mbox{\Sigma}}}\exp\left\{ -\frac{1}{2}\left[X-m_{X}\right]^{T}\Sigma^{-1}\left[X-m_{X}\right]\right\} \label{eq:gaussianPDF}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+joint pdf for 2 Gaussian random vectors 
+\begin_inset Formula $X$
+\end_inset
+
+ (
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional) and 
+\begin_inset Formula $Y$
+\end_inset
+
+ (
+\begin_inset Formula $m$
+\end_inset
+
+-dimensional):
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+p\left(x,y\right)=\frac{1}{\left(\sqrt{2\pi}\right)^{n+m}\sqrt{\det\Sigma}}\exp\left\{ -\frac{1}{2}\left[\begin{array}{c}
+x-m_{X}\\
+y-m_{Y}
+\end{array}\right]^{T}\Sigma^{-1}\left[\begin{array}{c}
+x-m_{X}\\
+y-m_{Y}
+\end{array}\right]\right\} \label{eq:gaussian_pxy}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Sigma=\left[\begin{array}{cc}
+\Sigma_{XX} & \Sigma_{XY}\\
+\Sigma_{YX} & \Sigma_{YY}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize{
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $\Sigma_{XY}$
+\end_inset
+
+ is the cross covariance (matrix) between 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Sigma_{XY}=\E\left[\left(X-m_{X}\right)\left(Y-m_{Y}\right)^{T}\right]=\E\left[\left(Y-m_{Y}\right)\left(X-m_{X}\right)^{T}\right]^{T}=\Sigma_{YX}^{T}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General Gaussian random vectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+conditional mean and covariance
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+important 
+\emph default
+facts about conditional mean and covariance:
+\begin_inset Formula 
+\begin{align*}
+m_{X|y} & =m_{X}+\Sigma_{XY}\Sigma_{YY}^{-1}\left[y-m_{Y}\right]\\
+\Sigma_{X|y} & =\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+proof uses 
+\begin_inset Formula $p\left(x,y\right)=p\left(x|y\right)p\left(y\right)$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussianPDF"
+
+\end_inset
+
+), and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussian_pxy"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout NoteItem
+[know 
+\begin_inset Formula $p\left(x,y\right)$
+\end_inset
+
+ from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussian_pxy"
+
+\end_inset
+
+) and 
+\begin_inset Formula $p\left(y\right)$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Itemize
+getting 
+\begin_inset Formula $\det\Sigma$
+\end_inset
+
+ and the inverse 
+\begin_inset Formula $\Sigma^{-1}$
+\end_inset
+
+: do a transformation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline}
+\left[\begin{array}{cc}
+I & -\Sigma_{XY}\Sigma_{YY}^{-1}\\
+0 & I
+\end{array}\right]\left[\begin{array}{cc}
+\Sigma_{XX} & \Sigma_{XY}\\
+\Sigma_{YX} & \Sigma_{YY}
+\end{array}\right]\left[\begin{array}{cc}
+I & 0\\
+-\Sigma_{YY}^{-1}\Sigma_{YX} & I
+\end{array}\right]\\
+=\left[\begin{array}{cc}
+\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX} & 0\\
+0 & \Sigma_{YY}
+\end{array}\right]\label{eq:CovInv}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence 
+\begin_inset Formula 
+\begin{equation}
+\det\Sigma=\det\Sigma_{YY}\det\left(\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX}\right)\label{eq:detSigm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+the determinant equality is also useful for (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussian_pxy"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\det\Sigma=\det\Sigma_{YY}\det\left(\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General Gaussian random vectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+inverse of the covariance matrix
+\end_layout
+
+\begin_layout Standard
+computing the inverse 
+\begin_inset Formula $\Sigma^{-1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+--(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:CovInv"
+
+\end_inset
+
+) gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\Sigma^{-1}=\left[\begin{array}{cc}
+\Sigma_{XX} & \Sigma_{XY}\\
+\Sigma_{YX} & \Sigma_{YY}
+\end{array}\right]^{-1}\\
+=\left[\begin{array}{cc}
+I & 0\\
+-\Sigma_{YY}^{-1}\Sigma_{YX} & I
+\end{array}\right]\left[\begin{array}{cc}
+\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX} & 0\\
+0 & \Sigma_{YY}
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+I & -\Sigma_{XY}\Sigma_{YY}^{-1}\\
+0 & I
+\end{array}\right]
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+--hence in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussian_pxy"
+
+\end_inset
+
+):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline}
+\left[\begin{array}{c}
+x-m_{X}\\
+y-m_{Y}
+\end{array}\right]^{T}\Sigma^{-1}\left[\begin{array}{c}
+x-m_{X}\\
+y-m_{Y}
+\end{array}\right]\\
+=\left[\star\vphantom{\left[\begin{array}{c}
+x-\left(m_{X}+\Sigma_{XY}\Sigma_{YY}^{-1}[y-m_{Y}]\right)\\
+y-m_{Y}
+\end{array}\right]}\right]^{T}\left[\begin{array}{cc}
+\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX} & 0\\
+0 & \Sigma_{YY}
+\end{array}\right]^{-1}\underbrace{\left[\begin{array}{c}
+x-\left(m_{X}+\Sigma_{XY}\Sigma_{YY}^{-1}[y-m_{Y}]\right)\\
+y-m_{Y}
+\end{array}\right]}_{[\star]}\label{eq:invSigmaDiag}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General Gaussian random vectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+\begin_inset Formula $p\left(x,y\right)=p\left(x|y\right)p\left(y\right)\Rightarrow p\left(x|y\right)=p\left(x,y\right)/p\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+using (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:detSigm"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:invSigmaDiag"
+
+\end_inset
+
+) in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussian_pxy"
+
+\end_inset
+
+), we get
+\begin_inset Formula 
+\begin{multline*}
+p\left(x|y\right)=\frac{p\left(x,y\right)}{p\left(y\right)}=\frac{1}{\left(\sqrt{2\pi}\right)^{n}\sqrt{\det\underbrace{\left(\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX}\right)}_{\left[\star\star\right]}}}\\
+\times\exp\left\{ -\frac{1}{2}\left[\underline{\dots\vphantom{\underline{x-\left(m_{X}+\Sigma_{XY}\Sigma_{YY}^{-1}[y-m_{Y}]\right)}}}\right]^{T}\left[\star\star\right]^{-1}\left[\underline{x-\left(m_{X}+\Sigma_{XY}\Sigma_{YY}^{-1}[y-m_{Y}]\right)}\right]\right\} 
+\end{multline*}
+
+\end_inset
+
+hence 
+\begin_inset Formula $X|y$
+\end_inset
+
+ is also Gaussian, with 
+\begin_inset Formula 
+\begin{align*}
+m_{X|y} & =m_{X}+\Sigma_{XY}\Sigma_{YY}^{-1}\left[y-m_{Y}\right]\\
+\Sigma_{X|y} & =\Sigma_{XX}-\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+the fact that 
+\begin_inset Formula $X|_{y}$
+\end_inset
+
+ is Gaussian can be obtained by comparing its pdf to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gaussianPDF"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Random process
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+discrete-time random process: a random variable evolving with time {
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $k=1,2,\dots$
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Itemize
+a stack of random vectors: 
+\begin_inset Formula $x\left(k\right)=\left[x\left(1\right),x\left(2\right),\dots\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[xscale=1.3,yscale=0.4,ymin=-0.32,ymax=0.32,,axis lines = middle,
+ enlargelimits = true, ytick=
+\backslash
+empty, samples=8,ylabel=$x(k)$ in experiment $
+\backslash
+omega_1$,xtick={0,1,2,...,6}] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[only marks, domain=0:7,mark=*,] {(rnd-0.5)/3}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+node[black,above] at (axis cs:-0.5,0){$
+\backslash
+omega_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[black,below] at (axis cs:7,0){$
+\backslash
+dots$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[black,below] at (axis cs:7.5,0){$k$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[xscale=1.3,yscale=0.3,ymin=-0.32,ymax=0.32,,axis lines = middle,
+ enlargelimits = true, ytick=
+\backslash
+empty, samples=8, xtick = 
+\backslash
+empty,ylabel=$x(k)$ in $
+\backslash
+omega_2$] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[only marks, domain=0:7,mark=*,] {(rnd-0.5)/2}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+node[black,above] at (axis cs:-0.5,0){$
+\backslash
+omega_2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[xscale=1.3,yscale=0.3,ymin=-0.32,ymax=0.32,,axis lines = middle,
+ enlargelimits = true, ytick=
+\backslash
+empty, samples=8, xtick = 
+\backslash
+empty,ylabel=$x(k)$ in $
+\backslash
+omega_3$] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[only marks, domain=0:7,mark=*,] {(rnd-0.5)/2}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+node[black,above] at (axis cs:-0.5,0){$
+\backslash
+omega_3$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vdots
+\backslash
+vspace{1in}
+\backslash
+vdots
+\backslash
+vdots$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+begin{axis}[xscale=1.3,yscale=0.3,ymin=-0.32,ymax=0.32,,axis lines = middle,
+ enlargelimits = true, ytick=
+\backslash
+empty, samples=8] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+addplot[only marks, domain=0:7,mark=*,] {(rnd-0.5)/2}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+node[black,above] at (axis cs:-0.5,0){$
+\backslash
+vdots$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+end{axis} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $x\left(k\right)=\left[x\left(1\right),x\left(2\right),\dots\right]^{T}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+complete probabilistic properties defined by the joint pdf 
+\begin_inset Formula $p\left(x\left(1\right),x\left(2\right),\dots\right)$
+\end_inset
+
+, which is usually difficult to get
+\end_layout
+
+\begin_layout Itemize
+usually sufficient to know the mean 
+\begin_inset Formula $\E\left[x\left(k\right)\right]=m_{x}\left(k\right)$
+\end_inset
+
+ and 
+\emph on
+auto-covariance
+\emph default
+:
+\begin_inset Formula 
+\begin{equation}
+\E\left[\left(x\left(j\right)-m_{x}\left(j\right)\right)\left(x\left(k\right)-m_{x}\left(k\right)\right)\right]=\Sigma_{xx}\left(j,k\right)\label{eq:autoCov}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sometimes 
+\begin_inset Formula $\Sigma_{xx}\left(j,k\right)$
+\end_inset
+
+ is also written as 
+\begin_inset Formula $X_{xx}\left(j,k\right)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+used because from time to time we will now need to use 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ as the summing function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+let 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+ be a 1-d random process
+\end_layout
+
+\begin_layout Itemize
+time average of 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\overline{x\left(k\right)}=\lim_{N\rightarrow\infty}\frac{1}{2N+1}\sum_{j=-N}^{N}x\left(j\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ensemble average: 
+\begin_inset Formula 
+\[
+\E\left[x\left(k\right)\right]=m_{x\left(k\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+ergodic
+\emph default
+ random process: for all moments of the distribution, the ensemble averages
+ equal the time averages 
+\begin_inset Formula 
+\[
+\E\left[x\left(k\right)\right]=\overline{x\left(k\right)},\ \Sigma_{xx}\left(j,k\right)=\overline{\left[x\left(j\right)-m_{x}\right]\left[x\left(k\right)-m_{x}\right]},\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ergodicity: not easy to test but many processes in practice are ergodic;
+ extremely important as large samples can be expensive to collect in practice
+\end_layout
+
+\begin_layout Itemize
+one necessary condition for ergodicity is stationarity
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+stationarity: tells whether the statistics characteristics changes w.r.t.
+ time
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+stationary in the strict sense
+\emph default
+: probability distribution does not change w.r.t.
+ time
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\text{Pr}\left\{ x\left(k_{1}\right)\leq x_{1},\dots,x\left(k_{n}\right)\leq x_{n}\right\} =\text{Pr}\left\{ x\left(k_{1}+l\right)\leq x_{1},\dots,x\left(k_{n}+l\right)\leq x_{n}\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+stationary in the week/wide sense
+\emph default
+: mean does not dependent on time 
+\begin_inset Formula 
+\[
+\E\left[x\left(k\right)\right]=m_{x}=\text{costant}
+\]
+
+\end_inset
+
+and the auto-covariance (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:autoCov"
+
+\end_inset
+
+) depends only on the time difference 
+\begin_inset Formula $l=j-k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+can hence write
+\begin_inset Formula 
+\[
+\E\left[\left(x\left(k\right)-m_{x}\right)\left(x\left(k+l\right)-m_{x}\right)\right]=\Sigma_{xx}\left(l\right)=X_{xx}\left(l\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+for stationary and ergodic random processes:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\Sigma_{xx}\left(l\right)=\E\left[\left(x\left(k\right)-m_{x}\right)\left(x\left(k+l\right)-m_{x}\right)\right]=\overline{\left(x\left(k\right)-m_{x}\right)\left(x\left(k+l\right)-m_{x}\right)}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+covariance and correlation for stationary ergodic processes
+\end_layout
+
+\begin_layout Itemize
+we will assume stationarity and ergodicity unless otherwise stated
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+auto-correlation
+\emph default
+: 
+\begin_inset Formula $R_{xx}\left(l\right)=\E\left[x\left(k\right)x\left(k+l\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+auto-correlation has non-uniform definitions.
+ In statistics, autocorrelation is often the same as autocovariance.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+cross-covariance
+\emph default
+:
+\begin_inset Formula 
+\[
+\Sigma_{xy}\left(l\right)=X_{xy}\left(l\right)=\E\left[\left(x\left(k\right)-m_{x}\right)\left(y\left(k+l\right)-m_{y}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+property (using ergodicity):
+\begin_inset Formula 
+\begin{multline*}
+\Sigma_{xy}\left(l\right)=X_{xy}\left(l\right)=\overline{\left(x\left(k\right)-m_{x}\right)\left(y\left(k+l\right)-m_{y}\right)}\\
+=\overline{\left(y\left(k+l\right)-m_{y}\right)\left(x\left(k\right)-m_{x}\right)}=X_{yx}\left(-l\right)=\Sigma_{yx}\left(-l\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+white noise
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+white 
+\emph default
+noise: a purely random process with 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+ not correlated with 
+\begin_inset Formula $x\left(j\right)$
+\end_inset
+
+ at all if 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+X_{xx}\left(0\right)=\sigma_{xx}^{2},\ X_{xx}\left(l\right)=0\ \forall l\neq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+non-stationary zero mean white noise:
+\begin_inset Formula 
+\[
+\E\left[x\left(k\right)x\left(j\right)\right]=Q\left(k\right)\delta_{kj},\ \delta_{kj}=\begin{cases}
+1 & ,\ k=j\\
+0 & ,\ k\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+auto-covariance and spectral density
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+spectral density
+\emph default
+: the Fourier transform of auto-covariance
+\begin_inset Formula 
+\[
+\Phi_{xx}\left(\omega\right)=\sum_{l=-\infty}^{\infty}X_{xx}\left(l\right)e^{-j\omega l},\ X_{xx}\left(l\right)=\frac{1}{2\pi}\int_{-\pi}^{\pi}e^{j\omega l}\Phi_{xx}\left(\omega\right)\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+cross spectral density
+\emph default
+: 
+\begin_inset Formula 
+\[
+\Phi_{xy}\left(\omega\right)=\sum_{l=-\infty}^{\infty}X_{xy}\left(l\right)e^{-j\omega l},\ X_{xy}\left(l\right)=\frac{1}{2\pi}\int_{-\pi}^{\pi}e^{j\omega l}\Phi_{xy}\left(\omega\right)\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+properties: 
+\end_layout
+
+\begin_layout Itemize
+the variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ is the area under the spectral density curve 
+\begin_inset Formula 
+\[
+\var\left[x\right]=\E\left[\left(x-\E\left[x\right]\right)^{2}\right]=X_{xx}\left(0\right)=\frac{1}{2\pi}\int_{-\pi}^{\pi}\Phi_{xy}\left(\omega\right)\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{xx}\left(0\right)\geq\left|X_{xx}\left(l\right)\right|,\ \forall l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+proof of 
+\begin_inset Formula $X_{xx}\left(0\right)\geq\left|X_{xx}\left(l\right)\right|,\ \forall l$
+\end_inset
+
+, as 
+\begin_inset Formula $\E\left\{ \left[\left(x\left(k\right)-m_{x}\right)\pm\left(x\left(k+l\right)-m_{x}\right)\right]^{2}\right\} \geq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+passing a random process 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ through an LTI system (convolution) generates another random process:
+\begin_inset Formula 
+\[
+y\left(k\right)=g\left(k\right)*u\left(k\right)=\sum_{i=-\infty}^{\infty}g\left(i\right)u\left(k-i\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $u$
+\end_inset
+
+ is 
+\emph on
+zero mean
+\emph default
+ and ergodic, then
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+X_{uy}\left(l\right)=\overline{u\left(k\right)\sum_{i=-\infty}^{\infty}u\left(k+l-i\right)g\left(i\right)}\\
+=\sum_{i=-\infty}^{\infty}\overline{u\left(k\right)u\left(k+l-i\right)}g\left(i\right)=\sum_{i=-\infty}^{\infty}X_{uu}\left(l-i\right)g\left(i\right)=g\left(l\right)*X_{uu}\left(l\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+similarly
+\begin_inset Formula 
+\[
+X_{yy}\left(l\right)=\sum_{i=-\infty}^{\infty}X_{yu}\left(l-i\right)g\left(i\right)=g\left(l\right)*X_{yu}\left(l\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+in pictures:
+\begin_inset Formula 
+\[
+\xymatrix{X_{uu}\left(l\right)\ar[r] & *+[F-]{\displaystyle G\left(z\right)}\ar[r] & X_{uy}\left(l\right);\ \ X_{yu}\left(l\right)\ar[r] & *+[F-]{\displaystyle G\left(z\right)}\ar[r] & X_{yy}\left(l\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+input-output spectral density relation
+\end_layout
+
+\begin_layout Standard
+for a general LTI system
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{u\left(k\right)\ar[r] & *++[F-]{G(z)=\frac{b_{n}z^{n}+b_{n-1}z^{n-1}+\dots+b_{0}}{z^{n}+a_{n-1}z^{n-1}+\dots+a_{0}}}\ar[r] & y\left(k\right)}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Y\left(z\right)=G\left(z\right)U\left(z\right)\Leftrightarrow Y\left(e^{j\omega}\right)=G\left(e^{j\omega}\right)U\left(e^{j\omega}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+auto-covariance relation in the last slide: 
+\begin_inset Formula 
+\[
+\xymatrix{X_{uu}\left(l\right)\ar[r] & *+[F-]{\displaystyle G\left(z\right)}\ar[r] & X_{uy}\left(l\right);\ \ X_{yu}\left(l\right)\ar[r] & *+[F-]{\displaystyle G\left(z\right)}\ar[r] & X_{yy}\left(l\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{yu}\left(l\right)=X_{uy}\left(-l\right)=g\left(-l\right)*X_{uu}\left(-l\right)=g\left(-l\right)*X_{uu}\left(l\right)
+\]
+
+\end_inset
+
+hence
+\begin_inset Formula 
+\[
+\boxed{\Phi_{yy}\left(\omega\right)=G\left(e^{j\omega}\right)G\left(e^{-j\omega}\right)\Phi_{uu}\left(\omega\right)=\left|G\left(e^{j\omega}\right)\right|^{2}\Phi_{uu}\left(\omega\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+intuition: auto-covariance is a 
+\begin_inset Quotes eld
+\end_inset
+
+second-moment
+\begin_inset Quotes erd
+\end_inset
+
+ statistical property.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+MIMO case:
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are vectors, 
+\begin_inset Formula $G\left(z\right)$
+\end_inset
+
+ becomes a transfer function matrix 
+\end_layout
+
+\begin_layout Itemize
+dimensions play important roles: 
+\begin_inset Formula 
+\[
+X_{uy}\left(l\right)=\E\left[\left(u\left(k\right)-m_{u}\right)\left(y\left(k+l\right)-m_{y}\right)^{T}\right]=X_{yu}\left(-l\right)^{T}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{X_{uu}\left(l\right)\ar[r] & *+[F-]{\displaystyle G\left(z\right)}\ar[r] & X_{uy}\left(l\right);\ \ X_{yu}\left(l\right)\ar[r] & *+[F-]{\displaystyle G\left(z\right)}\ar[r] & X_{yy}\left(l\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+X_{yy}\left(l\right) & = & g\left(l\right)*X_{yu}\left(l\right)=g\left(l\right)*X_{uy}^{T}\left(-l\right)\\
+ & = & g\left(l\right)*\left[g\left(-l\right)*X_{uu}\left(-l\right)\right]^{T}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\Phi_{yy}\left(e^{j\omega}\right)=G\left(e^{j\omega}\right)\cdot\Phi_{uu}\left(e^{j\omega}\right)G^{T}\left(e^{-j\omega}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process in state space
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+consider: 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+--zero mean, white, 
+\begin_inset Formula ${\scriptstyle \E\left[w\left(k\right)w\left(k\right)^{T}\right]=W\left(k\right)}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{equation}
+x\left(k+1\right)=A\left(k\right)x\left(k\right)+B_{w}\left(k\right)w\left(k\right)\label{eq:sssys}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+assume random initial state 
+\begin_inset Formula $x\left(0\right)$
+\end_inset
+
+ (
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+uncorrelated to 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\E\left[x\left(0\right)\right]=m_{x_{0}},\ \E\left[\left(x\left(0\right)-m_{x_{0}}\right)\left(x\left(0\right)-m_{x_{0}}\right)^{T}\right]=X_{0}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mean of state vector 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\boxed{m_{x}\left(k+1\right)=A\left(k\right)m_{x}\left(k\right)},\ m_{x}\left(0\right)=m_{x_{0}}\label{eq:ss_mean}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+covariance 
+\begin_inset Formula ${\scriptstyle X\left(k\right)=X_{xx}\left(k,k\right)}$
+\end_inset
+
+: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\scriptstyle x\left(k+1\right)-m_{x}\left(k+1\right)=A\left(k\right)\left(x\left(k\right)-m_{x}\left(k\right)\right)+B_{w}\left(k\right)w\left(k\right)\Rightarrow}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sssys"
+
+\end_inset
+
+)-(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ss_mean"
+
+\end_inset
+
+)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{X\left(k+1\right)=A\left(k\right)X\left(k\right)A^{T}\left(k\right)+B_{w}\left(k\right)W\left(k\right)B_{w}^{T}\left(k\right)},\ X\left(0\right)=X_{o}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+x\left(k+1\right) & = & Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)\\
+m_{x}(k+1) & = & Am_{x}\left(k\right)+Bu\left(k\right)+0\\
+\Rightarrow X_{xx}\left(k+1,k+1\right) & = & AX_{xx}\left(k\right)A^{T}+B_{w}W\left(k\right)B_{w}^{T},\quad X_{xx}\left(0,0\right)=X_{o}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+intuition: covariance is a 
+\begin_inset Quotes eld
+\end_inset
+
+second-moment
+\begin_inset Quotes erd
+\end_inset
+
+ statistical property 
+\end_layout
+
+\begin_layout NoteItem
+When filtered by a linear system, the resulted covariance or auto-covariance
+ should contain some 
+\begin_inset Quotes eld
+\end_inset
+
+square-like
+\begin_inset Quotes erd
+\end_inset
+
+ term of the plant dynamics.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process in state space
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+dynamics of the mean:
+\begin_inset Formula 
+\[
+\boxed{m_{x}\left(k+1\right)=A\left(k\right)m_{x}\left(k\right)},\ m_{x}\left(0\right)=m_{x_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dynamics of the covariance:
+\begin_inset Formula 
+\[
+\boxed{X\left(k+1\right)=A\left(k\right)X\left(k\right)A^{T}\left(k\right)+B_{w}\left(k\right)W\left(k\right)B_{w}^{T}\left(k\right)},\ X\left(0\right)=X_{o}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(steady state) if 
+\begin_inset Formula $A\left(k\right)=A$
+\end_inset
+
+ and is stable, 
+\begin_inset Formula $B_{w}\left(k\right)=B_{w}$
+\end_inset
+
+, and 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ is stationary 
+\begin_inset Formula $W\left(k\right)=W$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+m_{x}\left(k\right)\rightarrow0,\ X\left(k\right)\rightarrow\text{a steady state }X_{ss}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+X_{ss}=AX_{ss}A^{T}+B_{w}WB_{w}^{T}\text{: discrete-time Lyapunov Eq.}\label{eq:dtCovLyqp}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+X_{ss}\left(l\right) & =E\left[x\left(k\right)x^{T}\left(k+l\right)\right]=X_{ss}\left(A^{T}\right)^{l}\\
+X_{ss}\left(-l\right) & =X_{ss}\left(l\right)^{T}=A^{l}X_{ss}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process in state space
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+first-order system
+\begin_inset Formula 
+\[
+x\left(k+1\right)=ax\left(x\right)+\sqrt{1-a^{2}}w\left(k\right),\ \E\left[w\left(k\right)\right]=0,\ \E\left[w\left(k\right)w\left(j\right)\right]=W\delta_{kj}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $\left|a\right|<1$
+\end_inset
+
+ and 
+\begin_inset Formula $x\left(0\right)$
+\end_inset
+
+ uncorrelated with 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+steady-state variance equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dtCovLyqp"
+
+\end_inset
+
+) becomes
+\begin_inset Formula 
+\[
+X_{ss}=a^{2}X_{ss}+\left(1-a^{2}\right)W\Rightarrow X_{ss}=W
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+X\left(l\right)=X\left(-l\right)=a^{l}X_{ss}=a^{l}W
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+begin{filecontents}{Sp2.dat} x2 y2 -5 0.1 -4 0.15 -3 0.2 -2 0.32 -1.5 0.42 -1 0.55
+ 0 1 1 0.55 1.5 0.42 2 0.32 3 0.2 4 0.15 5 0.1 
+\backslash
+end{filecontents}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+begin{filecontents}{Sp1.dat} x1 y1 -6 0.15 -5 0.2 -4 0.25 -3 0.34 -2 0.48 -1.5
+ 0.59 -1 0.7 0 1 1 0.7 1.5 0.59 2 0.48 3 0.34 4 0.25 5 0.2 6 0.15 
+\backslash
+end{filecontents}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process in state space
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+\begin_inset Formula 
+\[
+x\left(k+1\right)=ax\left(x\right)+\sqrt{1-a^{2}}w\left(k\right),\ \E\left[w\left(k\right)\right]=0,\ \E\left[w\left(k\right)w\left(j\right)\right]=W\delta_{kj}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X\left(l\right)=X\left(-l\right)=a^{l}X_{ss}=a^{l}W
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfplotstableread{Sp.dat}{
+\backslash
+Sp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} [auto, scale=0.8, >=latex' new,arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[xscale=1.8,yscale=1,,axis lines = middle, enlargelimits = true,
+ ytick=
+\backslash
+empty, xtick=
+\backslash
+empty] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[only marks,mark=*] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  table[x=l,y=m]{
+\backslash
+Sp}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[only marks,mark=x] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  table[x=l,y=n]{
+\backslash
+Sp}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[only marks,mark=square] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  table[x=l,y=p]{
+\backslash
+Sp}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[black,above] at (axis cs:0.75,1){$x(l)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[black,above] at (axis cs:8.8,0){$l$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[black,above] at (axis cs:6,0.8){increasing $
+\backslash
+alpha$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](9,3) to (10,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Filtering a random process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+continuous-time case
+\end_layout
+
+\begin_layout NoteItem
+details in the reader
+\end_layout
+
+\begin_layout Standard
+similar results hold in the continuous-time case:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{u\left(t\right)\ar[r] & *++[F-]{G(s)}\ar[r] & y\left(t\right)}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+spectral density (SISO case):
+\begin_inset Formula 
+\[
+\Phi_{yy}\left(j\omega\right)=G\left(j\omega\right)G\left(-j\omega\right)\Phi_{uu}\left(j\omega\right)=\left|G\left(j\omega\right)\right|^{2}\Phi_{uu}\left(j\omega\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mean and covariance dynamics:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\d x\left(t\right)}{\d t} & =Ax\left(t\right)+B_{w}w\left(t\right),\ \E\left[w\left(t\right)\right]=0,\ \cov\left[w\left(t\right)\right]=W\\
+\frac{\d m_{x}\left(t\right)}{\d t} & =Am_{x}\left(t\right),\ m_{x}\left(0\right)=m_{x_{0}}\\
+\frac{\d X\left(t\right)}{\d t} & =AX+XA^{T}+B_{w}WB_{w}^{T}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+steady state: 
+\begin_inset Formula $X_{ss}\left(\tau\right)=X_{ss}e^{A^{T}\tau};\ X_{ss}\left(-\tau\right)=e^{A\tau}X_{ss}$
+\end_inset
+
+ where
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+AX_{ss}+X_{ss}A^{T}=-B_{w}WB_{w}^{T}:\ \text{continuout-time Lyapunov Eq.}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: Lyapunov equations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+discrete-time case:
+\begin_inset Formula 
+\[
+A^{T}PA-P=-Q
+\]
+
+\end_inset
+
+has the following unique solution iff 
+\begin_inset Formula $\lambda_{i}\left(A\right)\lambda_{j}\left(A\right)\neq1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,j=1,\dots,n$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+P=\sum_{k=0}^{\infty}\left(A^{T}\right)^{k}QA^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+continuous-time case:
+\begin_inset Formula 
+\[
+A^{T}P+PA=-Q
+\]
+
+\end_inset
+
+has the following unique solution iff 
+\begin_inset Formula $\lambda_{i}\left(A\right)+\bar{\lambda}_{j}\left(A\right)\neq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,j=1,\dots,n$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P=\int_{0}^{\infty}e^{A^{T}t}Qe^{At}\d t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

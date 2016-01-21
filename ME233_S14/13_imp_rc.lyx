@@ -1,0 +1,3106 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 13: Internal Model Principle and Repetitive Control
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big Picture
+\end_layout
+
+\begin_layout Subsection
+review of integral control in PID design
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+review of integral control in PID design
+\end_layout
+
+\begin_layout Standard
+example:
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1.5pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(s\right)}\\
+{\scriptstyle 0}\arr & \cblk\arr\sp(0.3){E\left(s\right)} & \bblk{C\left(s\right)}\arr\sb>>+ & \cblk\arr & \bblk{P\left(s\right)}\arline[r] & \dotblk\arr\arline[d] & {\scriptstyle Y\left(s\right)}\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+where 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+C\left(s\right)=k_{p}+k_{i}\frac{1}{s}+k_{d}s,\ P\left(s\right)=\frac{1}{ms^{2}+bs+k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P\left(s\right)=\frac{1}{ms+b},\ C\left(s\right)=k_{p}+k_{i}\frac{1}{s}+k_{d}s,\ k_{p},k_{i},k_{d}>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the integral action in PID control perfectly rejects (asymptotically) constant
+ disturbances (
+\begin_inset Formula $D\left(s\right)=d_{o}/s$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{align*}
+E\left(s\right) & =\frac{-P\left(s\right)}{1+P\left(s\right)C\left(s\right)}D\left(s\right)=\frac{-d_{o}}{\left(m+k_{d}\right)s^{2}+\left(k_{p}+b\right)s+k_{i}}\\
+\Rightarrow & e\left(t\right)\to0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+similar analysis for the case when the reference is none-zero
+\end_layout
+
+\begin_layout NoteItem
+the integral action in PID control provides zero steady-state error for
+ constant reference and constant disturbances:
+\begin_inset Formula 
+\[
+S\left(s\right)=G_{r\to e}\left(s\right)=\frac{1}{1+P\left(s\right)C\left(s\right)}
+\]
+
+\end_inset
+
+has a zero DC gain (
+\begin_inset Formula $P\left(0\right)$
+\end_inset
+
+ is finite and 
+\begin_inset Formula $C\left(0\right)=\infty$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout NoteItem
+The disturbance model can also be understood as: 
+\begin_inset Formula $d\left(t\right)$
+\end_inset
+
+ is the impulse response of the transfer function
+\begin_inset Formula 
+\[
+\frac{d_{o}}{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+note it is not pole-zero cancellation in the equation, the canceled mode
+ is the disturbance mode
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+review of integral control in PID design
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1.5pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(s\right)}\\
+{\scriptstyle 0}\arr & \cblk\arr\sp(0.3){E\left(s\right)} & \bblk{C\left(s\right)}\arr\sb>>+ & \cblk\arr & \bblk{P\left(s\right)}\arline[r] & \dotblk\arr\arline[d] & {\scriptstyle Y\left(s\right)}\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the 
+\begin_inset Quotes eld
+\end_inset
+
+structure
+\begin_inset Quotes erd
+\end_inset
+
+ of the reference/disturbance is built into the integral controller:
+\end_layout
+
+\begin_layout Itemize
+controller:
+\begin_inset Formula 
+\[
+C\left(s\right)=k_{p}+k_{i}\frac{1}{s}+k_{d}s=\boxed{\frac{1}{s}}\left(k_{d}s^{2}+k_{p}s+k_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+constant reference: 
+\begin_inset Formula 
+\[
+r\left(t\right)=r_{o}\Leftrightarrow\mathscr{L}\left\{ r\left(t\right)\right\} =\boxed{\frac{1}{s}}r_{o}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+constant disturbance:
+\begin_inset Formula 
+\[
+d\left(t\right)=d_{o}\Leftrightarrow\mathscr{L}\left\{ d\left(t\right)\right\} =\boxed{\frac{1}{s}}d_{o}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Internal Model Principle
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Internal Model Principle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+theorems
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General case: internal model principle (IMP)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Internal Model Principle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1.5pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(s\right)=\frac{B_{d}\left(s\right)}{A_{d}\left(s\right)}}\\
+{\scriptstyle R\left(s\right)}\arr\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(s\right)} & \bblk{C\left(s\right)=\frac{B_{c}\left(s\right)}{A_{c}\left(s\right)}}\arr\sb>>+ & \cblk\arr & \bblk{P\left(s\right)=\frac{B_{p}\left(s\right)}{A_{p}\left(s\right)}}\arline[r] & \dotblk\arr\arline[d] & {\scriptstyle Y\left(s\right)}\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+Assume 
+\begin_inset Formula $B_{p}\left(s\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{d}\left(s\right)=0$
+\end_inset
+
+ do not have common roots.
+ 
+\end_layout
+
+\begin_layout Theorem
+If the closed loop is asymptotically stable, 
+\end_layout
+
+\begin_layout Theorem
+and 
+\begin_inset Formula $A_{c}\left(s\right)$
+\end_inset
+
+ can be factorized as 
+\begin_inset Formula $A_{c}\left(s\right)=A_{d}\left(s\right)A_{c}^{'}\left(s\right)$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Theorem
+then the disturbance is asymptotically rejected.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General case: internal model principle (IMP)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1.5pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(s\right)=\frac{B_{d}\left(s\right)}{A_{d}\left(s\right)}}\\
+{\scriptstyle R\left(s\right)}\arr\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(s\right)} & \bblk{C\left(s\right)=\frac{B_{c}\left(s\right)}{A_{c}\left(s\right)}}\arr\sb>>+ & \cblk\arr & \bblk{P\left(s\right)=\frac{B_{p}\left(s\right)}{A_{p}\left(s\right)}}\arline[r] & \dotblk\arr\arline[d] & {\scriptstyle Y\left(s\right)}\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof
+\series default
+: The steady-state error response to the disturbance is
+\begin_inset Formula 
+\begin{align*}
+E\left(s\right) & =\frac{-P\left(s\right)}{1+P\left(s\right)C\left(s\right)}D\left(s\right)=\frac{-B_{p}\left(s\right)A_{c}\left(s\right)}{A_{p}\left(s\right)A_{c}\left(s\right)+B_{p}\left(s\right)B_{c}\left(s\right)}\frac{B_{d}\left(s\right)}{A_{d}\left(s\right)}\\
+ & =\frac{-B_{p}\left(s\right)A_{c}^{'}\left(s\right)B_{d}\left(s\right)}{A_{p}\left(s\right)A_{c}\left(s\right)+B_{p}\left(s\right)B_{c}\left(s\right)}
+\end{align*}
+
+\end_inset
+
+where all roots of 
+\begin_inset Formula $A_{p}\left(s\right)A_{c}\left(s\right)+B_{p}\left(s\right)B_{c}\left(s\right)=0$
+\end_inset
+
+ are on the left half plane.
+ Hence 
+\begin_inset Formula $e\left(t\right)\to0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Internal model principle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+discrete-time case:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Discrete-time IMP
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.15in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.3){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+Assume 
+\begin_inset Formula $B_{p}\left(z^{-1}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{d}\left(z^{-1}\right)=0$
+\end_inset
+
+ do not have common zeros.
+ 
+\end_layout
+
+\begin_layout Theorem
+If the closed loop is asymptotically stable,
+\end_layout
+
+\begin_layout Theorem
+and 
+\begin_inset Formula $A_{c}\left(z^{-1}\right)$
+\end_inset
+
+ can be factorized as 
+\begin_inset Formula $A_{c}\left(z^{-1}\right)=A_{d}\left(z^{-1}\right)A_{c}^{'}\left(z^{-1}\right)$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Theorem
+then the disturbance is asymptotically rejected.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof
+\series default
+: analogous to the continuous-time case.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+typical disturbance structures
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Internal model principle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+the disturbance structure:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.3){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+example disturbance structures:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{d}(z^{-1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+constant 
+\begin_inset Formula $d_{o}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1-z^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\cos(\omega_{0}k)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\ensuremath{\sin(\omega_{0}k)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{1-2z^{-1}\cos(\omega_{0})+z^{-2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+shifted ramp signal 
+\begin_inset Formula $d\left(k\right)=\alpha k+\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1-2z^{-1}+z^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+periodic: 
+\begin_inset Formula $d\left(k\right)=d\left(k-N\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1-z^{-N}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Internal model principle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.35in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+observations: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $C\left(z^{-1}\right)=\frac{B_{c}\left(z^{-1}\right)}{A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)}$
+\end_inset
+
+: 
+\end_layout
+
+\end_inset
+
+the controller contains a 
+\begin_inset Quotes eld
+\end_inset
+
+counter disturbance
+\begin_inset Quotes erd
+\end_inset
+
+ generator
+\end_layout
+
+\begin_layout Itemize
+high-gain control: the open-loop frequency response
+\begin_inset Formula 
+\[
+P\left(e^{-j\omega}\right)C\left(e^{-j\omega}\right)=\frac{e^{-dj\omega}B_{p}\left(e^{-j\omega}\right)B_{c}\left(e^{-j\omega}\right)}{A_{p}\left(e^{-j\omega}\right)A_{c}^{'}\left(e^{-j\omega}\right)A_{d}\left(e^{-j\omega}\right)}
+\]
+
+\end_inset
+
+is large at frequencies where 
+\begin_inset Formula $A_{d}(e^{-j\omega})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D\left(z^{-1}\right)=B_{d}\left(z^{-1}\right)/A_{d}\left(z^{-1}\right)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ can be understood as
+\end_layout
+
+\end_inset
+
+ means 
+\begin_inset Formula $d\left(k\right)$
+\end_inset
+
+ is the impulse response of 
+\begin_inset Formula $B_{d}\left(z^{-1}\right)/A_{d}\left(z^{-1}\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+A_{d}\left(z^{-1}\right)d\left(k\right)=B_{d}\left(z^{-1}\right)\delta\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Repetitive Control
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Repetitive Control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+use of internal model principle
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Repetitive control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Repetitive control focus on attenuating periodic disturbances 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(with period 
+\begin_inset Formula $N$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+with
+\begin_inset Formula 
+\[
+A_{d}\left(z^{-1}\right)=1-z^{-N}
+\]
+
+\end_inset
+
+Control structure:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It remains to design 
+\begin_inset Formula $B_{c}\left(z^{-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{c}^{'}\left(z^{-1}\right)$
+\end_inset
+
+.
+ We discuss two methods:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+pole placement
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(partial) cancellation of plant dynamics: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+prototype repetitive control
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+design by pole placement
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1, Pole placement: prerequisite
+\begin_inset Note Note
+status open
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Diophantine equation]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Consider
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.32in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $G\left(z\right)=\frac{\beta\left(z\right)}{\alpha\left(z\right)}=\frac{\beta_{1}z^{n-1}+\beta_{2}z^{n-2}+\dots+\beta_{n}}{z^{n}+\alpha_{1}z^{n-1}+\dots+\alpha_{n}}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.15in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha\left(z\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta\left(z\right)$
+\end_inset
+
+ are coprime (no common roots) iff 
+\begin_inset Formula $S$
+\end_inset
+
+ (Sylvester matrix) is nonsingular:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S=\left[\begin{array}{ccccccccc}
+1 & 0 & \dots & 0 & \beta_{1} & 0 & \dots & \dots & 0\\
+\alpha_{1} & 1 & \ddots & \vdots & \beta_{2} & \beta_{1} & \ddots &  & \vdots\\
+\vdots & \ddots & \ddots & 0 & \vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots &  & \alpha_{1} & 1 & \beta_{n-1} &  & \ddots & \ddots & 0\\
+\alpha_{n-1} &  &  & \alpha_{1} & \beta_{n} & \ddots &  & \ddots & \beta_{1}\\
+\alpha_{n} & \ddots &  & \vdots & 0 & \beta_{n} & \ddots &  & \beta_{2}\\
+0 & \alpha_{n} & \ddots & \vdots & \vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & \ddots & \ddots & \alpha_{n-1} & \vdots &  & \ddots & \beta_{n} & \beta_{n-1}\\
+0 & \dots & 0 & \alpha_{n} & 0 & \dots & \dots & 0 & \beta_{n}
+\end{array}\right]_{\left(2n-1\right)\times\left(2n-1\right)}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.12in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1, Pole placement: prerequisite
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example: 
+\begin_inset Formula 
+\[
+G\left(z\right)=\frac{\beta_{1}z^{n-1}+\beta_{2}z^{n-2}+\dots+\beta_{n}}{z^{n}+\alpha_{1}z^{n-1}+\dots+\alpha_{n}}=\frac{z^{n-1}+\alpha_{1}z^{n-2}+\dots+\alpha_{n-1}}{z^{n}+\alpha_{1}z^{n-1}+\dots+\alpha_{n-1}z+0}
+\]
+
+\end_inset
+
+i.e.
+\begin_inset Formula 
+\begin{align*}
+\beta_{1} & =1\\
+\beta_{i} & =\alpha_{i-1}\ \forall i\geq2\\
+\alpha_{n} & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha\left(z\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta\left(z\right)$
+\end_inset
+
+ are not coprime, and 
+\begin_inset Formula $S$
+\end_inset
+
+ is clearly singular.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1, Pole placement: big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.35in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Disturbance model: 
+\begin_inset Formula $A_{d}\left(z^{-1}\right)=1-z^{-N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pole placement assigns the closed-loop characteristic equation:
+\begin_inset Formula 
+\begin{multline*}
+z^{-d}B_{p}\left(z^{-1}\right)B_{c}\left(z^{-1}\right)+A_{p}\left(z^{-1}\right)A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)\\
+=\underbrace{1+\eta_{1}z^{-1}+\eta_{2}z^{-2}+\dots+\eta_{q}z^{-q}}_{\eta\left(z^{-1}\right)}
+\end{multline*}
+
+\end_inset
+
+which is in the structure of a 
+\emph on
+Diophantine equation
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Design procedure: specify the desired closed-loop dynamics 
+\begin_inset Formula $\eta\left(z^{-1}\right)$
+\end_inset
+
+; match coefficients of 
+\begin_inset Formula $z^{-i}$
+\end_inset
+
+ on both sides to get 
+\begin_inset Formula $B_{c}\left(z^{-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{c}^{'}\left(z^{-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1, Pole placement: big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.35in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{\frac{B_{c}\left(z^{-1}\right)}{A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diophantine equation in Pole placement:
+\begin_inset Formula 
+\begin{multline*}
+z^{-d}B_{p}\left(z^{-1}\right)B_{c}\left(z^{-1}\right)+A_{p}\left(z^{-1}\right)A_{c}^{'}\left(z^{-1}\right)A_{d}\left(z^{-1}\right)\\
+=\underbrace{1+\eta_{1}z^{-1}+\eta_{2}z^{-2}+\dots+\eta_{q}z^{-q}}_{\eta\left(z^{-1}\right)}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Questions: 
+\end_layout
+
+\begin_layout Itemize
+what are the constraints for choosing 
+\begin_inset Formula $\eta\left(z^{-1}\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+how to guarantee unique solution in Diophantine equation?
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Design and analysis procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+General procedure of control design:
+\end_layout
+
+\begin_layout Itemize
+Problem definition
+\end_layout
+
+\begin_layout Itemize
+Control design for solution (current stage)
+\end_layout
+
+\begin_layout Itemize
+Prove stability
+\end_layout
+
+\begin_layout Itemize
+Prove stability robustness
+\end_layout
+
+\begin_layout Itemize
+Case study or implementation results
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1, Pole placement: details
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Diophantine equation
+\end_layout
+
+\end_inset
+
+Given 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha\left(z^{-1}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\beta\left(z^{-1}\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta\left(z^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.35in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\eta\left(z^{-1}\right) & =1+\eta_{1}z^{-1}+\eta_{2}z^{-2}+\dots+\eta_{q}z^{-q}\\
+\alpha\left(z^{-1}\right) & =1+\alpha_{1}z^{-1}+\dots+\alpha_{n}z^{-n}\\
+\beta\left(z^{-1}\right) & =\beta_{1}z^{-1}+\beta_{2}z^{-2}+\dots+\beta_{n}z^{-n}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+The Diophantine equation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.05in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha\left(z^{-1}\right)\sigma\left(z^{-1}\right)+\beta\left(z^{-1}\right)\gamma\left(z^{-1}\right)=\eta\left(z^{-1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+ can be solved uniquely for 
+\begin_inset Formula $\sigma\left(z^{-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma\left(z^{-1}\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.05in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+\sigma\left(z^{-1}\right) & =1+\sigma_{1}z^{-1}+\dots+\sigma_{n-1}z^{-\left(n-1\right)}\\
+\gamma\left(z^{-1}\right) & =\gamma_{0}+\gamma_{1}z^{-1}+\dots+\gamma_{n-1}z^{-\left(n-1\right)}
+\end{align*}
+
+\end_inset
+
+if the numerators of 
+\begin_inset Formula $\alpha\left(z^{-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta\left(z^{-1}\right)$
+\end_inset
+
+ are coprime and 
+\begin_inset Formula $\deg\left(\eta\left(z^{-1}\right)\right)=q\leq2n-1$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.05in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1, Pole placement: details
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Proof of Diophantine equation Theorem (key ideas):
+\begin_inset Formula 
+\[
+\alpha\left(z^{-1}\right)\underbrace{\sigma\left(z^{-1}\right)}_{\text{unknown}}+\beta\left(z^{-1}\right)\underbrace{\gamma\left(z^{-1}\right)}_{\text{unknown}}=\eta\left(z^{-1}\right)
+\]
+
+\end_inset
+
+Matching the coefficients of 
+\begin_inset Formula $z^{-i}$
+\end_inset
+
+ gives (see one numerical example in course reader)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S\left[\begin{array}{c}
+\sigma_{1}\\
+\sigma_{2}\\
+\vdots\\
+\sigma_{n-1}\\
+\gamma_{0}\\
+\vdots\\
+\gamma_{n-1}
+\end{array}\right]+\left[\begin{array}{c}
+\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{n}\\
+0\\
+\vdots\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+\eta_{1}\\
+\eta_{2}\\
+\vdots\\
+\eta_{n-1}\\
+\eta_{n}\\
+\vdots\\
+\eta_{2n-1}
+\end{array}\right]
+\]
+
+\end_inset
+
+The coprime condition assures 
+\begin_inset Formula $S$
+\end_inset
+
+ is invertible.
+ 
+\begin_inset Formula $\deg\eta\left(z^{-1}\right)\leq2n-1$
+\end_inset
+
+ assures the proper dimension on the right hand side of the equality.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+design by stable pole-zero cancellation
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: simple case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.3in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{C\left(z^{-1}\right)}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{d}\left(z^{-1}\right)=1-z^{-N}
+\]
+
+\end_inset
+
+
+\series bold
+If all poles and zeros of the plant are stable
+\series default
+, then prototype repetitive control uses
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C\left(z^{-1}\right)=\frac{k_{r}z^{-N+d}A_{p}\left(z^{-1}\right)}{\left(1-z^{-N}\right)B_{p}\left(z^{-1}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Prototype repetitive control
+\end_layout
+
+\end_inset
+
+Under the assumptions above, the closed-loop system is asymptotically stable
+ for 
+\begin_inset Formula $0<k_{r}<2$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: stability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Proof of Theorem on prototype repetitive control: 
+\end_layout
+
+\begin_layout Standard
+From
+\begin_inset Formula 
+\[
+1+\frac{k_{r}z^{-N+d}A_{p}\left(z^{-1}\right)}{\left(1-z^{-N}\right)B_{p}\left(z^{-1}\right)}\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}=0
+\]
+
+\end_inset
+
+the closed-loop characteristic equation is
+\begin_inset Formula 
+\[
+A_{p}\left(z^{-1}\right)B_{p}\left(z^{-1}\right)\left[1-\left(1-k_{r}\right)z^{-N}\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+roots of 
+\begin_inset Formula $A_{p}\left(z^{-1}\right)B_{p}\left(z^{-1}\right)=0$
+\end_inset
+
+ are all stable
+\end_layout
+
+\begin_layout Itemize
+roots of 
+\begin_inset Formula $1-\left(1-k_{r}\right)z^{-N}=0$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{align*}
+\left|1-k_{r}\right|^{\frac{1}{N}}e^{j\frac{2\pi i}{N}},\ i & =0,\pm1,\dots,\textnormal{ for }0<k_{r}\leq1\\
+\left|1-k_{r}\right|^{\frac{1}{N}}e^{j\left(\frac{2\pi i}{N}+\frac{\pi}{N}\right)},\ i & =0,\pm1,\dots,\textnormal{ for }1<k_{r}
+\end{align*}
+
+\end_inset
+
+which are all inside the unit circle 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider the case with plant uncertainty
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{d\left(k\right)}\\
+\dotblk\arr\sp(0.3){r\left(k\right)}\sp(0.8)+ & \cblk\arr & \bblk{\frac{k_{r}z^{-N+d}A_{p}\left(z^{-1}\right)}{\left(1-z^{-N}\right)B_{p}\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}\left(1+\Delta\left(z^{-1}\right)\right)}\arline[r] & \dotblk\arr\sp<<{y\left(k\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ open-loop poles on the unit circle
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset Formula 
+\[
+\frac{k_{r}z^{-N+d}A_{p}\left(z^{-1}\right)}{\left(1-z^{-N}\right)B_{p}\left(z^{-1}\right)}\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}\left(1+\Delta\left(z^{-1}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Root locus example: 
+\begin_inset Formula $N=4$
+\end_inset
+
+, 
+\begin_inset Formula $1+\Delta\left(z^{-1}\right)=q/\left(z-p\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename src/rc_rlocus.eps
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall\ k_{r}>0$
+\end_inset
+
+, the closed-loop system is now unstable!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{d\left(k\right)}\\
+\dotblk\arr\sp(0.3){r\left(k\right)}\sp(0.8)+ & \cblk\arr & \bblk{C\left(z^{-1}\right)}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}\left(1+\Delta\left(z^{-1}\right)\right)}\arline[r] & \dotblk\arr\sp<<{y\left(k\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make the controller robust to plant uncertainties, do instead
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C\left(z^{-1}\right)=\frac{k_{r}q(z,z^{-1})z^{-N+d}A_{p}\left(z^{-1}\right)}{\left(1-q(z,z^{-1})z^{-N}\right)B_{p}\left(z^{-1}\right)}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+q(z,z^{-1}):\,\textrm{low-pass\ filter.\,\ e.g.\ zero-phase\ low\ pass \mbox{\frac{\alpha_{1}z^{-1}+\alpha_{0}+\alpha_{1}z}{\alpha_{0}+2\alpha_{1}}}}
+\]
+
+\end_inset
+
+which shifts the marginary stable open-loop poles to be inside the unit
+ circle:
+\begin_inset Formula 
+\[
+A_{p}\left(z^{-1}\right)B_{p}\left(z^{-1}\right)\left[1-\left(1-k_{r}\right)q(z,z^{-1})z^{-N}\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{C\left(z^{-1}\right)}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+A_{d}\left(z^{-1}\right)=1-z^{-N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+If poles of the plant are stable
+\series bold
+ 
+\series default
+but 
+\series bold
+NOT all zeros are stable
+\series default
+, let 
+\begin_inset Formula $B_{p}(z^{-1})=B_{p}^{-}(z^{-1})B_{p}^{+}(z^{-1})$
+\end_inset
+
+ [
+\begin_inset Formula $B_{p}^{-}\left(z^{-1}\right)$
+\end_inset
+
+---the uncancellable part] and
+\begin_inset Formula 
+\begin{equation}
+C\left(z^{-1}\right)=\frac{k_{r}z^{-N+\mu}A_{p}(z^{-1})B_{p}^{-}(z)z^{-\mu}}{(1-z^{-N})B_{p}^{+}(z^{-1})z^{-d}b},\ b>\max_{\omega\in[0,\pi]}|B_{p}^{-}(e^{j\omega})|^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similar as before, can show that the closed-loop system is stable (in-class
+ exercise).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Exercise: analyze the stability of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{2.4pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{D\left(z^{-1}\right)=\frac{B_{d}\left(z^{-1}\right)}{A_{d}\left(z^{-1}\right)}}\\
+\dotblk\arr\sp(0.3){R\left(z^{-1}\right)}\sp(0.8)+ & \cblk\arr\sp(0.2){E\left(z^{-1}\right)} & \bblk{C\left(z^{-1}\right)}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}}\arline[r] & \dotblk\arr\sp<<{Y\left(z^{-1}\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C\left(z^{-1}\right)=\frac{k_{r}z^{-N+\mu}A_{p}(z^{-1})B_{p}^{-}(z)z^{-\mu}}{(1-z^{-N})B_{p}^{+}(z^{-1})z^{-d}b},\ b>\max_{\omega\in[0,\pi]}|B_{p}^{-}(e^{j\omega})|^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Key steps: 
+\begin_inset Formula $\left|\frac{B_{p}^{-}\left(e^{j\omega}\right)B_{p}^{-}\left(e^{-j\omega}\right)}{b}\right|<1$
+\end_inset
+
+; 
+\begin_inset Formula $\left|\frac{k_{r}B_{p}^{-}\left(e^{j\omega}\right)B_{p}^{-}\left(e^{-j\omega}\right)}{b}-1\right|<1$
+\end_inset
+
+; all roots from
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z^{-N}\left[\frac{k_{r}B_{p}^{-}\left(z\right)B_{p}^{-}\left(z^{-1}\right)}{b}-1\right]+1=0
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+are inside the unit circle.
+\end_layout
+
+\begin_layout NoteItem
+can do a Nyquist analysis: the open-loop Nyquist response of 
+\begin_inset Formula 
+\[
+z^{-N}\left[\frac{k_{r}B_{p}^{-}\left(z\right)B_{p}^{-}\left(z^{-1}\right)}{b}-1\right]
+\]
+
+\end_inset
+
+ never has magnitudes larger than 1, hence impossible to encircle the -1
+ point.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2, Prototype repetitive control: extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{d\left(k\right)}\\
+\dotblk\arr\sp(0.3){r\left(k\right)}\sp(0.8)+ & \cblk\arr & \bblk{C\left(z^{-1}\right)}\arr\sb>>+ & \cblk\arr & \bblk{\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}\left(1+\Delta\left(z^{-1}\right)\right)}\arline[r] & \dotblk\arr\sp<<{y\left(k\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Robust version in the presence of plant uncertainties: 
+\begin_inset Formula 
+\begin{equation}
+C\left(z^{-1}\right)=\frac{k_{r}z^{-N+\mu}q(z,z^{-1})A_{p}(z^{-1})B_{p}^{-}(z)z^{-\mu}}{(1-q(z,z^{-1})z^{-N})B_{p}^{+}(z^{-1})z^{-d}b}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+q(z,z^{-1}):\,\textrm{low-pass\ filter.\,\ e.g.\ zero-phase\ low\ pass \mbox{\frac{\alpha_{1}z^{-1}+\alpha_{0}+\alpha_{1}z}{\alpha_{0}+2\alpha_{1}}}}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the order of 
+\begin_inset Formula $B_{p}^{-}\left(z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.3in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1pc}\xymatrix{ &  &  & \dotblk\ard\sp>>+\sp<<{d\left(k\right)}\\
+\dotblk\arr\sp(0.1){r\left(k\right)}\sp(0.8)+ & \cblk\arr & \bblk{C\left(z^{-1}\right)}\arr\sb>>+ & \cblk\arr & \bblk{\textnormal{Plant}}\arline[r] & \dotblk\arr\sp<<{y\left(k\right)}\arline[d] & \dotblk\\
+ & \dotblk\aru\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+disturbance period: 
+\begin_inset Formula $N=10$
+\end_inset
+
+; nominal plant: 
+\begin_inset Formula 
+\[
+\frac{z^{-d}B_{p}\left(z^{-1}\right)}{A_{p}\left(z^{-1}\right)}=\frac{z^{-1}}{\left(1-0.8z^{-1}\right)\left(1-0.7z^{-1}\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C\left(z^{-1}\right)=k_{r}\frac{\left(1-0.8z^{-1}\right)\left(1-0.7z^{-1}\right)q(z,z^{-1})z^{-10}}{z^{-1}\left(1-q(z,z^{-1})z^{-10}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+Question: suppose 
+\begin_inset Formula 
+\[
+q\left(z,z^{-1}\right)=\mbox{\frac{\alpha_{1}z^{-1}+\alpha_{0}+\alpha_{1}z}{\alpha_{0}+2\alpha_{1}}}
+\]
+
+\end_inset
+
+what's the order of 
+\begin_inset Formula $C\left(z^{-1}\right)$
+\end_inset
+
+? How would you implement it?
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Additional reading
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ME233 course reader
+\end_layout
+
+\begin_layout Itemize
+X.
+ Chen and M.
+ Tomizuka, “An Enhanced Repetitive Control Algorithm using the Structure
+ of Disturbance Observer,” in 
+\emph on
+Proceedings of 2012 IEEE/ASME International Conference on Advanced Intelligent
+ Mechatronics
+\emph default
+, Taiwan, Jul.
+ 11-14, 2012, pp.
+ 490-495
+\end_layout
+
+\begin_layout Itemize
+X.
+ Chen and M.
+ Tomizuka, “New Repetitive Control with Improved Steady-state Performance
+ and Accelerated Transient,” 
+\emph on
+IEEE Transactions on Control Systems Technology
+\emph default
+, vol.
+ 22, no.
+ 2, pp.
+ 664-675 (12 pages), Mar.
+ 2014
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\end_body
+\end_document

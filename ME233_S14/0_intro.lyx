@@ -1,0 +1,1055 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mode<handout>{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor{background canvas}
+\end_layout
+
+\begin_layout Plain Layout
+
+{bg=black!20}
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfpagesuselayout{2 on 1}[letterpaper,border shrink=0mm]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Introduction
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Syllabus
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Requirements
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+ME 233 talks about advanced and practical control theories, including but
+ not limited to:
+\end_layout
+
+\begin_layout Itemize
+dynamic programming
+\end_layout
+
+\begin_layout Itemize
+optimal estimation (Kalman Filter) and stochastic control
+\end_layout
+
+\begin_layout Itemize
+SISO and MIMO feedback design principles
+\end_layout
+
+\begin_layout Itemize
+digital control: implementation and design
+\end_layout
+
+\begin_layout Itemize
+feedforward design techniques: preview control, zero phase error tracking,
+ etc
+\end_layout
+
+\begin_layout Itemize
+feedback design techniques: LQG/LTR, internal model principle, repetitive
+ control, disturbance observer
+\end_layout
+
+\begin_layout Itemize
+system identification
+\end_layout
+
+\begin_layout Itemize
+adaptive control
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Teaching staff and class notes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+instructor: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Xu Chen, 2013 UC Berkeley Ph.D., maxchen@berkeley.edu
+\end_layout
+
+\begin_layout Itemize
+office hour: Tu Thur 1pm-2:30pm at 5112 Etcheverry Hall
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+teaching assistant:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Changliu Liu, changliuliu@berkeley.edu
+\end_layout
+
+\begin_layout Itemize
+office hour: M, W 10:00am – 11:00am in 136 Hesse Hall
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+class notes: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ME233 Class Notes by M.
+ Tomizuka (Parts I and II); Both can be purchased at Copy Central, 48 Shattuck
+ Square, Berkeley
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Requirements and evaluations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+website (case sensitive): 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+www.me.berkeley.edu/ME233/sp14
+\end_layout
+
+\begin_layout Itemize
+bcourses.berkeley.edu
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+prerequisites: ME C 232 or its equivalence 
+\end_layout
+
+\begin_layout Itemize
+lectures: Tu Thur 8-9:30am, 3113 Etcheverry Hall
+\end_layout
+
+\begin_layout Itemize
+discussions: Fri.
+ 10-11am, 1165 Etcheverry Hall
+\end_layout
+
+\begin_layout Itemize
+homework (20%)
+\end_layout
+
+\begin_layout Itemize
+two in-class midterms (20% each): Mar.
+ 4, 2014 and Apr.
+ 15, 2014; one-page handwritten summary sheets allowed
+\end_layout
+
+\begin_layout Itemize
+one final exam (40%): May 15 2014 (Th), 7 pm -10 pm; open notes
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Prerequisites (ME 232 table of contents)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Laplace and Z transformations
+\end_layout
+
+\begin_layout Itemize
+Models and Modeling of linear dynamical systems: transfer functions, state
+ space models
+\end_layout
+
+\begin_layout Itemize
+Solutions of linear state equations
+\end_layout
+
+\begin_layout NoteItem
+matrix exponential
+\end_layout
+
+\begin_layout Itemize
+Stability: poles, eigenvalues, Lyapunov stability
+\end_layout
+
+\begin_layout Itemize
+Controllability and observability 
+\end_layout
+
+\begin_layout Itemize
+State and output feedbacks, pole assignment via state feedback 
+\end_layout
+
+\begin_layout Itemize
+State estimation and observer, observer state feedback control 
+\end_layout
+
+\begin_layout Itemize
+Linear Quadratic (LQ) Optimal Control, LQR properties, Riccati equation
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Remark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ME233 will be webcasted:
+\end_layout
+
+\begin_layout Itemize
+Berkeley's YouTube channel (http://www.youtube.com/ucberkeley)
+\end_layout
+
+\begin_layout Itemize
+iTunes U (http://itunes.berkeley.edu/) 
+\end_layout
+
+\begin_layout Itemize
+webcast.berkeley (http://webcast.berkeley.edu) 
+\end_layout
+
+\begin_layout Standard
+links will be posted on course website when available
+\end_layout
+
+\begin_layout NoteItem
+however there can be delays about the video posting and uploading of lecture
+ materials
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+References (also on course website)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size tiny
+Probability
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size tiny
+Bertsekas, Introduction to Probability, Athena Scientific
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Yates and Goodman, Probability and Stochastic Processes, second edition,
+ Willey
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size tiny
+Linear Quadratic Optimal Control
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size tiny
+Anderson and Moore, Optimal Control: Linear Quadratic Methods, Dover Books
+ on Engineering (paperback), 2007.
+ A PDF can be downloaded from: http://users.rsise.anu.edu.au/%7Ejohn/papers/index.htm
+l
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Lewis and Syrmos, Vassilis L., Optimal Control, Wiley-IEEE, 1995
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Bryson and Ho, Applied Optimal Control: Optimization, Estimation, and Control,
+ Wiley
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size tiny
+Stochastic Control Theory and Optimal Filtering
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size tiny
+Brown and Hwang, Introduction to Random Signals and Applied Kalman Filtering,
+ Third Edition, Willey
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Lewis and Xie and Popa, Optimal and Robust Estimation, Second Edition CRC
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Grewal and Andrews, Kalman Filter, Theory and Practice, Prentice Hall
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Anderson, and Moore, Optimal Filtering, Dover Books on Engineering (paperback),
+ New York, 2005.
+ A PDF can be downloaded from: http://users.rsise.anu.edu.au/%7Ejohn/papers/index.htm
+l
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Astrom, Introduction to Stochastic Control Theory, Dover Books on Engineering
+ (paperback), New York, 2006
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size tiny
+Adaptive Control
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size tiny
+Astrom and Wittenmark, Adaptive Control, Addison Wesley, 2nd Ed., 1995
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Goodwin and Sin, Adaptive Filtering Prediction and Control, Prentice Hall,
+ 1984
+\end_layout
+
+\begin_layout Itemize
+
+\size tiny
+Krstic, Kanellakopoulos, and Kokotovic, Nonlinear and Adaptive Control Design,
+ Willey
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

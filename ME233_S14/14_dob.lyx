@@ -1,0 +1,1358 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 14: Disturbance Observer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Disturbance and uncertainties in mechanical systems:
+\end_layout
+
+\begin_layout Itemize
+system models are important in design: e.g., in ZPET, observer, and preview
+ controls
+\end_layout
+
+\begin_layout Itemize
+inevitable to have uncertainty in actual mechanical systems
+\end_layout
+
+\begin_layout Itemize
+system is also subjected to disturbances
+\end_layout
+
+\begin_layout Standard
+Related control design:
+\end_layout
+
+\begin_layout Itemize
+robust control
+\end_layout
+
+\begin_layout Itemize
+adaptive control
+\end_layout
+
+\begin_layout Standard
+Disturbance observer is one example of robust control.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Disturbance observer
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Disturbance observer (DOB)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+introduced by Ohnishi (1987) and refined by Umeno and Hori (1991)
+\end_layout
+
+\begin_layout Standard
+System:
+\begin_inset Formula 
+\[
+V\left(s\right)=G_{uv}\left(s\right)\left[U\left(s\right)+D\left(s\right)\right]
+\]
+
+\end_inset
+
+Assumptions: 
+\begin_inset Formula $u\left(t\right)$
+\end_inset
+
+--input; 
+\begin_inset Formula $d\left(t\right)$
+\end_inset
+
+--disturbance; 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+--output; 
+\begin_inset Formula $G_{uv}\left(s\right)$
+\end_inset
+
+--actual plant dynamics between 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+; 
+\begin_inset Formula $G_{nv}^{n}\left(s\right)$
+\end_inset
+
+--nominal model
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\xyR{1pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DOB intuition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\xyR{.5pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $Q\left(s\right)=1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align*}
+U\left(s\right) & =U^{*}\left(s\right)-\left[\frac{G_{uv}\left(s\right)}{G_{uv}^{n}\left(s\right)}\left(U\left(s\right)+D\left(s\right)\right)+\frac{1}{G_{uv}^{n}\left(s\right)}\Xi\left(s\right)-U\left(s\right)\right]\\
+\Rightarrow U\left(s\right) & =\frac{G_{uv}^{n}\left(s\right)}{G_{uv}\left(s\right)}U^{*}\left(s\right)-D\left(s\right)-\frac{1}{G_{uv}\left(s\right)}\Xi\left(s\right)\\
+V\left(s\right) & =G_{uv}^{n}\left(s\right)U^{*}\left(s\right)-\Xi\left(s\right)
+\end{align*}
+
+\end_inset
+
+i.e., dynamics between 
+\begin_inset Formula $U^{*}\left(s\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $V\left(s\right)$
+\end_inset
+
+ follows the nominal model; and disturbance is rejected
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DOB intuition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\xyR{.5pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $Q\left(s\right)=1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align*}
+\hat{D}\left(s\right) & =\left(\frac{G_{uv}\left(s\right)}{G_{uv}^{n}\left(s\right)}-1\right)U\left(s\right)+\frac{1}{G_{uv}^{n}\left(s\right)}\Xi\left(s\right)+\frac{G_{uv}\left(s\right)}{G_{uv}^{n}\left(s\right)}D\left(s\right)\\
+ & \approx\frac{1}{G_{uv}\left(s\right)}\Xi\left(s\right)+D\left(s\right)\ \textnormal{if }G_{uv}\left(s\right)=G_{uv}^{n}\left(s\right)
+\end{align*}
+
+\end_inset
+
+i.e., disturbance 
+\begin_inset Formula $D\left(s\right)$
+\end_inset
+
+ is estimated by 
+\begin_inset Formula $\hat{D}\left(s\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DOB details: causality
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\xyR{.5pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is impractical to have 
+\begin_inset Formula $Q\left(s\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+e.g., if 
+\begin_inset Formula $G_{uv}\left(s\right)=1/s^{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $1/G_{uv}^{n}\left(s\right)=s^{2}$
+\end_inset
+
+ (not realizable)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q\left(s\right)$
+\end_inset
+
+ should be designed such that 
+\begin_inset Formula $Q\left(s\right)/G_{nv}^{n}\left(s\right)$
+\end_inset
+
+ is causal.
+ e.g.
+ (low-pass filter)
+\begin_inset Formula 
+\[
+Q\left(s\right)=\frac{1+\sum_{k=1}^{N-r}a_{k}\left(\tau s\right)^{k}}{1+\sum_{k=1}^{N}a_{k}\left(\tau s\right)^{k}},\ Q\left(s\right)=\frac{3\tau s+1}{\left(\tau s+1\right)^{3}},\ Q\left(s\right)=\frac{6\left(\tau s\right)^{2}+4\tau s+1}{\left(\tau s+1\right)^{4}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau$
+\end_inset
+
+ determines the filter bandwidth
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DOB details: nominal model following
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\xyR{.5pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+Block diagram analysis gives 
+\begin_inset Formula 
+\[
+V\left(s\right)=G_{uv}^{o}\left(s\right)U^{*}\left(s\right)+G_{dv}^{o}\left(s\right)D\left(s\right)+G_{\xi v}^{o}\left(s\right)\Xi\left(s\right)
+\]
+
+\end_inset
+
+where
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+G_{uv}^{o} & =\frac{G_{uv}G_{uv}^{n}}{G_{uv}^{n}+\left(G_{uv}-G_{uv}^{n}\right)Q},\ G_{dv}^{o}=\frac{G_{uv}G_{uv}^{n}\left(1-Q\right)}{G_{uv}^{n}+\left(G_{uv}-G_{uv}^{n}\right)Q}\\
+G_{\xi v}^{o} & =-\frac{G_{uv}Q}{G_{uv}^{n}+\left(G_{uv}-G_{uv}^{n}\right)Q}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DOB details: nominal model following
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\xyR{.5pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+if 
+\begin_inset Formula $Q\left(s\right)\approx1$
+\end_inset
+
+, we have disturbance rejection and nominal model following:
+\begin_inset Formula 
+\[
+G_{uv}^{o}\approx G_{uv}^{n},\ G_{dv}^{o}\approx0,\ G_{\xi v}^{o}=-1
+\]
+
+\end_inset
+
+if 
+\begin_inset Formula $Q\left(s\right)\approx0$
+\end_inset
+
+, DOB is cut off:
+\begin_inset Formula 
+\[
+G_{uv}^{o}\approx G_{uv},\ G_{dv}^{o}\approx G_{uv},\ G_{\xi v}^{o}\approx0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DOB details: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\xyR{.5pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){D(s)}\sp>>+\\
+\ar[r]\sp(0.1){U^{*}(s)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){U(s)}\sp>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{G_{uv}(s)}\ar[rr]\sp(0.99){V(s)} & *[F]{}\ar[d]\sp>>+ & *[F]{}\\
+ &  & *[F]{}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/G_{uv}^{n}(s)}\ar[l]\sp>>+ & *[o]{\circ}\ar[l] & *[F]{}\ar[l]\sp(0.1){\Xi(s)}\sp>>+\\
+ &  &  & *+[F]{Q(s)}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sp>>- &  & *[F]{}\ar@{-}[ll]\sp{\hat{D}(s)}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G_{uv}^{o}=\frac{G_{uv}G_{uv}^{n}}{G_{uv}^{n}+\left(G_{uv}-G_{uv}^{n}\right)Q},\ G_{dv}^{o}=\frac{G_{uv}G_{uv}^{n}\left(1-Q\right)}{G_{uv}^{n}+\left(G_{uv}-G_{uv}^{n}\right)Q},\ G_{\xi v}^{o}=-\frac{G_{uv}Q}{G_{uv}^{n}+\left(G_{uv}-G_{uv}^{n}\right)Q}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+closed-loop characteristic equation:
+\begin_inset Formula 
+\begin{align*}
+G_{uv}^{n}\left(s\right)+\left(G_{uv}\left(s\right)-G_{uv}^{n}\left(s\right)\right)Q\left(s\right) & =0\\
+\Leftrightarrow G_{uv}^{n}\left(s\right)\left(1+\Delta\left(s\right)Q\left(s\right)\right) & =0,\ \textnormal{if }G_{uv}\left(s\right)=G_{uv}^{n}\left(s\right)\left(1+\Delta\left(s\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\series bold
+robust stability condition
+\series default
+: stable zeros for 
+\begin_inset Formula $G_{nv}^{n}\left(s\right)$
+\end_inset
+
+, plus
+\begin_inset Formula 
+\[
+||\Delta\left(j\omega\right)Q\left(j\omega\right)||<1,\ \forall\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Application example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Discrete-time case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Formula $\xyR{1pc}\xyC{2pc}\xymatrix{ &  &  & \ar[d]\sp(0.1){d(k)}\sp>>+\\
+\ar[r]\sp(0.1){u^{*}(k)}\sp>>+ & *[o]{\circ}\ar[rr]\sp(0.5){u(k)}\sb>>+ & *[F]{}\ar@{-}[d] & *[o]{\circ}\ar[r] & *+[F]{P(z^{-1})}\ar[rr]\sp(0.99){y(k)} & *[F]{}\ar@{-}[d] & *[F]{}\\
+ &  & *+[F]{z^{-m}}\ar[r]\sp>>- & *[o]{\circ}\ar[d] & *+[F]{1/P_{n}(z^{-1})}\ar[l]\sb>>+ & *[F]{}\ar@{-}[l]\\
+ &  &  & *+[F]{Q(z^{-1})}\ar@{-}[d]\\
+ & *[F]{}\ar[uuu]\sb>>- &  & *[F]{}\ar@{-}[ll]\sp{}
+}
+\xyR{2pc}\xyC{2pc}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+where 
+\begin_inset Formula $P\left(z^{-1}\right)\approx z^{-m}P_{n}\left(z^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+see more details in, e.g., 
+\size footnotesize
+X.
+ Chen and M.
+ Tomizuka, 
+\begin_inset Quotes eld
+\end_inset
+
+Optimal Plant Shaping for High Bandwidth Disturbance Rejection in Discrete
+ Disturbance Observers,” in Proceedings of the 2010 American Control Conference,
+ Baltimore, MD, Jun.
+ 30-Jul.
+ 02, 2010, pp.
+ 2641-2646
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

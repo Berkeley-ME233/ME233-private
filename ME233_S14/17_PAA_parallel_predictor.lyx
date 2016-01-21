@@ -1,0 +1,3614 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "beamerMargin.tex"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 17: PAA with Parallel Predictors
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture: we know now...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align left
+\begin_inset Formula 
+\[
+\xymatrix{u\left(k\right)\arr & \bblk{{\displaystyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}\arr & y\left(k+1\right)}
+\]
+
+\end_inset
+
+simply means:
+\begin_inset Formula 
+\begin{align*}
+y\left(k+1\right) & =B\left(z^{-1}\right)u\left(k\right)-\left(A\left(z^{-1}\right)-1\right)y\left(k+1\right)\\
+ & =\theta^{T}\phi\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+here 
+\begin_inset Formula $z^{-1}$
+\end_inset
+
+ should be understood as the one-step delay operator: 
+\begin_inset Formula $u\left(k\right)=z^{-1}u\left(k+1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+In RLS:
+\begin_inset Formula 
+\[
+\hat{y}^{o}\left(k+1\right)=\hat{\theta}^{T}\left(k\right)\phi\left(k\right)=\hat{B}\left(z^{-1},k\right)u\left(k\right)-\left(\hat{A}\left(z^{-1},k\right)-1\right)y\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Understanding the notation: if 
+\begin_inset Formula $B\left(z^{-1}\right)=b_{o}+b_{1}z^{-1}+\dots+b_{m}z^{-m}$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{B}\left(z^{-1},k\right)=\hat{b}_{o}\left(k\right)+\hat{b}_{1}\left(k\right)z^{-1}+\dots+\hat{b}_{m}\left(k\right)z^{-m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remark: 
+\begin_inset Formula $z^{-1}$
+\end_inset
+
+--shift operator; some references use 
+\begin_inset Formula $q^{-1}$
+\end_inset
+
+ instead
+\end_layout
+
+\begin_layout NoteItem
+understanding the notations: let 
+\begin_inset Formula $B\left(z^{-1}\right)=b_{0}+b_{1}z^{-1}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+B\left(z^{-1}\right)u\left(k\right) & =b_{0}u\left(k\right)+b_{1}u\left(k-1\right)\\
+\hat{B}\left(z^{-1},k\right) & =\hat{b}_{0}\left(k\right)+\hat{b}_{1}\left(k\right)z^{-1}\textnormal{: estimation at time \ensuremath{k}}\\
+\hat{B}\left(z^{-1},k\right)u\left(k\right) & =\hat{b}_{0}\left(k\right)u\left(k\right)+\hat{b}_{1}\left(k\right)u\left(k-1\right)
+\end{align*}
+
+\end_inset
+
+we can also write the results in vector form
+\begin_inset Formula 
+\begin{align*}
+B\left(z^{-1}\right)u\left(k\right) & =\left[b_{0}+b_{1}z^{-1}\right]u\left(k\right)=\left[\begin{array}{cc}
+b_{0} & b_{1}\end{array}\right]\left[\begin{array}{c}
+1\\
+z^{-1}
+\end{array}\right]u\left(k\right)\\
+ & =\left[\begin{array}{cc}
+b_{0} & b_{1}\end{array}\right]\left[\begin{array}{c}
+u\left(k\right)\\
+u\left(k-1\right)
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+generalizing: if 
+\begin_inset Formula $B\left(z^{-1}\right)=\sum_{i=0}^{m}b_{i}z^{-i}$
+\end_inset
+
+ then
+\begin_inset Formula 
+\[
+B\left(z^{-1}\right)u\left(k\right)=\sum_{i=0}^{m}b_{i}u\left(k-i\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Series-parallel adjustable system (equation-error method)
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS is a series-parallel adjustable system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+RLS in 
+\emph on
+a posteriori
+\emph default
+ form:
+\begin_inset Formula 
+\[
+\hat{y}\left(k+1\right)=\hat{B}\left(z^{-1},k+1\right)u\left(k\right)-\left(\hat{A}\left(z^{-1},k+1\right)-1\right)y\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+prediction error
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ is an equation error
+\end_layout
+
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\epsilon\left(k+1\right)=y\left(k+1\right)-\hat{y}\left(k+1\right)=\hat{A}\left(z^{-1},k+1\right)y\left(k+1\right)-\hat{B}\left(z^{-1},k+1\right)u\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle {\scriptstyle \hat{B}\left(z^{-1},k+1\right)}}}\arline[rr] &  & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arr\sp(0.47){\scriptscriptstyle y\left(k+1\right)} & \bblk{{\textstyle {\scriptstyle \hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+A series-parallel structure: 
+\begin_inset Formula $\hat{A}\left(z^{-1},k+1\right)$
+\end_inset
+
+--in series with plant; 
+\begin_inset Formula $\hat{B}\left(z^{-1},k+1\right)$
+\end_inset
+
+--in parallel with the plant
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Parallel adjustable system (output-error method)
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Observation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+If hyperstability holds such that 
+\begin_inset Formula $\epsilon\left(k+1\right)\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{y}\left(k+1\right)\to y\left(k+1\right)$
+\end_inset
+
+, it seems fine to do instead:
+\begin_inset Formula 
+\begin{equation}
+\hat{y}\left(k+1\right)=\hat{B}\left(z^{-1},k+1\right)u\left(k\right)-\left(\hat{A}\left(z^{-1},k+1\right)-1\right)\hat{y}\left(k+1\right)\label{eq:parallel_prioriY-1-1}
+\end{equation}
+
+\end_inset
+
+i.e.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{u\left(k\right)\arr & \bblk{{\displaystyle {\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}}\arr & \hat{y}\left(k+1\right)}
+\]
+
+\end_inset
+
+then we have a parallel structure
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+it turns out this brings certain advantages
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Other names
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+is also called an output-error method 
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle {\scriptstyle \hat{B}\left(z^{-1},k+1\right)}}}\arline[rr] &  & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arr\sp(0.47){\scriptscriptstyle y\left(k+1\right)} & \bblk{{\textstyle {\scriptstyle \hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+is also called an equation-error method
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Benefits of parallel algorithms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Intuition: when there is noise,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}\arline[rr] &  & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arline[r]\sp>>+ & \cblk\arline[r] & \dotblk\aru\sp>>+\sb<<{y\left(k+1\right)}\\
+ &  &  & \aru\sp{n\left(k\right)}\sb>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+provides better convergence of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ than
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle {\scriptstyle \hat{B}\left(z^{-1},k+1\right)}}}\arline[rrr] &  &  & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  &  &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arr\sp>>+ & \cblk\arr\sp(0.27){\scriptscriptstyle y\left(k+1\right)} & \bblk{{\textstyle {\scriptstyle \hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  &  & \aru\sp{n\left(k\right)}\sb>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will talk about the PAA convergence in a few more lectures.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+RLS-based parallel PAA
+\end_layout
+
+\begin_layout Subsection
+Formulas
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.2pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle \frac{b_{o}+b_{1}z^{-1}+\dots+b_{m}z^{-m}}{1+a_{1}z^{-1}+\dots+a_{n}z^{-n}}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAA summary:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+a priori 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+\frac{F\left(k\right)\phi\left(k\right)}{1+\phi^{T}\left(k\right)F\left(k\right)\phi\left(k\right)}\epsilon^{o}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+a posteriori
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F^{-1}\left(k+1\right)=\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Formula 
+\[
+\boxed{\phi^{T}\left(k\right)=\left[-\hat{y}\left(k\right),-\hat{y}\left(k-1\right),\dots,-\hat{y}\left(k+1-n\right),u\left(k\right),\dots,u\left(k-m\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+note that in RLS
+\begin_inset Formula 
+\[
+y\left(k+1\right)=B\left(z^{-1}\right)u\left(k\right)-\left(A\left(z^{-1}\right)-1\right)y\left(k+1\right)=\theta^{T}\phi\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+B\left(z^{-1}\right) & =b_{o}+b_{1}z^{-1}+\dots+b_{m}z^{-m}\\
+A\left(z^{-1}\right) & =1+a_{1}z^{-1}+\dots+a_{n}z^{-n}\\
+\theta^{T} & =[a_{1},a_{2},\cdots a_{n},b_{0},b_{1},\cdots,b_{m}]^{T}\\
+\phi\left(k\right) & =[-y(k),\cdots,-y(k+1-n),u(k),u(k-1),\cdots,u(k-m)]^{T}
+\end{align*}
+
+\end_inset
+
+in output error method
+\begin_inset Formula 
+\[
+\hat{y}\left(k+1\right)=\hat{B}\left(z^{-1},k+1\right)u\left(k\right)-\left(\hat{A}\left(z^{-1},k+1\right)-1\right)\hat{y}\left(k+1\right)
+\]
+
+\end_inset
+
+so
+\emph on
+
+\begin_inset Formula 
+\[
+\phi^{T}\left(k\right)=\left[-\hat{y}\left(k\right),-\hat{y}\left(k-1\right),\dots,-\hat{y}\left(k+1-n\right),u\left(k\right),\dots,u\left(k-m\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 1: transformation to a feedback structure
+\end_layout
+
+\begin_layout NoteItem
+substracting 
+\begin_inset Formula $\theta$
+\end_inset
+
+ from both sides of 
+\emph on
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\emph default
+gives
+\begin_inset Formula 
+\[
+\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+parameter estimation error 
+\emph default
+:
+\begin_inset Formula 
+\[
+\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+a posteriori
+\emph default
+ 
+\emph on
+prediction error
+\emph default
+ : 
+\begin_inset Formula $y\left(k+1\right)=\frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}u\left(k\right)$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{align*}
+B\left(z^{-1}\right)u\left(k\right) & =A\left(z^{-1}\right)y\left(k+1\right)\\
+\hat{B}\left(z^{-1},k+1\right)u\left(k\right) & =\hat{A}\left(z^{-1},k+1\right)\hat{y}\left(k+1\right)
+\end{align*}
+
+\end_inset
+
+hence
+\begin_inset Formula 
+\begin{multline*}
+A\left(z^{-1}\right)y\left(k+1\right)-\hat{A}\left(z^{-1},k+1\right)\hat{y}\left(k+1\right)\boxed{\pm A\left(z^{-1}\right)\hat{y}\left(k+1\right)}\\
+=B\left(z^{-1}\right)u\left(k\right)-\hat{B}\left(z^{-1},k+1\right)u\left(k\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\textnormal{i.e. }A\left(z^{-1}\right)\epsilon\left(k+1\right)=[B\left(z^{-1}\right)-\hat{B}\left(z^{-1},k+1\right)]u\left(k\right)\\
+-[A\left(z^{-1}\right)-\hat{A}\left(z^{-1},k+1\right)]\hat{y}\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+adding and substracting 
+\begin_inset Formula $A\left(z^{-1}\right)\hat{y}\left(k+1\right)$
+\end_inset
+
+ was for getting the term 
+\begin_inset Formula $\epsilon\left(k+1\right)=y\left(k+1\right)-\hat{y}\left(k+1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 1: transformation to a feedback structure
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+a posteriori
+\emph default
+ 
+\emph on
+prediction error
+\emph default
+ (cont'd):
+\begin_inset Formula 
+\begin{multline*}
+A\left(z^{-1}\right)\epsilon\left(k+1\right)=\overbrace{\left[B\left(z^{-1}\right)-\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right)}^{\left[\bigstar\right]}\\
+-\left[A\left(z^{-1}\right)-\hat{A}\left(z^{-1},k+1\right)\right]\hat{y}\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Look at 
+\begin_inset Formula $\left[\bigstar\right]$
+\end_inset
+
+: 
+\begin_inset Formula $B\left(z^{-1}\right)=b_{0}+b_{1}z^{-1}+\dots+b_{m}z^{-m}$
+\end_inset
+
+ gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\left[B\left(z^{-1}\right)-\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right)\\
+=\left[\begin{array}{c}
+b_{0}-\hat{b}_{0}\left(k+1\right)\\
+b_{1}-\hat{b}_{1}\left(k+1\right)\\
+\vdots\\
+b_{m}-\hat{b}_{m}\left(k+1\right)
+\end{array}\right]^{T}\left[\begin{array}{c}
+1\\
+z^{-1}\\
+\vdots\\
+z^{-m}
+\end{array}\right]u\left(k\right)=\left[\begin{array}{c}
+b_{0}-\hat{b}_{0}\left(k+1\right)\\
+b_{1}-\hat{b}_{1}\left(k+1\right)\\
+\vdots\\
+b_{m}-\hat{b}_{m}\left(k+1\right)
+\end{array}\right]^{T}\left[\begin{array}{c}
+u\left(k\right)\\
+u\left(k-1\right)\\
+\vdots\\
+u\left(k-m\right)
+\end{array}\right]
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 1: transformation to a feedback structure
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+a posteriori
+\emph default
+ 
+\emph on
+prediction error
+\emph default
+ (cont'd):
+\begin_inset Formula 
+\begin{multline*}
+A\left(z^{-1}\right)\epsilon\left(k+1\right)=\\
+\left[B\left(z^{-1}\right)-\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right)-\left[A\left(z^{-1}\right)-\hat{A}\left(z^{-1},k+1\right)\right]\hat{y}\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, for 
+\begin_inset Formula $A\left(z^{-1}\right)=1+a_{1}z^{-1}+\dots+a_{n}z^{-n}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\hat{A}\left(z^{-1},k+1\right)-A\left(z^{-1}\right)\right]\hat{y}\left(k+1\right)=\left[\begin{array}{c}
+a_{1}-\hat{a}_{1}\left(k+1\right)\\
+a_{2}-\hat{a}_{2}\left(k+1\right)\\
+\vdots\\
+a_{n}-\hat{a}_{n}\left(k+1\right)
+\end{array}\right]^{T}\left[\begin{array}{c}
+-\hat{y}\left(k\right)\\
+-\hat{y}\left(k-1\right)\\
+\vdots\\
+-\hat{y}\left(k+1-n\right)
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+Recall: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\theta^{T}=[a_{1},a_{2},\cdots a_{n},b_{0},b_{1},\cdots,b_{m}]^{T}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi\left(k\right)=\left[-\hat{y}\left(k\right),-\hat{y}\left(k-1\right),\dots,-\hat{y}\left(k+1-n\right),u\left(k\right),\dots,u\left(k-m\right)\right]
+\]
+
+\end_inset
+
+hence
+\begin_inset Formula 
+\begin{multline*}
+A\left(z^{-1}\right)\epsilon\left(k+1\right)=\left[B\left(z^{-1}\right)-\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right)\\
+-\left[A\left(z^{-1}\right)-\hat{A}\left(z^{-1},k+1\right)\right]\hat{y}\left(k+1\right)=\underline{-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+keep in mind that 
+\begin_inset Formula $\tilde{\theta}=\hat{\theta}-\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula 
+\begin{multline*}
+\boxed{A\left(z^{-1}\right)\epsilon\left(k+1\right)}=\left[B\left(z^{-1}\right)-\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right)\\
+-\left[A\left(z^{-1}\right)-\hat{A}\left(z^{-1},k+1\right)\right]\hat{y}\left(k+1\right)\boxed{=-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 1: transformation to a feedback structure
+\end_layout
+
+\begin_layout Standard
+PAA equations:
+\begin_inset Formula 
+\begin{align*}
+\tilde{\theta}\left(k+1\right) & =\tilde{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)\\
+A\left(z^{-1}\right)\epsilon\left(k+1\right) & =-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+equivalent block diagram:
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk{F\left(k\right)}\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+more detailly
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{\dotblk\ar[r]\sp(0.6){0\ +} & \cblk\ar[rrrr]\sp{-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} &  &  &  & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arline[rrrrr]\sp{\epsilon\left(k+1\right)} &  &  &  &  & \dotblk\ar[r]\arline[dd] & \dotblk\\
+ &  & \dotblk\\
+ & \dotblk\ar[uu]\sb(0.8)- &  & *[F]{\times}\arline[ll] & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk{F\left(k\right)}\arl\sb>>+ & *[F]{\times}\arl &  & \dotblk\ar[ll]\\
+ &  &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+ &  &  & \dotblk\\
+ &  &  &  &  & \underset{\textnormal{nonlinear block}}{} &  &  & \save"2,3"."5,10"*[F--]\frm{}\restore & \dotblk\\
+ &  &  & \dotblk\ar[uuu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\ar[uuu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Stability requirement for PAAs with fixed adaptation gain
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 2: Popov inequality
+\end_layout
+
+\begin_layout Standard
+We will consider a simplified case with 
+\bar under
+
+\begin_inset Formula $F\left(k\right)=F\succ0$
+\end_inset
+
+
+\bar default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk F\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+The nonlinear block is exactly the same as that in RLS, hence satisfying
+ Popov inequality:
+\begin_inset Formula 
+\[
+\sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)\geq-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\tilde{\theta}\left(0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 3: SPR condition
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk F\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $G\left(z^{-1}\right)=\frac{1}{A\left(z^{-1}\right)}$
+\end_inset
+
+ is SPR, then the PAA is asmptotically hyperstable
+\end_layout
+
+\begin_layout Standard
+Remarks:
+\end_layout
+
+\begin_layout Itemize
+RLS has an identity block: 
+\begin_inset Formula $G\left(z^{-1}\right)=1$
+\end_inset
+
+ which is independent of the plant
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1/A\left(z^{-1}\right)$
+\end_inset
+
+ depends on the plant (usually not SPR)
+\end_layout
+
+\begin_layout Itemize
+several other PAAs are developed to relax the SPR condition
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Stability requirement for PAAs with time-varying adaptation gain
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stability of RLS based parallel PAA: extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For the case of a time-varying 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ with
+\emph on
+
+\begin_inset Formula 
+\[
+F^{-1}\left(k+1\right)=\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)
+\]
+
+\end_inset
+
+
+\emph default
+
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk{F\left(k\right)}\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+the nonlinear block is more involved; we'll prove later, that it requires
+\begin_inset Formula 
+\[
+\frac{1}{A\left(z^{-1}\right)}-\frac{1}{2}\lambda,\ \textnormal{where }\lambda=\max_{k}\lambda_{2}\left(k\right)<2,\ \textnormal{to be SPR}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Parallel PAAs with relaxed SPR requirements
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parallel algorithm with a fixed compensator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Instead of:
+\emph on
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+\frac{F\left(k\right)\phi\left(k\right)}{1+\phi^{T}\left(k\right)F\left(k\right)\phi\left(k\right)}\epsilon^{o}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F^{-1}\left(k+1\right)=\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi^{T}\left(k\right)=\left[-\hat{y}\left(k\right),-\hat{y}\left(k-1\right),\dots,-\hat{y}\left(k+1-n\right),u\left(k\right),\dots,u\left(k-m\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+do:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.24in}
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+\frac{F\left(k\right)\phi\left(k\right)}{1+\phi^{T}\left(k\right)F\left(k\right)\phi\left(k\right)}\nu^{o}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\emph default
+where
+\emph on
+ 
+\begin_inset Formula 
+\begin{align*}
+\nu\left(k+1\right) & =C\left(z^{-1}\right)\epsilon\left(k+1\right)=\left(c_{0}+c_{1}z^{-1}+\dots c_{n}z^{-n}\right)\epsilon\left(k+1\right)\\
+\nu^{o}\left(k+1\right) & =c_{0}\epsilon^{o}\left(k+1\right)+c_{1}\epsilon\left(k\right)+\dots c_{n}\epsilon\left(k-n+1\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+note that 
+\begin_inset Formula $ $
+\end_inset
+
+the first element is 
+\begin_inset Formula $\epsilon^{o}\left(k+1\right)$
+\end_inset
+
+ and not 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ in 
+\begin_inset Formula 
+\[
+\nu^{o}\left(k+1\right)=c_{0}\epsilon^{o}\left(k+1\right)+c_{1}\epsilon\left(k\right)+\dots c_{n}\epsilon\left(k-n+1\right)
+\]
+
+\end_inset
+
+as 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ is not available before updating 
+\begin_inset Formula $\hat{\theta}\left(k+1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parallel algorithm with a fixed compensator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The SPR requirement becomes 
+\begin_inset Formula 
+\begin{equation}
+\frac{C\left(z^{-1}\right)}{A\left(z^{-1}\right)}-\frac{\lambda}{2},\ \lambda=\max_{k}\lambda_{2}\left(k\right)<2\label{eq:SPR_fxdComp}
+\end{equation}
+
+\end_inset
+
+should be SPR.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remark:
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+'s are close to 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+'s, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SPR_fxdComp"
+
+\end_inset
+
+) approximates 
+\begin_inset Formula $1-\lambda/2>0$
+\end_inset
+
+, and hence is likely to be SPR
+\end_layout
+
+\begin_layout Itemize
+problem: 
+\begin_inset Formula $A\left(z^{-1}\right)$
+\end_inset
+
+ is unknown 
+\emph on
+a priori
+\emph default
+ for the assigning of 
+\begin_inset Formula $C\left(z^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+solution: make 
+\begin_inset Formula $C\left(z^{-1}\right)$
+\end_inset
+
+ to be adjustable as well
+\end_layout
+
+\begin_layout NoteItem
+the equivalent block diagram is
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{\frac{C\left(z^{-1}\right)}{A\left(z^{-1}\right)}}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk{F\left(k\right)}\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parallel algorithm with an adjustable compensator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+If 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A\left(z^{-1}\right)=1+a_{1}z^{-1}+\dots+a_{n}z^{-n}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, let 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\hat{C}\left(z^{-1}\right)=1+\hat{c}_{1}z^{-1}+\dots+\hat{c}_{n}z^{-n}$
+\end_inset
+
+
+\emph on
+ 
+\emph default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+\nu\left(k+1\right) & =\hat{C}\left(z^{-1},k+1\right)\epsilon\left(k+1\right)\\
+\nu^{o}\left(k+1\right) & =\epsilon^{o}\left(k+1\right)+\sum_{i=1}^{n}\hat{c}_{i}\left(k\right)\epsilon\left(k+1-i\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+do
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Formula 
+\begin{align*}
+\hat{\theta}_{e}\left(k+1\right) & =\hat{\theta}_{e}\left(k\right)+\frac{F_{e}\left(k\right)\phi_{e}\left(k\right)}{1+\phi_{e}^{T}\left(k\right)F_{e}\left(k\right)\phi_{e}\left(k\right)}\nu^{o}\left(k+1\right)\\
+\hat{\theta}_{e}^{T}\left(k\right) & =\left[\hat{\theta}^{T}\left(k\right),\hat{c}_{1}\left(k\right),\dots,\hat{c}_{n}\left(k\right)\right]\\
+\phi_{e}^{T}\left(k\right) & =\left[\phi^{T}\left(k\right),-\epsilon\left(k\right),\dots,-\epsilon\left(k+1-n\right)\right]\\
+F_{e}^{-1}\left(k+1\right) & =\lambda_{1}\left(k\right)F_{e}^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi_{e}\left(k\right)\phi_{e}^{T}\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\emph default
+which has guaranteed 
+\series bold
+asymptotical stablility.
+\end_layout
+
+\begin_layout NoteItem
+it can be shown that the equivalent block diagram is
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1pc}\xymatrix{{\scriptstyle 0}\ar[r]\sp(0.8)+ & \cblk\ar[rr] &  & \bblk 1\arline[rr]\sp{\scriptstyle \nu\left(k+1\right)} &  & \dotblk\arline[d]\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}_{e}^{T}\left(k+1\right)\phi_{e}\left(k\right)} & \bblk{\tilde{\theta}_{e}\left(k+1\right)=\tilde{\theta}_{e}\left(k\right)+F_{e}\left(k\right)\phi_{e}\left(k\right)\nu\left(k+1\right)}\arl & *[F]{\times}\arl & \dotblk\arl\\
+ &  & \dotblk\arline[u]\sb<<{\phi_{e}\left(k\right)} &  & \dotblk\arline[u]\sp<<{\phi_{e}\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+to do that, we note the following algebra:
+\begin_inset Formula 
+\begin{align*}
+A\left(z^{-1}\right)\epsilon\left(k+1\right) & =-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\\
+\Rightarrow\epsilon\left(k+1\right) & =\left(1-A\left(z^{-1}\right)\right)\epsilon\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\nu\left(k+1\right) & =\epsilon\left(k+1\right)+\left(\hat{C}\left(z^{-1}\right)-1\right)\epsilon\left(k+1\right)\\
+ & =-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)-\left(A\left(z^{-1}\right)-\hat{C}\left(z^{-1}\right)\right)\epsilon\left(k+1\right)\\
+ & =-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)-\tilde{C}\left(z^{-1}\right)\epsilon\left(k+1\right)\\
+ & =-\tilde{\theta}_{e}^{T}\left(k+1\right)\phi_{e}\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+no special SPR requirements
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General PAA block diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.3in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{H\left(z^{-1}\right)}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle }\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l] & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)\textnormal{ or }\tilde{\theta}_{e}\left(k+1\right)} & \bblk{F\left(k\right)}\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)\textnormal{ or }\phi_{e}\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)\textnormal{ or }\phi_{e}\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H\left(z^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PAA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RLS/parallel predictor with adjustable compensator
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\scriptstyle 1/A\left(z^{-1}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+parallel predictor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\scriptstyle C\left(z^{-1}\right)/A\left(z^{-1}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+parallel predictor with fixed compensator
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General PAA block diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.3in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk{H\left(z^{-1}\right)}\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle }\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l] & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)\textnormal{ or }\tilde{\theta}_{e}\left(k+1\right)} & \bblk{F\left(k\right)}\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)\textnormal{ or }\phi_{e}\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)\textnormal{ or }\phi_{e}\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $F\left(k\right)=F$
+\end_inset
+
+, 
+\begin_inset Formula $H\left(z^{-1}\right)$
+\end_inset
+
+ being SPR is sufficient for asymptotic stability
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ is time-varying, we will show next: 
+\begin_inset Formula $H\left(z^{-1}\right)-\frac{1}{2}\lambda$
+\end_inset
+
+ being SPR is sufficient for asymptotic stability
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+PAAs with time-varying adaptation gains (revisit)
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PAA with time-varying adaptation gains
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+\hspace{-0.2in}\negthinspace\xyR{1.3pc}\xyC{1pc}\xymatrix{{\scriptstyle 0}\ar[r]\sp(0.8)+ & \cblk\ar[rr] &  & \bblk{H\left(z^{-1}\right)}\arline[rr]\sp{\scriptstyle \epsilon\left(k+1\right)} &  & \dotblk\arline[d]\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \bblk{\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)}\arl & *[F]{\times}\arl & \dotblk\arl\\
+ &  & \dotblk\arline[u]\sb<<{\phi\left(k\right)} &  & \dotblk\arline[u]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F^{-1}\left(k+1\right)=\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi^{T}\left(k\right)\phi\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+unfortunately, the nonlinear block does not satisfy Popov inequality (not
+ passive)
+\end_layout
+
+\begin_layout NoteItem
+intuitively, 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ brings additional energy generation in the nonlinear block
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PAA with time-varying adaptation gains
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+a modification can re-gain the passivity of the feedback block
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xyC{1.1pc}\xyR{0.7pc}\xymatrix{\cblk\ar[r] & \bblk{H\left(z^{-1}\right)}\arline[r]\sp>>>>>{\epsilon\left(k+1\right)} & \dotblk\arline[d]\\
+\dotblk\ar[u]\sb(0.8)-\sp{w\left(k\right)} & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[l]\sp(1.3){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula 
+\[
+\xyC{1.1pc}\xyR{0.7pc}\xymatrix{\cblk\ar[r] & \bblk{H\left(z^{-1}\right)}\arline[r]\sp>>>>>{\epsilon\left(k+1\right)} & \dotblk\ard\sp>>+\\
+\dotblk\arr\aru & \bblk{\lambda/2}\arr\sb>>+ & \cblk\ard\sp>>+\\
+\dotblk\arr & \bblk{\lambda/2}\arr\sb>>- & \cblk\ard\sp>>+\\
+\dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arr\sb>>+ & \cblk\ard\sp>>+\\
+\dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arr\sb>>- & \cblk\arline[d]\\
+\dotblk\arline[uuuuu]\sb>>-\sp{w\left(k\right)} & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PAA with time-varying adaptation gains
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+a modification can re-gain the passivity of the feedback block
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula 
+\[
+\xyC{1.1pc}\xyR{0.7pc}\xymatrix{\cblk\ar[r] & \bblk{H\left(z^{-1}\right)}\arline[r]\sp>>>>>{\epsilon\left(k+1\right)} & \dotblk\ard\sp>>+\\
+\dotblk\arr\aru & \bblk{\lambda/2}\arr\sb>>+ & \cblk\ard\sp>>+\\
+\dotblk\arr & \bblk{\lambda/2}\arr\sb>>- & \cblk\ard\sp>>+\\
+\dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arr\sb>>+ & \cblk\ard\sp>>+\\
+\dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arr\sb>>- & \cblk\arline[d]\\
+\dotblk\arline[uuuuu]\sb>>-\sb{w\left(k\right)} & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[l] & \dotblk\ar[l]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.7pc}\xymatrix{\cblk\ar[rr] & \dotblk\arline[d] & \bblk{H\left(z^{-1}\right)}\arr\sp>>+ & \cblk\arline[r] & \dotblk\arline[d]\\
+\dotblk & \dotblk\arr & \bblk{\lambda/2}\arline[r] & \dotblk\aru\sb>>- & \dotblk\ard\sp>>+\\
+\dotblk\ar[rr] &  & \bblk{\frac{1}{2}\left(\lambda-\lambda_{2}\left(k\right)\right)}\ar[rr]\sb>>- &  & \cblk\arline[dd]\sp{s\left(k\right)}\\
+\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sp>>-\\
+\dotblk\ar[uuuu]\sb>>-\sp{w\left(k\right)} & \dotblk\arline[u] & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[ll] & \cblk\arl & \dotblk\ar[l]\sp>>+
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.9pc}\xymatrix{\cblk\ar[rr] & \dotblk\arline[d] & \bblk{H\left(z^{-1}\right)}\arr\sp>>+ & \cblk\arline[r] & \dotblk\arline[d]\\
+\dotblk & \dotblk\arr & \bblk{\lambda/2}\arline[r] & \dotblk\aru\sb>>- & \dotblk\ar[dd]\sb>>>>+ & \dotblk\\
+ &  &  &  & \dotblk\dotblk\ar@{--}[llll]\ar@{--}[r] & \dotblk\ar@{=>}[d]\sp{\textnormal{NL blk}}\ar@{=>}[u]\sb{\textnormal{Linear blk}}\\
+\dotblk\ar[rr] &  & \bblk{\frac{1}{2}\left(\lambda-\lambda_{2}\left(k\right)\right)}\ar[rr]\sb>>>>- &  & \cblk\arline[dd]\sp(0.3){s\left(k\right)} & \dotblk\\
+\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\ar[uuuuu]\sb>>-\sb{w\left(k\right)} & \dotblk\arline[u] & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[ll] & \cblk\arl & \dotblk\ar[l]\sp>>+
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PAA with time-varying adaptation gains
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+step 1: show that the following is passive
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{2.3pc}\xymatrix{\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk & \dotblk\arline[u]\arl\sp(0.6){w\left(k\right)=\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[l] & \cblk\arl\sp(0.2){\epsilon\left(k+1\right)} & \dotblk\ar[l]\sp>>+\sb<<<{s\left(k\right)}
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+step 2: the following is then passive
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.4in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.7pc}\xymatrix{\dotblk &  &  &  & \dotblk\ard\sp>>+\\
+\dotblk\ar[rr]\aru &  & \bblk{\frac{1}{2}\left(\lambda-\lambda_{2}\left(k\right)\right)}\ar[rr]\sb>>- &  & \cblk\arline[dd]\sp{s\left(k\right)}\\
+\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\arline[uu]\sp{w\left(k\right)} & \dotblk\arline[u] & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[ll] & \cblk\arl & \dotblk\ar[l]\sp>>+
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+note that it is a feedback connection of a passive block with 
+\begin_inset Formula $\frac{1}{2}\left(\lambda-\lambda_{2}\left(k\right)\right)\geq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout NoteItem
+note that the input to PAA 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ equation is always 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and the output is always 
+\begin_inset Formula $\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1pc}\xymatrix{{\scriptstyle 0}\ar[r]\sp(0.8)+ & \cblk\ar[rr] &  & \bblk{H\left(z^{-1}\right)}\arline[rr]\sp{\scriptstyle \epsilon\left(k+1\right)} &  & \dotblk\arline[d]\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \bblk{\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)}\arl & *[F]{\times}\arl & \dotblk\arl\\
+ &  & \dotblk\arline[u]\sb<<{\phi\left(k\right)} &  & \dotblk\arline[u]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+step 3: SPR condition for the linear block 
+\begin_inset Formula $H\left(z^{-1}\right)-\frac{\lambda}{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Passivity of the sub nonlinear block
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.3in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{2.3pc}\xymatrix{\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk & \dotblk\arline[u]\arl\sp(0.6){w\left(k\right)=\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[l] & \cblk\arl\sp(0.2){\epsilon\left(k+1\right)} & \dotblk\ar[l]\sp>>+\sb<<<{s\left(k\right)}
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s\left(k\right)=\epsilon\left(k+1\right)+\frac{\lambda_{2}\left(k\right)}{2}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)$
+\end_inset
+
+ gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \sum_{k=0}^{k_{1}}w\left(k\right)s\left(k\right)\\
+= & \sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\left[\epsilon\left(k+1\right)+\frac{\lambda_{2}\left(k\right)}{2}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\right]\\
+\Downarrow & \textnormal{note that }F^{-1}\left(k+1\right)=\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)\\
+= & \sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left[F^{-1}\left(k+1\right)-\lambda_{1}\left(k\right)F^{-1}\left(k\right)\right]\tilde{\theta}\left(k+1\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+which is no less than 
+\begin_inset Formula $-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\left(0\right)\tilde{\theta}\left(0\right)$
+\end_inset
+
+ as shown next.
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula 
+\[
+\epsilon\left(k+1\right)=s\left(k\right)-\frac{\lambda_{2}\left(k\right)}{2}w\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Proof of passivity of the sub nonlinear block
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+hence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)=\sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\left(\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+Combining terms and after some algebra (see appendix), we get
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+\sum_{k=0}^{k_{1}}w\left(k\right)s\left(k\right)=\sum_{k=0}^{k_{1}}\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left(1-\lambda_{1}\left(k\right)\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)\\
++\sum_{k=0}^{k_{1}}\frac{1}{2}\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]^{T}F^{-1}\left(k\right)\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]\\
++\underbrace{\sum_{k=0}^{k_{1}}\frac{1}{2}\left[\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)\right]}_{\frac{1}{2}\tilde{\theta}^{T}\left(k_{1}+1\right)F^{-1}\left(k_{1}\right)\tilde{\theta}\left(k_{1}+1\right)-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\left(0\right)\tilde{\theta}\left(0\right)\geq-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\left(0\right)\tilde{\theta}\left(0\right)}\label{eq:subpaa}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.7pc}\xymatrix{\cblk\ar[rr] & \dotblk\arline[d] & \bblk{H\left(z^{-1}\right)}\arr\sp>>+ & \cblk\arline[r] & \dotblk\arline[d]\\
+\dotblk & \dotblk\arr & \bblk{\lambda/2}\arline[r] & \dotblk\aru\sb>>- & \dotblk\ard\sp>>+\\
+\dotblk\ar[rr] &  & \bblk{\frac{1}{2}\left(\lambda-\lambda_{2}\left(k\right)\right)}\ar[rr]\sb>>- &  & \cblk\arline[dd]\sp{s\left(k\right)}\\
+\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sp>>-\\
+\dotblk\ar[uuuu]\sb>>-\sp{w\left(k\right)} & \dotblk\arline[u] & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[ll] & \cblk\arl & \dotblk\ar[l]\sp>>+
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.9pc}\xymatrix{\cblk\ar[rr] & \dotblk\arline[d] & \bblk{H\left(z^{-1}\right)}\arr\sp>>+ & \cblk\arline[r] & \dotblk\arline[d]\\
+\dotblk & \dotblk\arr & \bblk{\lambda/2}\arline[r] & \dotblk\aru\sb>>- & \dotblk\ar[dd]\sb>>>>+ & \dotblk\\
+ &  &  &  & \dotblk\dotblk\ar@{--}[llll]\ar@{--}[r] & \dotblk\ar@{=>}[d]\sp{\textnormal{NL blk}}\ar@{=>}[u]\sb{\textnormal{Linear blk}}\\
+\dotblk\ar[rr] &  & \bblk{\frac{1}{2}\left(\lambda-\lambda_{2}\left(k\right)\right)}\ar[rr]\sb>>>>- &  & \cblk\arline[dd]\sp(0.3){s\left(k\right)} & \dotblk\\
+\dotblk & \dotblk\arr & \bblk{\lambda_{2}\left(k\right)/2}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\ar[uuuuu]\sb>>-\sb{w\left(k\right)} & \dotblk\arline[u] & \bblk{\textnormal{PAA }\tilde{\theta}\left(k\right)\textnormal{ Eq}}\arline[ll] & \cblk\arl & \dotblk\ar[l]\sp>>+
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+In summary, the NL block indeed satisfies Popov inequality.
+\end_layout
+
+\begin_layout Standard
+For stability of PAA, it is sufficient that 
+\begin_inset Formula 
+\[
+H\left(z^{-1}\right)-\frac{\lambda}{2}\ \textnormal{is SPR}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: derivation of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:subpaa"
+
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout NoteItem
+Observe the quadratic forms of 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ We need to replace 
+\begin_inset Formula $\phi\left(k\right)\epsilon\left(k+1\right)$
+\end_inset
+
+ with some 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ terms and 
+\begin_inset Quotes eld
+\end_inset
+
+complete the squares
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Details of the derivations
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tiny
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+ & \sum_{k=0}^{k_{1}}\underline{\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\left(\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right)}+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left[F^{-1}\left(k+1\right)-\lambda_{1}\left(k\right)F^{-1}\left(k\right)\right]\tilde{\theta}\left(k+1\right)\nonumber \\
+= & \sum_{k=0}^{k_{1}}\underline{\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)}+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left[F^{-1}\left(k+1\right)-\lambda_{1}\left(k\right)F^{-1}\left(k\right)\right]\tilde{\theta}\left(k+1\right)\nonumber \\
+= & \sum_{k=0}^{k_{1}}\underline{\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)}-\boxed{\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)}+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left[F^{-1}\left(k+1\right)-\underline{\lambda_{1}\left(k\right)F^{-1}\left(k\right)}\right]\tilde{\theta}\left(k+1\right)\nonumber \\
+= & \sum_{k=0}^{k_{1}}\underline{\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left(1-\lambda_{1}\left(k\right)\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)}-\boxed{\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)}\nonumber \\
+ & \qquad+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k+1\right)\tilde{\theta}\left(k+1\right)\label{eq:tvGain_popov}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+The term 
+\begin_inset Formula $\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left(1-\lambda_{1}\left(k\right)\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)$
+\end_inset
+
+ is always none-negative if 
+\begin_inset Formula $1-\lambda_{1}\left(k\right)\geq0$
+\end_inset
+
+, which is the assumption in the forgetting factor definition.
+ We only need to worry about
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sum_{k=0}^{k_{1}}\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)+\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k+1\right)\tilde{\theta}\left(k+1\right)\label{eq:tvGain_popov1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: derivation of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:subpaa"
+
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout NoteItem
+For the remaining terms, there is a cross product term 
+\begin_inset Formula $\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)$
+\end_inset
+
+ but no 
+\begin_inset Formula $\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)$
+\end_inset
+
+ terms.
+ We need to add and substract terms to complete the squares.
+\end_layout
+
+\begin_layout NoteItem
+Notice that
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tiny
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]^{T}F^{-1}\left(k\right)\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]=\underline{\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-2\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)}+\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The underlined terms are already available in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tvGain_popov1"
+
+\end_inset
+
+).
+ Adding and substracting terms in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tvGain_popov1"
+
+\end_inset
+
+) gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \sum_{k=0}^{k_{1}}\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-\frac{1}{2}\underline{\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)}\\
+ & +\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k+1\right)\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)+\underline{\frac{1}{2}\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)}\\
+= & \sum_{k=0}^{k_{1}}\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-\frac{1}{2}\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)\\
+ & +\underbrace{\frac{1}{2}\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]^{T}F^{-1}\left(k\right)\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]}_{\geq0}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: derivation of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:subpaa"
+
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Summarizing, we get
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=0}^{k_{1}}w\left(k\right)s\left(k\right)=\sum_{k=0}^{k_{1}}\frac{1}{2}\tilde{\theta}^{T}\left(k+1\right)\left(1-\lambda_{1}\left(k\right)\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)\\
++\sum_{k=0}^{k_{1}}\frac{1}{2}\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]^{T}F^{-1}\left(k\right)\left[\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right]\\
++\underbrace{\sum_{k=0}^{k_{1}}\frac{1}{2}\left[\tilde{\theta}^{T}\left(k+1\right)F^{-1}\left(k\right)\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k\right)F^{-1}\left(k\right)\tilde{\theta}\left(k\right)\right]}_{\frac{1}{2}\tilde{\theta}^{T}\left(k_{1}+1\right)F^{-1}\left(k_{1}\right)\tilde{\theta}\left(k_{1}+1\right)-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\left(0\right)\tilde{\theta}\left(0\right)}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence
+\begin_inset Formula 
+\[
+\sum_{k=0}^{k_{1}}w\left(k\right)s\left(k\right)\geq-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\left(0\right)\tilde{\theta}\left(0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

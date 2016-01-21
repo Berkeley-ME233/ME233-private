@@ -1,0 +1,2325 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+%\usepackage{color}
+
+\input{mtikzStyle}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 8: Discretization and Implementation of Continuous-time Design
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Discrete-time frequency response
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Discretization of continuous-time design
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Aliasing and anti-aliasing
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Discrete-time domain control design
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+why are we learning this:
+\end_layout
+
+\begin_layout Itemize
+nowadays controllers are implemented in discrete-time domain
+\end_layout
+
+\begin_layout Itemize
+implementation media: digital signal processor, field-programmable gate
+ array (FPGA), etc
+\end_layout
+
+\begin_layout Itemize
+either: controller is designed in continuous-time domain and implemented
+ digitally
+\end_layout
+
+\begin_layout Itemize
+or: controller is designed directly in discrete-time domain
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Discrete-time frequency response
+\begin_inset Note Note
+status open
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous- and discrete-time convolutions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+consider
+\begin_inset Formula 
+\[
+\xymatrix{{\textstyle {\scriptstyle u\ar[r]}} & \bblk G\ar[r] & {\textstyle y}}
+\]
+
+\end_inset
+
+where the signals and systems are all causal
+\end_layout
+
+\begin_layout Itemize
+continuous time: 
+\begin_inset Formula 
+\[
+y\left(t\right)=\int_{0}^{t}g\left(\tau\right)u\left(t-\tau\right)\d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+discrete time:
+\begin_inset Formula 
+\[
+y\left(k\right)=\sum_{j=0}^{k}g\left(j\right)u\left(k-j\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Frequency response of LTI SISO digital systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{{\textstyle {\scriptstyle a\sin\left(\omega T_{s}k\right)\ar[r]}} & \bblk{G\left(z\right)}\ar[r] & {\textstyle {\scriptstyle b\sin\left(\omega T_{s}k+\phi\right)}}\textnormal{ at steady state}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sampling time: 
+\begin_inset Formula $T_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi\left(\e^{j\omega T_{s}}\right)$
+\end_inset
+
+: phase difference between the output and the input
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M\left(\e^{j\omega T_{s}}\right)=b/a$
+\end_inset
+
+: magnitude difference
+\end_layout
+
+\begin_layout Standard
+continuous-time frequency response: 
+\begin_inset Formula 
+\[
+G\left(j\omega\right)=\left.G\left(s\right)\right|\sb{s=j\omega}=\left|G\left(j\omega\right)\right|\e^{j\angle G\left(j\omega\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+discrete-time frequency response:
+\begin_inset Formula 
+\begin{align*}
+G\left(\e^{j\omega T_{s}}\right) & =\left.G\left(z\right)\right|_{z=\e^{j\omega T_{s}}}=\left|G\left(\e^{j\omega T_{s}}\right)\right|\e^{j\angle G\left(\e^{j\omega T_{s}}\right)}\\
+ & =M\left(\e^{j\omega T_{s}}\right)\e^{j\phi\left(\e^{j\omega T_{s}}\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sampling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+sufficient samples must be collected (i.e., fast enough sampling frequency)
+ to recover the frequency of a continuous-time sinusoidal signal (with frequency
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+ in rad/sec)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename src/2000px-CPT-sound-nyquist-thereom-1.5percycle.svg.png
+	lyxscale 30
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sampling example (source: Wikipedia.org)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the sampling frequency 
+\begin_inset Formula $=\frac{2\pi}{T_{s}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Shannon's sampling theorem: the Nyquist frequency (
+\begin_inset Formula $\triangleq\frac{\pi}{T_{s}}$
+\end_inset
+
+) must satisfy
+\begin_inset Formula 
+\[
+-\frac{\pi}{T_{s}}<\omega<\frac{\pi}{T_{s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+intuition: 
+\begin_inset Formula $G\left(j\omega\right)$
+\end_inset
+
+ is obtained by evaluating 
+\begin_inset Formula $\omega$
+\end_inset
+
+ on the imaginary axis; 
+\begin_inset Formula $G\left(e^{j\omega T_{s}}\right)$
+\end_inset
+
+ is obtained by evaluating 
+\begin_inset Formula $z=e^{j\omega T_{s}}$
+\end_inset
+
+ on the unit circle, namely, 
+\begin_inset Formula $\omega T_{s}$
+\end_inset
+
+ evaluated in the range of 
+\begin_inset Formula $\left(-\pi,\pi\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Approximation of continuous-time controllers
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Approximation of continuous-time controllers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+bilinear transform
+\end_layout
+
+\begin_layout Standard
+formula:
+\begin_inset Formula 
+\begin{equation}
+\boxed{s=\frac{2}{T_{s}}\frac{z-1}{z+1}\qquad z=\frac{1+\frac{T_{s}}{2}s}{1-\frac{T_{s}}{2}s}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+intuition:
+\begin_inset Formula 
+\[
+z=\e^{sT_{s}}=\frac{\e^{sT_{s}/2}}{\e^{-sT_{s}/2}}\approx\frac{1+\frac{T_{s}}{2}s}{1-\frac{T_{s}}{2}s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+where the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+last 
+\end_layout
+
+\end_inset
+
+approximation 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sign 
+\end_layout
+
+\end_inset
+
+is from the Taylor expansion 
+\begin_inset Formula $\e^{x}=1+x+\frac{1}{2}x^{2}+\dots$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+implementation: start with 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+, obtain the discrete implementation
+\begin_inset Formula 
+\begin{equation}
+G_{d}\left(z\right)=\left.G\left(s\right)\right|_{s=\frac{2}{T_{s}}\frac{z-1}{z+1}}\label{eq:bilinear}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bilinear transformation maps the closed left half 
+\begin_inset Formula $s$
+\end_inset
+
+-plane to the closed unit ball in z-plane
+\end_layout
+
+\begin_layout NoteItem
+the imaginary axis on 
+\begin_inset Formula $s$
+\end_inset
+
+-plane to the unit circle on z-plane; 
+\end_layout
+
+\begin_layout Standard
+Stability reservation: 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ stable 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $G_{d}\left(z\right)$
+\end_inset
+
+ stable 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Extension: say we want to perform another mapping such that the left-hand
+ side of the s plane is mapped to a unit circle of radius 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Then we need 
+\begin_inset Formula 
+\[
+z=re^{sT}\approx r\frac{1+s\frac{T}{2}}{1-s\frac{T}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Approximation of continuous-time controllers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+history
+\end_layout
+
+\begin_layout Standard
+Bilinear transform is also known as Tustin transform.
+\end_layout
+
+\begin_layout Standard
+Arnold Tustin (16 July 1899 – 9 January 1994): 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+short bio from Wikipedia.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+British engineer, Professor at University of Birmingham and at Imperial
+ College London
+\end_layout
+
+\begin_layout Itemize
+served in the Royal Engineers in World War I
+\end_layout
+
+\begin_layout Itemize
+worked a lot on electrical machines
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Approximation of continuous-time controllers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+frequency mismatch in bilinear transform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mismatched frequency in standard bilinear transformation
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left.\frac{2}{T_{s}}\frac{z-1}{z+1}\right|_{z=\e^{j\omega T_{s}}}=\frac{2}{T_{s}}\frac{\e^{j\omega T_{S}/2}\left(\e^{j\omega T_{S}/2}-\e^{-j\omega T_{S}/2}\right)}{\e^{j\omega T_{S}/2}\left(\e^{j\omega T_{S}/2}+\e^{-j\omega T_{S}/2}\right)}=j\overbrace{\frac{2}{T_{s}}\tan\left(\frac{\omega T_{s}}{2}\right)}^{\omega_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.G\left(s\right)\right|_{s=j\omega}$
+\end_inset
+
+ is the true frequency response at 
+\begin_inset Formula $\omega$
+\end_inset
+
+; yet bilinear implementation gives, 
+\begin_inset Formula 
+\[
+G_{d}\left(\e^{j\omega T_{s}}\right)=\left.G\left(s\right)\right|_{s=j\omega_{v}}\neq\left.G\left(s\right)\right|_{s=j\omega}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+so 
+\begin_inset Formula 
+\[
+\left.s\right|_{s=j\omega}\neq\left.\frac{2}{T_{s}}\frac{z-1}{z+1}\right|_{z=\e^{j\omega T_{s}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm,scale=0.7]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (0,0) -- node[pos=0.99,right]{$
+\backslash
+omega_v$}(6,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (0,0) -- node[pos=0.8,left]{$
+\backslash
+omega$}(0,3.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a) at (0,0)[below]{$0$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (b) at (0,1.8)[left]{$
+\backslash
+pi/T$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-] (0,1.8) -- (6,1.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-] (0,0) -- node[pos=0.7,right]{$Tangent 
+\backslash
+ line 
+\backslash
+ at 
+\backslash
+ 
+\backslash
+omega=
+\backslash
+omega_v=0$}(3.2,3.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (0.5,0) arc (0:45:0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (c) at (0.5,0.2)[right]{$45
+\backslash
+textdegree$};
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+path [thick](0,0) edge [bend left] (7,2.9);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[thick,-] plot   [domain=0:2*pi](
+\backslash
+x,{0.02*atan(
+\backslash
+x)});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Approximation of continuous-time controllers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+bilinear transform with prewarping
+\end_layout
+
+\begin_layout Standard
+goal: extend bilinear transformation such that 
+\begin_inset Formula 
+\[
+\left.G_{d}\left(z\right)\right|_{z=\e^{j\omega T_{s}}}=\left.G\left(s\right)\right|_{s=j\omega}
+\]
+
+\end_inset
+
+at a particular frequency 
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+solution:
+\begin_inset Formula 
+\[
+\boxed{s=p\frac{z-1}{z+1},\qquad z=\frac{1+\frac{1}{p}s}{1-\frac{1}{p}s},\qquad p=\frac{\omega_{p}}{\tan\left(\frac{\omega_{p}T_{s}}{2}\right)}}
+\]
+
+\end_inset
+
+which gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G_{d}\left(z\right)=\left.G\left(s\right)\right|_{s=\frac{\omega_{p}}{\tan(\frac{\omega_{p}T}{2})}\frac{z-1}{z+1}}
+\]
+
+\end_inset
+
+and
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left.\frac{\omega_{p}}{\tan\left(\frac{\omega_{p}T_{s}}{2}\right)}\frac{z-1}{z+1}\right|_{z=\e^{j\omega_{p}T_{s}}}=j\frac{\omega_{p}}{\cancel{\tan\left(\frac{\omega_{p}T_{s}}{2}\right)}}\cancel{\tan\left(\frac{\omega_{p}T_{s}}{2}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+summary: bilinear transform with prewarping
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\boxed{s=p\frac{z-1}{z+1},\qquad z=\frac{1+\frac{1}{p}s}{1-\frac{1}{p}s},\qquad p=\frac{\omega_{p}}{\tan\left(\frac{\omega_{p}T_{s}}{2}\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Approximation of continuous-time controllers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+bilinear transform with prewarping
+\end_layout
+
+\begin_layout Standard
+choosing a prewarping frequency 
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+must be below the Nyquist frequency: 
+\begin_inset Formula 
+\[
+0<\omega_{p}<\frac{\pi}{T_{s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+standard bilinear transform corresponds to the case where 
+\begin_inset Formula $\omega_{p}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the best choice of 
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+ depends on the important features in control design
+\end_layout
+
+\begin_layout Standard
+example choices of 
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+at the cross-over frequency (which helps preserve phase margin)
+\end_layout
+
+\begin_layout Itemize
+at the frequency of a critical notch for compensating system resonances
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Sampling and aliasing
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sampling and aliasing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+sampling maps 
+\begin_inset Formula $ $
+\end_inset
+
+the continuous-time frequency 
+\begin_inset Formula 
+\[
+-\frac{\pi}{T_{s}}<\omega<\frac{\pi}{T_{s}}
+\]
+
+\end_inset
+
+onto the unit circle
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm, scale = 0.6]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[fill=blue!20,draw=blue!20, very thick] (0,-2) rectangle (-3.5,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [blue!50, very thick](-3.5,2) -- (0,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [blue!50, very thick](-3.5,-2) -- (0,-2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [blue!50, very thick](0,-2) -- (0,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (-4,0) -- node[pos=0.99,right]{$Real$}(4,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (0,-4) -- node[pos=0.99,right]{$Imaginary$}(0,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a) at (0,2)[right]{$
+\backslash
+pi/T_s$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (b) at (0,-2)[right]{$-
+\backslash
+pi/T_s$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (c) at (-3,3)[above]{$s-plane$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+filldraw[fill=blue!20,draw=blue!50, very thick] (10,0) circle (2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (6,0) -- node[pos=0.99,right]{$Real$}(14,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (10,-4) -- node[pos=0.99,right]{$Imaginary$}(10,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (d) at (7,3)[above]{$z-plane$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (e) at (8,0.2)[above,left]{$-1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (f) at (12,0.2)[above,right]{$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->,blue!50,very thick] (2,1) -- node[pos=0.5,above,black]{Sampling}(7,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sampling and aliasing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+sampling also maps 
+\begin_inset Formula $ $
+\end_inset
+
+the continuous-time frequencies 
+\begin_inset Formula $\frac{\pi}{T_{s}}<\omega<3\frac{\pi}{T_{s}}$
+\end_inset
+
+, 
+\begin_inset Formula $3\frac{\pi}{T_{s}}<\omega<5\frac{\pi}{T_{s}}$
+\end_inset
+
+, etc, onto the unit circle
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm, scale = 0.8]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+filldraw[fill=blue!20,draw=blue!20, very thick] (0,1) rectangle (-2,3);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (-3,0) -- node[pos=0.99,right]{$Real$}(3,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (0,-2) -- node[pos=0.99,right]{$Imaginary$}(0,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [draw = blue!50, very thick](-2,3) -- (0,3);
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [draw = blue!50, very thick](-2,1) -- (0,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [draw = blue!50, very thick](0,1) -- (0,3);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a) at (0,1)[right]{$
+\backslash
+pi/T_s$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (b) at (0,3)[right]{$3
+\backslash
+pi/T_s$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (c) at (0,-1)[right]{$-
+\backslash
+pi/T_s$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (d) at (-2,-1.5)[below]{$s-plane$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+filldraw[fill=blue!20,draw=blue!50, very thick] (8,0) circle (1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (5.5,0) -- node[pos=0.99,right]{$Real$}(10.5,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (8,-2) -- node[pos=0.99,right]{$Imaginary$}(8,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (d) at (6,-1.5)[below]{$z-plane$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (e) at (6.5,0.2)[above,left]{$-1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (f) at (9.5,0.2)[above,right]{$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->,blue!50,very thick] (1,2) -- node[pos=0.3,above=0.5,black]{Sampling}(6,1)
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sampling and aliasing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Sampling and Aliasing
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${\scriptstyle T_{s}=1/60}$
+\end_inset
+
+ sec (Nyquist frequency 30 Hz).
+\end_layout
+
+\begin_layout Example
+a continuous-time 10-Hz signal [10 Hz
+\begin_inset Formula $\leftrightarrow{\scriptstyle 2\pi\times10}$
+\end_inset
+
+ rad/sec 
+\begin_inset Formula ${\scriptstyle \in\left(-\pi/T_{s},\pi/T_{s}\right)}$
+\end_inset
+
+]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{1}\left(t\right)=\sin\left(2\pi\times10t\right)
+\]
+
+\end_inset
+
+is sampled to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{1}\left(k\right)=\sin\left(2\pi\times\frac{10}{60}k\right)=\sin\left(2\pi\times\frac{1}{6}k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+a 70-Hz signal 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\scriptstyle y_{2}\left(t\right)=\sin\left(2\pi\times70t\right)}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+[
+\begin_inset Formula ${\scriptstyle 2\pi\times70}$
+\end_inset
+
+ rad/sec 
+\begin_inset Formula ${\scriptstyle \in\left(\pi/T_{s},3\pi/T_{s}\right)}$
+\end_inset
+
+]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.1in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+y_{2}\left(t\right)=\sin\left(2\pi\times70t\right)
+\]
+
+\end_inset
+
+is sampled to
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset Formula ${\scriptstyle y_{2}\left(k\right)=\sin\left(2\pi\times\frac{70}{60}k\right)=\sin\left(2\pi\times\frac{1}{6}k\right)=y_{1}\left(k\right)}$
+\end_inset
+
+!
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{2}\left(k\right)=\sin\left(2\pi\times\frac{70}{60}k\right)=\sin\left(2\pi\times\frac{1}{6}k\right)\equiv y_{1}\left(k\right)!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Anti-aliasing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+need to avoid the negative influence of
+\emph on
+ aliasing 
+\emph default
+beyond the Nyquist frequencies
+\end_layout
+
+\begin_layout Itemize
+sample faster: make 
+\begin_inset Formula $\pi/T_{s}$
+\end_inset
+
+ large; the sampling frequency should be high enough for good control design
+\end_layout
+
+\begin_layout Itemize
+anti-aliasing: perform a low-pass filter to filter out the signals 
+\begin_inset Formula $\left|\omega\right|>\pi/T_{s}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sampling example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+continuous-time signal 
+\begin_inset Formula 
+\begin{align*}
+y\left(t\right) & =\begin{cases}
+e^{-at}, & t\geq0\\
+0, & t<0
+\end{cases},\ a>0\\
+\mathscr{L}\left\{ y\left(t\right)\right\}  & =\frac{1}{s+a}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+discrete-time sampled signal
+\begin_inset Formula 
+\begin{align*}
+y\left(k\right) & =\begin{cases}
+e^{-aT_{s}k}, & k\geq0\\
+0, & k<0
+\end{cases}\\
+\mathscr{Z}\left\{ y\left(k\right)\right\}  & =\frac{1}{1-z^{-1}e^{-aT_{s}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sampling maps the continuous-time pole 
+\begin_inset Formula $s_{i}=-a$
+\end_inset
+
+ to the discrete-time pole 
+\begin_inset Formula $z_{i}=e^{-aT_{s}}$
+\end_inset
+
+, via the mapping 
+\begin_inset Formula 
+\[
+z_{i}=e^{s_{i}T_{s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

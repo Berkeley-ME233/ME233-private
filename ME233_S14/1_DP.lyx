@@ -1,0 +1,2480 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+%\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+  \usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "beamerMargin.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 1: Dynamic Programming
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+General problem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Multivariable derivative
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Discrete-time LQ
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.6
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.15
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.25
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dynamic programming (DP)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+introduction:
+\end_layout
+
+\begin_layout Itemize
+history: developed in the 1950's by Richard Bellman
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+programming
+\begin_inset Quotes erd
+\end_inset
+
+: ~
+\begin_inset Quotes eld
+\end_inset
+
+planning
+\begin_inset Quotes erd
+\end_inset
+
+ (has nothing to do with computers)
+\end_layout
+
+\begin_layout NoteItem
+computers were not popular at all at that time
+\end_layout
+
+\begin_layout Itemize
+a useful concept with lots of applications
+\end_layout
+
+\begin_layout NoteItem
+(e.g.
+ in control, computer science, and economics; applications include but not
+ limited to: path planning, air traffic design, optimal control, etc)
+\end_layout
+
+\begin_layout Itemize
+IEEE Global History Network: “A breakthrough which set the stage for the
+ application of functional equation techniques in a wide spectrum of fields…”
+\end_layout
+
+\begin_layout NoteItem
+Richard Bellman: entered Princeton as a graduate student at age 26; completed
+ Ph.D.
+ degree in a record time of three months; received a half-page long list
+ of awards; published 35 books;
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Essentials of dynamic programming
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+key idea: solve a complex and difficult problem via solving a collection
+ of sub problems
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Path planning
+\end_layout
+
+\end_inset
+
+goal: obtain minimum cost path from 
+\begin_inset Formula $S$
+\end_inset
+
+ to 
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{1.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename src/pathPlanning_dynamicProgramming.eps
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+The numerical values are the cost (e.g., distance, time, etc) of the path.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+observation: if node 
+\begin_inset Formula $C$
+\end_inset
+
+ is on the optimal path, the then path from node 
+\begin_inset Formula $C$
+\end_inset
+
+ to node 
+\begin_inset Formula $E$
+\end_inset
+
+ must be optimal as well
+\end_layout
+
+\begin_layout NoteItem
+More specifically, if 
+\begin_inset Formula $C$
+\end_inset
+
+ is on the optimal path, then 
+\begin_inset Quotes eld
+\end_inset
+
+the remaining path to go
+\begin_inset Quotes erd
+\end_inset
+
+ should be 
+\begin_inset Formula $C\rightarrow D\rightarrow E$
+\end_inset
+
+ but not 
+\begin_inset Formula $C\rightarrow A\to B\to E$
+\end_inset
+
+ or any other combinations.
+\end_layout
+
+\begin_layout NoteItem
+Example: suppose you take a business trip from SF to Boston, in between
+ you have to attend a conference in Minnesota.
+ Your optimal path has to include Minnesota as a node in the path tree.
+ You of course want your trip between Minnesota and Boston to be a direct
+ flight as well.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Essentials of dynamic programming
+\begin_inset Note Note
+status open
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout FrameSubtitle
+path planning (contd):
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{1.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename src/pathPlanning_dynamicProgramming.eps
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+dist\left(E\right)\triangleq\textnormal{minimum cost \ensuremath{S\to E}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+solution: 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+backward analysis
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+dist\left(E\right) & =\min\left\{ dist\left(B\right)+2,dist\left(D\right)+1\right\} \\
+dist\left(B\right) & =dist\left(A\right)+6\\
+dist\left(D\right) & =min\left\{ dist\left(B\right)+1,dist\left(C\right)+3\right\} \\
+dist\left(C\right) & =2\\
+dist\left(A\right) & =\min\left\{ 1,dist\left(C\right)+4\right\} 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+forward computation
+\begin_inset Formula 
+\begin{align*}
+dist\left(C\right) & =2\\
+dist\left(A\right) & =1\\
+dist\left(B\right) & =1+6=7\\
+dist\left(D\right) & =5\\
+dist\left(E\right) & =6
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.3in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Essentials of dynamic programming
+\begin_inset Note Note
+status open
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout FrameSubtitle
+path planning (contd):
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{1.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename src/pathPlanning_dynamicProgramming.eps
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+summary (Bellman's principle of optimality): 
+\begin_inset Quotes eld
+\end_inset
+
+From any point on an optimal trajectory, the remaining trajectory is optimal
+ for the corresponding problem initiated at that point.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General optimal control problems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+general discrete-time plant: 
+\begin_inset Formula 
+\begin{align*}
+x\left(k+1\right) & =f\left(x\left(k\right),u\left(k\right),k\right)\\
+\text{state constraint: }x\left(k\right) & \in X\subset\mathbf{R}^{n}\\
+\text{input constraint: }u\left(k\right) & \in U\subset\mathbf{R}^{m}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+plants can be linear or nonlinear
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+constraints:
+\begin_inset Formula 
+\begin{align*}
+u\left(k\right) & \in U\subset\mathbf{R}^{m}\\
+x\left(k\right) & \in X\subset\mathbf{R}^{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+performance index:
+\begin_inset Formula 
+\[
+J=S\left(x\left(N\right)\right)+\sum_{k=0}^{N-1}L\left(x\left(k\right),u\left(k\right),k\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{-.45in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ & 
+\begin_inset Formula $L$
+\end_inset
+
+--real, scalar-valued functions; 
+\begin_inset Formula $N$
+\end_inset
+
+--final time (optimization horizon)
+\end_layout
+
+\begin_layout NoteItem
+decent work requires a numerical index to evaluate the performance
+\end_layout
+
+\begin_layout NoteItem
+optimal (in the sense of minimizing 
+\begin_inset Formula $J$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Itemize
+goal: obtain the optimal control sequence 
+\begin_inset Formula 
+\[
+\left\{ u^{o}\left(0\right),u^{o}\left(1\right),\dots,u^{o}\left(N-1\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dynamic programming for optimal control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+define: 
+\begin_inset Formula $U_{k}\triangleq\left\{ u\left(k\right),u\left(k+1\right),\dots,u\left(N-1\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+optimal cost to go at time 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+J_{k}^{o}\left(x\left(k\right)\right)=\min_{U_{k}}\left\{ S\left(x\left(N\right)\right)+\sum_{i=k}^{N-1}L\left(x\left(i\right),u\left(i\right),i\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+ & J_{k}^{o}\left(x\left(k\right)\right)\triangleq\min_{U_{k}}\left\{ S\left(x\left(N\right)\right)+\sum_{j=k}^{N-1}L\left(x\left(j\right),u\left(j\right),j\right)\right\} \nonumber \\
+= & \min_{u\left(k\right)}\min_{U_{k+1}}\left\{ L\left(x\left(k\right),u\left(k\right),k\right)+\left[S\left(x\left(N\right)\right)+\sum_{j=k+1}^{N-1}L\left(x\left(j\right),u\left(j\right),j\right)\right]\right\} \nonumber \\
+= & \min_{u\left(k\right)}\left\{ L\left(x\left(k\right),u\left(k\right),k\right)+\min_{U_{k+1}}\left[S\left(x\left(N\right)\right)+\sum_{j=k+1}^{N-1}L\left(x\left(j\right),u\left(j\right),j\right)\right]\right\} \nonumber \\
+= & \min_{u\left(k\right)}\left\{ L\left(x\left(k\right),u\left(k\right),k\right)+J_{k+1}^{o}\left(x\left(k+1\right)\right)\right\} \label{eq:opt_cost2go_general}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+from the second to the third line: 
+\begin_inset Formula $L\left(x\left(k\right),u\left(k\right),k\right)$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $U_{k+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+understanding the notation: 
+\begin_inset Formula $J_{k}^{o}\left(x\left(k\right)\right)$
+\end_inset
+
+ means the cost at time 
+\begin_inset Formula $k$
+\end_inset
+
+ is a function of the current state 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+.
+ This is intuitive to understand: flying from SF to Minnesota, and to Boston,
+ the optimal cost to go at Minnesota depends not on SF, but only on the
+ location of Minnesota.
+\end_layout
+
+\begin_layout Itemize
+boundary condition: 
+\begin_inset Formula $J_{N}^{o}\left(x\left(N\right)\right)=S\left(x\left(N\right)\right)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The problem can now be solved by solving a sequence of problems 
+\begin_inset Formula $J_{N-1}^{o},\ J_{N-2}^{o},\dots,J_{1}^{o},\ J^{o}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solving discrete-time finite-horizon LQ via DP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+system dynamics:
+\begin_inset Formula 
+\begin{equation}
+x\left(k+1\right)=A\left(k\right)x\left(k\right)+B\left(k\right)u\left(k\right),\ x\left(k_{0}\right)=x_{o}\label{eq:ssx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+the system can be time-varying
+\end_layout
+
+\begin_layout Itemize
+performance index
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (finite-horizon)
+\end_layout
+
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+J & =\frac{1}{2}x^{T}\left(N\right)Sx\left(N\right)+\frac{1}{2}\sum_{k=k_{0}}^{N-1}\left\{ x^{T}\left(k\right)Q\left(k\right)x\left(k\right)+u^{T}\left(k\right)R\left(k\right)u\left(k\right)\right\} \\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Q\left(k\right)=Q^{T}\left(k\right)\succeq0,\ S=S^{T}\succeq0,\ R\left(k\right)=R^{T}\left(k\right)\succ0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+LQ: L--linear plant; Q--quadratic cost function
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+optimal cost to go:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negmedspace\negmedspace\negmedspace\negmedspace\negmedspace\negmedspace\negthickspace\negthickspace\mkern-18muJ_{k}^{o}\left(x\left(k\right)\right)=\min_{u\left(k\right)}\left\{ \frac{1}{2}x^{T}\left(k\right)Q\left(k\right)x\left(k\right)+\frac{1}{2}u^{T}\left(k\right)R\left(k\right)u\left(k\right)+J_{k+1}^{o}\left(x\left(k+1\right)\right)\right\} 
+\]
+
+\end_inset
+
+with boundary condition: 
+\begin_inset Formula $J_{N}^{o}\left(x\left(N\right)\right)=\frac{1}{2}x^{T}\left(N\right)Sx\left(N\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Facts about quadratic functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+consider 
+\begin_inset Formula 
+\begin{equation}
+f\left(u\right)=\frac{1}{2}u^{T}Mu+p^{T}u+q,\ M=M^{T}\label{eq:quad1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+optimality (maximum when 
+\begin_inset Formula $M$
+\end_inset
+
+ is negative definite; minimum when 
+\begin_inset Formula $M$
+\end_inset
+
+ is positive definite) is achieved when 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial f}{\partial u}=Mu+p=0\Rightarrow u^{o}=-M^{-1}p\label{eq:quad2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+and the optimal cost is
+\begin_inset Formula 
+\begin{equation}
+f^{o}=f(u^{o})=-\frac{1}{2}p^{T}M^{-1}p+q\label{eq:quad3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+intuition: For the unconstrained scalar function 
+\begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
+\end_inset
+
+, if 
+\begin_inset Formula $a>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\max f\left(x\right)=\frac{4ac-b^{2}}{4a}$
+\end_inset
+
+ is achieved at 
+\begin_inset Formula $x^{o}=-\frac{b}{2a}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+-\frac{1}{2}p^{T}M^{-1}p+q\sim\frac{4\frac{M}{2}q-p^{T}p}{4\frac{M}{2}}
+\]
+
+\end_inset
+
+derivation:
+\begin_inset Formula 
+\begin{align*}
+f(u^{o}) & =\frac{1}{2}\left(-M^{-1}p\right)^{T}M\left(-M^{-1}p\right)+p^{T}\left(-M^{-1}p\right)+q\\
+ & =\frac{1}{2}p^{T}Mp-p^{T}M^{-1}p+q
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+From 
+\begin_inset Formula $J_{N}^{o}$
+\end_inset
+
+ to 
+\begin_inset Formula $J_{N-1}^{o}$
+\end_inset
+
+ in discrete-time LQ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+by definition:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{N-1}^{o}\left(x\left(N-1\right)\right)=\min_{u\left(N-1\right)}\left\{ \frac{1}{2}x^{T}\left(N\right)Sx\left(N\right)\right.\\
+\left.+\frac{1}{2}\left[x^{T}\left(N-1\right)Q\left(N-1\right)x\left(N-1\right)+u^{T}\left(N-1\right)R\left(N-1\right)u\left(N-1\right)\right]\right\} 
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+recall 
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negmedspace\negmedspace\negmedspace\negmedspace\negmedspace\negmedspace\negthickspace\negthickspace\mkern-18muJ_{k}^{o}\left(x\left(k\right)\right)=\min_{u\left(k\right)}\left\{ \frac{1}{2}x^{T}\left(k\right)Q\left(k\right)x\left(k\right)+\frac{1}{2}u^{T}\left(k\right)R\left(k\right)u\left(k\right)+J_{k+1}^{o}\left(x\left(k+1\right)\right)\right\} 
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $J_{N}^{o}\left(x\left(N\right)\right)=\frac{1}{2}x^{T}\left(N\right)Sx\left(N\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+using the system dynamics (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ssx"
+
+\end_inset
+
+) gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\negmedspace\negmedspace\negmedspace J_{N-1}^{o}\left(x\left(N-1\right)\right)=\frac{1}{2}\min_{u\left(N-1\right)}\{x^{T}\left(N-1\right)Q\left(N-1\right)x\left(N-1\right)\\
++u^{T}\left(N-1\right)R\left(N-1\right)u\left(N-1\right)+\left[A\left(N-1\right)x\left(N-1\right)+B\left(N-1\right)u\left(N-1\right)\right]^{T}\\
+\times S\left[A\left(N-1\right)x\left(N-1\right)+B\left(N-1\right)u\left(N-1\right)\right]\}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+this is a quadratic (actually convex) function of 
+\begin_inset Formula $u\left(N-1\right)$
+\end_inset
+
+.
+ it should be intuitive from the unsimplified cost to go as well: 
+\begin_inset Formula $x\left(N\right)$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $x\left(N-1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $u\left(N-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+optimal control by letting 
+\begin_inset Formula $\partial J_{N-1}/\partial u\left(N-1\right)=0$
+\end_inset
+
+: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace u^{o}\left(N-1\right)=-\underbrace{\left[R\left(N-1\right)+B^{T}\left(N-1\right)SB\left(N-1\right)\right]^{-1}B^{T}\left(N-1\right)SA\left(N-1\right)}_{\text{state feedback gain: }K\left(N-1\right)}x\left(N-1\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\star$
+\end_inset
+
+Optimality at 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $N-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+at time 
+\begin_inset Formula $N$
+\end_inset
+
+: optimal cost is
+\begin_inset Formula 
+\[
+J_{N}^{o}\left(x\left(N\right)\right)=\frac{1}{2}x^{T}\left(N\right)Sx\left(N\right)\triangleq\frac{1}{2}x^{T}\left(N\right)P\left(N\right)x\left(N\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+at time 
+\begin_inset Formula $N-1$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+J_{N-1}^{o}\left(x\left(N-1\right)\right)=\frac{1}{2}\min_{u\left(N-1\right)}\{x^{T}\left(N-1\right)Q\left(N-1\right)x\left(N-1\right)\\
++u^{T}\left(N-1\right)R\left(N-1\right)u\left(N-1\right)+\left[A\left(N-1\right)x\left(N-1\right)+B\left(N-1\right)u\left(N-1\right)\right]^{T}\\
+\times S\left[A\left(N-1\right)x\left(N-1\right)+B\left(N-1\right)u\left(N-1\right)\right]\}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+optimal cost to go [by using (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quad3"
+
+\end_inset
+
+)] is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{N-1}^{o}\left(x\left(N-1\right)\right)=\frac{1}{2}x^{T}\left(N-1\right)\left\{ \vphantom{\left[B^{T}\right]}Q\left(N-1\right)+A^{T}\left(N-1\right)SA\left(N-1\right)\right.\\
+\left.-\left(\underline{\dots}\right)^{T}\left[R\left(N-1\right)+B^{T}\left(N-1\right)SB\left(N-1\right)\right]^{-1}\underline{B^{T}\left(N-1\right)SA\left(N-1\right)}\right\} x\left(N-1\right)\\
+\triangleq\frac{1}{2}x^{T}\left(N-1\right)P\left(N-1\right)x\left(N-1\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+recall 
+\begin_inset Formula $-\frac{1}{2}p^{T}M^{-1}p+q$
+\end_inset
+
+ for 
+\begin_inset Formula $f\left(u\right)=\frac{1}{2}u^{T}Mu+p^{T}u+q$
+\end_inset
+
+ so
+\begin_inset Formula 
+\begin{multline*}
+J_{N-1}^{o}\left(x\left(N-1\right)\right)=\frac{1}{2}x^{T}\left(N-1\right)\left\{ \vphantom{\left[B^{T}\right]}Q\left(N-1\right)+A^{T}\left(N-1\right)SA\left(N-1\right)\right.\\
+\left.-\left(\underline{\dots}\right)^{T}\left[R\left(N-1\right)+B^{T}\left(N-1\right)SB\left(N-1\right)\right]^{-1}\left(\underline{B^{T}\left(N-1\right)SA\left(N-1\right)}\right)\right\} x\left(N-1\right)\\
+\boxed{\triangleq\frac{1}{2}x^{T}\left(N-1\right)P\left(N-1\right)x\left(N-1\right)}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+Observation
+\begin_inset Formula 
+\[
+P\left(N-1\right)=Q\left(N-1\right)+A^{T}\left(N-1\right)SA\left(N-1\right)-\left(\underline{\dots}\right)^{T}\left[R\left(N-1\right)+B^{T}\left(N-1\right)SB\left(N-1\right)\right]^{-1}\underline{B^{T}\left(N-1\right)SA\left(N-1\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary: from 
+\begin_inset Formula $N$
+\end_inset
+
+ to 
+\begin_inset Formula $N-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+at 
+\begin_inset Formula $N$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+J_{N}^{o}\left(x\left(N\right)\right)=\frac{1}{2}x^{T}\left(N\right)Sx\left(N\right)=\frac{1}{2}x^{T}\left(N\right)P\left(N\right)x\left(N\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+at 
+\begin_inset Formula $N-1$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+J_{N-1}^{o}\left(x\left(N-1\right)\right)=\frac{1}{2}x^{T}\left(N-1\right)P\left(N-1\right)x\left(N-1\right)
+\]
+
+\end_inset
+
+with (
+\begin_inset Formula $S$
+\end_inset
+
+ has been replaced with 
+\begin_inset Formula $P\left(N\right)$
+\end_inset
+
+ here)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+P\left(N-1\right)=Q\left(N-1\right)+A^{T}\left(N-1\right)P\left(N\right)A\left(N-1\right)\\
+-\left(\underline{\dots}\right)^{T}\left[R\left(N-1\right)+B^{T}\left(N-1\right)P\left(N\right)B\left(N-1\right)\right]^{-1}\underline{B^{T}\left(N-1\right)P\left(N\right)A\left(N-1\right)}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+and state-feedback law
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\negthickspace\negthickspace\negthickspace\negthickspace u^{o}\left(N-1\right)=-\left[R\left(N-1\right)+B^{T}\left(N-1\right)P\left(N\right)B\left(N-1\right)\right]^{-1}\\
+\times B^{T}\left(N-1\right)P\left(N\right)A\left(N-1\right)x\left(N-1\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Induction from 
+\begin_inset Formula $k+1$
+\end_inset
+
+ to 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+assume at 
+\begin_inset Formula $k+1$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{align*}
+J_{k+1}^{o}\left(x\left(k+1\right)\right) & =\frac{1}{2}x^{T}\left(k+1\right)P\left(k+1\right)x\left(k+1\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+analogous as the case from 
+\begin_inset Formula $N$
+\end_inset
+
+ to 
+\begin_inset Formula $N-1$
+\end_inset
+
+, we can get, at 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+J_{k}^{o}\left(x\left(k\right)\right)=\frac{1}{2}x^{T}\left(k\right)P\left(k\right)x\left(k\right)
+\]
+
+\end_inset
+
+with Riccati equation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace P\left(k\right)=A^{T}\left(k\right)P\left(k+1\right)A\left(k\right)+Q\left(k\right)\\
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace-A^{T}\left(k\right)P\left(k+1\right)B\left(k\right)\left[R\left(k\right)+B^{T}\left(k\right)P\left(k+1\right)B\left(k\right)\right]^{-1}B^{T}\left(k\right)P\left(k+1\right)A\left(k\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+and state-feedback law
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+u^{o}\left(k\right) & =-\left[R\left(k\right)+B^{T}\left(k\right)P\left(k+1\right)B\left(k\right)\right]^{-1}B^{T}\left(k\right)P\left(k+1\right)A\left(k\right)x\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+optimal state-feedback control law:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+u^{o}\left(k\right) & =-\left[R\left(k\right)+B^{T}\left(k\right)P\left(k+1\right)B\left(k\right)\right]^{-1}B^{T}\left(k\right)P\left(k+1\right)A\left(k\right)x\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Riccati equation:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace P\left(k\right)=A^{T}\left(k\right)P\left(k+1\right)A\left(k\right)+Q\left(k\right)\\
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace-A^{T}\left(k\right)P\left(k+1\right)B\left(k\right)\left[R\left(k\right)+B^{T}\left(k\right)P\left(k+1\right)B\left(k\right)\right]^{-1}B^{T}\left(k\right)P\left(k+1\right)A\left(k\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+with the boundary condition 
+\begin_inset Formula $P\left(N\right)=S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u^{o}(k)$
+\end_inset
+
+ depends on 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the state vector 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+system matrices 
+\begin_inset Formula $A\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $B\left(k\right)$
+\end_inset
+
+ and the cost matrix 
+\begin_inset Formula $R\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P(k+1)$
+\end_inset
+
+, which depends on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Q\left(k+2\right)$
+\end_inset
+
+, 
+\begin_inset Formula $A\left(k+1\right)$
+\end_inset
+
+, 
+\begin_inset Formula $B\left(k+1\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $P\left(k+2\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+...
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+iterating gives: 
+\begin_inset Formula $u(0)$
+\end_inset
+
+ depends on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ A\left(k\right),B\left(k\right),R\left(k\right),Q\left(k+1\right)\right\} _{k=0}^{N-1}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In practice, 
+\begin_inset Formula $P\left(k\right)$
+\end_inset
+
+ can be computed offline 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+first 
+\end_layout
+
+\end_inset
+
+since they do not require information of 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+, i.e., knowledge of the system dynamics along the optimization horizon and
+ specifications of the cost.
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

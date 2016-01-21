@@ -1,0 +1,2891 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+%\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "beamerMargin.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 18: Parameter Convergence in PAAs
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+why are we learning this:
+\end_layout
+
+\begin_layout Standard
+Consider a series-parallel PAA
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle {\scriptstyle \hat{B}\left(z^{-1},k+1\right)}}}\arline[rr] &  & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arr\sp(0.47){\scriptscriptstyle y\left(k+1\right)} & \bblk{{\textstyle {\scriptstyle \hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+where the plant is stable
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (i.e., 
+\begin_inset Formula $A\left(z^{-1}\right)$
+\end_inset
+
+ is Schur)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(Hyper)stability of PAA gives 
+\begin_inset Formula 
+\[
+\lim_{k\to\infty}\epsilon\left(k\right)=\lim_{k\to\infty}\left\{ -\tilde{\theta}^{T}\left(k\right)\phi\left(k-1\right)\right\} =0
+\]
+
+\end_inset
+
+But this does not guarantee
+\begin_inset Formula 
+\[
+\lim_{k\rightarrow\infty}\tilde{\theta}\left(k\right)=0\Longleftrightarrow\lim_{k\to\infty}\hat{\theta}\left(k\right)=\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Parameter convergence conditions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle {\scriptstyle \hat{B}\left(z^{-1},k+1\right)}}}\arline[rr] &  & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arr\sp(0.47){\scriptscriptstyle y\left(k+1\right)} & \bblk{{\textstyle {\scriptstyle \hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\epsilon\left(k\right)\to0$
+\end_inset
+
+ means
+\begin_inset Formula 
+\begin{align*}
+\hat{A}\left(z^{-1},k+1\right)\frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}u\left(k\right)-\hat{B}\left(z^{-1},k+1\right)u\left(k\right) & \to0\\
+\Rightarrow\left[\hat{A}\left(z^{-1},k+1\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right) & \to0\\
+\Leftrightarrow\left[\hat{A}\left(z^{-1}\right)B\left(z^{-1}\right)\pm A\left(z^{-1}\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\hat{B}\left(z^{-1}\right)\right]u\left(k\right) & \to0\\
+\Leftrightarrow\left[\tilde{A}\left(z^{-1}\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\tilde{B}\left(z^{-1}\right)\right]u\left(k\right) & \to0
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{A}\left(z^{-1}\right)=\hat{A}\left(z^{-1}\right)-A\left(z^{-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+note the result is essentially saying the filtered (by a deterministic FIR)
+ error converges to 0: 
+\begin_inset Formula 
+\[
+A\left(z^{-1}\right)\epsilon\left(k+1\right)\to0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+adding and subtracting 
+\begin_inset Formula $A\left(z^{-1}\right)B\left(z^{-1}\right)$
+\end_inset
+
+ give
+\begin_inset Formula 
+\[
+\left[\hat{A}\left(z^{-1}\right)B\left(z^{-1}\right)\pm A\left(z^{-1}\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\hat{B}\left(z^{-1}\right)\right]u\left(k\right)\to0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+note that 
+\begin_inset Formula 
+\begin{align*}
+\hat{A}\left(z^{-1},k+1\right)\frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}u\left(k\right)-\hat{B}\left(z^{-1},k+1\right)u\left(k\right) & \to0\\
+\nLeftarrow\left[\hat{A}\left(z^{-1},k+1\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\hat{B}\left(z^{-1},k+1\right)\right]u\left(k\right) & \to0
+\end{align*}
+
+\end_inset
+
+as 
+\begin_inset Formula $A\left(z^{-1}\right)u\left(k\right)$
+\end_inset
+
+ might be zero even if 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ is nonzero
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.24in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overbrace{\left[\tilde{A}\left(z^{-1}\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\tilde{B}\left(z^{-1}\right)\right]}^{\textnormal{a new polynomial }\alpha_{0}+\alpha_{1}z^{-1}+\dots+\alpha_{m+n}z^{-m-n}}u\left(k\right)\to0
+\]
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\tilde{B}\left(z^{-1}\right) & =\tilde{b}_{0}+\tilde{b}_{1}z^{-1}+\dots+\tilde{b}_{m}z^{-m}\\
+A\left(z^{-1}\right) & =1+a_{1}z^{-1}+\dots+a_{n}z^{-n}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+B\left(z^{-1}\right) & =b_{0}+b_{1}z^{-1}+\dots+b_{m}z^{-m}\\
+\tilde{A}\left(z^{-1}\right) & =\tilde{a}_{1}z^{-1}+\dots+\tilde{a}_{n}z^{-n}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.2in}
+\end_layout
+
+\end_inset
+
+Two questions we are going to discuss for assuring 
+\begin_inset Formula $\tilde{\theta}=0$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+is 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+ true iff 
+\begin_inset Formula $\tilde{a}_{i}=0,\ \tilde{b}_{i}=0$
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $\left\{ \alpha_{i}\right\} =0\Leftrightarrow\tilde{\theta}=0$
+\end_inset
+
+)?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.4in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $\alpha_{i}\neq0$
+\end_inset
+
+, can 
+\begin_inset Formula $\left[\alpha_{0}+\alpha_{1}z^{-1}+\dots+\alpha_{m+n}z^{-m-n}\right]u\left(k\right)=0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout NoteItem
+yes for the first question: 
+\begin_inset Formula $\left\{ \alpha_{i}\right\} =0\Leftrightarrow\tilde{\theta}=0$
+\end_inset
+
+ usually
+\end_layout
+
+\begin_layout NoteItem
+no for the second question: requires some condition on 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+.
+ For instance
+\begin_inset Formula 
+\[
+\left(1-z^{-1}\right)u\left(k\right)=0
+\]
+
+\end_inset
+
+if 
+\begin_inset Formula $u\left(k\right)=1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\bar under
+Qs 1: 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\tilde{a}_{i}=0,\ \tilde{b}_{i}=0$
+\end_inset
+
+? Ans: yes if 
+\begin_inset Formula $B\left(z^{-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $A\left(z^{-1}\right)$
+\end_inset
+
+ are coprime
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{0}+\alpha_{1}z^{-1}+\dots+\alpha_{m+n}z^{-m-n}=\tilde{A}\left(z^{-1}\right)B\left(z^{-1}\right)-A\left(z^{-1}\right)\tilde{B}\left(z^{-1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the right hand side is composed of terms of 
+\begin_inset Formula $\tilde{a}_{i}b_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{p}\tilde{b}_{q}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+comparing coefficients of 
+\begin_inset Formula $z^{-k}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+\alpha_{0}\\
+\alpha_{1}\\
+\vdots\\
+\vdots\\
+\vdots\\
+\alpha_{m+n}
+\end{array}\right]=S\left[\begin{array}{c}
+\tilde{b}_{0}\\
+\tilde{b}_{1}\\
+\vdots\\
+\tilde{b}_{m}\\
+\tilde{a}_{1}\\
+\vdots\\
+\tilde{a}_{n}
+\end{array}\right],\ S:\ \textnormal{a square matrix composed of \ensuremath{\left\{ a_{i},b_{j}\right\} }}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+turns out 
+\begin_inset Formula $S$
+\end_inset
+
+ is non-singular if and only if 
+\begin_inset Formula $B\left(z^{-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $A\left(z^{-1}\right)$
+\end_inset
+
+ are coprime (recall the theorem discussed in repetitive control)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\bar under
+Qs 2: if 
+\begin_inset Formula $\alpha_{i}\neq0$
+\end_inset
+
+, can 
+\begin_inset Formula $\left[\alpha_{0}+\alpha_{1}z^{-1}+\dots+\alpha_{m+n}z^{-m-n}\right]u\left(k\right)=0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+Simple example with 
+\begin_inset Formula $n+m=2$
+\end_inset
+
+, 
+\begin_inset Formula $u\left(k\right)=\cos\left(\omega k\right)=\re\left\{ e^{j\omega k}\right\} $
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left[\alpha_{0}+\alpha_{1}z^{-1}+\alpha_{2}z^{-2}\right]u\left(k\right) & \rightarrow0\\
+\Leftarrow\left[\alpha_{0}+\alpha_{1}z^{-1}+\alpha_{2}z^{-2}\right]e^{j\omega k} & \to0
+\end{align*}
+
+\end_inset
+
+which can be achieved either by 
+\begin_inset Formula $\alpha_{0}=\alpha_{1}=\alpha_{2}=0$
+\end_inset
+
+ (the desired case) or by
+\begin_inset Formula 
+\begin{multline*}
+\left(1-e^{-j\omega}z^{-1}\right)\left(1-e^{j\omega}z^{-1}\right)e^{j\omega k}\\
+=\left[1-2\cos\left(\omega\right)z^{-1}+z^{-2}\right]e^{j\omega k}\to0
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+remark: this is essentially from the internal model principle; 
+\begin_inset Formula $\alpha_{0}+\alpha_{1}z^{-1}+\alpha_{2}z^{-2}$
+\end_inset
+
+ has zeros at 
+\begin_inset Formula $e^{\pm j\omega}$
+\end_inset
+
+ to annihilate the sinusoid
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Qs 2: if 
+\begin_inset Formula $\alpha_{i}\neq0$
+\end_inset
+
+, can 
+\begin_inset Formula $\left[\alpha_{0}+\alpha_{1}z^{-1}+\dots+\alpha_{m+n}z^{-m-n}\right]u\left(k\right)=0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+If, however, 
+\begin_inset Formula 
+\[
+u\left(k\right)=c_{1}\cos\left(\omega_{1}k\right)+c_{2}\cos\left(\omega_{2}k\right)=\re\left\{ c_{1}e^{j\omega_{1}k}+c_{2}e^{j\omega_{2}k}\right\} 
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+\left[\alpha_{0}+\alpha_{1}z^{-1}+\alpha_{2}z^{-2}\right]u\left(k\right)\rightarrow0
+\]
+
+\end_inset
+
+can only be achieved by 
+\begin_inset Formula $\alpha_{0}=\alpha_{1}=\alpha_{2}=0$
+\end_inset
+
+ (the desired case).
+\end_layout
+
+\begin_layout Standard
+Observations: 
+\end_layout
+
+\begin_layout Itemize
+complex roots of 
+\begin_inset Formula $\alpha_{0}+\alpha_{1}z^{-1}+\alpha_{2}z^{-2}$
+\end_inset
+
+ always come as pairs 
+\end_layout
+
+\begin_layout Itemize
+impossible for 
+\begin_inset Formula $\alpha_{0}+\alpha_{1}z^{-1}+\alpha_{2}z^{-2}$
+\end_inset
+
+ to have four roots at 
+\begin_inset Formula $e^{\pm j\omega_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $e^{\pm j\omega_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if the total number of parameters 
+\begin_inset Formula $n+m=3$
+\end_inset
+
+, 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ should contain at least 
+\begin_inset Formula $2\left(=\frac{n+m+1}{2}\right)$
+\end_inset
+
+ frequency components
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+general case: 
+\begin_inset Formula 
+\[
+\alpha_{0}+\alpha_{1}z^{-1}+\dots+\alpha_{m+n}z^{-m-n}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+number of the pairs of roots = 
+\begin_inset Formula $\left(m+n\right)/2$
+\end_inset
+
+, if 
+\begin_inset Formula $m+n$
+\end_inset
+
+ is even
+\end_layout
+
+\begin_layout Itemize
+number of the pairs of roots = 
+\begin_inset Formula $\left(m+n-1\right)/2$
+\end_inset
+
+ if 
+\begin_inset Formula $m+n$
+\end_inset
+
+ is odd
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Persistant of excitation for PAA convergence
+\end_layout
+
+\end_inset
+
+For PAAs with a series-parallel predictor, the convergence
+\begin_inset Formula 
+\[
+\lim_{k\to\infty}\hat{\theta}_{i}\left(k\right)=\theta_{i}\left(k\right)
+\]
+
+\end_inset
+
+is assured if
+\end_layout
+
+\begin_layout Theorem
+1, the plant transfer function is irreducible
+\end_layout
+
+\begin_layout Theorem
+2, the input signal contains at least 
+\begin_inset Formula $1+\left(m+n\right)/2$
+\end_inset
+
+ (for 
+\begin_inset Formula $n+m$
+\end_inset
+
+ even) or 
+\begin_inset Formula $\left(m+n+1\right)/2$
+\end_inset
+
+ (for 
+\begin_inset Formula $m+n$
+\end_inset
+
+ odd) independent frequency components.
+\end_layout
+
+\begin_layout NoteItem
+Generating the frequency-rich input signal
+\begin_inset Formula 
+\[
+\xyC{1.2pc}\xymatrix{\dotblk\arr & *[F]{{\scriptstyle R1}|{\scriptstyle R2}|{\scriptstyle R3}|{\scriptstyle R4}|{\scriptstyle R5}}\ard\arline[r] & \dotblk\arline[d]\\
+\dotblk\arline[u] & \bblk{{\scriptstyle \textnormal{Modulo 2 Addition}}}\arline[l] & \dotblk\arl
+}
+\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Effect of noise on parameter identification
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effect of noise on parameter identification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Noise modeling:
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){w\left(k+1\right)}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{{\scriptstyle B\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+i.e.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+A\left(z^{-1}\right)y\left(k+1\right) & =B\left(z^{-1}\right)u\left(k\right)+w\left(k+1\right)\\
+y\left(k+1\right) & =\theta^{T}\phi\left(k\right)+w\left(k+1\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){n\left(k+1\right)}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{\frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+i.e.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+y\left(k+1\right) & =\theta^{T}\phi\left(k\right)+A\left(z^{-1}\right)n\left(k+1\right)
+\end{align*}
+
+\end_inset
+
+which is equivalent to 
+\begin_inset Formula $w\left(k+1\right)=A\left(z^{-1}\right)n\left(k+1\right)$
+\end_inset
+
+ in the first case
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effect of noise on parameter identification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+plant output:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y\left(k+1\right)=\theta^{T}\phi\left(k\right)+w\left(k+1\right)
+\]
+
+\end_inset
+
+predictor output:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.32in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{y}\left(k+1\right)=\hat{\theta}^{T}\left(k+1\right)\phi\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+a posteriori
+\emph default
+ prediction error:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\epsilon\left(k+1\right)=y\left(k+1\right)-\hat{y}\left(k+1\right)=\overbrace{-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)}^{\underline{\epsilon}\left(k+1\right):\ \textnormal{error without noise}}+w\left(k+1\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.35in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAA:
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\hat{\theta}\left(k+1\right) & =\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)\\
+F^{-1}\left(k+1\right) & =\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Plain Layout
+for convergence of 
+\begin_inset Formula $\hat{\theta}\left(k\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ must 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{multline*}
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)\\
+=\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\underline{\epsilon}\left(k+1\right)+F\left(k\right)\phi\left(k\right)w\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(k\right)\phi\left(k\right)w\left(k+1\right)$
+\end_inset
+
+ is integrated by PAA
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+for unbiased convergence, we 
+\end_layout
+
+\end_inset
+
+need:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\boxed{\E\left[\phi\left(k\right)w\left(k+1\right)\right]=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and a vanishing adaptation gain 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+: 
+\begin_inset Formula $F^{-1}\left(k+1\right)=\lambda_{1}\left(k\right)F^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{1}\left(k\right)\overset{k\to\infty}{\longrightarrow}1$
+\end_inset
+
+ and 
+\begin_inset Formula $0<\lambda_{2}\left(k\right)<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+limiting analysis: take a large 
+\begin_inset Formula $N$
+\end_inset
+
+ and consider behavior of PAA at 
+\begin_inset Formula $k>N$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+N+1\right)=\hat{\theta}\left(k\right)+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+the 
+\begin_inset Formula $\E\left[\phi\left(k\right)w\left(k+1\right)\right]=0$
+\end_inset
+
+ condition can be rigorously reached by the averaging and ODE approaches
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Series-parallel PAA convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){w\left(k+1\right)}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{{\scriptstyle B\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\underline{\epsilon}\left(k+1\right)+F\left(k\right)\phi\left(k\right)w\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In series-parallel PAA:
+\begin_inset Formula 
+\begin{multline*}
+\phi\left(k\right)=\left[-y\left(k\right),-y\left(k-1\right),\dots,-y\left(k-n+1\right),\right.\\
+\left.u\left(k\right),u\left(k-1\right),\dots,u\left(k-m\right)\right]^{T}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boxed{\E\left[\phi\left(k\right)w\left(k+1\right)\right]=0}$
+\end_inset
+
+ is achieved if
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ is white, and
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ are independent
+\end_layout
+
+\begin_layout NoteItem
+because 
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+ depends on 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Series-parallel PAA convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){w\left(k+1\right)}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{{\scriptstyle B\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+Issues: 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ is rarely white, e.g., 
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){n\left(k+1\right)}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{\frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+where the output measurement noise 
+\begin_inset Formula $n\left(k+1\right)$
+\end_inset
+
+ is usually white but 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+y\left(k+1\right) & =\theta^{T}\phi\left(k\right)+\overbrace{A\left(z^{-1}\right)n\left(k+1\right)}^{w\left(k+1\right)}
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ is not white.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parallel PAA convergence condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In parallel PAA:
+\begin_inset Formula 
+\begin{multline*}
+\phi\left(k\right)=\left[-\hat{y}\left(k\right),-\hat{y}\left(k-1\right),\dots,-\hat{y}\left(k-n+1\right),\right.\\
+\left.u\left(k\right),u\left(k-1\right),\dots,u\left(k-m\right)\right]^{T}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boxed{\E\left[\phi\left(k\right)w\left(k+1\right)\right]=0}$
+\end_inset
+
+ does not require 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ to be white as 
+\begin_inset Formula $\hat{y}\left(k\right)$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ by design
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\ard\sb>>-\sp<<{\hat{y}\left(k+1\right)}\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  & \cblk\arr & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arline[r] & \dotblk\aru\sp>>+\sb<<{y\left(k+1\right)}\\
+ &  & {\scriptstyle w\left(k+1\right)}\aru
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+because 
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+ depends on 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Series-parallel PAA convergence condition
+\end_layout
+
+\end_inset
+
+When the predictor is of series-parallel type, the PAA with a vanishing
+ adaptation gain has unbiased convergence when
+\end_layout
+
+\begin_layout Theorem
+i.
+ 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ is rich in frequency (persistent excitation) and is independent from the
+ noise 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+ii.
+ 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ is 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+purely random, i.e., 
+\end_layout
+
+\end_inset
+
+white
+\end_layout
+
+\begin_layout NoteItem
+Note that series-parallel predictors (e.g.
+ RLS) are always stable
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Parallel PAA convergence condition
+\end_layout
+
+\end_inset
+
+When the predictor is of parallel type, the PAA with vanishing adaptation
+ gain has unbiased convergence when
+\end_layout
+
+\begin_layout Theorem
+i.
+ 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ satisfies the persistent excitation condition
+\end_layout
+
+\begin_layout Theorem
+ii.
+ 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+ is independent from 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Note: parallel predictors have more strict stability requirements
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Convergence improvement in the presence of stochastic noises
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence improvement when there is noise 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\bar under
+extended least squares
+\end_layout
+
+\begin_layout Standard
+If the effect of noise can be expressed as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp<{n\left(k+1\right)}\\
+ &  & \bblk{\frac{C\left(z^{-1}\right)}{A\left(z^{-1}\right)}}\ard\sp>>+\\
+\dotblk\arr\sp<{u\left(k\right)} & \bblk{\frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}\arr\sp>>+ & \cblk\arr\sp>{y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+i.e.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.27in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+w\left(k+1\right)=C(z^{-1})n(k+1)=\left[1+c_{1}z^{-1}+\dots c_{n_{C}}z^{-n_{C}}\right]n(k+1)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n\left(k+1\right)$
+\end_inset
+
+ is white, then
+\begin_inset Formula 
+\begin{align*}
+y\left(k+1\right) & =\theta^{T}\phi\left(k\right)+C\left(z^{-1}\right)n\left(k+1\right)=\theta_{e}^{T}\phi_{e}\left(k\right)+n\left(k+1\right)\\
+\theta_{e}^{T} & =\left[\theta^{T},c_{1},\dots,c_{n_{C}}\right]\\
+\phi_{e}^{T}\left(k\right) & =\left[\phi^{T}\left(k\right),n\left(k\right),\dots,n\left(k-n_{C}+1\right)\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+no universal parallel predictor that suits for all noises
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence improvement when there is noise 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\bar under
+extended least squares
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+a posteriori 
+\emph default
+prediction 
+\begin_inset Formula 
+\begin{align*}
+\hat{y}\left(k+1\right) & =\hat{\theta}_{e}^{T}\left(k+1\right)\phi_{e}\left(k\right)\\
+\phi_{e}^{T}\left(k\right) & =\left[\phi^{T}\left(k\right),n\left(k\right),\dots,n\left(k-n_{C}+1\right)\right]
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula $n\left(k\right),\dots,n\left(k-n_{C}+1\right)$
+\end_inset
+
+ are not measurable.
+ However, if 
+\begin_inset Formula $\hat{\theta}_{e}$
+\end_inset
+
+ is close to 
+\begin_inset Formula $\theta_{e}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\epsilon\left(k+1\right)=y\left(k+1\right)-\hat{y}\left(k+1\right)\approx n\left(k+1\right)
+\]
+
+\end_inset
+
+ 
+\emph on
+extended least squares
+\emph default
+ uses 
+\begin_inset Formula 
+\begin{align*}
+\hat{y}\left(k+1\right) & =\hat{\theta}_{e}^{T}\left(k+1\right)\phi_{e}^{*}\left(k\right)\\
+\phi_{e}^{*}\left(k\right) & =\left[\phi^{T}\left(k\right),\epsilon\left(k\right),\dots,\epsilon\left(k-n_{C}+1\right)\right]^{T}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\epsilon\left(k\right)=y\left(k\right)-\hat{y}\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence improvement when there is noise 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\bar under
+output error method with adjustable compensator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.5pc}\xymatrix{ & \dotblk\arr & \bblk{{\textstyle \frac{\hat{B}\left(z^{-1},k+1\right)}{\hat{A}\left(z^{-1},k+1\right)}}}\arline[r] & \dotblk\ard\sb>>-\\
+\dotblk\arline[r]\sp{u\left(k\right)}\arline[r] & \dotblk\arline[u]\arline[d] &  & \cblk\arr\sp>{\epsilon\left(k+1\right)} & \dotblk\\
+ & \dotblk\arr & \bblk{{\displaystyle {\textstyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}}\arline[r] & \dotblk\aru\sp>>+
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+If 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A\left(z^{-1}\right)=1+a_{1}z^{-1}+\dots+a_{n}z^{-n}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, let 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\hat{C}\left(z^{-1}\right)=1+\hat{c}_{1}z^{-1}+\dots+\hat{c}_{n}z^{-n}$
+\end_inset
+
+
+\emph on
+ 
+\emph default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+\nu\left(k+1\right) & =\hat{C}\left(z^{-1},k+1\right)\epsilon\left(k+1\right)\\
+\nu^{o}\left(k+1\right) & =\epsilon^{o}\left(k+1\right)+\sum_{i=1}^{n}\hat{c}_{i}\left(k\right)\epsilon\left(k+1-i\right)
+\end{align*}
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+do
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Formula 
+\begin{align*}
+\hat{\theta}_{e}\left(k+1\right) & =\hat{\theta}_{e}\left(k\right)+\frac{F_{e}\left(k\right)\phi_{e}\left(k\right)}{1+\phi_{e}^{T}\left(k\right)F_{e}\left(k\right)\phi_{e}\left(k\right)}\nu^{o}\left(k+1\right)\\
+\hat{\theta}_{e}^{T}\left(k\right) & =\left[\hat{\theta}^{T}\left(k\right),\hat{c}_{1}\left(k\right),\dots,\hat{c}_{n}\left(k\right)\right]\\
+\phi_{e}^{T}\left(k\right) & =\left[\phi^{T}\left(k\right),-\epsilon\left(k\right),\dots,-\epsilon\left(k+1-n\right)\right]\\
+F_{e}^{-1}\left(k+1\right) & =\lambda_{1}\left(k\right)F_{e}^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi_{e}\left(k\right)\phi_{e}^{T}\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+construct PAA with 
+\begin_inset Formula $\theta_{e}^{T}=\left[\theta^{T},a_{1},\dots,a_{n}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu\left(k+1\right)$
+\end_inset
+
+ as the adaptation error.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence improvement when there is noise 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\bar under
+output error method with adjustable compensator
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Formula 
+\begin{align*}
+\hat{\theta}_{e}\left(k+1\right) & =\hat{\theta}_{e}\left(k\right)+\frac{F_{e}\left(k\right)\phi_{e}\left(k\right)}{1+\phi_{e}^{T}\left(k\right)F_{e}\left(k\right)\phi_{e}\left(k\right)}\nu^{o}\left(k+1\right)\\
+\hat{\theta}_{e}^{T}\left(k\right) & =\left[\hat{\theta}^{T}\left(k\right),\hat{c}_{1}\left(k\right),\dots,\hat{c}_{n}\left(k\right)\right]\\
+\phi_{e}^{T}\left(k\right) & =\left[\phi^{T}\left(k\right),-\epsilon\left(k\right),\dots,-\epsilon\left(k+1-n\right)\right]\\
+F_{e}^{-1}\left(k+1\right) & =\lambda_{1}\left(k\right)F_{e}^{-1}\left(k\right)+\lambda_{2}\left(k\right)\phi_{e}\left(k\right)\phi_{e}^{T}\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Stability condition: 
+\begin_inset Formula 
+\[
+1-\frac{\lambda}{2}\textnormal{ is SPR};\ \lambda=\max_{k}\lambda_{2}\left(k\right)<2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Convergence condition: depend on properties of the disturbance and 
+\begin_inset Formula $A\left(z^{-1}\right)$
+\end_inset
+
+; see details in ME233 reader
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Different recursive identification algorithms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+there are more PAAs for improved convergence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+each algorithm suits for a certain model of plant + disturbance
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Effect of deterministic disturbances
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effect of deterministic disturbances
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Intuition: if the disturbance structure is known, it can be included in
+ PAA for improved performance.
+\end_layout
+
+\begin_layout Standard
+Example (constant disturbance): 
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){d}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{{\scriptstyle B\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y\left(k+1\right)=-\sum_{i=1}^{n}a_{i}y\left(k+1-i\right)+\sum_{i=0}^{m}b_{i}u\left(k-i\right)+d=\theta^{T}\phi\left(k\right)+d
+\]
+
+\end_inset
+
+Approach 1: enlarge the model as
+\begin_inset Formula 
+\[
+y\left(k+1\right)=\left[\theta^{T},d\right]\left[\begin{array}{c}
+\phi\left(k\right)\\
+1
+\end{array}\right]=\theta_{e}^{T}\phi_{e}\left(k\right)
+\]
+
+\end_inset
+
+and construct PAA on 
+\begin_inset Formula $\theta_{e}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effect of deterministic disturbances
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){d}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{{\scriptstyle B\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y\left(k+1\right)=-\sum_{i=1}^{n}a_{i}y\left(k+1-i\right)+\sum_{i=0}^{m}b_{i}u\left(k-i\right)+d=\theta^{T}\phi\left(k\right)+d
+\]
+
+\end_inset
+
+Approach 2: notice that 
+\begin_inset Formula $\left(1-z^{-1}\right)d=0$
+\end_inset
+
+, we can do
+\begin_inset Formula 
+\[
+\xymatrix{{\scriptstyle y\left(k+1\right)}\arr & \bblk{1-z^{-1}}\arr & {\scriptstyle y_{f}\left(k+1\right)}}
+;\ \xymatrix{{\scriptstyle u\left(k+1\right)}\arr & \bblk{1-z^{-1}}\arr & {\scriptstyle u_{f}\left(k+1\right)}}
+;
+\]
+
+\end_inset
+
+and have a new 
+\begin_inset Quotes eld
+\end_inset
+
+disturbance-free
+\begin_inset Quotes erd
+\end_inset
+
+ model for PAA:
+\begin_inset Formula 
+\[
+y_{f}\left(k+1\right)=-\sum_{i=1}^{n}a_{i}y_{f}\left(k+1-i\right)+\sum_{i=0}^{m}b_{i}u_{f}\left(k-i\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Effect of deterministic disturbances
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{ &  & \dotblk\ard\sp>>+\sb(0.1){d}\\
+\dotblk\arr\sp(0.1){u\left(k\right)} & \bblk{{\scriptstyle B\left(z^{-1}\right)}}\arr\sb>>+ & \cblk\arr & \bblk{\frac{1}{A\left(z^{-1}\right)}}\arr\sp(1.1){y\left(k+1\right)} & \dotblk
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similar considerations can be applied to the cases when 
+\begin_inset Formula $d$
+\end_inset
+
+ is sinusoidal, repetitive, etc
+\end_layout
+
+\begin_layout NoteItem
+Summary
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+big picture: started with series-parallel predictor, obtained extensions
+ to obtain good stochastic performance
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,1753 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+%\newcommand{\xyR}[1]{
+%\xydef@\xymatrixrowsep@{#1}
+%}
+% scaling column
+%\newcommand{\xyC}[1]{
+%\xydef@\xymatrixcolsep@{#1}
+%}
+
+\usepackage{pgfpages}
+%\input{blkStyle}
+\input{mtikzStyle}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 11: Feedforward Control
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Zero Phase Error Tracking
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Stable pole-zero cancellation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Phase error
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Zero phase error tracking
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+why are we learning this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{\ \ar@{-}[r]^{r\left(k\right)} & \dotblk\ar[r]^{\quad+} & \cblk\ar[r]_{-\qquad\qquad} & \bblk{\text{Feedback }C}\ar[r] & \bblk P\arline[r] & \dotblk\arline[r]\arline[d] & \dotblk\ar[r]^{y\left(k\right)} & \ \\
+ &  & \dotblk\ar[u] &  &  & \dotblk\arline[lll]\\
+ & \dotblk\ar@{--}[uu]\ar@{<=>}[rrrrr]|-{G_{\text{closed}}\left(z^{-1}\right)} &  &  &  &  & \dotblk\ar@{--}[uu]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+two basic control problems: tracking (the reference) and regulation (against
+ disturbances)
+\end_layout
+
+\begin_layout Itemize
+feedback control has performance limitations
+\end_layout
+
+\begin_layout NoteItem
+(for instance, 
+\begin_inset Formula $S\left(s\right)+T\left(s\right)=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+For tracking 
+\begin_inset Formula $r\left(k\right)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ in digital control design
+\end_layout
+
+\end_inset
+
+, ideally we want
+\begin_inset Formula 
+\[
+G_{\textnormal{closed}}\left(z^{-1}\right)=1
+\]
+
+\end_inset
+
+which is 
+\series bold
+not attainable
+\series default
+ by feedback.
+ We thus need 
+\series bold
+feedforward
+\series default
+ control.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{\ \ar@{-}[r]^{r\left(k\right)} & \dotblk\ar[r]^{\quad+} & \cblk\ar[r]_{-\qquad\qquad} & \bblk{\text{Feedback }C}\ar[r] & \bblk P\arline[r] & \dotblk\arline[r]\arline[d] & \dotblk\ar[r]^{y\left(k\right)} & \ \\
+ &  & \dotblk\ar[u] &  &  & \dotblk\arline[lll]\\
+ & \dotblk\ar@{--}[uu]\ar@{<=>}[rrrrr]|-{G_{\text{closed}}\left(z^{-1}\right)} &  &  &  &  & \dotblk\ar@{--}[uu]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+notation:
+\begin_inset Formula 
+\[
+G_{\textnormal{closed}}\left(z^{-1}\right)=\frac{z^{-d}B_{c}\left(z^{-1}\right)}{A_{c}\left(z^{-1}\right)}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+B_{c}\left(z^{-1}\right) & =b_{c0}+b_{c1}z^{-1}+\dots+b_{cm}z^{-m},\ b_{co}\neq0\\
+A_{c}\left(z^{-1}\right) & =1+a_{c1}z^{-1}+\dots+a_{cn}z^{-n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z^{-1}$
+\end_inset
+
+: one-step delay operator.
+ 
+\begin_inset Formula $z^{-1}r\left(k\right)=r\left(k-1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{\ \ar@{-}[r]^{r\left(k\right)} & \dotblk\ar[r]^{\quad+} & \cblk\ar[r]_{-\qquad\qquad} & \bblk{\text{Feedback }C}\ar[r] & \bblk P\arline[r] & \dotblk\arline[r]\arline[d] & \dotblk\ar[r]^{y\left(k\right)} & \ \\
+ &  & \dotblk\ar[u] &  &  & \dotblk\arline[lll]\\
+ & \dotblk\ar@{--}[uu]\ar@{<=>}[rrrrr]|-{G_{\text{closed}}\left(z^{-1}\right)} &  &  &  &  & \dotblk\ar@{--}[uu]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+one naive approach: to let 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ track 
+\begin_inset Formula $y_{d}\left(k\right)$
+\end_inset
+
+, we can do
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+r\left(k\right)=G_{\textnormal{closed}}^{-1}\left(z^{-1}\right)y_{d}\left(k\right)=\frac{z^{d}A_{c}\left(z^{-1}\right)}{B_{c}\left(z^{-1}\right)}y_{d}\left(k\right)=\frac{A_{c}\left(z^{-1}\right)}{B_{c}\left(z^{-1}\right)}y_{d}\left(k+d\right)\label{eq:naiveFF}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+causality
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:naiveFF"
+
+\end_inset
+
+) requires knowledge of 
+\begin_inset Formula $y_{d}\left(k\right)$
+\end_inset
+
+ for at least 
+\begin_inset Formula $d$
+\end_inset
+
+ steps ahead (usually not an issue)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+stability
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: poles of 
+\begin_inset Formula $G_{\textnormal{closed}}^{-1}\left(z^{-1}\right)$
+\end_inset
+
+, i.e., zeros of 
+\begin_inset Formula $G_{\textnormal{closed}}\left(z^{-1}\right)$
+\end_inset
+
+, must be all stable (usually an issue)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+robustness
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: the model 
+\begin_inset Formula $G_{\textnormal{closed}}\left(z^{-1}\right)$
+\end_inset
+
+ needs to be accurate
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The cancellable parts in 
+\begin_inset Formula $G_{\textnormal{closed}}\left(z^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{{\scriptstyle y_{d}(k)}\arr & \bblk{\textnormal{Feedforward}}\arr & \bblk{{\displaystyle G_{\textnormal{closed}}(z^{-1})=\frac{z^{-d}B_{c}(z^{-1})}{A_{c}(z^{-1})}}}\arr & {\scriptstyle y(k)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{\textnormal{closed}}(z^{-1})$
+\end_inset
+
+ is always stable 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $A_{c}\left(z^{-1}\right)$
+\end_inset
+
+ can be fully canceled
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{c}\left(z^{-1}\right)$
+\end_inset
+
+ may contain 
+\emph on
+uncancellable parts
+\emph default
+ (zeros on or outside the unit circle)
+\end_layout
+
+\begin_layout Itemize
+partition 
+\begin_inset Formula $G_{\textnormal{closed}}(z^{-1})$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+G_{\textnormal{closed}}(z^{-1})=\frac{z^{-d}B_{c}(z^{-1})}{A_{c}(z^{-1})}=\frac{z^{-d}\overbrace{B_{c}^{+}(z^{-1})}^{\textnormal{cancellable}}\overbrace{B_{c}^{-}(z^{-1})}^{\textnormal{uncancellable}}}{A_{c}(z^{-1})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stable pole-zero cancellation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{{\scriptstyle y_{d}(k)}\arr & \bblk{\textnormal{Feedforward}}\arr & \bblk{{\displaystyle G_{\textnormal{closed}}(z^{-1})=\frac{z^{-d}B_{c}(z^{-1})}{A_{c}(z^{-1})}}}\arr & {\scriptstyle y(k)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+feedforward via stable pole-zero cancellation:
+\begin_inset Formula 
+\begin{equation}
+G_{\textnormal{spz}}\left(z^{-1}\right)=\frac{z^{d}A_{c}\left(z^{-1}\right)}{B_{c}^{+}\left(z^{-1}\right)}\frac{1}{B_{c}^{-}\left(1\right)}\label{eq:spz}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $B_{c}^{-}\left(1\right)=\left.B_{c}^{-}\left(z^{-1}\right)\right|_{z^{-1}=1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{c}^{-}\left(1\right)$
+\end_inset
+
+ makes the overall DC gain from 
+\begin_inset Formula $y_{d}\left(k\right)$
+\end_inset
+
+ to 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ to be one:
+\begin_inset Formula 
+\[
+G_{y_{d}\to y}\left(z^{-1}\right)=G_{\textnormal{spz}}\left(z^{-1}\right)G_{\textnormal{closed}}\left(z^{-1}\right)=\frac{B_{c}^{-}(z^{-1})}{B_{c}^{-}\left(1\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+example: 
+\begin_inset Formula $B_{c}^{-}\left(z^{-1}\right)=1+z^{-1}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{c}^{-}\left(1\right)=2$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+G_{y_{d}\to y}\left(z^{-1}\right)=\frac{1+z^{-1}}{2}\textnormal{: a moving-average low-pass filter}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stable pole-zero cancellation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+properties of 
+\begin_inset Formula $G_{y_{d}\to y}\left(z^{-1}\right)=\frac{1+z^{-1}}{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename src/moving_avg2.eps
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+there is always a 
+\series bold
+phase error
+\series default
+ in tracking
+\end_layout
+
+\begin_layout Itemize
+example: if 
+\begin_inset Formula $y_{d}\left(k\right)=\alpha k$
+\end_inset
+
+ (a ramp signal)
+\begin_inset Formula 
+\[
+y\left(k\right)=G_{y_{d}\to y}\left(z^{-1}\right)y_{d}\left(k\right)=\alpha k-\frac{\alpha}{2}
+\]
+
+\end_inset
+
+which is always delayed by a factor of 
+\begin_inset Formula $\alpha/2$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero Phase Error Tracking (ZPET)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{\arr\sp(0.1){\scriptstyle {\scriptstyle y_{d}(k)}} & \bblk{\textnormal{Feedforward}}\arr & \bblk{{\displaystyle G_{\textnormal{closed}}(z^{-1})=\frac{z^{-d}B_{c}^{+}(z^{-1})B_{c}^{-}(z^{-1})}{A_{c}(z^{-1})}}}\arr\sp(1){\scriptstyle y(k)} & \dotblk}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zero Phase Error Tracking (ZPET): extend (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:spz"
+
+\end_inset
+
+) by adding a 
+\begin_inset Formula $B_{c}^{-}(z)$
+\end_inset
+
+ part 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ so that 
+\begin_inset Formula $B_{c}^{-}(z^{-1})B_{c}^{-}(z)$
+\end_inset
+
+ make a zero-phase pair
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boxed{G_{\textnormal{ZPET}}(z^{-1})=\frac{z^{d}A_{c}(z^{-1})}{B_{c}^{+}(z^{-1})}\frac{B_{c}^{-}(z)}{B_{c}^{-}(1)^{2}}}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $B_{c}^{-}\left(z\right)=b_{c0}^{-}+b_{c1}^{-}z+\dots+b_{cs}^{-}z^{s}$
+\end_inset
+
+ if 
+\begin_inset Formula $B_{c}^{-}(z^{-1})=b_{c0}^{-}+b_{c1}^{-}z^{-1}+\dots+b_{cs}^{-}z^{-s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+overall dynamics between 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{d}\left(k\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace G_{y_{d}\to y}\left(z^{-1}\right)=G_{\textnormal{closed}}\left(z^{-1}\right)G_{\textnormal{ZPET}}\left(z^{-1}\right)=\frac{B_{c}^{-}(z)B_{c}^{-}(z^{-1})}{\left[B_{c}^{-}\left(1\right)\right]^{2}}\label{eq:overallZPET}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero Phase Error Tracking (ZPET)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+understanding (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:overallZPET"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+the frequency response always has 
+\series bold
+zero phase error
+\series default
+:
+\begin_inset Formula 
+\[
+B_{c}^{-}\left(e^{j\omega}\right)=\overline{B_{c}^{-}\left(e^{-j\omega}\right)}\textnormal{ (a complex conjugate pair)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{c}^{-}\left(1\right)^{2}$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is for normalizing 
+\begin_inset Formula $Gy_{d}\to y$
+\end_inset
+
+
+\begin_inset Formula $\left(z^{-1}\right)$
+\end_inset
+
+ to 
+\end_layout
+
+\end_inset
+
+normalizes 
+\begin_inset Formula $Gy_{d}\to y$
+\end_inset
+
+ to have unity DC gain: 
+\begin_inset Formula 
+\[
+\left.G_{y_{d}\to y}\left(e^{-j\omega}\right)\right|_{\omega=0}=\frac{\left.B_{c}^{-}(e^{j\omega})\right|_{\omega=0}\left.B_{c}^{-}(e^{-j\omega})\right|_{\omega=0}}{\left[B_{c}^{-}\left(1\right)\right]^{2}}=\cancelto{1}{\frac{\left[B_{c}^{-}(1)\right]^{2}}{\left[B_{c}^{-}(1)\right]^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+example: 
+\begin_inset Formula $B_{c}^{-}\left(z^{-1}\right)=1+z^{-1}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+G_{y_{d}\to y}\left(z^{-1}\right)=\frac{\left(1+z\right)\left(1+z^{-1}\right)}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $y_{d}\left(k\right)=\alpha k$
+\end_inset
+
+, then 
+\begin_inset Formula $y\left(k\right)=\alpha k$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Itemize
+fact: ZPET provides perfect tracking to step and ramp signals at steady
+ state (see ME 233 course reader)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero Phase Error Tracking (ZPET)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example: 
+\begin_inset Formula $B_{c}^{-}\left(z^{-1}\right)=1+2z^{-1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G_{y_{d}\to y}\left(z^{-1}\right)=\frac{(1+2z)(1+2z^{-1})}{9}=\frac{2z+5+2z^{-1}}{9}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename src/zpet_zpetInv.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bode Plot of 
+\begin_inset Formula $\frac{2z+5+2z^{-1}}{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{\arr\sp(0.1){\scriptstyle {\scriptstyle y_{d}(k)}} & \bblk{G_{\textnormal{ZPET}}\left(z^{-1}\right)}\arr\sp(0.3){r\left(k\right)} & \bblk{{\displaystyle G_{\textnormal{closed}}(z^{-1})=\frac{z^{-d}B_{c}^{+}(z^{-1})B_{c}^{-}(z^{-1})}{A_{c}(z^{-1})}}}\arr\sp(1){\scriptstyle y(k)} & \dotblk}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r\left(k\right)=\left[\frac{z^{d}A_{c}(z^{-1})}{B_{c}^{+}(z^{-1})}\frac{B_{c}^{-}(z)}{B_{c}^{-}(1)^{2}}\right]y_{d}\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z^{d}$
+\end_inset
+
+ is not causal 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ do instead
+\begin_inset Formula 
+\[
+r\left(k\right)=\left[\frac{A_{c}(z^{-1})}{B_{c}^{+}(z^{-1})}\frac{B_{c}^{-}(z)}{B_{c}^{-}(1)^{2}}\right]y_{d}\left(k+d\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{c}^{-}\left(z\right)=b_{c0}^{-}+b_{c1}^{-}z+\dots+b_{cs}^{-}z^{s}$
+\end_inset
+
+ is also not causal 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ do instead
+\begin_inset Formula 
+\[
+r\left(k\right)=\left[\frac{A_{c}(z^{-1})}{B_{c}^{+}(z^{-1})}\frac{z^{-s}B_{c}^{-}(z)}{B_{c}^{-}(1)^{2}}\right]y_{d}\left(k+d+s\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+at time 
+\begin_inset Formula $k$
+\end_inset
+
+, requires 
+\begin_inset Formula $y_{d}\left(k+d+s\right)$
+\end_inset
+
+: 
+\begin_inset Formula $d+s$
+\end_inset
+
+ steps preview of the desired output
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example: 
+\begin_inset Formula 
+\[
+G_{\textnormal{closed}}(z^{-1})=\frac{z^{-1}(1+2z^{-1})}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+without feedforward control:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename src/zpet_directCL.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example: 
+\begin_inset Formula 
+\[
+G_{\textnormal{closed}}(z^{-1})=\frac{z^{-1}(1+2z^{-1})}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+with ZPET feedforward:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename src/zpet_zpetTracking.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ZPET extensions:
+\end_layout
+
+\begin_layout Itemize
+standard form:
+\begin_inset Formula 
+\[
+G_{\textnormal{ZPET}}(z^{-1})=\frac{z^{d}A_{c}(z^{-1})}{B_{c}^{+}(z^{-1})}\frac{B_{c}^{-}(z)}{B_{c}^{-}(1)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+extended bandwidth (ref: B.
+ Haack and M.
+ Tomizuka, 
+\begin_inset Quotes eld
+\end_inset
+
+The effect of adding zeros to feedforward controllers,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+ASME J.
+ Dyn.
+ Syst.
+ Meas.
+ Control
+\emph default
+, vol.
+ 113, pp.
+ 6-10, 1991):
+\begin_inset Formula 
+\[
+G_{\textnormal{ZPET}}(z^{-1})=\frac{z^{d}A_{c}(z^{-1})}{B_{c}^{+}(z^{-1})}\frac{B_{c}^{-}(z)}{B_{c}^{-}(1)^{2}}\frac{\left(z^{-1}-b\right)\left(z-b\right)}{\left(1-b\right)^{2}},\ 0<b<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+remark: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left(z^{-1}-b\right)\left(z-b\right)/\left(1-b\right)^{2},\ 0<b<1$
+\end_inset
+
+ is a high-pass filter with unity DC gain
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,4304 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\setbeamertemplate{caption}[numbered]
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+%\providecommand{\xydframe}[2]{\save"#1"."#2"*[F--]\frm{}\restore}
+
+%\providecommand{\xyframe}[2]{\save"#1"."#2"*[F]\frm{}\restore}
+ 
+\usepackage{pgfpages}
+\providecommand{\xydframe}[2]{\save"#1"."#2"*[F--]\frm{}\restore}
+\providecommand{\xyframe}[2]{\save"#1"."#2"*[F]\frm{}\restore}
+\usepackage{amsthm}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "beamerStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 16: Stability of Parameter Adaptation Algorithms
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hyperstability
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For 
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+\left[\textnormal{correction term}\right]
+\]
+
+\end_inset
+
+we haven't talked about whether 
+\begin_inset Formula $\hat{\theta}(k)$
+\end_inset
+
+ will converge to the true value 
+\begin_inset Formula $\theta$
+\end_inset
+
+ if 
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+.
+ We haven't even talked about whether 
+\begin_inset Formula $\hat{\theta}\left(k\right)$
+\end_inset
+
+ will stay bounded or not!
+\end_layout
+
+\begin_layout NoteItem
+Besides RLS, there are many other forms of PAA; figuring this out is important
+\end_layout
+
+\begin_layout NoteItem
+Stability in this case is different from what we have learned in LTI systems:
+ concepts of poles and eigenvalues not available here 
+\end_layout
+
+\begin_layout Itemize
+Tools of stability evaluation: Lyapunov-based analysis
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (provided in ME233 course reader)
+\end_layout
+
+\end_inset
+
+, or hyperstability theory (topic of this lecture)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Hyperstability theory
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Hyperstability theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+history
+\end_layout
+
+\begin_layout Standard
+Vasile M.
+ Popov:
+\end_layout
+
+\begin_layout Itemize
+born in 1928, Romania
+\end_layout
+
+\begin_layout NoteItem
+was a visiting professor at EE departments of UC Berkeley and Stanford at
+ the end of 1960's
+\end_layout
+
+\begin_layout Itemize
+retired from University of Florida in 1993
+\end_layout
+
+\begin_layout Itemize
+developed hyperstability theory independently from Lyapnov theory
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Hyperstability theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider a 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(overall nonlinear) 
+\end_layout
+
+\end_inset
+
+closed-loop system in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Block-diagram-for"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xyR{1.5pc}\xyC{1.5pc}\xymatrix{\dotblk\ar[r]\sp>>+ & \cblk\ar[r]^{u\qquad} & \bblk{\text{LTI\ block}}\arline[r] & \dotblk\ar[r]\arline[d]^{v} & \dotblk\\
+ & \dotblk\ar[u]^{w}\sb>>- & \bblk{\text{Nonlinear block}}\arline[l] & \dotblk\ar[l]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Block-diagram-for"
+
+\end_inset
+
+Block diagram for hyperstability analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The linear time invariant (LTI) block is realized by
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.45
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+continuous-time case:
+\begin_inset Formula 
+\begin{align*}
+\dot{x}\left(t\right) & =Ax\left(t\right)+Bu\left(t\right)\\
+v\left(t\right) & =Cx\left(t\right)+Du\left(t\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+discrete-time case:
+\begin_inset Formula 
+\begin{align*}
+x\left(k+1\right) & =Ax\left(k\right)+Bu\left(k\right)\\
+v\left(k\right) & =Cx\left(k\right)+Du\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Hyperstability discusses conditions for 
+\begin_inset Quotes eld
+\end_inset
+
+nice
+\begin_inset Quotes erd
+\end_inset
+
+ behaviors in 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+the feedback block can be nonlinear and even time-varying 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Passivity
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Passive 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(positive) 
+\end_layout
+
+\end_inset
+
+systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Passive system
+\end_layout
+
+\end_inset
+
+The system 
+\begin_inset Formula $\xymatrix{v\arr & \bblk{\textnormal{System}}\arr & w}
+$
+\end_inset
+
+ is called passive if
+\begin_inset Formula 
+\[
+\int_{0}^{t_{1}}w^{T}\left(t\right)v\left(t\right)\d t\geq-\gamma^{2},\ \forall t_{1}\geq0\textnormal{ or }\sum_{k=0}^{k_{1}}w^{T}\left(k\right)v\left(k\right)\geq-\gamma^{2},\ \forall k_{1}\geq0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ depends on the initial conditions.
+\end_layout
+
+\begin_layout Itemize
+intuition: 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\int_{0}^{t_{1}}w^{T}\left(t\right)v\left(t\right)\d t$
+\end_inset
+
+ is the work/supply done to the system.
+ By conservation of energy, 
+\begin_inset Formula 
+\[
+E\left(t_{1}\right)\leq E\left(0\right)+\int_{0}^{t_{1}}w^{T}\left(t\right)v\left(t\right)\d t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+where 
+\begin_inset Formula $E\left(\cdot\right)$
+\end_inset
+
+ is 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not necessarily positive definite
+\end_layout
+
+\end_inset
+
+an energy function of the system states
+\end_layout
+
+\begin_layout NoteItem
+note: passive systems can be linear or nonlinear
+\end_layout
+
+\begin_layout NoteItem
+note: passive systems must be square
+\end_layout
+
+\begin_layout NoteItem
+example: (linear system) 
+\begin_inset Formula $w=kv$
+\end_inset
+
+ where 
+\begin_inset Formula $k>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+example: (sector nonlinearity) 
+\begin_inset Formula $w=f\left(v\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $f\left(v\right)$
+\end_inset
+
+ lies between 
+\begin_inset Formula $\underline{\alpha}v$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\bar{\alpha}v$
+\end_inset
+
+ (
+\begin_inset Formula $\bar{\alpha}>\underline{\alpha}\geq0$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strictly passive 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(positive) 
+\end_layout
+
+\end_inset
+
+systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+If the equality is 
+\emph on
+strict
+\emph default
+ in the passivity definition, with
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\int_{0}^{t_{1}}w^{T}\left(t\right)v\left(t\right)\d t\geq-\gamma^{2}\\
++\delta\int_{0}^{t_{1}}v^{T}\left(t\right)v\left(t\right)\d t+\epsilon\int_{0}^{t_{1}}w^{T}\left(t\right)w\left(t\right)\d t,\ \forall t_{1}\geq0
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+or in the discrete-time case
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=0}^{k_{1}}w^{T}\left(k\right)v\left(k\right)\geq-\gamma^{2}\\
++\delta\sum_{k=0}^{k_{1}}v^{T}\left(k\right)v\left(k\right)+\epsilon\sum_{k=0}^{k_{1}}w^{T}\left(k\right)w\left(k\right),\ \forall k_{1}\geq0
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon\geq0$
+\end_inset
+
+, but not both zero, the system is 
+\emph on
+strictly passive.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Passivity of combined systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Fact
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Passivity of connected systems
+\end_layout
+
+\end_inset
+
+If two systems 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ are both passive, then the following parallel and feedback combination
+ of 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ are also passive
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xymatrix{ & \dotblk\ar[r] & \bblk{S_{1}}\arline[r] & \dotblk\ard\sb(0.8)+\\
+v\arline[r] & \dotblk\arline[u]\arline[d] &  & \cblk\ar[r] & w\\
+ & \dotblk\ar[r] & \bblk{S_{2}}\arline[r] & \dotblk\aru\sp(0.8)+
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0.6in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xymatrix{v\ar[r]\sp(0.8)+ & \cblk\ar[r] & \bblk{S_{1}}\arline[r] & \dotblk\ar[r]\arline[d] & w\\
+ & \dotblk\ar[u]\sb(0.8)- & \bblk{S_{2}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+proof is straightforward
+\end_layout
+
+\begin_layout NoteItem
+the following system is not passive by observation 
+\begin_inset Formula 
+\[
+\xymatrix{ & \dotblk\ar[r] & \bblk{S_{1}}\arline[r] & \dotblk\arr & w_{1}\\
+v\arline[r] & \dotblk\arline[u]\arline[d]\\
+ & \dotblk\ar[r] & \bblk{S_{2}}\arline[r] & \dotblk\arr & w_{2}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Main results
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Hyperstability theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Hyperstability
+\end_layout
+
+\end_inset
+
+The feedback system in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Block-diagram-for"
+
+\end_inset
+
+ is hyperstable if and only if 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+positive constant 
+\end_layout
+
+\end_inset
+
+there exist positive constants 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ and 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a positive constant 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ such that
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ all solutions 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfy
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\Vert x(t)\right\Vert _{2}<\delta\left[\left\Vert x(0)\right\Vert _{2}+\gamma\right],\ \forall t>0\textnormal{ or }\left\Vert x(k)\right\Vert _{2}<\delta\left[\left\Vert x(0)\right\Vert _{2}+\gamma\right],\ \forall k>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\Vert x(t)\right\Vert <\delta\left[\left\Vert x(0)\right\Vert +\gamma\right],\ \forall t>0\textnormal{ or }\left\Vert x(k)\right\Vert <\delta\left[\left\Vert x(0)\right\Vert +\gamma\right],\ \forall k>0
+\]
+
+\end_inset
+
+for all feedback blocks that satisfy the 
+\emph on
+Popov inequality
+\emph default
+
+\begin_inset Formula 
+\[
+\int_{0}^{t_{1}}w^{T}\left(t\right)v\left(t\right)\d t\geq-\gamma^{2},\ \forall t_{1}\geq0\textnormal{ or }\sum_{k=0}^{k_{1}}w^{T}\left(k\right)v\left(k\right)\geq-\gamma^{2},\ \forall k_{1}\geq0
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ depends on the initial conditions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In other words, the LTI block is bounded in states for any initial conditions
+ for any 
+\emph on
+passive
+\emph default
+ nonlinear blocks
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(doesn't generate energy) 
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Hyperstability theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Asymptotic hyperstability
+\end_layout
+
+\end_inset
+
+ The feedback system below is asymptotically hyperstable if and only if
+ it is hyperstable and for all 
+\emph on
+bounded
+\emph default
+ 
+\begin_inset Formula $w$
+\end_inset
+
+ satisfying the Popov inequality we have
+\begin_inset Formula 
+\[
+\lim_{k\rightarrow\infty}x(k)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{\dotblk\ar[r]^{\qquad+} & \cblk\ar[r]_{-\qquad\qquad\quad}^{u\qquad} & \bblk{\text{LTI\ block}}\arline[r] & \dotblk\ar[r]\arline[d]^{v} & \dotblk\\
+ & \dotblk\ar[u]^{w} & \bblk{\text{Nonlinear block}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Hyperstability theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout NoteItem
+Hyperstability theory says we can conclude (asymptotic) hyperstability if
+ the LTI block and the nonlinear respectively possess certain properties.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Hyperstability
+\end_layout
+
+\end_inset
+
+ The feedback system in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Block-diagram-for"
+
+\end_inset
+
+ is hyperstable if and only if the nonlinear block satisfies 
+\series bold
+Popov inequality
+\series default
+ (i.e., it is passive) and the LTI transfer function is 
+\series bold
+positive real
+\series default
+.
+\end_layout
+
+\begin_layout NoteItem
+intuition: a passive system in feedback connection with another passive
+ system gives a passive closed loop.
+ 
+\end_layout
+
+\begin_layout NoteItem
+It is false that a feedback combination of two passive systems is stable.
+ If the new passive system has a positive definite storage function, then
+ it is stable.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Asymptotical hyperstability
+\end_layout
+
+\end_inset
+
+ The feedback system in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Block-diagram-for"
+
+\end_inset
+
+ is asymptotically hyperstable if and only if the nonlinear block satisfies
+ 
+\series bold
+Popov inequality
+\series default
+ and the LTI transfer function is 
+\series bold
+strictly positive real
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+intuition: a strictly passive system in feedback connection with a passive
+ system gives an asymptotically stable closed loop.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Positive real and strictly positive real
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Positive real and strictly positive real 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Positive real transfer function (continuous-time case): a SISO transfer
+ function 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is called 
+\emph on
+positive real
+\emph default
+ (
+\series bold
+PR
+\series default
+) if
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is real for real values of 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\re\left\{ G\left(s\right)\right\} >0$
+\end_inset
+
+ for 
+\begin_inset Formula $\re\left\{ s\right\} >0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above is intuitive but not practical to evaluate.
+ Equivalently, 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is PR if 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ does not possess any pole in 
+\begin_inset Formula $\re\left\{ s\right\} >0$
+\end_inset
+
+ (no unstable poles)
+\end_layout
+
+\begin_layout Enumerate
+any pole on the imaginary axis 
+\begin_inset Formula $j\omega_{0}$
+\end_inset
+
+ does not repeat and the associated residue (i.e., the coefficient appearing
+ in the partial fraction expansion) 
+\begin_inset Formula $\lim_{s\rightarrow j\omega_{0}}\left(s-j\omega_{0}\right)G\left(s\right)$
+\end_inset
+
+ is non-negative
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\omega\in\mathbb{R}$
+\end_inset
+
+ where 
+\begin_inset Formula $s=j\omega$
+\end_inset
+
+ is not a pole of 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+, 
+\begin_inset Formula $G\left(j\omega\right)+G\left(-j\omega\right)=2\re\left\{ G\left(j\omega\right)\right\} \geq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Positive real and strictly positive real 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Strictly positive real transfer function (continuous-time case): a SISO
+ transfer function 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is 
+\emph on
+strictly positive real
+\emph default
+ (
+\series bold
+SPR
+\series default
+) if
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ does not possess any pole in 
+\begin_inset Formula $\re\left\{ s\right\} \geq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout NoteItem
+i.e., all poles are on the left half plane
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\omega\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $G\left(j\omega\right)+G\left(-j\omega\right)=2\re\left\{ G\left(j\omega\right)\right\} >0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename src/spr.eps
+	width 5cm
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Figure: example Nyquist plot of a SPR transfer function
+\end_layout
+
+\begin_layout NoteItem
+We will be mostly considering SPR systems.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Positive real and strictly positive real 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+discrete-time case
+\end_layout
+
+\begin_layout Standard
+A SISO discrete-time transfer function 
+\begin_inset Formula $G\left(z\right)$
+\end_inset
+
+ is positive real (
+\series bold
+PR
+\series default
+) if:
+\end_layout
+
+\begin_layout Enumerate
+it does not possess any pole outside of the unit circle
+\end_layout
+
+\begin_layout Enumerate
+any pole on the unit circle does not repeat and the associated redsidue
+ is non-negative 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall|\omega|\leq\pi$
+\end_inset
+
+ where 
+\begin_inset Formula $z=e^{j\omega}$
+\end_inset
+
+ is not a pole of 
+\begin_inset Formula $G\left(z\right)$
+\end_inset
+
+, 
+\begin_inset Formula $G(e^{-j\omega})+G(e^{j\omega})=2\re\left\{ G(e^{j\omega})\right\} \geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $G\left(z\right)$
+\end_inset
+
+ is strictly positive real (
+\series bold
+SPR
+\series default
+) if:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G(z)$
+\end_inset
+
+ does not possess any pole outside of or on the unit circle on z-plane
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall|\omega|<\pi$
+\end_inset
+
+, 
+\begin_inset Formula $G(e^{-j\omega})+G(e^{j\omega})=2\re\left\{ G(e^{j\omega})\right\} >0$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ for all real values of 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of PR and SPR transfer functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $G\left(z\right)=c$
+\end_inset
+
+ is SPR if 
+\begin_inset Formula $c>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G\left(z\right)=\frac{1}{z-a},\ \left|a\right|<1$
+\end_inset
+
+ is asymptotically stable but not PR:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+2\re\left\{ G\left(e^{j\omega}\right)\right\}  & =\frac{1}{e^{j\omega}-a}+\frac{1}{e^{-j\omega}-a}\\
+ & =2\frac{\cos\omega-a}{1+a^{2}-2a\cos\omega}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename src/notSPR.eps
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G\left(z\right)=\frac{z}{z-a},\ \left|a\right|<1$
+\end_inset
+
+ is asymptotically stable and SPR
+\end_layout
+
+\begin_layout NoteItem
+homework: 
+\begin_inset Formula 
+\[
+G\left(z\right)=1/\left(1-a_{1}z^{-1}-a_{2}z^{-1}-\dots-a_{n}z^{-n}\right),\ \sum_{i=1}^{n}\left|a_{i}\right|<1
+\]
+
+\end_inset
+
+is SPR
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strictly positive real implies strict passivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+It turns out [see Appendix (to prove on board at the end of class)]:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+: the LTI system 
+\begin_inset Formula $G\left(s\right)=C\left(sI-A\right)^{-1}B+D$
+\end_inset
+
+ (in minimal realization) 
+\begin_inset Formula 
+\begin{align*}
+\dot{x} & =Ax+Bu\\
+y & =Cx+Du
+\end{align*}
+
+\end_inset
+
+is 
+\end_layout
+
+\begin_layout Itemize
+passive if 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is positive real
+\end_layout
+
+\begin_layout Itemize
+strictly passive if 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is strictly positive real
+\end_layout
+
+\begin_layout Standard
+Analogous results hold for discrete-time systems.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Understanding the hyperstability theorem
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Understanding the hyperstability theorem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example: consider a mass-spring-damper system
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename src/massSpringDamper.eps
+	width 5.5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+system dynamics (
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $m\ddot{x}+b\dot{x}+kx=u\Rightarrow$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+G_{u\to x}\left(s\right) & =\frac{1}{ms^{2}+bs+k}\\
+G_{u\to v}\left(s\right) & =\frac{s}{ms^{2}+bs+k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with a general nonlinear feedback control law
+\begin_inset Formula 
+\[
+\xymatrix{{\scriptstyle 0}\ar[r]^{\qquad+} & \cblk\ar[r]_{-\qquad\qquad\quad}^{u\qquad} & \bblk{G_{u\to v}\left(s\right)}\arline[r] & \dotblk\ar[r]\arline[d]^{v} & \dotblk\\
+ & \dotblk\ar[u]^{w} & \bblk{\text{Nonlinear block}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{0}^{t_{1}}u\left(t\right)v\left(t\right)\d t$
+\end_inset
+
+ is the total energy supplied to the system
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Understanding the hyperstability theorem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+if the nonlinear block satisfies the Popov inequality
+\begin_inset Formula 
+\[
+\int_{0}^{t_{1}}w\left(t\right)v\left(t\right)\d t\geq-\gamma_{0}^{2},\ \forall t_{1}\geq0
+\]
+
+\end_inset
+
+then from 
+\begin_inset Formula $u\left(t\right)=-w\left(t\right)$
+\end_inset
+
+, the energy supplied to the system is bounded by
+\begin_inset Formula 
+\[
+\int_{0}^{t_{1}}u\left(t\right)v\left(t\right)\d t\leq\gamma_{0}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+energy conservation (assuming 
+\begin_inset Formula $v\left(0\right)=v_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\left(0\right)=x_{0}$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\frac{1}{2}mv^{2}+\frac{1}{2}kx^{2}-\frac{1}{2}mv_{0}^{2}-\frac{1}{2}kx_{0}^{2}=\int_{0}^{t_{1}}u\left(t\right)v\left(t\right)\d t\leq\gamma_{0}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+define state vector 
+\begin_inset Formula $x=\left[x_{1},x_{2}\right]^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1}=\sqrt{\frac{k}{2}}x$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=\sqrt{\frac{m}{2}}v$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+||x\left(t\right)||_{2}^{2}\leq||x\left(0\right)||_{2}^{2}+\gamma_{0}^{2}\leq\left(||x\left(0\right)||_{2}+\gamma_{0}\right)^{2}
+\]
+
+\end_inset
+
+which is a special case in the hyperstability definition
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Understanding the hyperstability theorem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xymatrix{\dotblk\ar[r]^{\qquad+} & \cblk\ar[r]_{-\qquad\qquad\quad}^{u\qquad} & \bblk{\text{LTI\ block}}\arline[r] & \dotblk\ar[r]\arline[d]^{v} & \dotblk\\
+ & \dotblk\ar[u]^{w} & \bblk{\text{Nonlinear block}}\arline[l] & \dotblk\ar[l]
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+intuition from the example
+\emph default
+: 
+\end_layout
+
+\begin_layout Standard
+The nonlinear block satisfying Popov inequality assures bounded supply to
+ the LTI system.
+ Based on energy conservation, the energy of the LTI system is bounded.
+ If the energy function is positive definite with respect to the states,
+ then the states will be bounded.
+ 
+\end_layout
+
+\begin_layout NoteItem
+KYP lemma provides a candidate positive definite 
+\begin_inset Quotes eld
+\end_inset
+
+energy function
+\begin_inset Quotes erd
+\end_inset
+
+ for the positive real LTI block.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+more intuition
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+If the LTI system is strictly passive, it consumes energy.
+ The bounded supply will eventually be all consumed, hence the convergence
+ to zero for the states.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Remark about the relationship between hyperstability and general stability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+A remark about hyperstability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+An example of a system that is asymptotically hyperstable and stable: 
+\begin_inset Formula 
+\[
+\xymatrix{v\ar[r]\sp(0.8)+ & \cblk\ar[r] & \bblk{\frac{1}{s+1}}\arline[r] & \dotblk\ar[r]\arline[d] & w\\
+ & \dotblk\ar[u]\sb(0.8)- & \bblk{\textnormal{static gain }k\left(>0\right)}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+(it has a strictly stable pole): closed-loop characteristic polynomial comes
+ from
+\begin_inset Formula 
+\[
+1+k\frac{1}{s+1}=0
+\]
+
+\end_inset
+
+hence the closed-loop pole is
+\begin_inset Formula 
+\[
+s=-\left(k+1\right)<0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Stable systems may however be not hyperstable: for instance
+\begin_inset Formula 
+\[
+\xymatrix{v\ar[r]\sp(0.8)+ & \cblk\ar[r] & \bblk{\frac{1}{s-1}}\arline[r] & \dotblk\ar[r]\arline[d] & w\\
+ & \dotblk\ar[u]\sb(0.8)- & \bblk{\textnormal{static gain }k\left(>1\right)}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+is stable but not hyperstable (
+\begin_inset Formula $\frac{1}{s-1}$
+\end_inset
+
+ is unstable and hence not SPR)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Procedure of PAA stability analysis by hyperstability theory
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Procedure of 
+\end_layout
+
+\end_inset
+
+PAA stability analysis by hperstability theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+step 1: translate the adaptation algorithm to a feedback combination of
+ a LTI block and a nonlinear block, as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Block-diagram-for"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+step 2: verify that the feedback block satisfies the Popov inequality
+\end_layout
+
+\begin_layout Itemize
+step 3: check that the LTI block is strictly positive real
+\end_layout
+
+\begin_layout NoteItem
+steps 1 to 3 constitute the sufficiency portion of the asymptotic hyperstability
+ theorem
+\end_layout
+
+\begin_layout Itemize
+step 4: show that the output of the feedback block is bounded.
+ Then from the definition of asymptotic hyperstability, we conclude that
+ the state 
+\begin_inset Formula $x$
+\end_inset
+
+ converges to zero
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example: hyperstability of RLS with constant adaptation gain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Recall PAA with recursive least squares:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+a priori 
+\emph default
+parameter update
+\emph on
+ 
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+\frac{F\left(k\right)\phi\left(k\right)}{1+\phi^{T}\left(k\right)F\left(k\right)\phi\left(k\right)}\epsilon^{o}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+a posteriori 
+\emph default
+parameter update
+\emph on
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+F\left(k\right)\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We use the 
+\emph on
+a posteriori 
+\emph default
+form to prove that the RLS with 
+\begin_inset Formula $F\left(k\right)=F\succ0$
+\end_inset
+
+ is 
+\series bold
+always asymptotically hyperstable.
+\end_layout
+
+\begin_layout NoteItem
+this actually also holds for non-constant adaptation gains, we will talk
+ about this in a few more lectures.
+\end_layout
+
+\begin_layout NoteItem
+the result should be intuitive: RLS is nothing but 
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k\right)=\left[\sum_{i=1}^{k}\phi^{T}\left(i-1\right)\phi\left(i-1\right)\right]^{-1}\sum_{j=1}^{k}\phi\left(j-1\right)y\left(j\right)
+\]
+
+\end_inset
+
+nothing would go wrong at each step
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 1: transformation to a feedback structure
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k+1\right)=\hat{\theta}\left(k\right)+F\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.3in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+equation of 
+\end_layout
+
+\end_inset
+
+
+\series default
+\emph on
+parameter estimation error (vector)
+\emph default
+ 
+\begin_inset Formula $\tilde{\theta}\left(k\right)=\hat{\theta}\left(k\right)-\theta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\phi\left(k\right)\epsilon\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+equation of 
+\end_layout
+
+\end_inset
+
+
+\series default
+a posteriori
+\emph default
+ 
+\emph on
+prediction error 
+\emph default
+
+\begin_inset Formula $\epsilon\left(k+1\right)=y\left(k+1\right)-\hat{\theta}^{T}\left(k+1\right)\phi\left(k\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\epsilon\left(k+1\right) & =\theta^{T}\phi\left(k\right)-\hat{\theta}^{T}\left(k+1\right)\phi\left(k\right)\\
+ & =-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 1: transformation to a feedback structure
+\end_layout
+
+\begin_layout Standard
+PAA equations:
+\begin_inset Formula 
+\begin{align*}
+\tilde{\theta}\left(k+1\right) & =\tilde{\theta}\left(k\right)+F\phi\left(k\right)\epsilon\left(k+1\right)\\
+\epsilon\left(k+1\right) & =-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+equivalent block diagram:
+\begin_inset Formula 
+\[
+\xyR{1.3pc}\xyC{1.3pc}\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[rrr] &  &  & \bblk 1\arline[rrrr] &  &  &  & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)- & *[F]{\times}\arline[l]\sp(1.5){\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)} & \dotblk\arl\arline[d] &  & \cblk\arline[ll]\sb{\tilde{\theta}\left(k+1\right)} & \bblk F\arl\sb>>+ & *[F]{\times}\arl & \dotblk\arl\\
+ &  &  & \dotblk\arr & \bblk{z^{-1}}\arline[r] & \dotblk\aru\sp>>+\\
+ &  & \dotblk\arline[uu]\sb<<{\phi\left(k\right)} &  &  &  &  & \dotblk\arline[uu]\sp<<{\phi\left(k\right)}
+}
+\xyR{1.3pc}\xyC{1.3pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 2: Popov inequality
+\end_layout
+
+\begin_layout Standard
+for the feedback nonlinear block, need to prove
+\begin_inset Formula 
+\[
+\sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)\geq-\gamma_{0}^{2},\ \forall k_{1}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tilde{\theta}\left(k+1\right)=\tilde{\theta}\left(k\right)+F\phi\left(k\right)\epsilon\left(k+1\right)=\tilde{\theta}\left(0\right)+F\sum_{j=0}^{k}\phi\left(j\right)\epsilon\left(j+1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)=F\phi\left(k\right)\epsilon\left(k+1\right)$
+\end_inset
+
+ gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)\\
+= & \sum_{k=0}^{k_{1}}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula 
+\begin{align*}
+ & \sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\underbrace{\phi\left(k\right)\epsilon\left(k+1\right)}_{F^{-1}\left(\tilde{\theta}\left(k+1\right)-\tilde{\theta}\left(k\right)\right)}\\
+= & \sum_{k=0}^{k_{1}}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 2: Popov inequality
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+adding and substracting terms
+\begin_inset Quotes erd
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)\\
+=\sum_{k=0}^{k_{1}}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)\right)\\
+=\sum_{k=0}^{k_{1}}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)\pm\tilde{\theta}^{T}\left(k\right)F^{-1}\tilde{\theta}\left(k\right)\right.\\
+\vphantom{\sum_{k=0}^{k_{1}}}\left.-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)$
+\end_inset
+
+ is a cross product between 
+\begin_inset Formula $\tilde{\theta}\left(k+1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\theta}\left(k\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ can 
+\begin_inset Quotes eld
+\end_inset
+
+complete the squares
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 2: Popov inequality
+\end_layout
+
+\begin_layout Standard
+Combining terms yields
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=0}^{k_{1}}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)\pm\tilde{\theta}^{T}\left(k\right)F^{-1}\tilde{\theta}\left(k\right)-\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)\right)\\
+=\underline{\sum_{k=0}^{k_{1}}\frac{1}{2}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k\right)F^{-1}\tilde{\theta}\left(k\right)\right)}\\
++\sum_{k=0}^{k_{1}}\frac{1}{2}\underbrace{\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)-2\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k\right)+\tilde{\theta}^{T}\left(k\right)F^{-1}\tilde{\theta}\left(k\right)\right)}_{\left[\bigstar\right]}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left[\bigstar\right]$
+\end_inset
+
+ is equivalent to
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(F^{-1/2}\tilde{\theta}\left(k+1\right)-F^{-1/2}\tilde{\theta}\left(k\right)\right)^{T}\left(F^{-1/2}\tilde{\theta}\left(k+1\right)-F^{-1/2}\tilde{\theta}\left(k\right)\right)\geq0
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 2: Popov inequality
+\end_layout
+
+\begin_layout Itemize
+the underlined term is also lower bounded:
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=0}^{k_{1}}\frac{1}{2}\left(\tilde{\theta}^{T}\left(k+1\right)F^{-1}\tilde{\theta}\left(k+1\right)-\tilde{\theta}^{T}\left(k\right)F^{-1}\tilde{\theta}\left(k\right)\right)\\
+=\frac{1}{2}\tilde{\theta}^{T}\left(k_{1}+1\right)F^{-1}\tilde{\theta}\left(k_{1}+1\right)-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\tilde{\theta}\left(0\right)\\
+\geq-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\tilde{\theta}\left(0\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+hence
+\begin_inset Formula 
+\[
+\boxed{\sum_{k=0}^{k_{1}}\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\epsilon\left(k+1\right)\geq-\frac{1}{2}\tilde{\theta}^{T}\left(0\right)F^{-1}\tilde{\theta}\left(0\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 3: SPR condition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{{\scriptstyle 0}\ar[r]\sp(0.8)+ & \cblk\ar[r] & \bblk 1\arline[r] & \dotblk\ar[r]\arline[d] & {\scriptstyle \epsilon\left(k+1\right)}\\
+ & \dotblk\ar[u]\sb(0.8)-\sp{w\left(k\right)} & \bblk{\textnormal{Nonlinear Block}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the identity block 
+\begin_inset Formula $G\left(z^{-1}\right)=1$
+\end_inset
+
+ is always SPR
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.3in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+from steps 1-3, we conclude the adaptation system is asymptotically hyperstable
+\end_layout
+
+\begin_layout Itemize
+this means 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ will be bounded, and if 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ is further shown to be bounded, 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ converge to zero 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+step 4: boundedness of the signal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[r] & \bblk 1\arline[r] & \dotblk\ar[r]\arline[d] & \epsilon\left(k+1\right)\\
+ & \dotblk\ar[u]\sb(0.8)-\sp{w\left(k\right)} & \bblk{\textnormal{Nonlinear Block}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\epsilon\left(k+1\right)=-w\left(k\right)$
+\end_inset
+
+, so 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ is bounded if 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ is bounded
+\end_layout
+
+\begin_layout Itemize
+thus hyperstability theorem gives that 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ converges to zero
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.3in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example cont'd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+intuition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{0\ar[r]\sp(0.8)+ & \cblk\ar[r] & \bblk 1\arline[r] & \dotblk\ar[r]\arline[d] & \epsilon\left(k+1\right)\\
+ & \dotblk\ar[u]\sb(0.8)-\sp{w\left(k\right)} & \bblk{\textnormal{Nonlinear Block}}\arline[l] & \dotblk\ar[l]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For this simple case, we can intuitively see why 
+\begin_inset Formula $\epsilon\left(k+1\right)\rightarrow0$
+\end_inset
+
+: Popov inequality gives
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\sum_{k=0}^{k_{1}}\epsilon\left(k+1\right)w\left(k\right) & \geq-\gamma_{0}^{2}\\
+\underset{}{\overset{w\left(k\right)=-\epsilon\left(k+1\right)}{\Longleftrightarrow}\xymatrix{\arr}
+}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xyR{0.1pc}\xyC{4pc}\xymatrix{ & \sum_{k=0}^{k_{1}}\epsilon\left(k+1\right)w\left(k\right)\geq-\gamma_{0}^{2}\\
+\dotblk\ar@{=>}[r]\sp(0.27){w\left(k\right)=-\epsilon\left(k+1\right)} & \sum_{k=0}^{k_{1}}\epsilon^{2}\left(k+1\right)\leq\gamma_{0}^{2}
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{k=0}^{k_{1}}\epsilon\left(k+1\right)w\left(k\right)\geq-\gamma_{0}^{2}$
+\end_inset
+
+; as 
+\begin_inset Formula $w\left(k\right)=-\epsilon\left(k+1\right)$
+\end_inset
+
+, so 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{k_{1}}\epsilon^{2}\left(k+1\right)\leq\gamma_{0}^{2}
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $k_{1}\rightarrow\infty$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ must converge to 0 to ensure the boundedness.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+One remark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Recall
+\begin_inset Formula 
+\[
+\epsilon\left(k+1\right)=\frac{\epsilon^{o}\left(k+1\right)}{1+\phi^{T}\left(k\right)F\phi\left(k\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\epsilon\left(k+1\right)\rightarrow0$
+\end_inset
+
+ does not necessarily mean 
+\begin_inset Formula $\epsilon^{o}\left(k+1\right)\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+need to show 
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+ is bounded: for instance, the plant needs to be input-output stable for
+ 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ to be bounded
+\end_layout
+
+\begin_layout Itemize
+see details in ME 233 course reader
+\end_layout
+
+\begin_layout NoteItem
+two fundamental problems in PAA analysis:
+\end_layout
+
+\begin_layout NoteItem
+stability: if hyperstable, then 
+\begin_inset Formula $\epsilon\left(k+1\right)=-\tilde{\theta}^{T}\left(k+1\right)\phi\left(k\right)\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+convergence: whether 
+\begin_inset Formula $\tilde{\theta}\left(k\right)=\hat{\theta}\left(k\right)-\theta\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+stability 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\tilde{\theta}\left(k+1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+ graduatelly become orthogonal 
+\begin_inset Formula $\nRightarrow$
+\end_inset
+
+ convergence in general (details in a few more lectures)
+\end_layout
+
+\begin_layout Standard
+There are different PAAs with different stability and convergence requirements
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exercise
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In the following block diagrams, 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are respectively the input and output of the overall system; 
+\begin_inset Formula $h\left(\cdot\right)$
+\end_inset
+
+ is a sector nonlinearity satisfying 
+\begin_inset Formula 
+\[
+2\left|x\right|<\left|h\left(x\right)\right|<5\left|x\right|
+\]
+
+\end_inset
+
+ Check whether they satisfy the Popov inequality.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xymatrix{u\arr & \bblk{\int}\arr & y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xymatrix{u\arr & \bblk{\int}\arr & \bblk{h\left(\cdot\right)}\arr & y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xymatrix{ & \dotblk\arr & \bblk{h\left(\cdot\right)}\arline[r] & \dotblk\ard\sp>>+\\
+\dotblk\arline[r]\sp<<u & \dotblk\arline[u]\arr & \bblk{\int}\arr\sb>>+ & \cblk\arr\sp>>y & \dotblk
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xymatrix{u\arr & \bblk{\int}\arr & \bblk{{\displaystyle \frac{1}{as+1}},\ a>0}\arr & y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Appendix 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Further reading
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the 
+\begin_inset Quotes eld
+\end_inset
+
+energy function
+\begin_inset Quotes erd
+\end_inset
+
+ mentioned in the passivity slides is more formally called the storage function
+\end_layout
+
+\begin_layout Itemize
+a (linear or nonlinear) passive system with a positive definite storage
+ function is stable
+\end_layout
+
+\begin_layout Itemize
+a (linear or nonlinear) strictly passive system is asymptotically stable
+\end_layout
+
+\begin_layout Itemize
+another way to describe the hyperstability theorem (in the language of passive
+ systems) is that: a strictly passive, time-invariant dynamical system with
+ a passive (possibly time-varying) memoryless function is asymptotically
+ stable.
+\end_layout
+
+\begin_layout Itemize
+reference: H.
+ Khalil, 
+\begin_inset Quotes eld
+\end_inset
+
+Nonlinear Systems
+\begin_inset Quotes erd
+\end_inset
+
+, Prentice Hall
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Strictly positive real implies strict passivity
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Kalman Yakubovich Popov Lemma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Kalman Yakubovich Popov (KYP) Lemma connects frequency-domain SPR conditions
+ and time-domain system matrices:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+: Consider 
+\begin_inset Formula $G\left(s\right)=C\left(sI-A\right)^{-1}B+D$
+\end_inset
+
+ where 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ is controllable and 
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ is observable.
+ 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is 
+\series bold
+strictly positive real
+\series default
+ if and only if there exist matrices 
+\begin_inset Formula $P=P^{T}\succ0$
+\end_inset
+
+, 
+\begin_inset Formula $L$
+\end_inset
+
+, and 
+\begin_inset Formula $W$
+\end_inset
+
+, and a positive constant 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{align*}
+PA+A^{T}P & =-L^{T}L-\epsilon P\\
+PB & =C^{T}-L^{T}W\\
+W^{T}W & =D+D^{T}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof: see H.
+ Khalil, 
+\begin_inset Quotes eld
+\end_inset
+
+Nonlinear Systems
+\begin_inset Quotes erd
+\end_inset
+
+, Prentice Hall
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Kalman Yakubovich Popov Lemma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Discrete-time version of KYP lemma: replace 
+\begin_inset Formula $s$
+\end_inset
+
+ with 
+\begin_inset Formula $z$
+\end_inset
+
+ and replace the matrix equalities with
+\begin_inset Formula 
+\begin{align*}
+A^{T}PA-P & =-L^{T}L-\epsilon P\\
+B^{T}PA-C & =-K^{T}L\\
+D+D^{T}-B^{T}PB & =K^{T}K
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Strictly positive real implies strict passivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+From KYP lemma, the following result can be shown:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+: the LTI system 
+\begin_inset Formula $G\left(s\right)=C\left(sI-A\right)^{-1}B+D$
+\end_inset
+
+ (in minimal realization) 
+\begin_inset Formula 
+\begin{align*}
+\dot{x} & =Ax+Bu\\
+y & =Cx+Du
+\end{align*}
+
+\end_inset
+
+is 
+\end_layout
+
+\begin_layout Itemize
+passive if 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is positive real
+\end_layout
+
+\begin_layout Itemize
+strictly passive if 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ is strictly positive real
+\end_layout
+
+\begin_layout Standard
+Analogous results hold for discrete-time systems.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Strictly positive real implies strict passivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Proof
+\series default
+: Consider 
+\begin_inset Formula $V=\frac{1}{2}x^{T}Px$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+V\left(x\left(T\right)\right)-V\left(x\left(0\right)\right)=\int_{0}^{T}\dot{V}\d t=\int_{0}^{T}\left[\frac{1}{2}x^{T}\left(A^{T}P+PA\right)x+u^{T}B^{T}Px\right]\d t
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ be the input and the output of 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+.
+ KYP lemma gives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V\left(x\left(T\right)\right)-V\left(x\left(0\right)\right)=\int_{0}^{T}\left[-\frac{1}{2}x^{T}\left(L^{T}L+\epsilon P\right)x+u^{T}B^{T}Px\right]\d t
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{T}u^{T}y\d t & =\int_{0}^{T}u^{T}\left(Cx+Du\right)\d t=\int_{0}^{T}\left[u^{T}\left(B^{T}P+W^{T}L\right)x+u^{T}Du\right]\d t\\
+ & =\int_{0}^{T}\left[u^{T}\left(B^{T}P+W^{T}L\right)x+\frac{1}{2}u^{T}\left(D+D^{T}\right)u\right]\d t\\
+ & =\int_{0}^{T}\left[u^{T}\left(B^{T}P+W^{T}L\right)x+\frac{1}{2}u^{T}W^{T}Wu\right]\d t
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+for MIMO case, we consider 
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{T}\frac{1}{2}\left(u^{T}y+y^{T}u\right)\d t & =\int_{0}^{T}\left[u^{T}\left(B^{T}P+W^{T}L\right)x+\frac{1}{2}u^{T}\left(D+D^{T}\right)u\right]\d t\\
+ & =\int_{0}^{T}\left[u^{T}\left(B^{T}P+W^{T}L\right)x+\frac{1}{2}u^{T}W^{T}Wu\right]\d t
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Strictly positive real implies strict passivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+hence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \int_{0}^{T}u^{T}y\d t-V\left(x\left(T\right)\right)+V\left(x\left(0\right)\right)\\
+= & \int_{0}^{T}\left[u^{T}\left(B^{T}P+W^{T}L\right)x+\frac{1}{2}u^{T}W^{T}Wu+\frac{1}{2}x^{T}\left(L^{T}L+\epsilon P\right)x-u^{T}B^{T}Px\right]\d t\\
+= & \frac{1}{2}\int_{0}^{T}\left(Lx+Wu\right)^{T}\left(Lx+Wu\right)\d t+\frac{1}{2}\epsilon x^{T}Px\geq\frac{1}{2}\epsilon x^{T}Px>0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

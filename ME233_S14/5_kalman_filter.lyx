@@ -1,0 +1,4976 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+%\usepackage{tikz}
+%\usetikzlibrary{shapes} 
+%\usetikzlibrary{arrows,arrows.new}
+
+%\usepackage{pgfplots}
+
+%\usepackage{pstricks-add}
+%\usepackage{pst-grad} % For gradients
+%\usepackage{pst-plot} % For axes
+\input{mtikzStyle}
+\providecommand{\xydframe}[2]{\save"#1"."#2"*[F--]\frm{}\restore}
+\providecommand{\xyframe}[2]{\save"#1"."#2"*[F]\frm{}\restore}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 2
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "beamerMargin.tex"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 5: Stochastic State Estimation (Kalman Filter)
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Problem statement
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Discrete-time Kalman Filter
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Properties
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Continuous-time Kalman Filter
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Properties
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+why are we learning this?
+\end_layout
+
+\begin_layout Itemize
+state estimation in deterministic case:
+\begin_inset Formula 
+\begin{align*}
+\text{Plant: } & x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right),\ y\left(k\right)=Cx\left(k\right)\\
+\text{Observer: } & \hat{x}\left(k+1\right)=A\hat{x}\left(k\right)+Bu\left(k\right)+L\left(y\left(k\right)-C\hat{x}\left(k\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+observer gain 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $L$
+\end_inset
+
+ designed based on the error (
+\begin_inset Formula $e\left(k\right)=x\left(k\right)-\hat{x}\left(k\right)$
+\end_inset
+
+) dynamics: 
+\begin_inset Formula 
+\begin{equation}
+e\left(k+1\right)=\left(A-LC\right)e\left(k\right)\label{eq:errObs}
+\end{equation}
+
+\end_inset
+
+to reach fast convergence of 
+\begin_inset Formula $\lim_{k\rightarrow\infty}e\left(k\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+observation: 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $L$
+\end_inset
+
+ is not optimal when there is noise in the plant; actually 
+\begin_inset Formula $\lim_{k\rightarrow\infty}e\left(k\right)=0$
+\end_inset
+
+ isn't even a valid goal when there is noise
+\end_layout
+
+\begin_layout Itemize
+Kalman Filter provides optimal state estimation under input and output noises
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Problem statement
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+plant:
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+x\left(k+1\right) & =A\left(k\right)x\left(k\right)+B\left(k\right)u\left(k\right)+B_{w}\left(k\right)w\left(k\right)\\
+y\left(k\right) & =C\left(k\right)x\left(k\right)+v\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $A\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $B\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $C\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $B_{w}\left(k\right)$
+\end_inset
+
+--known system matrices
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+--
+\begin_inset Formula $s$
+\end_inset
+
+-dimensional input noise; 
+\begin_inset Formula $v\left(k\right)$
+\end_inset
+
+--
+\begin_inset Formula $r$
+\end_inset
+
+-dimensional measurement noise; 
+\begin_inset Formula $x\left(0\right)$
+\end_inset
+
+--unknown initial state 
+\end_layout
+
+\begin_layout Itemize
+assumptions: 
+\begin_inset Formula $x\left(0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $v\left(k\right)$
+\end_inset
+
+ are independent and Gaussian distributed; 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v\left(k\right)$
+\end_inset
+
+ are white: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\E\left[x\left(0\right)\right]=x_{o},\  & \E\left[\left(x\left(0\right)-x_{o}\right)\left(x\left(0\right)-x_{o}\right)^{T}\right]=X_{0}\\
+\E\left[w\left(k\right)\right]=0,\ \E\left[v\left(k\right)\right]=0,\  & \E\left[w\left(k\right)v^{T}\left(j\right)\right]=0\ \forall k,j\\
+\E\left[w\left(k\right)w^{T}\left(j\right)\right]=W\left(k\right)\delta_{kj},\  & \E\left[v\left(k\right)v^{T}\left(j\right)\right]=V\left(k\right)\delta_{kj}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+goal: 
+\begin_inset Formula 
+\[
+\text{minimize }\E\left[\left.||x\left(k\right)-\hat{x}\left(k\right)||^{2}\right|_{Y_{j}}\right],\ Y_{j}=\left\{ y\left(0\right),y\left(1\right),\dots,y\left(j\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+goal: 
+\begin_inset Formula 
+\[
+\text{minimize }\E\left[\left.||x\left(k\right)-\hat{x}\left(k\right)||^{2}\right|_{Y_{j}}\right],\ Y_{j}=\left\{ y\left(0\right),y\left(1\right),\dots,y\left(j\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+solution: 
+\begin_inset Formula 
+\[
+\hat{x}\left(k\right)=\E\left[x\left(k\right)|Y_{j}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+three classes of problems:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $k>j$
+\end_inset
+
+: prediction problem
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k=j$
+\end_inset
+
+: filtering problem
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k<j$
+\end_inset
+
+: smoothing problem
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+History
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Rudolf Kalman: 
+\end_layout
+
+\begin_layout Itemize
+obtained B.S.
+ in 1953 and M.S.
+ in 1954 from MIT, and Ph.D.
+ in 1957 from Columbia University, all in Electrical Engineering
+\end_layout
+
+\begin_layout Itemize
+developed and implemented Kalman Filter in 1960, during the Apollo program,
+ and furthermore in various famous programs including the NASA Space Shuttle,
+ Navy submarines, etc.
+\end_layout
+
+\begin_layout NoteItem
+Kalman Filter was initially met with vast skepticism; Kalman had to publish
+ the result first in Mechanical Engineering instead of Electrical Engineering
+\end_layout
+
+\begin_layout Itemize
+was awarded the National Medal of Science on Oct.
+ 7, 2009 from U.S.
+ president Barack Obama
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Useful facts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+assume 
+\begin_inset Formula $x$
+\end_inset
+
+ is Gaussian distributed
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $y=Ax+B$
+\end_inset
+
+ then
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:skill1"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+X_{xy}=\E\left[\left(x-\E\left[x\right]\right)\left(y-\E\left[y\right]\right)^{T}\right] & =X_{xx}A^{T}\\
+X_{yy}=\E\left[\left(y-\E\left[y\right]\right)\left(y-\E\left[y\right]\right)^{T}\right] & =AX_{xx}A^{T}
+\end{cases}\label{eq:skill1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $y=Ax+B$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{'}=A^{'}x+B^{'}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{equation}
+X_{yy^{'}}=AX_{xx}\left(A^{'}\right)^{T},\ X_{y^{'}y}=A^{'}X_{xx}A^{T}\label{eq:skills2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $y=Ax+Bv$
+\end_inset
+
+; 
+\begin_inset Formula $v$
+\end_inset
+
+ is Gaussian and independent of 
+\begin_inset Formula $x$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+X_{yy}=AX_{xx}A^{T}+BX_{vv}B^{T}\label{eq:skills4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $y=Ax+Bv$
+\end_inset
+
+, 
+\begin_inset Formula $y^{'}=A^{'}x+B^{'}v$
+\end_inset
+
+; 
+\begin_inset Formula $v$
+\end_inset
+
+ is Gaussian and dependent of 
+\begin_inset Formula $x$
+\end_inset
+
+, then
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+X_{yy^{'}}=AX_{xx}\left(A^{'}\right)^{T}+AX_{xv}\left(B^{'}\right)^{T}+BX_{vx}\left(A^{'}\right)^{T}+BX_{vv}\left(B^{'}\right)^{T}\label{eq:skill3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Discrete-time KF
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Derivation of Kalman Filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+goal: 
+\begin_inset Formula 
+\[
+\text{minimize }\E\left[\left.||x\left(k\right)-\hat{x}\left(k\right)||^{2}\right|_{Y_{k}}\right],\ Y_{k}=\left\{ y\left(0\right),y\left(1\right),\dots,y\left(k\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the best estimate is the conditional expectation 
+\begin_inset Formula 
+\begin{align*}
+\E\left[x\left(k\right)|Y_{k}\right] & =\E\left[\left.x\left(k\right)\right|\left\{ Y_{k-1},y\left(k\right)\right\} \right]\\
+ & =\E\left[x\left(k\right)|Y_{k-1}\right]+\E\left[\left.\tilde{x}\left(k\right)|_{Y_{k-1}}\right|\tilde{y}\left(k\right)|_{Y_{k-1}}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Property 3 in LS
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto, scale = 1.2, >=latex' new,arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [-](0,1) to (8,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [-](2,0) to (2,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6.8,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (3.2,1.25);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,->](6.8,2) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (1.2,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (1.6,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (2.6,2.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](2.6,2.8) to (1.6,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](1.2,4) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (zy) at (1.2,2){$
+\backslash
+tilde{y}(k)_{|Y_{k-1}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xz) at (0.2,3.5){$
+\backslash
+text{E}
+\backslash
+left[
+\backslash
+tilde{x(k)}_{|Y_{k-1}}
+\backslash
+middle|
+\backslash
+tilde{y}(k)_{|Y_{k-1}}
+\backslash
+right]$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (z) at (2.7,3){$y(k)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (x) at (4,3.5){$x(k)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xtilde) at (7,3.5){$
+\backslash
+tilde{x}(k)_{|Y_{k-1}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xhat) at (5,1.9){$
+\backslash
+hat{x}(k)_{|Y_{k-1}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (y) at (4.2,1){$Y_{k-1}$ (a linear space)};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+introduce some notations:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\text{a priori estimation }\hat{x}\left(k|k-1\right) & =\E\left[x\left(k\right)|Y_{k-1}\right]=\hat{x}\left(k\right)|_{y\left(0\right),\dots y\left(k-1\right)}\\
+\text{a posteriori estimation }\hat{x}\left(k|k\right) & =\E\left[x\left(k\right)|Y_{k}\right]=\hat{x}\left(k\right)|_{y\left(0\right),\dots y\left(k\right)}\\
+\text{a priori covariance }M\left(k\right) & =\E\left[\tilde{x}\left(k\right)|_{Y_{k-1}}\tilde{x}^{T}\left(k\right)|_{Y_{k-1}}\right]\\
+\text{a posteriori covariance }Z\left(k\right) & =\E\left[\tilde{x}\left(k\right)|_{Y_{k}}\tilde{x}^{T}\left(k\right)|_{Y_{k}}\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Gain update
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Derivation of Kalman Filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+KF gain update
+\end_layout
+
+\begin_layout Standard
+to get 
+\begin_inset Formula $\E\left[\left.\tilde{x}\left(k\right)|_{Y_{k-1}}\right|\tilde{y}\left(k\right)|_{Y_{k-1}}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula 
+\[
+\E\left[x\left(k\right)|Y_{k}\right]=\E\left[x\left(k\right)|Y_{k-1}\right]+\E\left[\left.\tilde{x}\left(k\right)|_{Y_{k-1}}\right|\tilde{y}\left(k\right)|_{Y_{k-1}}\right]
+\]
+
+\end_inset
+
+we need 
+\begin_inset Formula $X_{\tilde{x}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{\tilde{y}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}}^{-1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+recall 
+\begin_inset Formula $\E\left[x|y\right]=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\left(k\right)=C\left(k\right)x\left(k\right)+v\left(k\right)$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{align*}
+\hat{y}\left(k\right)|_{Y_{k-1}} & =C\left(k\right)\hat{x}\left(k|k-1\right)+\hat{v}\left(k\right)|_{Y_{k-1}}=C\left(k\right)\hat{x}\left(k|k-1\right)\\
+\Rightarrow\tilde{y}\left(k\right)|_{Y_{k-1}} & =C\left(k\right)\tilde{x}\left(k|k-1\right)+v\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+hence
+\begin_inset Formula 
+\begin{align}
+X_{\tilde{x}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}} & =M\left(k\right)C^{T}\left(k\right)\label{eq:Xxy_KF}\\
+X_{\tilde{y}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}} & =C\left(k\right)M\left(k\right)C^{T}\left(k\right)+V\left(k\right)\label{eq:Xyy_KF}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Derivation of Kalman Filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+KF gain update
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tilde{y}\left(k\right)|_{Y_{k-1}}=C\left(k\right)\tilde{x}\left(k|k-1\right)+v\left(k\right)
+\]
+
+\end_inset
+
+unbiased estimation: 
+\begin_inset Formula $\E\left[\hat{x}\left(k|k-1\right)\right]=\E\left[x\right]\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\E\left[\tilde{y}\left(k\right)|_{Y_{k-1}}\right]=\E\left[\tilde{x}\left(k\right)|_{Y_{k-1}}\right]+\E\left[v\left(k\right)|_{Y_{k-1}}\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+thus 
+\begin_inset Formula 
+\begin{multline*}
+\E\left[\left.\tilde{x}\left(k\right)|_{Y_{k-1}}\right|\tilde{y}\left(k\right)|_{Y_{k-1}}\right]\\
+=\cancelto{0}{\E\left[\tilde{x}\left(k\right)|_{Y_{k-1}}\right]}+X_{\tilde{x}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}}X_{\tilde{y}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}}^{-1}\left(\tilde{y}\left(k\right)|_{Y_{k-1}}-0\right)\\
+=M\left(k\right)C^{T}\left(k\right)\left[C\left(k\right)M\left(k\right)C^{T}\left(k\right)+V\left(k\right)\right]^{-1}\left(y\left(k\right)-\hat{y}\left(k\right)|_{Y_{k-1}}\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Derivation of Kalman Filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+KF gain update
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\E\left[x\left(k\right)|Y_{k}\right]=\E\left[x\left(k\right)|Y_{k-1}\right]+\E\left[\left.\tilde{x}\left(k\right)|_{Y_{k-1}}\right|\tilde{y}\left(k\right)|_{Y_{k-1}}\right]
+\]
+
+\end_inset
+
+ now becomes
+\begin_inset Formula 
+\begin{multline*}
+\hat{x}\left(k|k\right)=\hat{x}\left(k|k-1\right)\\
++\underbrace{M\left(k\right)C^{T}\left(CM\left(k\right)C^{T}+V\left(k\right)\right)^{-1}}_{F\left(k\right)}\left(y\left(k\right)-C\hat{x}\left(k|k-1\right)\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+namely
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boxed{\begin{cases}
+\hat{x}\left(k|k\right) & =\hat{x}\left(k|k-1\right)+F\left(k\right)\left(y\left(k\right)-C\left(k\right)\hat{x}\left(k|k-1\right)\right)\\
+F\left(k\right) & =M\left(k\right)C^{T}\left(k\right)\left(C\left(k\right)M\left(k\right)C^{T}\left(k\right)+V\left(k\right)\right)^{-1}
+\end{cases}}\label{eq:KFgain}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Covariance update
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Derivation of Kalman Filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+KF covariance update
+\end_layout
+
+\begin_layout Standard
+now for the variance update:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \E\left[\tilde{x}\left(k\right)|_{Y_{k}}\tilde{x}\left(k\right)^{T}|_{Y_{k}}\right]=\E\left[\tilde{x}\left(k\right)|_{\left\{ Y_{k-1},y\left(k\right)\right\} }\tilde{x}\left(k\right)^{T}|_{\left\{ Y_{k-1},y\left(k\right)\right\} }\right]\\
+= & \E\left[\tilde{x}\left(k\right)|_{Y_{k-1}}\tilde{x}\left(k\right)^{T}|_{Y_{k-1}}\right]\\
+ & \qquad-X_{\tilde{x}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}}X_{\tilde{y}\left(k\right)|_{Y_{k-1}}\tilde{y}\left(k\right)|_{Y_{k-1}}}^{-1}X_{\tilde{y}\left(k\right)|_{Y_{k-1}}\tilde{x}\left(k\right)|_{Y_{k-1}}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+where the first equality comes from the property of Gaussian LS; the second
+ equality has used (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Xxy_KF"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Xyy_KF"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+or, using the introduced notations,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{Z\left(k\right)=M\left(k\right)-M\left(k\right)C^{T}\left(k\right)\left(C\left(k\right)M\left(k\right)C^{T}\left(k\right)+V\left(k\right)\right)^{-1}C\left(k\right)M\left(k\right)}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Derivation of Kalman Filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+KF covariance update
+\end_layout
+
+\begin_layout Standard
+the connection between 
+\begin_inset Formula $Z\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $M\left(k\right)$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+x\left(k\right) & =A\left(k-1\right)x\left(k-1\right)+B\left(k-1\right)u\left(k-1\right)+B_{w}\left(k-1\right)w\left(k-1\right)\\
+\Rightarrow\hat{x}\left(k|k-1\right) & =A\left(k-1\right)\hat{x}\left(k-1|k-1\right)+B\left(k-1\right)u\left(k-1\right)\\
+\Rightarrow\tilde{x}\left(k|k-1\right) & =A\left(k-1\right)\tilde{x}\left(k-1|k-1\right)+B_{w}\left(k-1\right)w\left(k-1\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+thus 
+\begin_inset Formula $M\left(k\right)=\cov\left[\tilde{x}\left(k|k-1\right)\right]$
+\end_inset
+
+ is [using uesful fact (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:skills4"
+
+\end_inset
+
+)]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{M\left(k\right)=A\left(k-1\right)Z\left(k-1\right)A^{T}\left(k-1\right)+B_{w}\left(k-1\right)W\left(k-1\right)B_{w}^{T}\left(k-1\right)}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+with 
+\begin_inset Formula $M\left(0\right)=\E\left[\tilde{x}\left(0|-1\right)\tilde{x}\left(0|-1\right)^{T}\right]=X_{0}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout NoteItem
+(no a priori estimation at time 0).
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The full set of KF equations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\hat{x}(k|k) & =\hat{x}(k|k-1)+F(k)\overbrace{\left[y(k)-C\left(k\right)\hat{x}(k|k-1)\right]}^{e_{y}(k)}\\
+\hat{x}(k|k-1) & =A\left(k-1\right)\hat{x}(k-1|k-1)+B\left(k-1\right)u(k-1)\\
+F(k) & =M(k)C^{T}\left(k\right)\left[C\left(k\right)M(k)C^{T}\left(k\right)+V\left(k\right)\right]^{-1}\\
+M(k) & =A\left(k-1\right)Z(k-1)A^{T}\left(k-1\right)+B_{w}\left(k-1\right)W\left(k-1\right)B_{w}^{T}\left(k-1\right)\\
+Z(k) & =M\left(k\right)-M\left(k\right)C^{T}\left(k\right)...\\
+ & \qquad\times\left(C\left(k\right)M\left(k\right)C^{T}\left(k\right)+V\left(k\right)\right)^{-1}C\left(k\right)M\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+with initial conditions 
+\begin_inset Formula $\hat{x}\left(0|-1\right)=x_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $M\left(0\right)=X_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The full set of KF equations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+in a shifted index:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\hat{x}(k+1|k+1) & =\hat{x}(k+1|k)+F(k+1)\left[y(k+1)-C\left(k+1\right)\hat{x}(k+1|k)\right]\nonumber \\
+\hat{x}(k+1|k) & =A\left(k\right)\hat{x}(k|k)+B\left(k\right)u(k)\nonumber \\
+F(k+1) & =M(k+1)C^{T}\left(k+1\right)\left[C\left(k+1\right)M(k+1)C^{T}\left(k+1\right)+V\left(k+1\right)\right]^{-1}\nonumber \\
+M(k+1) & =A\left(k\right)Z(k)A^{T}\left(k\right)+B_{w}\left(k\right)W\left(k\right)B_{w}^{T}\left(k\right)\label{eq:KF_Mk1}\\
+Z(k+1) & =M\left(k+1\right)-M\left(k+1\right)C^{T}\left(k+1\right)...\label{eq:KF_Zk1}\\
+ & \ \ \times\left(C\left(k+1\right)M\left(k+1\right)C^{T}\left(k+1\right)+V\left(k+1\right)\right)^{-1}C\left(k+1\right)M\left(k+1\right)\nonumber 
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+with 
+\begin_inset Formula $\hat{x}\left(0|-1\right)=x_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $M\left(0\right)=X_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+combining (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:KF_Mk1"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:KF_Zk1"
+
+\end_inset
+
+) gives the Riccati equation:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+M\left(k+1\right)=A\left(k\right)M\left(k\right)A^{T}\left(k\right)+B_{w}\left(k\right)W\left(k\right)B_{w}^{T}\left(k\right)\\
+-A\left(k\right)M\left(k\right)C^{T}\left(k\right)\left[C\left(k\right)M\left(k\right)C^{T}\left(k\right)+V\left(k\right)\right]^{-1}C\left(k\right)M\left(k\right)A^{T}\left(k\right)\label{eq:dtKF_RE}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The full set of KF equations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Several remarks
+\end_layout
+
+\begin_layout NoteItem
+Kalman Filter (KF) is a 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+linear 
+\end_layout
+
+\end_inset
+
+time-varying filter
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $M\left(k\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $Z\left(k\right)$
+\end_inset
+
+ can be obtained offline first
+\end_layout
+
+\begin_layout Itemize
+Kalman Filter (KF) is linear, and optimal for Gaussian.
+ More advanced nonlinear estimation won't improve the results here.
+ 
+\end_layout
+
+\begin_layout NoteItem
+Nonlinear estimation can only improve the result if the random process is
+ not Gaussian and we consider at least third-order probability distribution
+ functions
+\end_layout
+
+\begin_layout Itemize
+KF works for time-varying systems
+\end_layout
+
+\begin_layout Itemize
+the block diagram of KF is:
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1.6pc}\xymatrix{{\scriptstyle y\left(k\right)}\arline[rrr] &  &  & \dotblk\arr\sp>>+ & \cblk\arline[r] & \dotblk\ard\\
+ &  &  &  & \bblk{C\left(k\right)}\aru\sb>>- & \bblk{F\left(k\right)}\ard\sp>>+\\
+{\scriptstyle u\left(k\right)}\arr & \bblk{B\left(k\right)}\arr\sp>>+ & \cblk\arr & \bblk{z^{-1}I}\arline[r]\sb>>{\hat{x}\left(k|k-1\right)} & \dotblk\aru\arr\sb>>+ & \cblk\arline[r]\sp>>{\hat{x}\left(k|k\right)} & \dotblk\arr\arline[d] & \dotblk\\
+ &  & \dotblk\aru\sb>>+ & \bblk{A\left(k\right)}\arline[l] &  &  & \dotblk\arline[lll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Steady-state KF
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Steady-state KF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+assumptions:
+\end_layout
+
+\begin_layout Itemize
+system is time-invariant: 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $B_{w}$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are constant;
+\end_layout
+
+\begin_layout Itemize
+noise is stationary: 
+\begin_inset Formula $V\succ0$
+\end_inset
+
+ and 
+\begin_inset Formula $W\succ0$
+\end_inset
+
+ do not depend on time.
+\end_layout
+
+\begin_layout Standard
+KF equations become:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{x}(k+1|k+1) & = & \hat{x}(k+1|k)+F(k+1)\left[y(k+1)-C\hat{x}(k+1|k)\right]\\
+ & = & A\hat{x}(k|k)+Bu(k)+F(k+1)\left[y(k+1)-C\hat{x}(k+1|k)\right]\\
+F(k+1) & = & M(k+1)C^{T}\left[CM(k+1)C^{T}+V\right]^{-1}\\
+M(k+1) & = & AZ(k)A^{T}+B_{w}WB_{w}^{T};\quad M(0)=X_{0}\\
+Z(k+1) & = & M(k+1)-M(k+1)C^{T}\left[CM(k+1)C^{T}+V\right]^{-1}CM(k+1)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+with Riccati equation (RE):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+M(k+1)=AM(k)A^{T}+B_{w}WB_{w}^{T}-AM(k)C^{T}\left[CM(k)C^{T}+V\right]^{-1}CM(k)A^{T}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Steady-state KF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ is observable or detectable 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,B_{w}\right)$
+\end_inset
+
+ is controllable (disturbable) or stabilizable
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then 
+\begin_inset Formula $M\left(k\right)$
+\end_inset
+
+ in the RE converges to some steady-state value 
+\begin_inset Formula $M_{s}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (explained in next slide).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and KF can be implemented by
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{x}(k+1|k+1) & = & \hat{x}(k+1|k)+F_{s}\left[y(k+1)-C\hat{x}(k+1|k)\right]\\
+\hat{x}(k+1|k) & = & A\hat{x}(k|k)+Bu(k)\\
+F_{s} & = & M_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $M_{s}$
+\end_inset
+
+ is the positive definite solution of the algebraic Riccati equation:
+\begin_inset Formula 
+\[
+M_{s}=AM_{s}A^{T}+B_{w}WB_{w}^{T}-AM_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}CM_{s}A^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+ARE is short for algebraic Riccati equation
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Duality with LQ
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Duality with LQ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The steady-state condition is obtained by comparing the RE in LQ and KF
+\end_layout
+
+\begin_layout Standard
+discrete-time LQ: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(k)=A^{T}P(k+1)A-A^{T}P(k+1)B[R+B^{T}P(k+1)B]^{-1}B^{T}P(k+1)A+Q
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $K\left(k\right)=[R+B^{T}P(k+1)B]^{-1}B^{T}P(k+1)A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+discrete-time KF (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dtKF_RE"
+
+\end_inset
+
+): 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+M(k+1)=AM(k)A^{T}-AM(k)C^{T}\left[CM(k)C^{T}+V\right]^{-1}CM(k)A^{T}+B_{w}WB_{w}^{T}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $F\left(k\right)=M(k)C^{T}\left[CM(k)C^{T}+V\right]^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+discrete-time LQ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+discrete-time KF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{w}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=C^{T}C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{w}WB_{w}^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+backward recursion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+forward recursion
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+steady-state LQ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+A^{T}PA-P-A^{T}PB\left[R+B^{T}PB\right]^{-1}B^{T}PA+C^{T}C=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+K=\left[R+B^{T}PB\right]^{-1}B^{T}PA
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+steady-state KF
+\begin_inset Formula 
+\[
+AMA^{T}-M+B_{w}WB_{w}^{T}-AMC^{T}\left[CMC^{T}+V\right]^{-1}CMA^{T}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{s}=M_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Duality with LQ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+discrete-time LQ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+discrete-time KF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{w}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=C^{T}C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{w}WB_{w}^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+steady-state conditions for discrete-time LQ:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ controllable or stabilizable 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ observable or detectable
+\end_layout
+
+\begin_layout Standard
+steady-state conditions for discrete-time KF:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A^{T},C^{T}\right)$
+\end_inset
+
+ controllable or stabilizable
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ observable or detectable 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A^{T},B_{w}^{T}\right)$
+\end_inset
+
+ observable or detectable
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\left(A,B_{w}\right)$
+\end_inset
+
+ controllable or stabilizable
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Duality with LQ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+discrete-time LQ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+discrete-time KF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{w}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=C^{T}C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{w}WB_{w}^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+backward recursion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+forward recursion
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+LQ: stable closed-loop 
+\begin_inset Quotes eld
+\end_inset
+
+A
+\begin_inset Quotes erd
+\end_inset
+
+ matrix is
+\begin_inset Formula 
+\[
+A-BK_{s}=\underline{A-B[R+B^{T}P_{s}B]^{-1}B^{T}P_{s}A}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+KF: stable KF 
+\begin_inset Quotes eld
+\end_inset
+
+A
+\begin_inset Quotes erd
+\end_inset
+
+ matrix is
+\begin_inset Formula 
+\begin{align*}
+\hat{x}(k+1|k) & =A\hat{x}(k|k)+Bu\left(k\right)\\
+ & =A\hat{x}(k|k-1)+AF_{s}\left[y\left(k\right)-C\hat{x}\left(x|k-1\right)\right]+Bu\left(k\right)\\
+ & =\underline{\left[A-AM_{s}C^{T}\left(CM_{s}C^{T}+V\right)^{-1}C\right]}\hat{x}(k|k-1)+\dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Purpose of each condition 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ observable or detectable: assures the existence of the steady-state Riccati
+ solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.3in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,B_{w}\right)$
+\end_inset
+
+ controllable or stabilizable: assures that the steady-state solution is
+ positive definite and that the KF dynamics is stable
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Remark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+KF: stable KF 
+\begin_inset Quotes eld
+\end_inset
+
+A
+\begin_inset Quotes erd
+\end_inset
+
+ matrix is
+\begin_inset Formula 
+\begin{align*}
+\hat{x}(k+1|k) & =\left[A-AM_{s}C^{T}\left(CM_{s}C^{T}+V\right)^{-1}C\right]\hat{x}(k|k-1)+\dots\\
+ & =\underline{\left(A-AF_{s}C\right)}\hat{x}(k|k-1)+\dots
+\end{align*}
+
+\end_inset
+
+in the form of 
+\begin_inset Formula $\hat{x}\left(k|k\right)$
+\end_inset
+
+ dynamics:
+\begin_inset Formula 
+\begin{align*}
+\hat{x}(k+1|k+1) & =\hat{x}(k+1|k)+F_{s}\left[y(k+1)-C\hat{x}(k+1|k)\right]\\
+ & =\underline{\left(A-F_{s}CA\right)}\hat{x}(k|k)+\left(I-F_{s}C\right)Bu(k)+F_{s}y(k+1)\\
+ & =\left[A-M_{s}C^{T}\left(CM_{s}C^{T}+V\right)^{-1}CA\right]\hat{x}(k|k)+\dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+can show that 
+\begin_inset Formula $eig\left(A-AF_{s}C\right)=eig\left(A-F_{s}CA\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\text{hint: }\det\left(I+MN\right)=\det\left(I+NM\right)\Rightarrow\det\left[I-z^{-1}A\left(I-F_{s}C\right)\right]=\det\left[I-\left(I-F_{s}C\right)z^{-1}A\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Remark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+intuition of guaranteed KF stability
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset Formula $A-AF_{s}C$
+\end_inset
+
+ being Schur (eigenvalues inside unit circle)
+\end_layout
+
+\end_inset
+
+: ARE 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ Lyapunov equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+M_{s} & =AM_{s}A^{T}+B_{w}WB_{w}^{T}-AM_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}CM_{s}A^{T}\\
+ & =AM_{s}A^{T}+B_{w}WB_{w}^{T}-A\underbrace{M_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}}_{F_{s}}\left[CM_{s}C^{T}+V\right]\underbrace{\left[CM_{s}C^{T}+V\right]^{-1}CM_{s}}_{F_{s}^{T}}A^{T}\\
+ & =\left(A-AF_{s}C\right)M_{s}\left(A-AF_{s}C\right)^{T}+2AF_{s}CM_{s}A^{T}-AF_{s}CM_{s}C^{T}F_{s}^{T}A^{T}\\
+ & \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+B_{w}WB_{w}^{T}-AF_{s}\left[CM_{s}C^{T}+V\right]F_{s}^{T}A^{T}\\
+ & =\left(A-AF_{s}C\right)M_{s}\left(A-AF_{s}C\right)^{T}+AF_{s}VF_{s}^{T}A^{T}+B_{w}WB_{w}^{T}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longleftrightarrow\left(A-AF_{s}C\right)M_{s}\left(A-AF_{s}C\right)^{T}-M_{s}=-AF_{s}VF_{s}^{T}A^{T}-B_{w}WB_{w}^{T}
+\]
+
+\end_inset
+
+which is a Lyapunov equation with the right hand side being negative semidefinit
+e and 
+\begin_inset Formula $M_{s}\succ0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Return difference equation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+KF dynamics
+\begin_inset Formula 
+\begin{align*}
+\hat{x}(k+1|k+1) & =\underline{\left(A-F_{s}CA\right)}\hat{x}(k|k)+\left(I-F_{s}C\right)Bu(k)+F_{s}y(k+1)\\
+ & =A\hat{x}(k|k)-F_{s}CA\hat{x}(k|k)+\left(I-F_{s}C\right)Bu(k)+F_{s}y(k+1)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[zI-A\right]\hat{x}\left(k|k\right)=F_{s}y(k+1)+\left(I-F_{s}C\right)Bu(k)-F_{s}CA\hat{x}(k|k)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{\ar[r]\sp(0.8)+ & \cblk\ar[r]|-\sim & \bblk{F_{s}}\ar[r] & \bblk{\left(zI-A\right)^{-1}}\ar[r]^{\quad\ {\scriptscriptstyle \hat{x}\left(k|k\right)}} & \bblk{CA}\arline[r] & \dotblk\ar[r]\arline[d] & \dotblk\\
+ & \dotblk\ar[u]\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+let 
+\begin_inset Formula $G(z)=C(zI-A)^{-1}B_{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ARE 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ return difference equation (RDE) (see ME232 reader)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xRightarrow{\text{take determinant}}\frac{\beta\left(z\right)}{\phi\left(z\right)}\det(V+CM_{s}C^{T})\frac{\beta\left(z^{-1}\right)}{\phi\left(z^{-1}\right)}=\det\left(V+G(z)WG^{T}(z^{-1})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[I+CA(zI-A)^{-1}F_{s}\right](V+CM_{s}C^{T})\left[I+CA(z^{-1}I-A)^{-1}F_{s}\right]^{T}=V+G(z)WG^{T}(z^{-1})
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Symmetric root locus for KF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+KF eigenvalues: 
+\begin_inset Formula 
+\begin{multline*}
+\det\left[I+CA\underline{(zI-A)^{-1}F_{s}}\right]=\det\left[I+\underline{(zI-A)^{-1}F_{s}}CA\right]\\
+=\frac{\det\left(zI-A+F_{s}CA\right)}{\det\left(zI-A\right)}\triangleq\frac{\beta\left(z\right)}{\phi\left(z\right)}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+taking determinants in RDE gives
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\xRightarrow{\text{take determinant}}\frac{\beta\left(z\right)}{\phi\left(z\right)}\det(V+CM_{s}C^{T})\frac{\beta\left(z^{-1}\right)}{\phi\left(z^{-1}\right)}=\det\left(V+G(z)WG^{T}(z^{-1})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\beta(z)\beta(z^{-1})=\phi(z)\phi(z^{-1})\frac{\det\left(V+G(z)WG^{T}(z^{-1})\right)}{\det\left(V+CMC^{T}\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ARE 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+M_{s}=AM_{s}A^{T}+B_{w}WB_{w}^{T}-AM_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}CM_{s}A^{T}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{s}=M_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+single-output case: KF poles come from 
+\begin_inset Formula $\beta(z)\beta(z^{-1})=0$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula 
+\[
+\det\left(V+G(z)WG^{T}(z^{-1})\right)=V\left(1+G(z)\frac{W}{V}G^{T}(z^{-1})\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W/V\rightarrow0$
+\end_inset
+
+: KF poles 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ stable poles of 
+\begin_inset Formula $G\left(z\right)G^{T}\left(z^{-1}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W/V\rightarrow\infty$
+\end_inset
+
+: KF poles 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ stable zeros of 
+\begin_inset Formula $G\left(z\right)G^{T}\left(z^{-1}\right)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (
+\begin_inset Formula $G(z)=C(zI-A)^{-1}B_{w}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+SISO case
+\begin_inset Formula 
+\[
+\beta\left(z\right)\beta\left(z^{-1}\right)=\frac{V}{V+CM_{s}C^{T}}\left[\phi(z)\phi\left(z^{-1}\right)+\frac{W}{V}m\left(z\right)m\left(z^{-1}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Continuous-time KF
+\end_layout
+
+\begin_layout Subsection
+Solution
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+summary of solutions
+\end_layout
+
+\begin_layout Standard
+system: 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{aligned}\dot{x}\left(t\right) & =Ax\left(t\right)+Bu\left(t\right)+B_{w}w\left(t\right)\\
+y\left(t\right) & =Cx\left(t\right)+v\left(t\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+assumptions: same as discrete-time KF
+\end_layout
+
+\begin_layout NoteItem
+standard assumption of whitness and Gaussian distributions; 
+\begin_inset Formula $\E\left[x\left(0\right)\right]=x_{o}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{0}=\E\left[\left(x\left(0\right)-x_{0}\right)\left(x\left(0\right)-x_{0}\right)^{T}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+aim: 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\text{minimize }J=\left.||x\left(t\right)-\hat{x}\left(t\right)||_{2}^{2}\right|_{\left\{ y\left(\tau\right):0\leq\tau\leq t\right\} }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+continuous-time KF:
+\begin_inset Formula 
+\[
+\frac{\d\hat{x}\left(t|t\right)}{\d t}=A\hat{x}\left(t|t\right)+Bu\left(t\right)+F\left(t\right)\left[y\left(t\right)-C\hat{x}\left(t|t\right)\right],\ \hat{x}\left(0|0\right)=x_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F\left(t\right)=M\left(t\right)C^{T}V^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\d M\left(t\right)}{\d t}=AM\left(t\right)+M\left(t\right)A^{T}+B_{w}WB_{w}^{T}-M\left(t\right)C^{T}V^{-1}CM\left(t\right),\ M\left(0\right)=X_{0}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+CT KF is obtained as the limiting case of a discrete-time KF
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Steady-state solution and conditions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF: steady state
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+assumptions: 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ observable or detectable; 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(A,B_{w}\right)$
+\end_inset
+
+ controllable or stabilizable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+asymptotically stable steady-state KF:
+\begin_inset Formula 
+\[
+\frac{\d\hat{x}\left(t|t\right)}{\d t}=A\hat{x}\left(t|t\right)+Bu\left(t\right)+F_{s}\left[y\left(t\right)-C\hat{x}\left(t|t\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{s}=M_{s}C^{T}V^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+AM_{s}+M_{s}A^{T}+B_{w}WB_{w}^{T}-M_{s}C^{T}V^{-1}CM_{s}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+duality with LQ:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Continuous-Time LQ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A^{T}P_{s}+P_{s}A+Q-P_{s}BR^{-1}B^{T}P_{s}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $K=R^{-1}B^{T}P_{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Properties: return difference equality, symmetric root locus...
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF: return difference equality
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align left
+analogy to LQ gives the return difference equality:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[I+C\left(sI-A\right)^{-1}F_{s}\right]V\left[I+F_{s}^{T}\left(-sI-A\right)^{-T}C^{T}\right]=V+G\left(s\right)WG^{T}\left(-s\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $G\left(s\right)=C\left(sI-A\right)^{-1}B_{w}$
+\end_inset
+
+, hence:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[I+C\left(j\omega I-A\right)^{-1}F_{s}\right]V\left[I+C\left(-j\omega I-A\right)^{-1}F_{s}\right]^{T}=V+G\left(j\omega\right)WG^{T}\left(-j\omega\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+observation 1: 
+\begin_inset Formula $\frac{\d\hat{x}\left(t|t\right)}{\d t}=A\hat{x}\left(t|t\right)+Bu\left(t\right)+F_{s}\underbrace{\left[y\left(t\right)-C\hat{x}\left(t|t\right)\right]}_{e_{y}\left(t\right)}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\xymatrix{\dotblk\ar[r]_{y}\sp(0.8)+ & \cblk\ar[r]^{e_{y}} & \bblk{F_{s}}\ar[r] & \bblk{\left(sI-A\right)^{-1}}\ar[r]^{\quad\hat{x}} & \bblk C\arline[r] & \dotblk\ar[r]\arline[d] & \dotblk\\
+ & \dotblk\ar[u]\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF: properties
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+observation 1: 
+\begin_inset Formula 
+\[
+\xymatrix{\dotblk\ar[r]_{y}\sp(0.8)+ & \cblk\ar[r]^{e_{y}} & \bblk{F_{s}}\ar[r] & \bblk{\left(sI-A\right)^{-1}}\ar[r]^{\quad\hat{x}} & \bblk C\arline[r] & \dotblk\ar[r]\arline[d] & \dotblk\\
+ & \dotblk\ar[u]\sb(0.8)- &  &  &  & \dotblk\arline[llll]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+transfer function from 
+\begin_inset Formula $y$
+\end_inset
+
+ to 
+\begin_inset Formula $e_{y}$
+\end_inset
+
+: 
+\begin_inset Formula $\left[I+C\left(j\omega I-A\right)^{-1}F_{s}\right]^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+spectral density relation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Phi_{e_{y}e_{y}}\left(\omega\right)=\left[I+C\left(j\omega I-A\right)^{-1}F_{s}\right]^{-1}\Phi_{yy}\left(\omega\right)\left\{ \left[I+C\left(-j\omega I-A\right)^{-1}F_{s}\right]^{-1}\right\} ^{T}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF: properties
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+observation 2:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{cases}
+\dot{x}\left(t\right) & =Ax\left(t\right)+Bu\left(t\right)+B_{w}w\left(t\right)\\
+y\left(t\right) & =Cx\left(t\right)+v\left(t\right)
+\end{cases}\Rightarrow\Phi_{yy}\left(\omega\right)=G\left(j\omega\right)WG^{T}\left(-j\omega\right)+V
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+from observations 1 and 2: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[I+C\left(j\omega I-A\right)^{-1}F_{s}\right]V\left[I+C\left(-j\omega I-A\right)^{-1}F_{s}\right]^{T}=V+G\left(j\omega\right)WG^{T}\left(-j\omega\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+thus says
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Phi_{e_{y}e_{y}}\left(\omega\right) & =\left[I+C\left(j\omega I-A\right)^{-1}F_{s}\right]^{-1}\Phi_{yy}\left(\omega\right)\left\{ \left[I+C\left(-j\omega I-A\right)^{-1}F_{s}\right]^{-1}\right\} ^{T}\\
+ & =V
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+namely, the estimation error is white! 
+\end_layout
+
+\begin_layout NoteItem
+The whiteness of the estimation error indicates that there is no way to
+ improve further!
+\end_layout
+
+\begin_layout NoteItem
+analogous results hold for the discrete-time case
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF: symmetric root locus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align left
+taking determinants of RDE gives:
+\begin_inset Formula 
+\begin{multline*}
+\det\left[I+C\left(sI-A\right)^{-1}F_{s}\right]\det V\det\left[I+C\left(-sI-A\right)^{-1}F_{s}\right]^{T}\\
+=\det\left[V+G\left(s\right)WG^{T}\left(-s\right)\right]
+\end{multline*}
+
+\end_inset
+
+for single-output systems:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\det\left[I+C\left(sI-A\right)^{-1}F_{s}\right]\det\left[I+C\left(-sI-A\right)^{-1}F_{s}\right]^{T}=1+G\left(s\right)\frac{W}{V}G^{T}\left(-s\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time KF: symmetric root locus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align left
+the left hand side of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\det\left[I+C\left(sI-A\right)^{-1}F_{s}\right]\det\left[I+C\left(-sI-A\right)^{-1}F_{s}\right]^{T}=1+G\left(s\right)\frac{W}{V}G^{T}\left(-s\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+determines the KF eigenvalues:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\det\left[I+C\left(sI-A\right)^{-1}F_{s}\right] & =\det\left[I+\left(sI-A\right)^{-1}F_{s}C\right]\\
+ & =\det\left[\left(sI-A\right)^{-1}\right]\det\left[sI-A+F_{s}C\right]\\
+ & =\frac{\det\left[sI-\left(A-F_{s}C\right)\right]}{\det\left(sI-A\right)}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence looking at 
+\begin_inset Formula $1+G\left(s\right)\frac{W}{V}G^{T}\left(-s\right)$
+\end_inset
+
+, we have:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W/V\rightarrow0$
+\end_inset
+
+: KF poles 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ stable poles of 
+\begin_inset Formula $G\left(s\right)G^{T}\left(-s\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W/V\rightarrow\infty$
+\end_inset
+
+: KF poles 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ stable zeros of 
+\begin_inset Formula $G\left(s\right)G^{T}\left(-s\right)$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (
+\begin_inset Formula $G(z)=C(zI-A)^{-1}B_{w}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula 
+\begin{multline*}
+\left[I+C\left(sI-A\right)^{-1}F_{s}\right]V\left[I+F_{s}^{T}\left(-sI-A\right)^{-T}C^{T}\right]\\
+=V+G\left(s\right)WG^{T}\left(-s\right)\\
+\Rightarrow\det\left[I+C\left(sI-A\right)^{-1}F_{s}\right]\det V\det\left[I+F_{s}^{T}\left(-sI-A\right)^{-T}C^{T}\right]\\
+=\det\left[V+G\left(s\right)WG^{T}\left(-s\right)\right]
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new,arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (0,4) -- (8,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (4,0) -- (4,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (4,4) -- (6,6);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (6,6) -- (7,7);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (4,4) -- (2,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (2,2) -- (1,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (4,4) -- (6,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (6,2) -- (7,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (4,4) -- (2,6);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (2,6) -- (1,7);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [->] (1.5,5.5) -- [out=90,in=0](2,6);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path [->] (1.5,5.5) edge [bend left] node {increasing W/V} (2,6);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [circle,draw] (a) at (3,5) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [circle,draw] (b) at (3,3) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path [->] (2,3.2) edge [bend left] node [pos=0.05]{KF poles} (2.7,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path [->] (2,3) edge [bend right] node {} (2.7,3);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

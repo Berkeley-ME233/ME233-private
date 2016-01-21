@@ -1,0 +1,1622 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 12: Preview Control
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Problem formulation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Relationship to LQ
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Review: optimal tracking
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We consider controlling the system
+\begin_inset Formula 
+\begin{align}
+x\left(k+1\right) & =Ax\left(k\right)+Bu\left(k\right)\label{eq:previewControl_sys}\\
+y\left(k\right) & =Cx\left(k\right)\nonumber 
+\end{align}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+x\in\mathbb{R}^{n},\ u\in\mathbb{R}^{m},\ y\in\mathbb{R}^{r}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Objective: 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ follows 
+\begin_inset Formula $y_{d}\left(k\right)$
+\end_inset
+
+ under a quadratic performance index.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Optimal tracking with full reference information (homework 1):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+\min_{U_{0}}J:=\frac{1}{2}\left[y_{d}(N)-y(N)\right]^{T}S\left[y_{d}(N)-y(N)\right]\\
++\frac{1}{2}\sum_{k=0}^{N-1}\left(\left[y_{d}(k)-y(k)\right]^{T}Q_{y}\left[y_{d}(k)-y(k)\right]+u(k)^{T}Ru(k)\right)
+\end{multline}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+u^{o}(k) & = & -\left[R+B^{T}P(k+1)B\right]^{-1}B^{T}\left[P(k+1)Ax(k)+b^{T}(k+1)\right]\\
+J_{k}^{o}\left(x(k)\right) & = & \frac{1}{2}x^{T}(k)P(k)x(k)+b(k)x(k)+c(k)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula 
+\begin{eqnarray}
+P(k) & = & C^{T}Q_{y}C+A^{T}P(k+1)A-A^{T}P(k+1)B\left[R+B^{T}P(k+1)B\right]^{-1}B^{T}P(k+1)A\\
+b(k) & = & -y_{d}^{T}(k)Q_{y}C+b(k+1)\{A-B(R+B^{T}P(k+1)B)^{-1}B^{T}P(k+1)A\}\\
+c(k) & = & c(k+1)+\frac{1}{2}y_{d}^{T}(k)Q_{y}y_{d}(k)-\frac{1}{2}b(k+1)B\left[R+B^{T}P(k+1)B\right]^{-1}B^{T}b(k+1)
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Overview of preview control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Preview control considers the same cost-function structure, with:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+a 
+\begin_inset Formula $N_{p}$
+\end_inset
+
+-step preview window
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: the desired output signals in this window are known
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsf{
+\end_layout
+
+\end_inset
+
+post preview window
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: after the preview window we assume we no longer know the desired output
+ (due to, e.g., limited vision in the example of vehicle driving), but we
+ assume the reference is generated from some models.
+ 
+\end_layout
+
+\begin_layout Itemize
+e.g.
+ (deterministic model)
+\begin_inset Formula 
+\begin{equation}
+y_{d}\left(k+N_{p}+l\right)=y_{d}\left(k+N_{p}\right),\ l>0\label{eq:previewControl1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+or (stochastic model): 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the desired output is generated by
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+x_{d}\left(k+1\right) & =A_{d}x_{d}\left(k\right)+B_{d}w_{d}\left(k\right)\label{eq:stocha}\\
+y_{d}\left(k\right) & =C_{d}x_{d}\left(k\right)\nonumber 
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{d}(k)$
+\end_inset
+
+ is white and Gaussian distributed.
+ Note: if 
+\begin_inset Formula $A_{d}=I$
+\end_inset
+
+, 
+\begin_inset Formula $B_{d}=0$
+\end_inset
+
+, 
+\begin_inset Formula $C_{d}=I$
+\end_inset
+
+, 
+\begin_inset Formula $x_{d}(k+N_{p})=y_{d}(k+N_{p})$
+\end_inset
+
+, then (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:stocha"
+
+\end_inset
+
+)
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl1"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout NoteItem
+Assume that 
+\begin_inset Formula $x_{d}(k)$
+\end_inset
+
+ is directly accessible.
+ This model implies that 
+\begin_inset Formula $y_{d}(k)$
+\end_inset
+
+ is a correlated Gaussian random process.
+ 
+\begin_inset Formula $N_{p}$
+\end_inset
+
+-step preview means that the generator is running 
+\begin_inset Formula $N_{p}$
+\end_inset
+
+ steps ahead.
+ At time 
+\begin_inset Formula $k$
+\end_inset
+
+, 
+\begin_inset Formula $y_{d}(k),\dots,y_{d}(k+N_{p})$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{d}(k+N_{p})$
+\end_inset
+
+ are deterministic.
+ A special case is that 
+\begin_inset Formula $y_{d}(k)$
+\end_inset
+
+ is white, i.e., 
+\begin_inset Formula $y_{d}(k)=w_{d}(k)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+E\left\{ y_{d}\left(k+N_{p}+l\right)\right\} =0,\ l>0\label{eq:previewControl2}
+\end{equation}
+
+\end_inset
+
+That is, we assume we completely do not know the future trajectory.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Formulation of the optimal control problem
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Structuring the future knowledge
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Knowledge of the future trajectory can be built into
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+\underbrace{\left[\begin{array}{c}
+y_{d}\left(k+1\right)\\
+y_{d}\left(k+2\right)\\
+\vdots\\
+y_{d}\left(k+N_{p}\right)\\
+\hline x_{d}\left(k+N_{p}+1\right)
+\end{array}\right]}_{Y_{d}(k+1)}=\underbrace{\left[\begin{array}{cccc|c}
+0 & I & 0 & \dots & 0\\
+0 & 0 & I & \ddots & \vdots\\
+\vdots & \ddots & \ddots & \ddots & 0\\
+0 & \dots & 0 & 0 & C_{d}\\
+\hline 0 & \dots & 0 & 0 & A_{d}
+\end{array}\right]}_{A_{Y_{d}}}\underbrace{\left[\begin{array}{c}
+y_{d}\left(k\right)\\
+y_{d}\left(k+1\right)\\
+\vdots\\
+y_{d}\left(k+N_{p}-1\right)\\
+\hline x_{d}\left(k+N_{p}\right)
+\end{array}\right]}_{Y_{d}(k)}\\
++\underbrace{\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+0\\
+\hline B_{d}
+\end{array}\right]}_{B_{Y_{d}}}\underbrace{w_{d}\left(k+N_{p}\right)}_{\bar{w}_{d}(k)}\label{eq:previewControl_refEq}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+When 
+\begin_inset Formula $A_{d}=I$
+\end_inset
+
+, 
+\begin_inset Formula $B_{d}=0$
+\end_inset
+
+, 
+\begin_inset Formula $C_{d}=I$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{d}(k+N_{p})=y_{d}(k+N_{p})$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl_refEq"
+
+\end_inset
+
+) translates to the deterministic formulation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl1"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The cost function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+At time 
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+J_{k}=\frac{1}{1+N}\E\left\{ \left(y\left(N+k\right)-y_{d}\left(N+k\right)\right)^{T}S_{y}\left(y\left(N+k\right)-y_{d}\left(N+k\right)\right)\right.\\
++\sum_{j=0}^{N-1}\left[\left(y\left(j+k\right)-y_{d}\left(j+k\right)\right)^{T}Q_{y}\left(y\left(j+k\right)-y_{d}\left(j+k\right)\right)\right.\\
+\left.+\left.\vphantom{\left(y\left(j+k\right)-y_{d}\left(j+k\right)\right)^{T}}u\left(j+k\right)^{T}Ru\left(j+k\right)\right]\right\} \label{eq:previewControl_cost}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a moving horizon cost
+\end_layout
+
+\begin_layout Itemize
+only 
+\begin_inset Formula $u(k)$
+\end_inset
+
+ is applied to the plant after we find a solution to minimize 
+\begin_inset Formula $J_{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+in deterministic formulation, we remove the expectation sign.
+ In stochastic formulation, expectation is taken with respect to 
+\begin_inset Formula 
+\[
+\left\{ w_{d}\left(k+N_{p}\right),w_{d}\left(k+N_{p}+1\right),\dots,w_{d}\left(k+N-1\right)\right\} 
+\]
+
+\end_inset
+
+for the minimization of 
+\begin_inset Formula $J_{k}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Augmenting the system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Augmenting 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\bar under
+system
+\bar default
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl_sys"
+
+\end_inset
+
+) with (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl_refEq"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+the plant with the reference model yields
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boxed{\left[\begin{array}{c}
+x\left(k+1\right)\\
+Y_{d}\left(k+1\right)
+\end{array}\right]=\underbrace{\left[\begin{array}{cc}
+A & 0\\
+0 & A_{Y_{d}}
+\end{array}\right]}_{A_{e}}\underbrace{\left[\begin{array}{c}
+x\left(k\right)\\
+Y_{d}\left(k\right)
+\end{array}\right]}_{x_{e}\left(k\right)}+\underbrace{\left[\begin{array}{c}
+B\\
+0
+\end{array}\right]}_{B_{e}}u\left(k\right)+\underbrace{\left[\begin{array}{c}
+0\\
+B_{Y_{d}}
+\end{array}\right]}_{B_{w,e}}\bar{w}_{d}(k)}\label{eq:previewControl_enlargedSys}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{align*}
+y\left(j+k\right)-y_{d}\left(j+k\right) & =Cx\left(k+j\right)-\left[I,0,\dots,0\right]Y_{d}\left(k+j\right)\\
+ & =\underbrace{\left[C,-I,0,\dots,0\right]}_{C_{e}}x_{e}\left(k+j\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Putting the above equation to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl_cost"
+
+\end_inset
+
+) yields
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Translation to a standard LQ
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Translation to a standard LQ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y\left(j+k\right)-y_{d}\left(j+k\right)=\underbrace{\left[C,-I,0,\dots,0\right]}_{C_{e}}x_{e}\left(k+j\right)
+\]
+
+\end_inset
+
+Hence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{k}=\frac{1}{1+N}\E\left\{ \left(y\left(N+k\right)-y_{d}\left(N+k\right)\right)^{T}S_{y}\left(y\left(N+k\right)-y_{d}\left(N+k\right)\right)\right.\\
++\sum_{j=0}^{N-1}\left[\left(y\left(j+k\right)-y_{d}\left(j+k\right)\right)^{T}Q_{y}\left(y\left(j+k\right)-y_{d}\left(j+k\right)\right)\right.\left.+\left.\vphantom{\left(y\left(j+k\right)-y_{d}\left(j+k\right)\right)^{T}}u\left(j+k\right)^{T}Ru\left(j+k\right)\right]\right\} 
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+is nothing but
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+J_{k}=\frac{1}{1+N}\E\left\{ \vphantom{\sum_{j=0}^{N-1}}x_{e}\left(N+k\right)^{T}C_{e}^{T}S_{y}C_{e}x_{e}\left(N+k\right)\right.\\
++\left.\sum_{j=0}^{N-1}\left[x_{e}\left(j+k\right)^{T}C_{e}^{T}Q_{y}C_{e}x_{e}\left(j+k\right)+u\left(j+k\right)^{T}Ru\left(j+k\right)\right]\right\} \label{eq:previewControl_equivalentCost}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution of the preview control problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The equivalent formulation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+x_{e}\left(k+1\right) & =A_{e}x_{e}\left(k\right)+B_{e}u\left(k\right)+B_{w,e}\bar{w}_{d}(k)\\
+J_{k} & =\frac{1}{1+N}\E\left\{ \vphantom{\sum_{j=0}^{N-1}}x_{e}\left(N+k\right)^{T}C_{e}^{T}S_{y}C_{e}x_{e}\left(N+k\right)\right.\\
+ & +\left.\sum_{j=0}^{N-1}\left[x_{e}\left(j+k\right)^{T}C_{e}^{T}Q_{y}C_{e}x_{e}\left(j+k\right)+u\left(j+k\right)^{T}Ru\left(j+k\right)\right]\right\} 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+is a standard LQ (deterministic formulation) or a standard LQG problem with
+ exactly known state (stochastic formulation).
+ Hence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\negthickspace\negthickspace\negthickspace\negthickspace u^{o}\left(k\right) & =-\left[B_{e}^{T}P\left(k+1\right)B_{e}+R\right]^{-1}B_{e}^{T}P(k+1)A_{e}x_{e}\left(k\right)\\
+P\left(k\right) & =-A_{e}^{T}P\left(k+1\right)B_{e}\left[B_{e}^{T}P\left(k+1\right)B_{e}+R\right]^{-1}B_{e}^{T}P\left(k+1\right)A_{e}\\
+ & \qquad+A_{e}^{T}P\left(k+1\right)A_{e}+C_{e}^{T}Q_{y}C_{e}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $P\left(k+N\right)=C_{e}^{T}S_{y}C_{e}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Remark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula $u^{o}\left(k\right)=K_{e}x_{e}\left(k\right)=\left[\begin{array}{cc}
+K_{e1}(k) & K_{e2}(k)\end{array}\right]x_{e}\left(k\right)$
+\end_inset
+
+, the closed-loop matrix is 
+\begin_inset Formula 
+\begin{align*}
+A_{e}-B_{e}K_{e}(k) & =\left[\begin{array}{cc}
+A & 0\\
+0 & A_{Y_{d}}
+\end{array}\right]-\left[\begin{array}{c}
+B\\
+0
+\end{array}\right]\left[\begin{array}{cc}
+K_{e1}(k) & K_{e2}(k)\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+A-BK_{e1}(k) & -BK_{e2}(k)\\
+0 & A_{Y_{d}}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the closed-loop eigenvalue from 
+\begin_inset Formula $A_{Y_{d}}$
+\end_inset
+
+ will not be changed.
+ 
+\end_layout
+
+\begin_layout Itemize
+The Riccati equation may look ill conditioned if 
+\begin_inset Formula $A_{Y_{d}}$
+\end_inset
+
+ contains marginally stable eigenvalues
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (as the closed-loop is then marginally stable, )
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+A_{Y_{d}}=\left[\begin{array}{cccc|c}
+0 & I & 0 & \dots & 0\\
+0 & 0 & I & \ddots & \vdots\\
+\vdots & \ddots & \ddots & \ddots & 0\\
+0 & \dots & 0 & 0 & C_{d}\\
+\hline 0 & \dots & 0 & 0 & A_{d}
+\end{array}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{d}$
+\end_inset
+
+ can be marginally stable (e.g., 
+\begin_inset Formula $A_{d}=I$
+\end_inset
+
+ for the discussed case (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:previewControl1"
+
+\end_inset
+
+)).
+ 
+\end_layout
+
+\end_inset
+
+This, however, does not cause a problem.
+ For additional details, see the course reader or come to the instructor's
+ office hour .
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,3208 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 6: Linear Quadratic Gaussian (LQG) Control
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+LQ when there is Gaussian noise
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+LQG
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Steady-state LQG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+in deterministic control design: 
+\end_layout
+
+\begin_layout Itemize
+state feedback: arbitrary pole placement for controllable systems
+\end_layout
+
+\begin_layout Itemize
+observer provides (when system is observable) state estimation when not
+ all states are available
+\end_layout
+
+\begin_layout Itemize
+separation principle for observer state feedback control
+\end_layout
+
+\begin_layout Standard
+we have now learned: 
+\end_layout
+
+\begin_layout Itemize
+LQ: optimal state feedback which minimizes a quadratic cost about the states
+\end_layout
+
+\begin_layout Itemize
+KF: provides optimal state estimation
+\end_layout
+
+\begin_layout Standard
+in stochastic control:
+\end_layout
+
+\begin_layout Itemize
+the above two give the linear quadratic Gaussian (LQG) controller
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+plant: 
+\begin_inset Formula 
+\[
+\begin{aligned}x\left(k+1\right) & =Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)\\
+y\left(k\right) & =Cx\left(k\right)+v\left(k\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+assumptions: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v\left(k\right)$
+\end_inset
+
+ are independent, zero mean, white Gaussian random processes, with
+\begin_inset Formula 
+\[
+\E[w(k)w^{T}(k)]=W,\ \E[v(k)v^{T}(k)]=V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(0\right)$
+\end_inset
+
+ is a Gaussian random vector independent of 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v\left(k\right)$
+\end_inset
+
+, with
+\begin_inset Formula 
+\[
+\E[x(0)]=x_{0},\ \E[(x(0)-x_{0})(x(0)-x_{0})^{T}]=X_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Stochastic control with exactly known state
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ when there is noise
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Assume all states are accessible in the plant
+\begin_inset Formula 
+\[
+x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The original LQ cost
+\begin_inset Formula 
+\[
+2J=x^{T}\left(N\right)Sx\left(N\right)+\sum_{j=0}^{N-1}\left\{ x^{T}\left(j\right)Qx\left(j\right)+u^{T}\left(j\right)Ru\left(j\right)\right\} 
+\]
+
+\end_inset
+
+is no longer valid due to the noise term 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Instead, consider a stochastic performance index:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{J=\underset{\left\{ x(0),w(0),\ldots,w(N-1)\right\} }{\E}\left\{ x^{T}(N)Sx(N)+\sum_{j=0}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} }
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+with 
+\begin_inset Formula $S\succeq0$
+\end_inset
+
+, 
+\begin_inset Formula $Q\succeq0$
+\end_inset
+
+, 
+\begin_inset Formula $R\succ0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+solution via stochastic dynamic programming:
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Quotes eld
+\end_inset
+
+cost to go
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{k}\left(x\left(k\right)\right)\triangleq\underset{W_{k}^{+}}{\E}\left\{ x^{T}(N)Sx(N)+\sum_{j=k}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} ,\ \\
+W_{k}^{+}=\left\{ w(k),\ldots,w(N-1)\right\} 
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We look for the optima under control 
+\begin_inset Formula $U_{k}^{+}=\left\{ u\left(k\right),\dots,u\left(N-1\right)\right\} $
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+J_{k}^{o}\left(x\left(k\right)\right)=\min_{U_{k}^{+}}J_{k}\left(x\left(k\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the ultimate optimal cost is 
+\begin_inset Formula 
+\[
+J^{o}=\underset{x\left(0\right)}{\E}\left[\min_{U_{0}^{+}}J_{0}\left(x\left(0\right)\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+understanding the notations: 
+\begin_inset Formula ${\scriptstyle U_{k}^{+}=\left\{ u\left(k\right),U_{k+1}^{+}\right\} }$
+\end_inset
+
+, 
+\begin_inset Formula ${\scriptstyle W_{k}^{+}=\left\{ w\left(k\right),W_{k+1}^{+}\right\} }$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+solution via stochastic dynamic programming:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.05in}
+\end_layout
+
+\end_inset
+
+iteration on 
+\emph on
+optimal 
+\emph default
+cost to go: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tiny
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+J_{k}^{o}\left(x\left(k\right)\right) & =\min_{U_{k}^{+}}\underset{W_{k}^{+}}{\E}\left\{ x^{T}(N)Sx(N)+x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\sum_{j=k+1}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} \nonumber \\
+ & =\min_{U_{k+1}^{+}}\min_{u\left(k\right)}\underset{W_{k}^{+}}{\E}\left\{ x^{T}(N)Sx(N)+x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\sum_{j=k+1}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} \label{eq:LQG_DP1}\\
+ & =\min_{U_{k+1}^{+}}\min_{u\left(k\right)}\left\{ x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\underset{W_{k}^{+}}{\E}\left[x^{T}(N)Sx(N)+\sum_{j=k+1}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right]\right\} \label{eq:LQG_DP2}\\
+ & =\min_{u\left(k\right)}\left\{ x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\min_{U_{k+1}^{+}}\underset{w\left(k\right)}{\E}\underset{W_{k+1}^{+}}{\E}\left[x^{T}(N)Sx(N)+\sum_{j=k+1}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right]\right\} \label{eq:LQG_DP3}\\
+ & =\min_{u\left(k\right)}\left\{ x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\underset{w\left(k\right)}{\E}\min_{U_{k+1}}\underset{W_{k+1}^{+}}{\E}\left[x^{T}(N)Sx(N)+\sum_{j=k+1}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right]\right\} \label{eq:LQG_DP4}\\
+ & =\min_{u\left(k\right)}\left\{ x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\underset{w\left(k\right)}{\E}\left[J_{k+1}^{o}\left(x\left(k+1\right)\right)\right]\right\} 
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LQG_DP1"
+
+\end_inset
+
+) to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LQG_DP2"
+
+\end_inset
+
+): 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+, 
+\begin_inset Formula $w\left(k+1\right)$
+\end_inset
+
+,..., 
+\begin_inset Formula $w\left(N-1\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout NoteItem
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LQG_DP3"
+
+\end_inset
+
+) to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LQG_DP4"
+
+\end_inset
+
+): minimization and expectation is interchangeable, e.g.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\min_{u}\left\{ \underset{x}{\E}\left[f\left(x,u\right)\right]\right\} =\min_{u}\sum_{x}p_{X}\left(x\right)f\left(x,u\right)=\sum_{x}p_{X}\left(x\right)\left[\min_{u}f\left(x,u\right)\right]\text{ as }p_{X}\left(x\right)\geq0
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+solution via stochastic dynamic programming: induction
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{J_{k}^{o}\left(x\left(k\right)\right)=\min_{u\left(k\right)}\left\{ x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\underset{w\left(k\right)}{\E}\left[J_{k+1}^{o}\left(x\left(k+1\right)\right)\right]\right\} }
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+at time 
+\begin_inset Formula $N$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+J_{N}^{o}\left(x\left(N\right)\right)=x^{T}\left(N\right)Sx\left(N\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+assume at time 
+\begin_inset Formula $k+1$
+\end_inset
+
+:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+do a formal induction starting from time 
+\begin_inset Formula $N-1$
+\end_inset
+
+ to see that this is true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{k+1}^{o}\left(x\left(k+1\right)\right)=\underbrace{x^{T}\left(k+1\right)P\left(k+1\right)x\left(k+1\right)}_{\text{cost in a standard LQ}}+\underbrace{b\left(k+1\right)}_{\text{due to noise}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+where 
+\begin_inset Formula $x^{T}\left(k+1\right)P\left(k+1\right)x\left(k+1\right)$
+\end_inset
+
+ is the cost in a standard LQ; 
+\begin_inset Formula $b\left(k+1\right)$
+\end_inset
+
+ is the added cost due to the randomness
+\end_layout
+
+\end_inset
+
+then at time 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{k}^{^{o}}\left(x\left(k\right)\right)=\min_{u\left(k\right)}\left(x^{T}(k)Qx(k)+u^{T}(k)Ru(k)+\underset{w\left(k\right)}{\E}\left[x^{T}\left(k+1\right)P\left(k+1\right)x\left(k+1\right)+b\left(k+1\right)\right]\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+next: use system dynamics 
+\begin_inset Formula $x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)$
+\end_inset
+
+...
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{.1in}
+\end_layout
+
+\end_inset
+
+after some algebra:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{k}^{o}\left(x\left(k\right)\right)=\underset{w\left(k\right)}{\E}\min_{u\left(k\right)}\{x^{T}(k)\left[Q+A^{T}P\left(k+1\right)A\right]x(k)\\
++u^{T}(k)\left[R+B^{T}P\left(k+1\right)B\right]u(k)+2x^{T}\left(k\right)A^{T}P\left(k+1\right)Bu\left(k\right)+2x^{T}\left(k\right)A^{T}P\left(k+1\right)B_{w}w\left(k\right)\\
++2u^{T}\left(k\right)B^{T}P\left(k+1\right)B_{w}w\left(k\right)+w\left(k\right)^{T}B_{w}^{T}P\left(k+1\right)B_{w}w\left(k\right)+b\left(k+1\right)\}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ is white and zero mean 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ all first-order terms of 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+ are zero after taking expectation
+\end_layout
+
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{w\left(k\right)}{\E}\left\{ 2x^{T}\left(k\right)A^{T}P\left(k+1\right)B_{w}w\left(k\right)+2u^{T}\left(k\right)B^{T}P\left(k+1\right)B_{w}w\left(k\right)\right\} =0
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\scriptstyle \underset{w\left(k\right)}{\E}\left\{ w\left(k\right)^{T}B_{w}^{T}P\left(k+1\right)B_{w}w\left(k\right)\right\} }$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is deterministic, and 
+\end_layout
+
+\end_inset
+
+equals
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tr\left\{ \underset{w\left(k\right)}{\E}\left[B_{w}^{T}P\left(k+1\right)B_{w}w\left(k\right)w\left(k\right)^{T}\right]\right\} =\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+other terms: not random w.r.t.
+ 
+\begin_inset Formula $w\left(k\right)$
+\end_inset
+
+; can be taken outside of 
+\begin_inset Formula $\E_{w(k)}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+therefore
+\begin_inset Formula 
+\begin{multline*}
+J_{k}^{o}\left(x\left(k\right)\right)=\min_{u\left(k\right)}\{x^{T}(k)\left[Q+A^{T}P\left(k+1\right)A\right]x(k)\\
++u^{T}(k)\left[R+B^{T}P\left(k+1\right)B\right]u(k)+2x^{T}\left(k\right)A^{T}P\left(k+1\right)Bu\left(k\right)\}\\
++\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]+b\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+note: the term inside the minimization is a quadratic (actually convex)
+ function of 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+.
+ Optimization is easily done.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Recall: facts of quadratic functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+consider 
+\begin_inset Formula 
+\begin{equation}
+f\left(u\right)=\frac{1}{2}u^{T}Mu+p^{T}u+q,\ M=M^{T}\label{eq:quad1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+optimality (maximum when 
+\begin_inset Formula $M$
+\end_inset
+
+ is negative definite; minimum when 
+\begin_inset Formula $M$
+\end_inset
+
+ is positive definite) is achieved when 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial f}{\partial u^{o}}=Mu^{o}+p=0\Rightarrow u^{o}=-M^{-1}p\label{eq:quad2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+and the optimal cost is
+\begin_inset Formula 
+\begin{equation}
+f^{o}=f(u^{o})=-\frac{1}{2}p^{T}M^{-1}p+q\label{eq:quad3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{k}^{o}\left(x\left(k\right)\right)=\min_{u\left(k\right)}\left\{ u^{T}(k)\left[R+B^{T}P\left(k+1\right)B\right]u(k)+2x^{T}\left(k\right)A^{T}P\left(k+1\right)Bu\left(k\right)\right.\\
+\left.\vphantom{\left[B^{T}\right]}+x^{T}(k)\left[Q+A^{T}P\left(k+1\right)A\right]x(k)\right\} +\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]+b\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+optimal control law [by using (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quad2"
+
+\end_inset
+
+)]:
+\begin_inset Formula 
+\[
+\boxed{u^{o}\left(k\right)=-\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)Ax\left(k\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+optimal cost [by using (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quad3"
+
+\end_inset
+
+)]:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace J_{k}^{o}\left(x\left(k\right)\right)=\left\{ -x^{T}\left(k\right)A^{T}P\left(k+1\right)B\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)Ax\left(k\right)\right.\\
+\left.\vphantom{\left(B^{T}\right)^{-1}}+x^{T}\left(k\right)\left[Q+A^{T}P\left(k+1\right)A\right]x\left(k\right)\right\} +\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]+b\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Riccati equation:
+\end_layout
+
+\begin_layout Standard
+the optimal cost
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+J_{k}^{o}\left(x\left(k\right)\right)=\left\{ -x^{T}\left(k\right)A^{T}P\left(k+1\right)B\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)Ax\left(k\right)\right.\\
+\left.\vphantom{\left(B^{T}\right)^{-1}}+x^{T}\left(k\right)\left[Q+A^{T}P\left(k+1\right)A\right]x\left(k\right)\right\} +\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]+b\left(k+1\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+can be written as
+\begin_inset Formula 
+\[
+\boxed{J_{k}^{o}\left(x\left(k\right)\right)=x^{T}\left(k\right)P\left(k\right)x\left(k\right)+b\left(k\right)}
+\]
+
+\end_inset
+
+with the Riccati equation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{P\left(k\right)=A^{T}P\left(k+1\right)A-A^{T}P\left(k+1\right)B\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)A+Q}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+and
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{b\left(k\right)=\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]+b\left(k+1\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+boundary conditions: 
+\begin_inset Formula $P\left(N\right)=S$
+\end_inset
+
+ and 
+\begin_inset Formula $b\left(N\right)=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQ with noise and exactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+observations:
+\end_layout
+
+\begin_layout Itemize
+optimal control law and Riccati equation are the same as those in the regular
+ LQ problem
+\end_layout
+
+\begin_layout Itemize
+addition cost is due to 
+\begin_inset Formula $B_{w}w\left(k\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+b\left(k\right)=\tr\left[B_{w}^{T}P\left(k+1\right)B_{w}W\right]+b\left(k+1\right),\ b\left(N\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+these are the optimal cost to go, 
+\end_layout
+
+\end_inset
+
+the final optimal cost 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+at 
+\begin_inset Formula $k=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+is
+\begin_inset Formula 
+\begin{align}
+J^{o}\left(x\left(0\right)\right) & =\underset{x\left(0\right)}{\E}\left[x^{T}\left(0\right)P\left(0\right)x\left(0\right)+b\left(0\right)\right]\nonumber \\
+ & =\underset{x\left(0\right)}{\E}\left[\left(x_{o}+x\left(0\right)-x_{o}\right)^{T}P\left(0\right)\left(x_{o}+x\left(0\right)-x_{o}\right)+b\left(0\right)\right]\nonumber \\
+ & =x_{o}^{T}P\left(0\right)x_{o}+\tr\left(P\left(0\right)X_{o}\right)+b\left(0\right)\label{eq:LQcost}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+=x_{o}^{T}P\left(0\right)x_{o}+\underset{x\left(0\right)}{\E}\left[\left(x\left(0\right)-x_{o}\right)^{T}P\left(0\right)\left(x\left(0\right)-x_{o}\right)\right]+b\left(0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+b\left(0\right)=\sum_{j=0}^{N-1}\tr\left[B_{w}^{T}P\left(j+1\right)B_{w}W\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Stochastic control with inexactly known state
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQG: LQ with noise and inexactly known states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+notice that
+\end_layout
+
+\begin_layout Itemize
+\noindent
+not all states may be available and there is usually output noise: 
+\begin_inset Formula 
+\[
+\begin{aligned}x\left(k+1\right) & =Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)\\
+y\left(k\right) & =Cx\left(k\right)+v\left(k\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+when 
+\begin_inset Formula $u$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $y$
+\end_inset
+
+, the cost has to also consider the randomness from 
+\begin_inset Formula $V_{k}^{+}=\left\{ v\left(k\right),\dots,v\left(N-1\right)\right\} $
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\boxed{J=\underset{x(0),W_{0}^{+},V_{0}^{+}}{\E}\left\{ x^{T}(N)Sx(N)+\sum_{j=0}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} }\label{eq:lqg_cost}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+these motivate the linear quadratic Gaussian (LQG) control problem
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQG solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+only 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+ is accessible instead of 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+, some connection has to be built to connect the cost to 
+\begin_inset Formula $Y_{k}=\left\{ y\left(0\right),\dots,y\left(k\right)\right\} $
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+ & \E\left[x^{T}\left(k\right)Qx\left(k\right)\right]\nonumber \\
+= & \E\left\{ \E\left[\left.x^{T}\left(k\right)Qx\left(k\right)\right|Y_{k}\right]\right\} \nonumber \\
+= & \E\left\{ \E\left[\left.\left(x\left(k\right)-\hat{x}\left(k|k\right)+\hat{x}\left(k|k\right)\right)^{T}Q\left(x\left(k\right)-\hat{x}\left(k|k\right)+\hat{x}\left(k|k\right)\right)\right|Y_{k}\right]\right\} \nonumber \\
+= & \E\left\{ \E\left[\left.\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)^{T}Q\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)\right|Y_{k}+\left.\hat{x}^{T}\left(k|k\right)Q\hat{x}\left(k|k\right)\right|Y_{k}\right.\right.\nonumber \\
+ & \left.\left.\left.\quad\quad\quad\quad\quad+2\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)^{T}Q\hat{x}\left(k|k\right)\right|Y_{k}\right]\right\} \label{eq:EE}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQG solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+but 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\E\left[x\left(k\right)|Y_{k}\right]=\hat{x}\left(k|k\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\E\left[\hat{x}\left(k|k\right)|Y_{k}\right]=\E\left[\E\left[x\left(k\right)|Y_{k}\right]|Y_{k}\right]=\hat{x}\left(k|k\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, so 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\hat{x}\left(k|k\right)$
+\end_inset
+
+ is orthogonal to 
+\begin_inset Formula $\tilde{x}\left(k|k\right)$
+\end_inset
+
+ (property of least square estimation), so
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\E\left\{ \E\left[\left.\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)^{T}Q\hat{x}\left(k|k\right)\right|Y_{k}\right]\right\}  & =\E\left[\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)^{T}Q\hat{x}\left(k|k\right)\right]\\
+ & =\tr\E\left[Q\hat{x}\left(k|k\right)\tilde{x}^{T}\left(k|k\right)\right]=0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+yielding
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \underline{\E\left[x^{T}\left(k\right)Qx\left(k\right)\right]}\\
+= & \E\left\{ \E\left[\left.\left.\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)^{T}Q\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)\right|Y_{k}+\hat{x}^{T}\left(k|k\right)Q\hat{x}\left(k|k\right)\right|Y_{k}\right]\right\} \\
+= & \E\left[\left.\hat{x}^{T}\left(k|k\right)Q\hat{x}\left(k|k\right)\right|Y_{k}\right]\\
+ & +\E\left\{ \E\left[\left.\tr\left\{ Q\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)\left(x\left(k\right)-\hat{x}\left(k|k\right)\right)^{T}\right\} \right|Y_{k}\right]\right\} \\
+= & \underline{\E\left[\hat{x}^{T}\left(k|k\right)Q\hat{x}\left(k|k\right)\right]+\tr\left\{ QZ\left(k\right)\right\} }
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQG solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+the LQG cost (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lqg_cost"
+
+\end_inset
+
+) is thus
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline*}
+J=\overbrace{\E\left\{ \hat{x}^{T}(N|N)S\hat{x}(N|N)+\sum_{j=0}^{N-1}[\hat{x}^{T}(j|j)Q\hat{x}(j|j)+u^{T}(j)Ru(j)]\right\} }^{\hat{J}}\\
++\underbrace{\tr\left\{ SZ\left(N\right)\right\} +\sum_{j=0}^{N-1}\tr\left\{ QZ\left(j\right)\right\} }_{\text{independent of the control input}}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence 
+\begin_inset Formula 
+\[
+\boxed{\min_{\left\{ u\left(0\right),\dots,u\left(N-1\right)\right\} }J\Longleftrightarrow\min_{\left\{ u\left(0\right),\dots,u\left(N-1\right)\right\} }\hat{J}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQG is equivalent to an LQ with exactly know states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+consider the equivalent problem to minimize:
+\begin_inset Formula 
+\[
+\hat{J}=\E\left\{ \hat{x}^{T}(N|N)S\hat{x}(N|N)+\sum_{j=0}^{N-1}[\hat{x}^{T}(j|j)Q\hat{x}(j|j)+u^{T}(j)Ru(j)]\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{x}\left(k|k\right)$
+\end_inset
+
+ is fully accessible, with the dynamics:
+\begin_inset Formula 
+\begin{align*}
+\hat{x}\left(k+1|k+1\right) & =\hat{x}\left(k+1|k\right)+F\left(k+1\right)e_{y}\left(k+1\right)\\
+ & =A\hat{x}\left(k|k\right)+Bu\left(k\right)+F\left(k+1\right)e_{y}\left(k+1\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+from KF results, 
+\begin_inset Formula $e_{y}\left(k+1\right)$
+\end_inset
+
+ is white, Gaussian with covariance: 
+\begin_inset Formula 
+\[
+V+CM\left(k+1\right)C^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LQG is equivalent to LQ with exactly know states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+LQ with exactly known states:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J=\E\left\{ x^{T}(N)Sx(N)+\sum_{j=0}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u^{o}\left(k\right)=-\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)Ax\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+LQG:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.25in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\hat{J}=\E\left\{ \hat{x}^{T}(N|N)S\hat{x}(N|N)+\sum_{j=0}^{N-1}[\hat{x}^{T}(j|j)Q\hat{x}(j|j)+u^{T}(j)Ru(j)]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{x}\left(k+1|k+1\right)=A\hat{x}\left(k|k\right)+Bu\left(k\right)+F\left(k+1\right)e_{y}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+the solution of LQG is thus:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boxed{u^{o}\left(k\right)=-\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)A\hat{x}\left(k|k\right)}\label{eq:LQGu}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{P\left(k\right)=A^{T}P\left(k+1\right)A-A^{T}P\left(k+1\right)B\left[R+B^{T}P\left(k+1\right)B\right]^{-1}B^{T}P\left(k+1\right)A+Q}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimal cost of LQG control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LQ with known states (see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LQcost"
+
+\end_inset
+
+)):
+\begin_inset Formula 
+\[
+x\left(k+1\right)=Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J^{o}=x_{o}^{T}P\left(0\right)x_{o}+\tr\left(P\left(0\right)X_{o}\right)+\underbrace{\sum_{j=0}^{N-1}\tr\left[B_{w}^{T}P\left(j+1\right)B_{w}W\right]}_{b\left(0\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+LQG: 
+\begin_inset Formula 
+\[
+\hat{x}\left(k+1|k+1\right)=A\hat{x}\left(k|k\right)+Bu\left(k\right)+F\left(k+1\right)e_{y}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\hat{J}^{o}=x_{o}^{T}P(0)x_{o}+\tr[P(0)Z(0)]\\
++\sum\nolimits _{j=0}^{N-1}\tr\left\{ F^{T}(j+1)P(j+1)F(j+1)[V+CM(k+1)C^{T}]\right\} 
+\end{multline}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{o}=\hat{J}_{o}+\sum_{j=0}^{N-1}\tr\{QZ(j)\}+\tr\{SZ(N)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Separation theorem in LQG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+KF: an (optimal) 
+\series bold
+observer
+\end_layout
+
+\begin_layout Standard
+LQ: an (optimal) 
+\series bold
+state feedback
+\series default
+ control
+\end_layout
+
+\begin_layout Standard
+Separation theorem in observer state feedback holds--the closed-loop dynamics
+ contains two 
+\series bold
+separated
+\series default
+ parts: LQ dynamics plus KF dynamics
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.8pc}\xymatrix{ &  &  &  &  & {\scriptstyle w\left(k\right)}\ard\\
+ &  &  &  &  & \bblk{B_{w}}\ard\sp(0.7)+ &  &  &  & {\scriptstyle v\left(k\right)}\ard\sp>>+\\
+\dotblk\arR\sp>>+ & \cblk\arR & \bblk{\textnormal{LQG }K\left(k\right)}\arline[r]\sp(1){u\left(k\right)} & \dotblk\arline[d]\arr & \bblk B\arr\sp(0.85)+ & \cblk\arr & \bblk{zI}\arline[r] & \dotblk\arline[d]\arr & \bblk C\arr\sb>>+ & \cblk\arline[r] & \dotblk\arr\arline[dd] & {\scriptstyle y\left(k\right)}\\
+ &  &  & \dotblk\arline[r] & \dotblk\ard & \dotblk\aru\sb(0.75)+ & \bblk A\arline[l] & \dotblk\arl\\
+ & *[o]{\bullet}\ar@{=>}[uu]\sp>>- &  &  & \bblkshaded{\textnormal{KF}}\ar@{=}[lll]\sb{\hat{x}\left(k|k\right)} &  &  &  &  &  & \dotblk\ar[llllll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Steady-state LQG
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stationary LQG problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Assumptions: system is time invariant; weighting matrices in performance
+ index is time-invariant; noises are white, Gaussian, wide sense stationary.
+\end_layout
+
+\begin_layout Standard
+Equivalent problem: minimize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+J^{'} & =\lim_{N\rightarrow\infty}\frac{J}{N}=\lim_{N\rightarrow\infty}\E\left\{ \frac{x^{T}(N)Sx(N)}{N}+\frac{1}{N}\sum_{j=0}^{N-1}[x^{T}(j)Qx(j)+u^{T}(j)Ru(j)]\right\} \\
+ & =\E\left[x^{T}(k)Qx(k)+u^{T}(k)Ru(k)\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution of stationary LQG problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{aligned}x\left(k+1\right) & =Ax\left(k\right)+Bu\left(k\right)+B_{w}w\left(k\right)\\
+y\left(k\right) & =Cx\left(k\right)+v\left(k\right)\\
+J^{'} & =\E\left[x^{T}(k)Qx(k)+u^{T}(k)Ru(k)\right]
+\end{aligned}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the solution is 
+\begin_inset Formula $u=-K_{s}\hat{x}\left(k|k\right)$
+\end_inset
+
+: steady-state LQ + steady-state KF
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+K_{s} & =\left[R+B^{T}P_{s}B\right]^{-1}B^{T}P_{s}A\\
+P_{s} & =A^{T}P_{s}A-A^{T}P_{s}B\left[R+B^{T}P_{s}B\right]^{-1}B^{T}P_{s}A+Q\\
+F_{s} & =M_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}\\
+M_{s} & =AM_{s}A^{T}-AM_{s}C^{T}\left[CM_{s}C^{T}+V\right]^{-1}CM_{s}A^{T}+B_{w}WB_{w}^{T}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+stability and convergence conditions of the Riccati equations:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,B_{w}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+: controllable or stabilizable
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A,C_{q}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+: observable or detectable (
+\begin_inset Formula $Q=C_{q}^{T}C_{q}$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution of stationary LQG problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+stability conditions: guaranteed closed-loop stability and KF stability
+\end_layout
+
+\begin_layout Itemize
+separation theorem: closed-loop eigenvalues come from
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the 
+\begin_inset Formula $n$
+\end_inset
+
+ eigenvalues of LQ state feedback: 
+\begin_inset Formula $A-BK_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the 
+\begin_inset Formula $n$
+\end_inset
+
+ eigenvalues of KF: 
+\begin_inset Formula $A-AF_{s}C$
+\end_inset
+
+ (or equivalently 
+\begin_inset Formula $A-F_{S}CA$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+optimal cost:
+\begin_inset Formula 
+\begin{equation}
+J_{\infty}^{o}=\tr\left[P_{s}\left(BK_{s}Z_{s}A^{T}+B_{w}WB_{w}^{T}\right)\right]\label{eq:}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+exercise: prove (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Continuous-time LQG problem
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time LQG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+plant: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{x}(t) & = & Ax(t)+Bu(t)+B_{w}w(t)\\
+y(t) & = & Cx(t)+v(t)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+assumptions: 
+\begin_inset Formula $w\left(t\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ are Gaussian and white; 
+\begin_inset Formula $x\left(0\right)$
+\end_inset
+
+ is Gaussian 
+\end_layout
+
+\begin_layout Itemize
+cost: 
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace J=\E\left\{ x^{T}\left(t_{f}\right)Sx\left(t_{f}\right)+\int_{t_{0}}^{t_{f}}\left[x^{T}\left(t\right)Q\left(t\right)x\left(t\right)+u^{T}\left(t\right)R\left(t\right)u\left(t\right)\right]\d t\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $S\succeq0$
+\end_inset
+
+ , 
+\begin_inset Formula $Q\left(t\right)\succeq0$
+\end_inset
+
+, and 
+\begin_inset Formula $R\left(t\right)\succ0$
+\end_inset
+
+ and the expectation is taken over all random quantities 
+\begin_inset Formula $\{x\left(0\right),w\left(t\right),v\left(t\right)\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time LQG solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Continuous-time LQ:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u(t)=-R^{-1}B^{T}P(t)\hat{x}(t|t)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\d P}{\d t}=A^{T}P+PA-PBR^{-1}B^{T}P+Q,\ P(t_{f})=S
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Continuous-time KF:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\d\hat{x}(t|t)}{\d t}=A\hat{x}(t|t)+Bu(t)+F(t)\left(y(t)-C\hat{x}(t|t)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F(t)=M(t)C^{T}V^{-1},\ \hat{x}(t_{0}|t_{0})=x_{o}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\d M}{\d t}=AM+MA^{T}-MC^{T}V^{-1}CM+B_{w}WB_{W}^{T},\ M(t_{0})=X_{o}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

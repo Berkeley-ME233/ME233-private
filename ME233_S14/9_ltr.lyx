@@ -1,0 +1,1283 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 9: LQG/Loop Transfer Recovery (LTR) 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Big picture
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Loop transfer recovery
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Target feedback loop
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Fictitious KF
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Where are we now?
+\end_layout
+
+\begin_layout Itemize
+LQ: optimal control, guaranteed robust stability under basic assumptions
+ in stationary case
+\end_layout
+
+\begin_layout Itemize
+KF: optimal state estimation, good properties from the duality between LQ
+ and KF
+\end_layout
+
+\begin_layout Itemize
+LQG: LQ+KF with separation theorem
+\end_layout
+
+\begin_layout Itemize
+frequency-domain feedback design principles and implementations
+\end_layout
+
+\begin_layout Standard
+Stability robustness of LQG was discussed in one of the homework problems:
+ the nice robust stability in LQ (good gain and phase margins) is lost in
+ LQG.
+\end_layout
+
+\begin_layout Standard
+LQG/LTR is one combined scheme that uses many of the concepts learned so
+ far.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Basic concepts
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Continuous-time stationary LQG solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{0.8pc}\xymatrix{\cblk\arr & \bblk{\textnormal{LQG gain }K}\arline[r] & \dotblk\arline[d]\arr\sp(0.3){u\left(t\right)} & \bblk{\textnormal{Plant}}\arline[r]\sp>>{y\left(t\right)} & \dotblk\arline[dd]\\
+ &  & \dotblk\arline[r] & \dotblk\ard\\
+\dotblk\ar@{->}[uu]\sp>>{-} &  &  & \bblk{\textnormal{Kalman Filter}}\arline[lll]\sb{\hat{x}\left(t|t\right)} & \dotblk\arl
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.3in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+u\left(t\right) & =-K\hat{x}\left(t|t\right)\\
+\frac{\d\hat{x}(t|t)}{\d t} & =A\hat{x}(t|t)+Bu(t)+F\left(y(t)-C\hat{x}(t|t)\right)\\
+ & =(A-BK-FC)\hat{x}(t|t)+Fy(t)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the closed loop is equivalent to
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{4pc}\xymatrix{\cblk\arr\sp>>>>>>{-y\left(t\right)} & \bblk{G_{c}}\arr\sp(0.4){u\left(t\right)} & \bblk{\textnormal{Plant}}\arline[r]\sp<<<<<{y\left(t\right)} & \dotblk\arline[dd]\\
+\\
+\dotblk\ar@{->}[uu]\sp>>{-} &  &  & \dotblk\arline[lll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+G_{c}(s)=K(sI-A+BK+FC)^{-1}F
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Loop transfer recovery (LTR)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.16in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{0.7pc}\xyC{4pc}\xymatrix{\cblk\arr & \bblk{G_{c}\left(s\right)}\arr & \bblk{G\left(s\right)}\arline[r] & \dotblk\arline[dd]\\
+\\
+\dotblk\ar@{->}[uu]\sp>>{-} &  &  & \dotblk\arline[lll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.16in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Loop Transfer Recovery (LTR)
+\end_layout
+
+\end_inset
+
+If a 
+\begin_inset Formula $m\times m$
+\end_inset
+
+ dimensional 
+\begin_inset Formula $G(s)$
+\end_inset
+
+ has only minimum phase transmission zeros, then
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ as 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rho\rightarrow0\ (maybe\ 10^{-19})\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\rho\rightarrow0$
+\end_inset
+
+,
+\end_layout
+
+\end_inset
+
+ the open-loop transfer function
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.16in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+G\left(s\right)G_{c}(s)=\left[C\left(sI-A\right)^{-1}B\right]\left[K(sI-A+BK+FC)^{-1}F\right]\\
+\xrightarrow{\rho\rightarrow0}C(sI-A)^{-1}F
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.16in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $K$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho$
+\end_inset
+
+ are from the LQ [
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ controllable, 
+\begin_inset Formula $(A,C)$
+\end_inset
+
+ observable]
+\begin_inset Formula 
+\begin{align}
+J & =\int_{0}^{\infty}\left(x^{T}(t)C^{T}Cx(t)+\rho u^{T}(t)Nu(t)\right)dt\\
+\dot{x}(t) & =Ax(t)+Bu(t)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\end_layout
+
+\begin_layout NoteItem
+for non-square plants, we have to add auxiliary inputs/outputs to make the
+ plant square.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Loop transfer recovery (LTR)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1.5pc}\xymatrix{\ \ar[r]\sp>>{+} & \cblk\ar[r] & \bblk{G_{c}\left(s\right)}\ar[r] & \bblk{G\left(s\right)=C\left(sI-A\right)^{-1}B}\ar@{-}[r] & *[F]{}\ar[r]\ar@{-}[d] & \ \\
+\  & \dotblk\aru\sb>>{-} &  &  & *[F]{}\ar@{-}[lll] & \ 
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+converges, as 
+\begin_inset Formula $\rho\to0$
+\end_inset
+
+, to the 
+\emph on
+target feedback loop
+\emph default
+
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1pc}\xymatrix{\ \ar[r]\sp>>{+} & \cblk\ar[r] & \bblk{C\left(sI-A\right)^{-1}F}\ar@{-}[r] & \dotblk\ar@{->}[r]\ar@{-}[d] & \ \\
+\  & \dotblk\aru\sb>>{-} &  & \dotblk\ar@{-}[ll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+key concepts:
+\end_layout
+
+\begin_layout Itemize
+regard LQG as an output feedback controller
+\end_layout
+
+\begin_layout Itemize
+will design 
+\begin_inset Formula $F$
+\end_inset
+
+ such that 
+\begin_inset Formula $C\left(sI-A\right)^{-1}F$
+\end_inset
+
+ has a good loop shape
+\end_layout
+
+\begin_layout NoteItem
+(hence LQG/LTR is a robust control algorithm)
+\end_layout
+
+\begin_layout Itemize
+not a conventional optimal control problem
+\end_layout
+
+\begin_layout Itemize
+not even a stochastic control design method
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Fictitious KF and the target feedback loop
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Selection of 
+\begin_inset Formula $F$
+\end_inset
+
+ for the target feedback loop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+standard KF procedure: given noise properties (
+\begin_inset Formula $W$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+, etc), KF gain 
+\begin_inset Formula $F$
+\end_inset
+
+ comes from RE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+fictitious
+\emph default
+ KF for target feedback loop design: want to have good behavior in
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\xyR{1pc}\xyC{1pc}\xymatrix{\ \ar[r]\sp>>{+} & \cblk\ar[r] & \bblk{C\left(sI-A\right)^{-1}F}\ar@{-}[r] & \dotblk\ar@{->}[r]\ar@{-}[d] & \ \\
+\  & \dotblk\aru\sb>>{-} &  & \dotblk\ar@{-}[ll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+select 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ to get a desired 
+\begin_inset Formula $F$
+\end_inset
+
+ (hence a 
+\emph on
+fictitious
+\emph default
+ KF problem):
+\begin_inset Formula 
+\begin{align*}
+\dot{x}(t) & =Ax(t)+Lw(t), & E[w(t)w^{T}(t+\tau)]=I\delta(\tau)\\
+y(t) & =Cx(t)+v(t), & E[v(t)v^{T}(t+\tau)]=\mu I\delta(\tau)
+\end{align*}
+
+\end_inset
+
+which gives
+\begin_inset Formula 
+\begin{equation}
+F=\frac{1}{\mu}MC^{T},\quad AM+M^{T}A+LL^{T}-\frac{1}{\mu}MC^{T}CM=0,\ M\succ0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The target feedback loop from fictitious KF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\dot{x}(t) & =Ax(t)+Lw(t), & E[w(t)w^{T}(t+\tau)]=I\delta(\tau)\\
+y(t) & =Cx(t)+v(t), & E[v(t)v^{T}(t+\tau)]=\mu I\delta(\tau)
+\end{align*}
+
+\end_inset
+
+Return difference equation for the fictitious KF is
+\begin_inset Formula 
+\[
+\left[I_{m}+G_{F}\left(s\right)\right]\left[I_{m}+G_{F}\left(-s\right)\right]^{T}=I_{m}+\frac{1}{\mu}\left[C\Phi\left(s\right)L\right]\left[C\Phi\left(-s\right)L\right]^{T}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $G_{F}\left(s\right)=C\left(sI-A\right)^{-1}F$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi\left(s\right)=\left(sI-A\right)^{-1}$
+\end_inset
+
+.
+ Then
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\sigma\left[I_{m}+G_{F}\left(j\omega\right)\right]=\sqrt{\lambda\left\{ \left[I_{m}+G_{F}\left(j\omega\right)\right]\left[I_{m}+G_{F}\left(-j\omega\right)\right]^{T}\right\} }\\
+=\sqrt{1+\frac{1}{\mu}\left\{ \sigma\left[C\Phi\left(j\omega\right)L\right]\right\} ^{2}}\geq1
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The (nice) target feedback loop from fictitious KF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\sigma\left[I_{m}+G_{F}\left(j\omega\right)\right]=\sqrt{\lambda\left\{ \left[I_{m}+G_{F}\left(j\omega\right)\right]\left[I_{m}+G_{F}\left(-j\omega\right)\right]^{T}\right\} }\\
+=\sqrt{1+\frac{1}{\mu}\left\{ \sigma\left[C\Phi\left(j\omega\right)L\right]\right\} ^{2}}\geq1
+\end{multline*}
+
+\end_inset
+
+gives:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{\max}S(j\omega)=\sigma_{\max}[I+G_{F}(j\omega)]^{-1}\leq1$
+\end_inset
+
+, namely
+\begin_inset Formula 
+\[
+\textnormal{no\ disturbance\ amplification\ at\ any\ frequency}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{\max}T(j\omega)=\sigma_{\max}[I-S\left(j\omega\right)]\leq2$
+\end_inset
+
+, hence,
+\begin_inset Formula 
+\[
+\textnormal{guaranteed closed\ loop\ stable\ if}\ \sigma_{\max}\Delta(j\omega)<1/2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

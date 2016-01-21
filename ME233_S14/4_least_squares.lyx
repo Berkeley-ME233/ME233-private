@@ -1,0 +1,3308 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes} 
+\usetikzlibrary{arrows,arrows.new}
+
+\usepackage{pgfplots}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 4: Least Squares (LS) Estimation
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Background and general solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Solution in the Gaussian case
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Properties
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\hat{x}=\E\left[x|y\right]$
+\end_inset
+
+ minimizes 
+\begin_inset Formula $J=\E\left[\left.||x-\hat{x}||^{2}\right|y\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+general least squares estimation:
+\end_layout
+
+\begin_layout Itemize
+given: jointly distributed 
+\begin_inset Formula $x$
+\end_inset
+
+ (
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional) & 
+\begin_inset Formula $y$
+\end_inset
+
+ (
+\begin_inset Formula $m$
+\end_inset
+
+-dimensional) 
+\end_layout
+
+\begin_layout Itemize
+goal: find the optimal estimate 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ that minimizes
+\begin_inset Formula 
+\[
+\E\left[\left.||x-\hat{x}||^{2}\right|y=y_{1}\right]=\E\left[\left.\left(x-\hat{x}\right)^{T}\left(x-\hat{x}\right)\right|y=y_{1}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+solution
+\emph default
+: consider
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace J\left(z\right)=\E\left[\left.||x-z||^{2}\right|y=y_{1}\right]=\E\left[\left.x^{T}x\right|y=y_{1}\right]-2z^{T}\E\left[\left.x\right|y=y_{1}\right]+z^{T}z
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+which is quadratic in 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ For optimal cost,
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial z}J(z)=0\Rightarrow z=\E\left[x|y=y_{1}\right]\triangleq\hat{x}
+\]
+
+\end_inset
+
+hence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\boxed{\hat{x}=\E\left[x|y=y_{1}\right]=\int_{-\infty}^{\infty}xp_{x|y}\left(x|y_{1}\right)\d x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{J_{\min}=J\left(\hat{x}\right)=\tr\left\{ \E\left[\left(x-\hat{x}\right)\left(x-\hat{x}\right)^{T}|y=y_{1}\right]\right\} }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+general least squares estimation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\hat{x}=\E\left[x|y=y_{1}\right]=\int_{-\infty}^{\infty}xp_{x|y}\left(x|y_{1}\right)\d x}
+\]
+
+\end_inset
+
+achieves the minimization of
+\begin_inset Formula 
+\[
+\E\left[\left.||x-\hat{x}||^{2}\right|y=y_{1}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+solution concepts:
+\end_layout
+
+\begin_layout Itemize
+the solution holds for any probability distribution in 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+for each 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[x|y=y_{1}\right]$
+\end_inset
+
+ is different
+\end_layout
+
+\begin_layout Itemize
+if no specific value of 
+\begin_inset Formula $y$
+\end_inset
+
+ is given, 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ is a function of the random vector/variable 
+\begin_inset Formula $y$
+\end_inset
+
+, written as
+\begin_inset Formula 
+\[
+\hat{x}=\E\left[x|y\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Solution in the Gaussian case
+\end_layout
+
+\begin_layout Subsection
+Why Gaussian?
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Least square estimation in the Gaussian case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Why Gaussian?
+\end_layout
+
+\begin_layout Itemize
+Gaussian is common in practice: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+macroscopic random phenomena = superposition of microscopic random effects
+ (Central limit theorem)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Gaussian distribution has nice properties that make it mathematically feasible
+ to solve many practical problems:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+pdf is solely determined by the mean and the variance/covariance
+\end_layout
+
+\begin_layout Itemize
+linear functions of a Gaussian random process are still Gaussian
+\end_layout
+
+\begin_layout Itemize
+the output of an LTI system is a Gaussian random process if the input is
+ Gaussian 
+\end_layout
+
+\begin_layout Itemize
+if two jointly Gaussian distributed random variables are uncorrelated, then
+ they are independent
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ jointly Gaussian
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $X_{1}|X_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}|X_{1}$
+\end_inset
+
+ are also Gaussian
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Least square estimation in the Gaussian case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Why Gaussian?
+\end_layout
+
+\begin_layout Standard
+Gaussian and white:
+\end_layout
+
+\begin_layout Itemize
+they are different concepts
+\end_layout
+
+\begin_layout Itemize
+there can be Gaussian white noise, Poisson white noise, etc
+\end_layout
+
+\begin_layout Itemize
+Gaussian white noise is used a lot since it is a good approximation to many
+ practical noises
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\hat{x}=\E\left[x|y\right]=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Least square estimation in the Gaussian case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+the solution
+\end_layout
+
+\begin_layout Standard
+problem (re-stated): 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+--Gaussian distributed
+\begin_inset Formula 
+\[
+\text{minimize }\E\left[\left.||x-\hat{x}||^{2}\right|y\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+solution: 
+\begin_inset Formula $\boxed{\hat{x}=\E\left[x|y\right]=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+properties:
+\end_layout
+
+\begin_layout Itemize
+the estimation is unbiased: 
+\begin_inset Formula $\boxed{\E\left[\hat{x}\right]=\E\left[x\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y$
+\end_inset
+
+ is Gaussian
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ is Gaussian; and 
+\begin_inset Formula $x-\hat{x}$
+\end_inset
+
+ is also Gaussian
+\end_layout
+
+\begin_layout Itemize
+covariance of 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\E\left[\left(\hat{x}-\E\left[\hat{x}\right]\right)\left(\hat{x}-\E\left[\hat{x}\right]\right)^{T}\right]=\E\left\{ \left(y-\E\left[y\right]\right)\left[X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)\right]^{T}\right\} =X_{xy}X_{yy}^{-1}X_{yx}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+estimation error 
+\begin_inset Formula $\tilde{x}\triangleq x-\hat{x}$
+\end_inset
+
+: zero mean and 
+\begin_inset Formula 
+\[
+\cov\left[\tilde{x}\right]=\underbrace{\E\left[\left(x-\E\left[x|y\right]\right)\left(x-\E\left[x|y\right]\right)^{T}\right]}_{\text{conditional covariance}}=X_{xx}-X_{xy}X_{yy}^{-1}X_{yx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Least square estimation in the Gaussian case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+\begin_inset Note Note
+status open
+
+\begin_layout FrameSubtitle
+the solution
+\end_layout
+
+\begin_layout Plain Layout
+problem: 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+--Gaussian distributed
+\begin_inset Formula 
+\[
+\text{minimize }\E\left[\left.||x-\hat{x}||^{2}\right|y\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+solution: 
+\begin_inset Formula $\boxed{\hat{x}=\E\left[x|y\right]=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "85col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\hat{x}=\E\left[x|y\right]=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\E\left[x|y\right]$
+\end_inset
+
+ is a better estimate than 
+\begin_inset Formula $\E\left[x\right]$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+the estimation is unbiased: 
+\begin_inset Formula $\E\left[\hat{x}\right]=\E\left[x\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+estimation error 
+\begin_inset Formula $\tilde{x}\triangleq x-\hat{x}$
+\end_inset
+
+: zero mean and 
+\begin_inset Formula 
+\[
+\cov\left[x-\hat{x}\right]=X_{xx}-X_{xy}X_{yy}^{-1}X_{yx}\preceq\cov\left[x-\E\left[X\right]\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout NoteItem
+\begin_inset Formula $\cov\left[x-\hat{x}\right]\preceq\cov\left[x-\E\left[X\right]\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ is an unbiased estimation.
+ Hence the estimation has been improved, i.e., 
+\begin_inset Formula $\E\left[x|y\right]=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)$
+\end_inset
+
+ is a better estimate than 
+\begin_inset Formula $\E\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\begin_layout Subsection
+two random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+two random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Property 1
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+(i) the estimation error 
+\begin_inset Formula $\tilde{x}=x-\hat{x}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ are orthogonal:
+\begin_inset Formula 
+\[
+\E\left[\left(x-\hat{x}\right)^{T}\hat{x}\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+proof
+\series default
+ of (i):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\E\left[\tilde{x}\left(y-m_{y}\right)^{T}\right] & =\E\left[\left(x-\E\left[x\right]-X_{xy}X_{yy}^{-1}\left(y-m_{y}\right)\right)\left(y-m_{y}\right)^{T}\right]\\
+ & =X_{xy}-X_{xy}X_{yy}^{-1}X_{yy}=0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+two random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Property 1
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+(i) the estimation error 
+\begin_inset Formula $\tilde{x}=x-\hat{x}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(ii) 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ are orthogonal:
+\begin_inset Formula 
+\[
+\E\left[\left(x-\hat{x}\right)^{T}\hat{x}\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+proof
+\series default
+ of (ii): 
+\begin_inset Formula $\E\left[\tilde{x}^{T}\hat{x}\right]=\E\left[\left(x-\hat{x}\right)^{T}\left(\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-m_{y}\right)\right)\right]=\E\left[\tilde{x}^{T}\right]\E\left[x\right]+\E\left[\left(x-\hat{x}\right)^{T}X_{xy}X_{yy}^{-1}\left(y-m_{y}\right)\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $\E\left[\tilde{x}^{T}\right]=0$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{multline*}
+\E\left[\left(x-\hat{x}\right)^{T}X_{xy}X_{yy}^{-1}\left(y-m_{y}\right)\right]=\tr\left\{ \E\left[X_{xy}X_{yy}^{-1}\left(y-m_{y}\right)\left(x-\hat{x}\right)^{T}\right]\right\} \\
+=\tr\left\{ X_{xy}X_{yy}^{-1}\E\left[\left(y-m_{y}\right)\left(x-\hat{x}\right)^{T}\right]\right\} =0\textnormal{ because of (i)}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+note: 
+\begin_inset Formula $\tr\left\{ BA\right\} =\tr\left\{ AB\right\} $
+\end_inset
+
+.
+ Consider, e.g.
+ 
+\begin_inset Formula $A=\left[a,b\right]$
+\end_inset
+
+ , 
+\begin_inset Formula $B=\left[\begin{array}{c}
+c\\
+d
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+two random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Property 1
+\series default
+ (re-stated):
+\end_layout
+
+\begin_layout Standard
+(i) the estimation error 
+\begin_inset Formula $\tilde{x}=x-\hat{x}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ are orthogonal:
+\begin_inset Formula 
+\[
+\E\left[\left(x-\hat{x}\right)^{T}\hat{x}\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+intuition: least square estimation is a projection
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto, scale = 0.8, node distance=2cm,>=latex' new,arrow
+ head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](0,1) to (8,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](2,0) to (2,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6.8,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (3.2,1.25);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,->](6.8,2) -- node[right]{$
+\backslash
+tilde{x}=x-
+\backslash
+hat{x}$} (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (x) at (4,3.5){$x$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xhat) at (5,1.3){$
+\backslash
+hat{x}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (y) at (3.4,1.5){$y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+: 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are uncorrelated 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, where 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are uncorrelated 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Property 2
+\series default
+: let 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ be Gaussian and uncorrelated
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+, i.e., 
+\begin_inset Formula $\E\left[\left(y-\E\left[y\right]\right)\left(z-\E\left[z\right]\right)^{T}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, then
+\end_layout
+
+\begin_layout Standard
+(i) the optimal estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+\E\left[x|y,z\right] & =\E\left[x\right]+\overbrace{\left(\E\left[x|y\right]-\E\left[x\right]\right)}^{\text{first improvement}}+\overbrace{\left(\E\left[x|z\right]-\E\left[x\right]\right)}^{\text{second improvement}}\\
+ & =\E\left[x|y\right]+\left(\E\left[x|z\right]-\E\left[x\right]\right)
+\end{align*}
+
+\end_inset
+
+Alternatively, let 
+\begin_inset Formula $\boxed{\hat{x}_{|y}\triangleq\E\left[x|y\right]}$
+\end_inset
+
+, 
+\begin_inset Formula $\boxed{\tilde{x}_{|y}\triangleq x-\E\left[x|y\right]=x-\hat{x}_{|y}}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\boxed{\E\left[x|y,z\right]=\E\left[x|y\right]+\E\left[\tilde{x}_{|y}|z\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+(ii) the estimation error covariance is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+X_{xx}-X_{xy}X_{yy}^{-1}X_{yx}-X_{xz}X_{zz}^{-1}X_{zx}=X_{\tilde{x}\tilde{x}}-X_{xz}X_{zz}^{-1}X_{zx}=\underline{X_{\tilde{x}\tilde{x}}-X_{\tilde{x}z}X_{zz}^{-1}X_{z\tilde{x}}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $X_{\tilde{x}\tilde{x}}=\E\left[\tilde{x}_{|y}\tilde{x}_{|y}^{T}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{\tilde{x}z}=\E\left[\tilde{x}_{|y}\left(z-m_{z}\right)^{T}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, where 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are uncorrelated 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Property 2
+\series default
+: let 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ be Gaussian and uncorrelated then
+\end_layout
+
+\begin_layout Plain Layout
+(i) the optimal estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\E\left[x|y,z\right]=\E\left[x|y\right]+\left(\E\left[x|z\right]-\E\left[z\right]\right)=\E\left[x|y\right]+\E\left[\tilde{x}_{|y}|z\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+proof
+\series default
+ of (i): let 
+\begin_inset Formula $w=\left[y,z\right]^{T}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\E\left[x|w\right] & =\E\left[x\right]+\left[\begin{array}{cc}
+X_{xy} & X_{xz}\end{array}\right]\left[\begin{array}{cc}
+X_{yy} & X_{yz}\\
+X_{zy} & X_{zz}
+\end{array}\right]^{-1}\left[\begin{array}{c}
+y-\E\left[y\right]\\
+z-\E\left[z\right]
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+Using 
+\begin_inset Formula $X_{yz}=0$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{align*}
+\E\left[x|w\right] & =\E\left[x\right]+\underbrace{X_{xy}X_{yy}^{-1}\left(y-\E\left[y\right]\right)}_{\E\left[x|y\right]-\E\left[x\right]}+\underbrace{X_{xz}X_{zz}^{-1}\left(z-\E\left[z\right]\right)}_{\E\left[x|z\right]-\E\left[x\right]}\\
+ & =\E\left[x|y\right]+\E\left[\left(\hat{x}_{|y}+\tilde{x}_{|y}\right)|z\right]-\E\left[x\right]\\
+ & =\E\left[x|y\right]+\E\left[\tilde{x}_{|y}|z\right]
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\E\left[\hat{x}_{|y}|z\right]=\E\left[\E\left[x|y\right]|z\right]=\E\left[x\right]$
+\end_inset
+
+ as 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are independent
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, where 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are uncorrelated 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Property 2
+\series default
+: let 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ be Gaussian and uncorrelated then
+\end_layout
+
+\begin_layout Plain Layout
+(ii) the estimation error covariance is 
+\begin_inset Formula 
+\[
+X_{xx}-X_{xy}X_{yy}^{-1}X_{yx}-X_{xz}X_{zz}^{-1}X_{zx}=X_{\tilde{x}\tilde{x}}-X_{xz}X_{zz}^{-1}X_{zx}=X_{\tilde{x}\tilde{x}}-X_{\tilde{x}z}X_{zz}^{-1}X_{z\tilde{x}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $X_{\tilde{x}\tilde{x}}=\E\left[\tilde{x}_{|y}\tilde{x}_{|y}^{T}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{\tilde{x}z}=\E\left[\tilde{x}_{|y}\left(z-m_{z}\right)^{T}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+proof
+\series default
+ of (ii): let 
+\begin_inset Formula $w=\left[y,z\right]^{T}$
+\end_inset
+
+, the estimation error covariance is
+\begin_inset Formula 
+\[
+X_{xx}-X_{xw}X_{ww}^{-1}X_{wx}=X_{xx}-X_{xy}X_{yy}^{-1}X_{yx}-X_{xz}X_{zz}^{-1}X_{zx}
+\]
+
+\end_inset
+
+additionally
+\begin_inset Formula 
+\begin{align*}
+X_{xz} & =\E\left[\left(\underline{x}-\E\left[x\right]\right)\left(z-\E\left[z\right]\right)^{T}\right]=\E\left[\left(\underline{\hat{x}_{|y}+\tilde{x}_{|y}}-\E\left[x\right]\right)\left(z-\E\left[z\right]\right)^{T}\right]\\
+ & =\E\left[\left(\hat{x}_{|y}-\E\left[x\right]\right)\left(z-\E\left[z\right]\right)^{T}\right]+\E\left[\tilde{x}_{|y}\left(z-\E\left[z\right]\right)^{T}\right]
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula $\hat{x}_{|y}-\E\left[x\right]$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $y$
+\end_inset
+
+, which is uncorrelated with 
+\begin_inset Formula $z$
+\end_inset
+
+, hence 
+\begin_inset Formula $\E\left[\left(\hat{x}_{|y}-\E\left[x\right]\right)\left(z-\E\left[z\right]\right)^{T}\right]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{xz}=X_{\tilde{x}_{|y}z}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, where 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are uncorrelated
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Property 2
+\series default
+ (re-stated): let 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ be Gaussian and uncorrelated 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+then
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(i) the optimal estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\E\left[x|y,z\right]=\E\left[x|y\right]+\E\left[\tilde{x}_{|y}|z\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) the estimation error covariance is 
+\begin_inset Formula 
+\[
+X_{\tilde{x}\tilde{x}}-X_{\tilde{x}z}X_{zz}^{-1}X_{z\tilde{x}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+intuition:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto, scale = 0.8, >=latex' new,arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](0,1) to (8,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](2,0) to (2,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6.8,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (3.2,1.25);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,->](6.8,2) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (1.2,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (1.6,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](1.2,4) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (z) at (1.2,2){$z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (x) at (4,3.5){$x$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xz) at (0.2,3.5){$
+\backslash
+text{E}
+\backslash
+left[
+\backslash
+tilde{x}_{|y}
+\backslash
+middle|z
+\backslash
+right]$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xtilde) at (7,3.5){$
+\backslash
+tilde{x}_{|y}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xhat) at (5,1.3){$
+\backslash
+hat{x}_{|y}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (y) at (3.4,1.5){$y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+: 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are correlated 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Properties of least square estimate (Gaussian case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+three random vectors 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, where 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are correlated 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Property 3
+\series default
+: let 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ be Gaussian and correlated, then
+\end_layout
+
+\begin_layout Standard
+(i) the optimal estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\E\left[x|y,z\right]=\E\left[x|y\right]+\E\left[\tilde{x}_{|y}|\tilde{z}_{|y}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{z}_{|y}=z-\hat{z}_{|y}=z-\E\left[z|y\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{x}_{|y}=x-\hat{x}_{|y}=x-\E\left[x|y\right]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(ii) the estimation error covariance is 
+\begin_inset Formula 
+\[
+X_{\tilde{x}_{|y}\tilde{x}_{|y}}-X_{\tilde{x}_{|y}\tilde{z}_{|y}}X_{\tilde{z}_{|y}\tilde{z}_{|y}}^{-1}X_{\tilde{z}_{|y}\tilde{x}_{|y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+intuition:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto, scale = 0.8, >=latex' new,arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](0,1) to (8,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](2,0) to (2,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (6.8,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (3.2,1.25);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,->](6.8,2) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (1.2,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (1.6,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](2,1) to (2.6,2.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](2.6,2.8) to (1.6,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](1.2,4) to (6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (zy) at (1.2,2){$
+\backslash
+tilde{z}_{|y}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xz) at (0.2,3.5){$
+\backslash
+text{E}
+\backslash
+left[
+\backslash
+tilde{x}_{|y}
+\backslash
+middle|
+\backslash
+tilde{z}_{|y}
+\backslash
+right]$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (z) at (2.7,3){$z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (x) at (4,3.5){$x$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xtilde) at (7,3.5){$
+\backslash
+tilde{x}_{|y}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (xhat) at (5,1.3){$
+\backslash
+hat{x}_{|y}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (y) at (3.4,1.5){$y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Application of the three properties
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider 
+\begin_inset Formula 
+\[
+\xymatrix{ &  & \text{noise}\ar[d]\sp(0.8)+\\
+\ar[r] & \bblk{\text{System}}\ar[r]\sb(0.85)+ & \cblk\ar[r] & y\left(k\right)
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $\left[y\left(0\right),y\left(1\right),\dots,y\left(k\right)\right]^{T}$
+\end_inset
+
+, we want to estimate the state 
+\begin_inset Formula $x\left(k\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+the properties give a recursive way to compute 
+\begin_inset Formula 
+\[
+\hat{x}\left(k\right)|\left\{ y\left(0\right),y\left(1\right),\dots,y\left(k\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider estimating the velocity 
+\begin_inset Formula $x$
+\end_inset
+
+ of a motor, with 
+\begin_inset Formula 
+\begin{align*}
+\E\left[x\right] & =m_{x}=10\textnormal{ rad/s}\\
+\var\left[x\right] & =2\text{ rad}^{2}/\text{s}^{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are two (tachometer) sensors available:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{1}=x+v_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $\E\left[v_{1}\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[v_{1}^{2}\right]=1\text{ rad}^{2}/\text{s}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{2}=x+v_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $\E\left[v_{2}\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[v_{2}^{2}\right]=1\text{ rad}^{2}/\text{s}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ are independent, Gaussian, 
+\begin_inset Formula $\E\left[v_{1}v_{2}\right]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[\left(x-\E\left[x\right]\right)v_{i}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+best estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ using only 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+X_{xy_{1}} & =\E\left[\left(x-m_{x}\right)\left(y{}_{1}-m_{y_{1}}\right)\right]=\E\left[\left(x-m_{x}\right)\left(x-m_{x}+v_{1}\right)\right]\\
+ & =X_{xx}+\E\left[\left(x-m_{x}\right)v_{1}\right]=2
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+X_{y_{1}y_{1}} & =\E\left[\left(y{}_{1}-m_{y_{1}}\right)\left(y{}_{1}-m_{y_{1}}\right)\right]=\E\left[\left(x-m_{x}+v_{1}\right)\left(x-m_{x}+v_{1}\right)\right]\\
+ & =X_{xx}+\E\left[v_{1}^{2}\right]=3
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{x}_{|y_{1}}=\E\left[x\right]+X_{xy_{1}}X_{y_{1}y_{1}}^{-1}\left(y_{1}-\E\left[y_{1}\right]\right)=10+\frac{2}{3}\left(y_{1}-10\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+similarly, best estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ using only 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $\hat{x}_{|y_{2}}=10+\frac{2}{3}\left(y_{2}-10\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example
+\begin_inset Note Note
+status open
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+estimate the velocity 
+\begin_inset Formula $x$
+\end_inset
+
+ of a motor: 
+\begin_inset Formula $\E\left[x\right]=10$
+\end_inset
+
+ rad/s; 
+\begin_inset Formula $\var\left[x\right]=2\text{ rad}^{2}/\text{s}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+two (tachometer) sensors: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $y_{1}=x+v_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $\E\left[v_{1}\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[v_{1}^{2}\right]=1\text{ rad}^{2}/\text{s}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{2}=x+v_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $\E\left[v_{2}\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $\E\left[v_{2}^{2}\right]=1\text{ rad}^{2}/\text{s}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+where 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ are Gaussian, 
+\begin_inset Formula $\E\left[v_{1}v_{2}\right]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\E\left[\left(x-\E\left[x\right]\right)v_{i}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+best estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ using 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ (direct approach): let 
+\begin_inset Formula $y=\left[y_{1},y_{2}\right]^{T}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{xy}=\E\left[\left(x-m_{x}\right)\left[\begin{array}{c}
+y_{1}-m_{y_{1}}\\
+y_{2}-m_{y_{2}}
+\end{array}\right]^{T}\right]=\left[2,2\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{yy}=\E\left[\left[\begin{array}{c}
+y_{1}-m_{y_{1}}\\
+y_{2}-m_{y_{2}}
+\end{array}\right]\left[\begin{array}{cc}
+y_{1}-m_{y_{1}} & y_{2}-m_{y_{2}}\end{array}\right]\right]=\left[\begin{array}{cc}
+3 & 2\\
+2 & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{x}_{|y}=\E\left[x\right]+X_{xy}X_{yy}^{-1}\left(y-m_{y}\right)=10+\left[2,2\right]\left[\begin{array}{cc}
+3 & 2\\
+2 & 3
+\end{array}\right]^{-1}\left[\begin{array}{c}
+y_{1}-10\\
+y_{2}-10
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+note: 
+\begin_inset Formula $X_{yy}^{-1}$
+\end_inset
+
+ is expensive to compute at high dimensions
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+best estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ using 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ (alternative approach using Property 3):
+\begin_inset Formula 
+\[
+\E\left[x|y_{1},y_{2}\right]=\E\left[x|y_{1}\right]+\E\left[\tilde{x}_{|y_{1}}|\tilde{y}_{2|y_{1}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which involves just the scalar computations:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\E\left[x|y_{1}\right]=10+\frac{2}{3}\left(y_{1}-10\right),\ \tilde{x}_{|y_{1}}=x-\E\left[x|y_{1}\right]=\frac{1}{3}\left(x-10\right)+\frac{2}{3}v_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{y}_{2|y_{1}}=y_{2}-\E\left[y_{2}|y_{1}\right]=y_{2}-\left[\E\left[y_{2}\right]+X_{y_{2}y_{1}}\frac{1}{X_{y_{1}y_{1}}}\left(y_{1}-m_{y_{1}}\right)\right]=\left(y_{2}-10\right)-\frac{2}{3}\left(y_{1}-10\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{\tilde{x}_{|y_{1}}\tilde{y}_{2|y_{1}}}=\E\left[\left(\frac{1}{3}\left(x-10\right)+\frac{2}{3}v_{1}\right)\left(\left(y_{2}-10\right)-\frac{2}{3}\left(y_{1}-10\right)\right)^{T}\right]=\frac{1}{9}\var\left[x\right]+\frac{4}{9}\var\left[v_{1}\right]=\frac{2}{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{\tilde{y}_{2|y_{1}}\tilde{y}_{2|y_{1}}}=\frac{1}{9}\var\left[x\right]+\var\left[v_{2}\right]+\frac{4}{9}\var\left[v_{1}\right]=\frac{5}{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\E\left[\tilde{x}_{|y_{1}}|\tilde{y}_{2|y_{1}}\right] & =\E\left[\tilde{x}_{|y_{1}}\right]+X_{\tilde{x}_{|y_{1}}\tilde{y}_{2|y_{1}}}\frac{1}{X_{\tilde{y}_{2|y_{1}}\tilde{y}_{2|y_{1}}}}\left[\tilde{y}_{2|y_{1}}-\E\left[\tilde{y}_{2|y_{1}}\right]\right]\\
+ & =10+\frac{2}{5}\left(y_{1}-10\right)+\frac{2}{5}\left(y_{2}-10\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+* Appendix: trace of a matrix
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ and standard matrix inner product
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the trace of a 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix is given by 
+\begin_inset Formula $\tr\left(A\right)=\sum_{i=1}^{n}a_{ii}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+trace is the matrix inner product:
+\begin_inset Formula 
+\begin{equation}
+\left\langle A,B\right\rangle =\tr\left(A^{T}B\right)=\tr\left(B^{T}A\right)=\left\langle B,A\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+take a three-column example: write the matrices in the column vector form
+ 
+\begin_inset Formula $B=\left[b_{1},b_{2},b_{3}\right],\ A=\left[a_{1},a_{2},a_{3}\right]$
+\end_inset
+
+, then,
+\begin_inset Formula 
+\begin{equation}
+A^{T}B=\left[\begin{array}{ccc}
+a_{1}^{T}b_{1} & * & *\\*
+ & a_{2}^{T}b_{2} & *\\*
+ & * & a_{3}^{T}b_{3}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\tr\left(A^{T}B\right)=a_{1}^{T}b_{1}+a_{2}^{T}b_{2}+a_{3}^{T}b_{3}=\left[\begin{array}{c}
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right]^{T}\cdot\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+b_{3}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+which is the inner product of the two long stacked vectors.
+\end_layout
+
+\begin_layout Itemize
+we frequently use the inner-product equality 
+\begin_inset Formula $\left\langle A,B\right\rangle =\left\langle B,A\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

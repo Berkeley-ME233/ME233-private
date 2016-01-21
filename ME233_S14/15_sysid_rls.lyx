@@ -1,0 +1,2377 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\DeclareMathOperator{\minimize}{minimize}
+\DeclareMathOperator{\E}{E}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 15: System Identification and Recursive Least Squares
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We have been assuming knwoledge of the plant in controller design.
+\end_layout
+
+\begin_layout Standard
+In practice, plant models come from: 
+\end_layout
+
+\begin_layout Itemize
+modeling by physics: Newton's law, conservation of energy, etc
+\end_layout
+
+\begin_layout Itemize
+(input-output) data-based system identification
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+: topic of the next few lectures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The need for system identification and adaptive control come from
+\end_layout
+
+\begin_layout Itemize
+unknown plants 
+\end_layout
+
+\begin_layout Itemize
+time-varying plants 
+\end_layout
+
+\begin_layout Itemize
+known disturbance structure but unknown disturbance parameters
+\end_layout
+
+\begin_layout NoteItem
+sometimes, we know the structure of disturbance but don't know the model
+ parameters
+\end_layout
+
+\begin_layout NoteItem
+the above motivates the needs of system identification and adaptive control
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+System modeling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider the input-output relationship of a plant:
+\begin_inset Formula 
+\[
+\xymatrix{u\left(k\right)\ar[r] & \bblk{{\displaystyle G_{p}\left(z^{-1}\right)=\frac{z^{-1}B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}\ar[r] & y\left(k\right)}
+\]
+
+\end_inset
+
+or equivalently
+\begin_inset Formula 
+\begin{equation}
+\xymatrix{u\left(k\right)\ar[r] & \bblk{{\displaystyle \frac{B\left(z^{-1}\right)}{A\left(z^{-1}\right)}}}\ar[r] & y\left(k+1\right)}
+\label{eq:sysid_model}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+B(z^{-1})=b_{0}+b_{1}z^{-1}+\cdots+b_{m}z^{-m};\quad A(z^{-1})=1+a_{1}z^{-1}+\cdots+a_{n}z^{-n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\left(k+1\right)$
+\end_inset
+
+ is a linear combination of 
+\begin_inset Formula $y\left(k\right)$
+\end_inset
+
+, ...
+ , 
+\begin_inset Formula $y\left(k+1-n\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $u\left(k\right)$
+\end_inset
+
+, ..., 
+\begin_inset Formula $u\left(k-m\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+y(k+1)=-\sum_{i=1}^{n}a_{i}y(k+1-i)+\sum_{i=0}^{m}b_{i}u(k-i)\label{eq:yregressor}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+System modeling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Define 
+\emph on
+parameter vector
+\emph default
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\emph on
+regressor vector 
+\emph default
+
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\theta\triangleq[a_{1},a_{2},\cdots a_{n},b_{0},b_{1},\cdots,b_{m}]^{T}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi\left(k\right)\triangleq[-y(k),\cdots,-y(k+1-n),u(k),u(k-1),\cdots,u(k-m)]^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:yregressor"
+
+\end_inset
+
+) can be simply written as:
+\begin_inset Formula 
+\begin{equation}
+\boxed{y\left(k+1\right)=\theta^{T}\phi\left(k\right)}\label{eq:plant}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\left(k+1\right)$
+\end_inset
+
+ are known or measured
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+goal
+\series default
+: estimate the unknown 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter estimation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Suppose we have an estimate of the parameter vector:
+\begin_inset Formula 
+\[
+\hat{\theta}\triangleq[\hat{a}_{1},\hat{a}_{2},\cdots\hat{a}_{n},\hat{b}_{0},\hat{b}_{1},\cdots,\hat{b}_{m}]^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At time 
+\begin_inset Formula $k$
+\end_inset
+
+, we can do estimation
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ the next plant output using 
+\begin_inset Formula $\phi\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{y}\left(k+1\right)=\hat{\theta}^{T}\left(k\right)\phi\left(k\right)}\label{eq:predictor}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\theta}(k)\triangleq[\hat{a}_{1}(k),\hat{a}_{2}(k),\cdots\hat{a}_{n}(k),\hat{b}_{0}(k),\hat{b}_{1}(k),\cdots,\hat{b}_{m}(k)]^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter identification by least squares (LS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+At time 
+\begin_inset Formula $k$
+\end_inset
+
+, the least squares (LS) estimate of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ minimizes
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ the following cost function
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\boxed{J_{k}=\sum_{i=1}^{k}\left[y(i)-\hat{\theta}^{T}(k)\phi(i-1)\right]^{2}}\label{eq:PI}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solution: 
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace J_{k}=\sum_{i=1}^{k}\left(y\left(i\right)^{2}+\hat{\theta}^{T}\left(k\right)\phi\left(i-1\right)\phi^{T}\left(i-1\right)\hat{\theta}\left(k\right)-2y\left(i\right)\phi^{T}\left(i-1\right)\hat{\theta}\left(k\right)\right)
+\]
+
+\end_inset
+
+Letting 
+\begin_inset Formula $\partial J_{k}/\partial\hat{\theta}\left(k\right)=0$
+\end_inset
+
+ yields 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\sum_{i=1}^{k}\left(\phi\left(i-1\right)\phi^{T}\left(i-1\right)\hat{\theta}\left(k\right)-y\left(i\right)\phi\left(i-1\right)\right)=0$
+\end_inset
+
+.
+ Hence
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{\theta}\left(k\right)=\underbrace{\left[\sum_{i=1}^{k}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}}_{F\left(k\right)}\sum_{i=1}^{k}\phi\left(i-1\right)y\left(i\right)}\label{eq:off-line}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula $J_{k}$
+\end_inset
+
+ is quadratic and convex in 
+\begin_inset Formula $\hat{\theta}\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Recursive least squares (RLS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+At time 
+\begin_inset Formula $k+1$
+\end_inset
+
+, we know 
+\begin_inset Formula $u\left(k+1\right)$
+\end_inset
+
+ and have one more measurement 
+\begin_inset Formula $y\left(k+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Instead of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PI"
+
+\end_inset
+
+), we can do better by minimizing 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+J_{k+1}=\sum_{i=1}^{k+1}\left[y(i)-\hat{\theta}^{T}(k+1)\phi(i-1)\right]^{2}
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+whose solution is
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\hat{\theta}\left(k+1\right)=\overbrace{\left[\sum_{i=1}^{k+1}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}}^{F\left(k+1\right)}\sum_{i=1}^{k+1}\phi\left(i-1\right)y\left(i\right)\label{eq:rls_thetak1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Key of 
+\end_layout
+
+\end_inset
+
+recursive least squares
+\series default
+ (RLS): no need to do the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+big 
+\end_layout
+
+\end_inset
+
+matrix inversion in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rls_thetak1"
+
+\end_inset
+
+), 
+\begin_inset Formula $\hat{\theta}\left(k+1\right)$
+\end_inset
+
+ can be obtained by
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{\theta}(k+1)=\hat{\theta}(k)+\left[\textnormal{correction term}\right]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS parameter adaptation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Goal: to obtain
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{\theta}(k+1)=\hat{\theta}(k)+\left[\textnormal{correction term}\right]}
+\end{equation}
+
+\end_inset
+
+Derivations: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+note first
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F\left(k+1\right)^{-1}=\sum_{i=1}^{k+1}\phi\left(i-1\right)\phi^{T}\left(i-1\right)=F\left(k\right)^{-1}+\phi\left(k\right)\phi^{T}\left(k\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\hat{\theta}\left(k+1\right) & =F\left(k+1\right)\sum_{i=1}^{k+1}\phi\left(i-1\right)y\left(i\right)\nonumber \\
+ & =F\left(k+1\right)\left[\sum_{i=1}^{k}\phi\left(i-1\right)y\left(i\right)+\phi\left(k\right)y\left(k+1\right)\right]\nonumber \\
+ & =F\left(k+1\right)\left[F\left(k\right)^{-1}\hat{\theta}\left(k\right)+\phi\left(k\right)y\left(k+1\right)\right]\nonumber \\
+ & =F\left(k+1\right)\left[\left(F\left(k+1\right)^{-1}-\phi\left(k\right)\phi^{T}\left(k\right)\right)\hat{\theta}\left(k\right)+\phi\left(k\right)y\left(k+1\right)\right]\nonumber \\
+ & =\hat{\theta}\left(k\right)+F\left(k+1\right)\phi\left(k\right)\left[y\left(k+1\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k\right)\right]\label{eq:rls_paa}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS parameter adaptation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Define
+\emph on
+ 
+\emph default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{y}^{o}(k+1) & = & \hat{\theta}^{T}(k)\phi(k)\\
+\epsilon^{o}(k+1) & = & y(k+1)-\hat{y}^{o}(k+1)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rls_paa"
+
+\end_inset
+
+) is equivalent to 
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{\theta}(k+1)=\hat{\theta}(k)+F(k+1)\phi(k)\epsilon^{o}(k+1)}\label{eq:thetaupdate1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS adaptation gain recursion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $F\left(k+1\right)$
+\end_inset
+
+ is called the adaptation gain, and can be updated by
+\begin_inset Formula 
+\begin{equation}
+\boxed{F(k+1)=F(k)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{1+\phi^{T}(k)F(k)\phi(k)}}\label{eq:Fupdate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Itemize
+matrix inversion lemma
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (see homework)
+\end_layout
+
+\end_inset
+
+: if 
+\begin_inset Formula $A$
+\end_inset
+
+ is nonsingular, 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ have compatible dimensions, then 
+\begin_inset Formula 
+\[
+\left(A+BC\right)^{-1}=A^{-1}-A^{-1}B\left(CA^{-1}B+I\right)^{-1}CA^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+note the algebra
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+F\left(k+1\right) & =\left[\sum_{i=1}^{k+1}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}=\left[F\left(k\right)^{-1}+\phi\left(k\right)\phi^{T}\left(k\right)\right]^{-1}\\
+ & =F\left(k\right)-F\left(k\right)\phi\left(k\right)\left(\phi^{T}\left(k\right)F\left(k\right)\phi\left(k\right)+1\right)^{-1}\phi^{T}\left(k\right)F\left(k\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+which gives (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Fupdate"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS parameter adaptation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+An alternative representation of adaptation law (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thetaupdate1"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{align*}
+\textnormal{(\ref{eq:Fupdate})}\Rightarrow F\left(k+1\right)\phi\left(k\right) & =F(k)\phi\left(k\right)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{1+\phi^{T}(k)F(k)\phi(k)}\phi\left(k\right)\\
+ & =\frac{F(k)\phi(k)}{1+\phi^{T}(k)F(k)\phi(k)}
+\end{align*}
+
+\end_inset
+
+Hence we have the parameter adaptation algorithm (PAA):
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "67col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\hat{\theta}(k+1) & =\hat{\theta}(k)+F(k+1)\phi(k)\epsilon^{o}(k+1)\\
+ & =\hat{\theta}(k)+\frac{F(k)\phi(k)}{1+\phi^{T}(k)F(k)\phi(k)}\epsilon^{o}(k+1)\\
+F(k+1) & =F(k)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{1+\phi^{T}(k)F(k)\phi(k)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PAA implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\hat{\theta}\left(0\right)$
+\end_inset
+
+: initial guess of parameter vector
+\begin_inset Formula 
+\[
+\hat{\theta}(k+1)=\hat{\theta}(k)+\frac{F(k)\phi(k)}{1+\phi^{T}(k)F(k)\phi(k)}\epsilon^{o}(k+1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(0\right)=\sigma I$
+\end_inset
+
+: 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is a large number, as 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ is always none-increasing
+\begin_inset Formula 
+\[
+F(k+1)=F(k)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{1+\phi^{T}(k)F(k)\phi(k)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLS parameter adaptation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Up till now we have been using the 
+\emph on
+a priori 
+\emph default
+prediction and 
+\emph on
+a priori
+\emph default
+ prediction error:
+\emph on
+ 
+\emph default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{y}^{o}(k+1) & = & \hat{\theta}^{T}(k)\phi(k):\ \text{after measurement of }y\left(k\right)\\
+\epsilon^{o}(k+1) & = & y(k+1)-\hat{y}^{o}(k+1)
+\end{eqnarray*}
+
+\end_inset
+
+Further analysis (e.g., convergence of 
+\begin_inset Formula $\hat{\theta}\left(k\right)$
+\end_inset
+
+) requires the new definitions of 
+\emph on
+a posteriori
+\emph default
+ prediction and 
+\emph on
+a posteriori
+\emph default
+ prediction error: 
+\emph on
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{y}(k+1) & = & \hat{\theta}^{T}(k+1)\phi(k):\ \text{after measurement of }y\left(k+1\right)\\
+\epsilon(k+1) & = & y(k+1)-\hat{y}(k+1)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Relationship between 
+\begin_inset Formula $\epsilon\left(k+1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon^{o}\left(k+1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Note that
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\hat{\theta}(k+1) & =\hat{\theta}(k)+\frac{F(k)\phi(k)}{1+\phi^{T}(k)F(k)\phi(k)}\epsilon^{o}(k+1)\\
+\Rightarrow\underbrace{\phi^{T}\left(k\right)\hat{\theta}(k+1)}_{\hat{y}\left(k+1\right)} & =\underbrace{\phi^{T}\left(k\right)\hat{\theta}(k)}_{\hat{y}^{o}\left(k+1\right)}+\frac{\phi^{T}\left(k\right)F(k)\phi(k)}{1+\phi^{T}(k)F(k)\phi(k)}\epsilon^{o}(k+1)\\
+\!\!\!\!\!\!\!\Rightarrow\underbrace{y\left(k+1\right)-\hat{y}\left(k+1\right)}_{\epsilon\left(k+1\right)} & =\underbrace{y\left(k+1\right)-\hat{y}^{o}\left(k+1\right)}_{\epsilon^{o}\left(k+1\right)}-\frac{\phi^{T}\left(k\right)F(k)\phi(k)}{1+\phi^{T}(k)F(k)\phi(k)}\epsilon^{o}(k+1)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+Hence
+\begin_inset Formula 
+\begin{equation}
+\boxed{\epsilon\left(k+1\right)=\frac{\epsilon^{o}\left(k+1\right)}{1+\phi^{T}(k)F\left(k\right)\phi(k)}}\label{eq:postErr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+note: 
+\begin_inset Formula $\left|\epsilon\left(k+1\right)\right|\leq\left|\epsilon^{o}\left(k+1\right)\right|$
+\end_inset
+
+ (
+\begin_inset Formula $\hat{y}\left(k+1\right)$
+\end_inset
+
+ is more accurate than 
+\begin_inset Formula $\hat{y}^{o}\left(k+1\right)$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+A posteriori
+\emph default
+ RLS parameter adaptation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+With (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:postErr"
+
+\end_inset
+
+), we can write the PAA in the 
+\emph on
+a posteriori
+\emph default
+ form
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{\theta}(k+1)=\hat{\theta}(k)+F(k)\phi(k)\epsilon(k+1)}
+\end{equation}
+
+\end_inset
+
+which is not implementable but is needed for stability analysis.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Forgetting factor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+motivation
+\end_layout
+
+\begin_layout Itemize
+previous discussions assume the actual parameter vector 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is constant
+\end_layout
+
+\begin_layout Itemize
+adaptation gain 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ keeps decreasing, as 
+\begin_inset Formula 
+\[
+F^{-1}\left(k+1\right)=F^{-1}\left(k\right)+\phi\left(k\right)\phi^{T}\left(k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+this means adaptation becomes weaker and weaker
+\end_layout
+
+\begin_layout Itemize
+for time-varying parameters, we need a mechanism to 
+\begin_inset Quotes eld
+\end_inset
+
+forget
+\begin_inset Quotes erd
+\end_inset
+
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+old' data
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Forgetting factor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider a new cost
+\begin_inset Formula 
+\[
+J_{k}=\sum_{i=1}^{k}\lambda^{k-i}\left[y(i)-\hat{\theta}^{T}(k)\phi(i-1)\right]^{2},\ 0<\lambda\leq1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+past errors are less weighted: 
+\begin_inset Formula 
+\begin{multline*}
+\!\!\!\!\!\!\!\!\!\!\!\!J_{k}=\left[y\left(k\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k-1\right)\right]^{2}+\lambda\left[y\left(k-1\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k-2\right)\right]^{2}\\
++\lambda^{2}\left[y\left(k-2\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k-3\right)\right]^{2}+\dots
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the solution is:
+\begin_inset Formula 
+\begin{equation}
+\!\!\!\!\!\!\!\!\!\!\!\!\hat{\theta}\left(k\right)=\overbrace{\left[\sum_{i=1}^{k}\lambda^{k-i}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}}^{F\left(k\right)}\sum_{i=1}^{k}\lambda^{k-i}\phi\left(i-1\right)y\left(i\right)\label{eq:paa_lambda}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Forgetting factor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:paa_lambda"
+
+\end_inset
+
+), the recursion of the adaptation gain is:
+\begin_inset Formula 
+\[
+F\left(k+1\right)^{-1}=\lambda F\left(k\right)^{-1}+\phi\left(k\right)\phi\left(k\right)^{T}
+\]
+
+\end_inset
+
+or, equivalently
+\begin_inset Formula 
+\begin{equation}
+F(k+1)=\frac{1}{\lambda}\left[F(k)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{\lambda+\phi^{T}(k)F(k)\phi(k)}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Forgetting factor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The weighting can be made more flexible:
+\begin_inset Formula 
+\[
+F(k+1)=\frac{1}{\lambda_{1}\left(k\right)}\left[F(k)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{\lambda_{1}\left(k\right)+\phi^{T}(k)F(k)\phi(k)}\right]
+\]
+
+\end_inset
+
+which corresponds to the cost function
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\!\!\!\!\!\!\!J_{k}=\left[y\left(k\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k-1\right)\right]^{2}+\lambda_{1}\left(k-1\right)\left[y\left(k-1\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k-2\right)\right]^{2}\\
++\lambda_{1}\left(k-1\right)\lambda_{1}\left(k-2\right)\left[y\left(k-2\right)-\hat{\theta}^{T}\left(k\right)\phi\left(k-3\right)\right]^{2}+\dots
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+i.e.
+ (assuming 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\prod_{j=k}^{k-1}\lambda_{1}\left(j\right)=1$
+\end_inset
+
+)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\[
+J_{k}=\sum_{i=1}^{k}\left\{ \left(\prod_{j=i}^{k-1}\lambda_{1}\left(j\right)\right)\left[y(i)-\hat{\theta}^{T}(k)\phi(i-1)\right]^{2}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Now consider the most general representation: 
+\begin_inset Formula 
+\[
+\min J_{k}=\sum_{i=1}^{k}\alpha_{i}\left[y(i)-\hat{\theta}^{T}(k)\phi(i-1)\right]^{2}
+\]
+
+\end_inset
+
+The corresponding offline parameter identification result is:
+\begin_inset Formula 
+\[
+\boxed{\hat{\theta}\left(k\right)=\left[\sum_{i=1}^{k}\alpha_{i}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}\sum_{i=1}^{k}\alpha_{i}\phi\left(i-1\right)y\left(i\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Forgetting factor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The general form of the adaptation gain is:
+\begin_inset Formula 
+\begin{equation}
+F(k+1)=\frac{1}{\lambda_{1}(k)}\left[F(k)-\frac{F(k)\phi(k)\phi^{T}(k)F(k)}{\frac{\lambda_{1}(k)}{\lambda_{2}(k)}+\phi^{T}(k)F(k)\phi(k)}\right]\label{eq:genForget}
+\end{equation}
+
+\end_inset
+
+which comes from:
+\begin_inset Formula 
+\[
+F\left(k+1\right)^{-1}=\lambda_{1}\left(k\right)F\left(k\right)^{-1}+\lambda_{2}\left(k\right)\phi\left(k\right)\phi^{T}\left(k\right)
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $0<\lambda_{1}\left(k\right)\leq1$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $0\leq\lambda_{2}\left(k\right)\leq2$
+\end_inset
+
+ (for stability requirements, will come back to this soon).
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{1}\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{2}\left(k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PAA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+constant adaptation gain
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+least square gain
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+least square gain with forgetting factor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Influence of the initial conditions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+If we initialize 
+\begin_inset Formula $F\left(k\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}\left(k\right)$
+\end_inset
+
+ at 
+\begin_inset Formula $F_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+, we are actually minimizing 
+\begin_inset Formula 
+\[
+J_{k}=\left(\hat{\theta}\left(k\right)-\theta_{0}\right)^{T}F_{0}^{-1}\left(\hat{\theta}\left(k\right)-\theta_{0}\right)+\sum_{i=1}^{k}\alpha_{i}\left[y(i)-\hat{\theta}^{T}(k)\phi(i-1)\right]^{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ is the weighting for the error at time 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The least square parameter estimate is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\theta}\left(k\right)=\left[F_{0}^{-1}+\sum_{i=1}^{k}\alpha_{i}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}\left[F_{0}^{-1}\theta_{0}+\sum_{i=1}^{k}\alpha_{i}\phi\left(i-1\right)y\left(i\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(check that the equation is valid when 
+\begin_inset Formula $k=0$
+\end_inset
+
+, assuming 
+\begin_inset Formula $\sum_{i=1}^{0}=0$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The result can be seen by verifying the recursive update equations.
+ For instance, for 
+\begin_inset Formula $k=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+J_{1}=\left(y\left(1\right)-\phi\left(0\right)^{T}\hat{\theta}\left(1\right)\right)^{2}+\left(\hat{\theta}\left(1\right)-\theta_{0}\right)^{T}F_{0}^{-1}\left(\hat{\theta}\left(1\right)-\theta_{0}\right)
+\]
+
+\end_inset
+
+ is minimized when (by setting 
+\begin_inset Formula $\partial J_{1}/\partial\hat{\theta}\left(1\right)=0$
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\left(\phi\left(0\right)\phi\left(0\right)^{T}+F_{0}^{-1}\right)\hat{\theta}\left(1\right)=\left(F_{0}^{-1}\theta_{0}+y\left(1\right)\phi\left(0\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We see the relative importance of the initial values decays with time.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*Influence of the initial conditions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+If it is possible to wait a few samples before the adaptation, proper initial
+ values can be obtained if the recursion is started at time 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+ with 
+\begin_inset Formula 
+\begin{align*}
+F\left(k_{0}\right) & =\left[\sum_{i=1}^{k_{0}}\alpha_{i}\phi\left(i-1\right)\phi^{T}\left(i-1\right)\right]^{-1}\\
+\hat{\theta}\left(k_{0}\right) & =F\left(k_{0}\right)\sum_{i=1}^{k_{0}}\alpha_{i}\phi\left(i-1\right)y\left(i\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

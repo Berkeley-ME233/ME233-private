@@ -1,0 +1,1833 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+%\include{blkStyle.tex}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 10: LQ with Frequency Shaped Cost Function (FSLQ)
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Background
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Parseval's Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Frequency-shaped LQ cost function
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Transformation to a standard LQ
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+why are we learning this:
+\end_layout
+
+\begin_layout Itemize
+in standard LQ, 
+\begin_inset Formula $Q$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+ are constant matrices in the cost function
+\begin_inset Formula 
+\begin{equation}
+J=\int_{0}^{\infty}\left(x^{T}(t)Qx(t)+\rho u^{T}(t)Ru(t)\right)\d t
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+how can we introduce more design freedom for 
+\begin_inset Formula $Q$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Connection between time and frequency domains 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Parseval's Theorem
+\end_layout
+
+\end_inset
+
+ For a square integrable signal 
+\begin_inset Formula $f\left(t\right)$
+\end_inset
+
+ defined on 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}f^{T}\left(t\right)f\left(t\right)\d t=\frac{1}{2\pi}\int_{-\infty}^{\infty}F^{T}\left(-j\omega\right)F\left(j\omega\right)\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1D case:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}\left|f\left(t\right)\right|^{2}\d t=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left|F\left(j\omega\right)\right|^{2}\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Intuition: energy in time-domain equals energy in frequency domain
+\end_layout
+
+\begin_layout Standard
+For the general case, 
+\begin_inset Formula $f\left(t\right)$
+\end_inset
+
+ can be acausal.
+ We have 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}f^{T}\left(t\right)f\left(t\right)\d t=\frac{1}{2\pi}\int_{-\infty}^{\infty}F^{T}\left(-j\omega\right)F\left(j\omega\right)\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Discrete-time version:
+\begin_inset Formula 
+\[
+\sum_{k=-\infty}^{\infty}f^{T}\left(k\right)f\left(k\right)=\frac{1}{2\pi}\int_{-\infty}^{\infty}F^{T}\left(\e^{-j\omega}\right)F\left(\e^{j\omega}\right)\d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+History
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Marc-Antoine Parseval (1755-1836):
+\end_layout
+
+\begin_layout Itemize
+French mathematician
+\end_layout
+
+\begin_layout Itemize
+published just five (but important) mathematical publications in total (source:
+ Wikipedia.org)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Frequency-domain LQ cost function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+From Parseval's Theorem, the LQ cost in frequency domain is
+\begin_inset Formula 
+\begin{align}
+J & =\int_{0}^{\infty}\left(x^{T}(t)Qx(t)+\rho u^{T}(t)Ru(t)\right)\d t\\
+ & =\frac{1}{2\pi}\int_{-\infty}^{\infty}\left(X^{T}(-j\omega)QX(j\omega)+\rho U^{T}(-j\omega)RU(j\omega)\right)\d\omega
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Frequency-shaped LQ expands 
+\begin_inset Formula $Q$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+ to frequency-dependent functions:
+\begin_inset Formula 
+\begin{equation}
+J=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left(X^{T}(-j\omega)Q\left(j\omega\right)X(j\omega)+\rho U^{T}(-j\omega)R\left(j\omega\right)U(j\omega)\right)\d\omega\label{eq:fslqJ}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Frequency-domain LQ cost function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\begin{align*}
+Q\left(j\omega\right)=Q_{f}^{T}(-j\omega)Q_{f}(j\omega)\succeq0 & ,\ X_{f}\left(j\omega\right)=Q_{f}\left(j\omega\right)X\left(j\omega\right)\\
+R\left(j\omega\right)=R_{f}^{T}(-j\omega)R_{f}(j\omega)\succ0 & ,\ U_{f}\left(j\omega\right)=R_{f}\left(j\omega\right)U\left(j\omega\right)
+\end{align*}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fslqJ"
+
+\end_inset
+
+) becomes
+\begin_inset Formula 
+\[
+J=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left(X_{f}^{T}(-j\omega)X_{f}(j\omega)+\rho U_{f}^{T}(-j\omega)U_{f}(j\omega)\right)\d\omega
+\]
+
+\end_inset
+
+which is equivalent to (using Parseval's Theorem again)
+\begin_inset Formula 
+\begin{equation}
+\boxed{J=\int_{0}^{\infty}\left(x_{f}^{T}(t)x_{f}(t)+\rho u_{f}^{T}(t)u_{f}(t)\right)\d t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Frequency-domain LQ cost function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Summarizing, we have:
+\end_layout
+
+\begin_layout Itemize
+plant:
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\dot{x}\left(t\right) & =Ax\left(t\right)+Bu\left(t\right)\\
+y\left(t\right) & =Cx\left(t\right)
+\end{cases}\label{eq:p}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+new cost:
+\begin_inset Formula 
+\begin{equation}
+J=\int_{0}^{\infty}\left(x_{f}^{T}(t)x_{f}(t)+\rho u_{f}^{T}(t)u_{f}(t)\right)\d t\label{eq:j}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+filtered states and inputs: 
+\begin_inset Formula 
+\[
+\xymatrix{x\left(t\right)\ar[r] & *+[F-]{\displaystyle Q_{f}\left(s\right)}\ar[r] & x_{f}\left(t\right)}
+,\ \xymatrix{u\left(t\right)\ar[r] & *+[F-]{\displaystyle R_{f}\left(s\right)}\ar[r] & u_{f}\left(t\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We just need to translate the problem to a standard one [which we know (very
+ well) how to solve]
+\end_layout
+
+\begin_layout NoteItem
+key: we have to enlarge the system to include 
+\begin_inset Formula $x_{f}\left(t\right)$
+\end_inset
+
+ as a state in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:j"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Frequency-domain weighting filters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+state filtering
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{x\left(t\right)\ar[r] & *+[F-]{\displaystyle Q_{f}\left(s\right)}\ar[r] & x_{f}\left(t\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+this is in general 
+\end_layout
+
+\end_inset
+
+a MIMO process in general: if 
+\begin_inset Formula $x\left(t\right)\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{f}\left(t\right)\in\mathbb{R}^{q}$
+\end_inset
+
+, then 
+\begin_inset Formula $Q_{f}\left(s\right)$
+\end_inset
+
+ is a 
+\begin_inset Formula $q\times n$
+\end_inset
+
+ transfer function matrix 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{f}\left(s\right)$
+\end_inset
+
+: state filter; designer's choice; can be selected to meet the desired control
+ action and the performance requirements
+\end_layout
+
+\begin_layout NoteItem
+design examples: 
+\end_layout
+
+\begin_layout NoteItem
+if there are a lot of low-frequency disturbances, 
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+ can be selected to be an integrator
+\end_layout
+
+\begin_layout NoteItem
+say, the system is subjected to a 
+\begin_inset Formula $100$
+\end_inset
+
+ Hz vibration; can select 
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+ to have higher amplitude at 
+\begin_inset Formula $100$
+\end_inset
+
+ Hz, so that errors in this range weights more in design
+\end_layout
+
+\begin_layout Itemize
+write 
+\begin_inset Formula $Q_{f}\left(s\right)=C_{1}\left(sI-A_{1}\right)^{-1}B_{1}+D_{1}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset Formula ${\scriptstyle Q_{f}\left(s\right)=C_{1}\left(sI-A_{1}\right)^{-1}B_{1}+D_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ in the general state-space realization:
+\begin_inset Formula 
+\begin{equation}
+\left\{ \begin{array}{l}
+\dot{z}_{1}(t)=A_{1}z_{1}(t)+B_{1}x(t)\\
+x_{f}(t)=C_{1}z_{1}(t)+D_{1}x(t)
+\end{array}\right.\label{eq:x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+step 1: check the order of 
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+, decide the order of 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $size(A_{1},1)=size(Q_{f},1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+step 2: check the order of 
+\begin_inset Formula $x$
+\end_inset
+
+, decide the order of 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $size(B_{1})=size(A_{1},1)\times size(x,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+step 3: order of 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $size(D_{1})=size(x_{f},1)\times size(x,1)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Frequency-domain weighting filters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+input filtering
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{u\left(t\right)\ar[r] & *+[F-]{\displaystyle R_{f}\left(s\right)}\ar[r] & u_{f}\left(t\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{f}\left(s\right)$
+\end_inset
+
+: input filter; designer's choice; can be selected to meet the robustness
+ requirements
+\end_layout
+
+\begin_layout NoteItem
+design example: the system is subjected to a lot of high-frequency noises;
+ 
+\begin_inset Formula $R_{f}$
+\end_inset
+
+ can be selected to be a high-pass type filter with 0dB DC gain, so that
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is penalized more at high frequencies
+\end_layout
+
+\begin_layout Itemize
+write 
+\begin_inset Formula $R_{f}\left(s\right)=C_{2}\left(sI-A_{2}\right)^{-1}B_{2}+D_{2}$
+\end_inset
+
+ in the general state-space realization:
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\dot{z}_{2}(t) & =A_{2}z_{2}(t)+B_{2}u(t)\\
+u_{f}(t) & =C_{2}z_{2}(t)+D_{2}u(t)
+\end{cases}\label{eq:u}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Back to time-domain design
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout NoteItem
+enlarged system
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{z}_{2}(t) & = & A_{2}z_{2}(t)+B_{2}u(t)\\
+u_{f}(t) & = & C_{2}z_{2}(t)+D_{2}u(t)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ \begin{array}{l}
+\dot{z}_{1}(t)=A_{1}z_{1}(t)+B_{1}x(t)\\
+x_{f}(t)=C_{1}z_{1}(t)+D_{1}x(t)
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\dot{x}\left(t\right) & =Ax\left(t\right)+Bu\left(t\right)\\
+y\left(t\right) & =Cx\left(t\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combining (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:x"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:u"
+
+\end_inset
+
+) gives the enlarged system
+\begin_inset Formula 
+\[
+\frac{\d}{\d t}\underbrace{\left[\begin{array}{c}
+x(t)\\
+z_{1}(t)\\
+z_{2}(t)
+\end{array}\right]}_{x_{e}(t)}=\underbrace{\left[\begin{array}{ccc}
+A & 0 & 0\\
+B_{1} & A_{1} & 0\\
+0 & 0 & A_{2}
+\end{array}\right]}_{A_{e}}\left[\begin{array}{c}
+x(t)\\
+z_{1}(t)\\
+z_{2}(t)
+\end{array}\right]+\underbrace{\left[\begin{array}{c}
+B\\
+0\\
+B_{2}
+\end{array}\right]}_{B_{e}}u(t)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+x_{f}\left(t\right) & =\underbrace{[D_{1}\ C_{1}\ 0]}_{C_{e}}\left[\begin{array}{c}
+x(t)\\
+z_{1}(t)\\
+z_{2}(t)
+\end{array}\right]\\
+u_{f}\left(t\right) & =[0\ 0\ C_{2}]x_{e}\left(t\right)+D_{2}u(t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary of solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+With the enlarged system, the cost
+\begin_inset Formula 
+\begin{equation}
+J=\int_{0}^{\infty}\left(x_{f}^{T}(t)x_{f}(t)+\rho u_{f}^{T}(t)u_{f}(t)\right)\d t
+\end{equation}
+
+\end_inset
+
+translates to
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace J=\int_{0}^{\infty}\Big(x_{e}^{T}(t)Q_{e}x_{e}(t)+2u^{T}(t)\underbrace{\left[\begin{array}{ccc}
+0 & 0 & \rho D_{2}^{T}C_{2}\end{array}\right]}_{N_{e}}x_{e}(t)+u^{T}(t)\underbrace{\rho D_{2}^{T}D_{2}}_{R_{e}}u(t)\Big)\d t
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Q_{e}=\left[\begin{array}{ccc}
+D_{1}^{T}D_{1} & D_{1}^{T}C_{1} & 0\\
+C_{1}^{T}D_{1} & C_{1}^{T}C_{1} & 0\\
+0 & 0 & \rho C_{2}^{T}C_{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+solution (see appendix for more details):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.08in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\boxed{u\left(t\right)=-R_{e}^{-1}(B_{e}^{T}P_{e}+N_{e})x_{e}\left(t\right)=-Kx\left(t\right)-K_{1}z_{1}\left(t\right)-K_{2}z_{2}\left(t\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+algebraic Riccati equation:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.06in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\boxed{A_{e}^{T}P_{e}+P_{e}A_{e}-(B_{e}^{T}P_{e}+N_{e})^{T}R_{e}^{-1}(B_{e}^{T}P_{e}+N_{e})+Q_{e}=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+structure of the FSLQ system:
+\begin_inset Formula 
+\[
+\xyR{0.6pc}\xyC{0.6pc}\xymatrix{\dotblk\arr\sp>>{+} & \cblk\arr\sp>>{+} & \cblk\arr\sp>>{+} & \cblk\ar@{->}[rrrrrrrr] &  &  &  &  &  &  & \dotblk\arline[dd] & \bblk B\arr & \bblk{{\scriptstyle \left(sI-A\right)^{-1}}}\arline[r]\sp>{x} & \dotblk\arr\arline[ddddddd] & \dotblk\\
+ & \dotblk\aru\sb>>{-} &  &  &  & \dotblk\ard\sb>>{+} &  &  &  & \bblk{D_{2}}\arline[llll] & \dotblk\arl\\
+ &  &  &  & \dotblk & \cblk\arl\sb>>{u_{f}} & \bblk{C_{2}}\arl\sp>>{+} & \dotblk\arl\arline[d] & \bblk{{\scriptstyle \left(sI-A_{2}\right)^{-1}}}\arline[l]\sb>>{z_{2}} & \bblk{B_{2}}\arl & \dotblk\arl\\
+ &  &  & \dotblk\ar@{->}[uuu]\sb>>{-} &  & \bblk{K_{2}}\arline[ll] &  & \dotblk\ar@{->}[ll]\\
+ &  & \dotblk\ar@{->}[uuuu]\sb>>{-} &  &  & \bblk{K_{1}}\arline[lll] & \dotblk\arl\\
+ &  & \dotblk & \cblk\arl\sb>>{x_{f}} & \dotblk\arl\sb>>{+} & \bblk{C_{1}}\arline[l] & \dotblk\arl\arline[u] & \bblk{{\scriptstyle \left(sI-A_{1}\right)^{-1}}}\arline[l]\sp>>{z_{1}} & \bblk{B_{1}}\arl & \dotblk\arl\arline[d] &  &  &  & \dotblk\arline[llll]\\
+ &  &  & \dotblk\aru\sb>>{+} &  &  &  & \bblk{D_{1}}\arline[llll] & \dotblk\arl & \dotblk\arline[l]\\
+ & \dotblk\arline[uuuuuu] &  &  &  &  & \bblk K\arline[lllll] & \dotblk\arl &  &  &  &  &  & \dotblk\arline[llllll]
+}
+\xyR{1pc}\xyC{1pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: general LQ solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consider LQ problems with cost
+\begin_inset Formula 
+\begin{equation}
+J=\int_{0}^{\infty}\left(x^{T}\left(t\right)\underbrace{C^{T}C}_{Q}x\left(t\right)+2u^{T}\left(t\right)Nx\left(t\right)+u^{T}\left(t\right)Ru\left(t\right)\right)\d t\label{eq:lqcross}
+\end{equation}
+
+\end_inset
+
+and system dynamics 
+\begin_inset Formula 
+\[
+\dot{x}\left(t\right)=Ax\left(t\right)+Bu\left(t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+assume 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ is controllable/stabilizable and 
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ is observable/detectable
+\end_layout
+
+\begin_layout Itemize
+the solution of the problem is
+\begin_inset Formula 
+\[
+u\left(t\right)=-R^{-1}(B^{T}P+N)x\left(t\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A^{T}P+PA-(B^{T}P+N)^{T}R^{-1}(B^{T}P+N)+Q=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: general LQ solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Intuition: under the assumptions, we know we can stabilize the system and
+ drive 
+\begin_inset Formula $x\left(t\right)$
+\end_inset
+
+ to zero.
+ Consider Lyapunov function 
+\begin_inset Formula $V\left(t\right)=x^{T}\left(t\right)Px\left(t\right)$
+\end_inset
+
+, 
+\begin_inset Formula $P=P^{T}\succ0$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\cancelto{0}{V\left(\infty\right)}-V\left(0\right) & =\int_{0}^{\infty}\dot{V}\left(t\right)\d t\\
+ & =\int_{0}^{\infty}\left(x^{T}\left(t\right)\left(PA+A^{T}P\right)x\left(t\right)+2x^{T}\left(t\right)PBu\left(t\right)\right)\d t
+\end{align*}
+
+\end_inset
+
+Adding (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lqcross"
+
+\end_inset
+
+) on both sides yields
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+V\left(\infty\right)-V\left(0\right)+J=\\
+\int_{0}^{\infty}\left(x^{T}\left(t\right)\left(Q+PA+A^{T}P\right)x\left(t\right)+2x^{T}\left(t\right)\left(PB+N^{T}\right)u\left(t\right)+u^{T}\left(t\right)Ru\left(t\right)\right)\d t\label{eq:lqcross_deriv}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+to minimize the cost, we are going to re-organize the terms in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lqcross_deriv"
+
+\end_inset
+
+) into some 
+\begin_inset Quotes eld
+\end_inset
+
+squared
+\begin_inset Quotes erd
+\end_inset
+
+ terms
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Appendix: general LQ solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+completing the squares
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+2x^{T}\left(t\right)\left(PB+N^{T}\right)u\left(t\right)+u^{T}\left(t\right)Ru\left(t\right)=\left\Vert R^{1/2}u\left(t\right)+R^{-1/2}\left(B^{T}P+N\right)x\left(t\right)\right\Vert _{2}^{2}\\
+-x^{T}\left(t\right)\left(PB+N^{T}\right)R^{-1}\left(B^{T}P+N\right)x\left(t\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lqcross_deriv"
+
+\end_inset
+
+) is actually
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.1in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\cancelto{0}{V\left(\infty\right)}-V\left(0\right)+J\\
+=\int_{0}^{\infty}\left[x^{T}\left(t\right)\left(Q+PA+A^{T}P-\left(PB+N^{T}\right)R^{-1}\left(B^{T}P+N\right)\right)x\left(t\right)\vphantom{\left\Vert R^{-1/2}\left(N^{T}\right)\right\Vert _{2}^{2}}\right.\\
++\left.\left\Vert R^{1/2}u\left(t\right)+R^{-1/2}\left(B^{T}P+N\right)x\left(t\right)\right\Vert _{2}^{2}\right]\d t
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+hence 
+\begin_inset Formula $J_{\min}=V\left(0\right)=x^{T}\left(0\right)Px\left(0\right)$
+\end_inset
+
+ is achieved when
+\begin_inset Formula 
+\[
+Q+PA+A^{T}P-\left(PB+N^{T}\right)R^{-1}\left(B^{T}P+N\right)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\textnormal{and }u\left(t\right)=-R^{-1}\left(B^{T}P+N\right)x\left(t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

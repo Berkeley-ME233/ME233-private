@@ -1,0 +1,3124 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{etex}
+%\usetheme{Warsaw}
+\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+
+\setbeamercolor{bgcolor}{fg=black,bg=white}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+%\setbeamertemplate{sections/subsections in toc}[default]
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+
+
+\date{}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+% XYpic and XYmatrix related
+\usepackage[all]{xy}
+% scaling row
+\newcommand{\xyR}[1]{
+\xydef@\xymatrixrowsep@{#1}
+}
+% scaling column
+\newcommand{\xyC}[1]{
+\xydef@\xymatrixcolsep@{#1}
+}
+
+\usepackage{pgfpages}
+\usepackage{color}
+\input{mtikzStyle}
+\end_preamble
+\options 12pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans lmss
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Author: Xu Chen; ucbmaxchen@gmail.com; 2013~ (C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "blkStyle.lyx"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "tikzStyle.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.8
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,left]{bgcolor}{
+\backslash
+hspace*{2em} ME 233, UC Berkeley, Spring 2014}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=5.25ex,dp=1ex,right]{bgcolor}{Xu Chen 
+\backslash
+hspace*{2em}}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.0
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{}%     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt%
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.5
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{ME 233, Spring 2014, UC Berkeley}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{title in head/foot}
+\backslash
+insertsubsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.5
+\backslash
+paperwidth,ht=2.25ex,dp=1ex,center]{bgcolor}{Xu Chen}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{author in head/foot}
+\backslash
+insertsection   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{
+\backslash
+hspace*{.5cm}ME 233 Xu Chen 
+\backslash
+vspace{9pt}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Lecture 7: Principles of Feedback Design
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "70col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+MIMO closed-loop analysis
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Robust stability
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+MIMO feedback design
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{headline}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+setbeamertemplate{footline} {   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox{%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.7
+\backslash
+paperwidth,ht=3ex,dp=2ex,left]{bgcolor}{
+\backslash
+hspace*{1em}}%    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+inserttitle{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+insertframenumber{} / 
+\backslash
+inserttotalframenumber
+\backslash
+hspace*{2ex}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false,shadow=false,wd=0.1
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{beamercolorbox}[rounded=false, shadow=false, wd=0.2
+\backslash
+paperwidth,ht=2.25ex,dp=2ex,right]{bgcolor}{}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+usebeamerfont{date in head/foot}
+\backslash
+insertshortdate{}
+\backslash
+hspace*{2em}     
+\end_layout
+
+\begin_layout Plain Layout
+
+ME233 
+\backslash
+insertshorttitle{}-
+\backslash
+insertframenumber{}
+\backslash
+hspace*{1em}% / 
+\backslash
+inserttotalframenumber
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{beamercolorbox}}%   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip7pt% 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Big picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Big picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+we are pretty familiar with SISO feedback system design and analysis
+\end_layout
+
+\begin_layout Itemize
+state-space designs (LQ, KF, LQG,...): time-domain; good mathematical formulation
+ and solutions based on rigorous linear algebra
+\end_layout
+
+\begin_layout Itemize
+frequency-domain and transfer-function analysis: builds intuition; good
+ for properties such as stability robustness
+\end_layout
+
+\end_deeper
+\begin_layout Section
+MIMO closed-loop analysis
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO closed-loop analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+signals and transfer functions are vectors and matrices now:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r$
+\end_inset
+
+ (reference) and 
+\begin_inset Formula $y$
+\end_inset
+
+ (plant output): 
+\begin_inset Formula $m$
+\end_inset
+
+-dimensional
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{p}\left(s\right)$
+\end_inset
+
+: 
+\begin_inset Formula $p$
+\end_inset
+
+ by 
+\begin_inset Formula $m$
+\end_inset
+
+ transfer function matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{multline}
+E\left(s\right)=R\left(s\right)-\left(H\left(s\right)Y_{o}\left(s\right)+V\left(s\right)\right)\\
+=R\left(s\right)-\left\{ H\left(s\right)G_{p}\left(s\right)G_{c}\left(s\right)E\left(s\right)+H\left(s\right)G_{d}\left(s\right)D\left(s\right)+V\left(s\right)\right\} \label{eq:MIMOcl}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1.5pc}\xymatrix{ &  & \dotblk\arr_{D\left(s\right)\qquad} & \bblk{G_{d}\left(s\right)}\arline[r] & \dotblk\ard\sb(0.8)+\\
+\dotblk\arr_{R\left(s\right)\qquad}\sp(0.8)+ & \cblk\arr^{E\left(s\right)\quad} & \bblk{G_{c}\left(s\right)}\arr & \bblk{G_{p}\left(s\right)}\arr\sb(0.8)+ & \cblk\arline[r] & \dotblk\arline[d]\arr^{Y_{o}\left(s\right)\qquad} & \dotblk\\
+ & \dotblk\aru\sb(0.8)- & \cblk\arline[l] & \bblk{H\left(s\right)}\arl\sb(0.85)+\sb(0.6){Y\left(s\right)} & \dotblk\arline[l] & \dotblk\arline[l]\\
+ &  & \aru\sp(0.8)+\sb(0.2){V\left(s\right)}
+}
+\xyR{2pc}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+error signal (the order of transfer function 
+\series bold
+matrices 
+\series default
+matter!):
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+\begin_inset Formula 
+\[
+\text{[warning: \ensuremath{H\left(s\right)C\left(s\right)\neq C\left(s\right)H\left(s\right)}]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO closed-loop analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MIMOcl"
+
+\end_inset
+
+) gives
+\begin_inset Formula 
+\begin{multline*}
+E\left(s\right)=\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}R\left(s\right)\\
+-\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}H\left(s\right)G_{d}\left(s\right)D\left(s\right)-\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}V\left(s\right)
+\end{multline*}
+
+\end_inset
+
+where the 
+\emph on
+loop transfer function
+\emph default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\boxed{G_{\text{open}}\left(s\right)=H\left(s\right)G_{p}\left(s\right)G_{c}\left(s\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{black}{
+\end_layout
+
+\end_inset
+
+We want to minimize 
+\begin_inset Formula $E^{*}\left(s\right)\triangleq R\left(s\right)-Y\left(k\right)=E\left(s\right)+V\left(s\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+E^{*}\left(s\right)=\underline{\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}}R\left(s\right)\\
+-\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}H\left(s\right)G_{d}\left(s\right)D\left(s\right)+\underline{\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}G_{\text{open}}\left(s\right)}V\left(s\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+Sensitivity and complementary sensitivity functions:
+\begin_inset Formula 
+\begin{align*}
+S\left(s\right) & \triangleq\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}\\
+T\left(s\right) & \triangleq\left(I_{m}+G_{\text{open}}\left(s\right)\right)^{-1}G_{\text{open}}\left(s\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fundamental limitations in feedback design
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+E^{*}\left(s\right) & =S\left(s\right)R\left(s\right)+T\left(s\right)V\left(s\right)-S\left(s\right)H\left(s\right)G_{d}\left(s\right)D\left(s\right)\\
+Y\left(s\right) & =R\left(s\right)+E^{*}\left(s\right)=T\left(s\right)R\left(s\right)+T\left(s\right)V\left(s\right)-S\left(s\right)H\left(s\right)G_{d}\left(s\right)D\left(s\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+E^{*}\left(s\right) & =S\left(s\right)R\left(s\right)+T\left(s\right)V\left(s\right)-S\left(s\right)H\left(s\right)G_{d}\left(s\right)D\left(s\right)\\
+Y\left(s\right) & =R\left(s\right)-E^{*}\left(s\right)=T\left(s\right)R\left(s\right)+\dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sensitivity function 
+\begin_inset Formula $S\left(s\right)$
+\end_inset
+
+: explains disturbance-rejection ability
+\end_layout
+
+\begin_layout Itemize
+complementary sensitivity function 
+\begin_inset Formula $T\left(s\right)$
+\end_inset
+
+: explains reference tracking and sensor-noise rejection abilities
+\end_layout
+
+\begin_layout Itemize
+fundamental constraint of feedback design:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\cb[yellow]{yellow}{S\left(s\right)+T\left(s\right)=I_{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{S\left(s\right)+T\left(s\right)=I_{m}}
+\]
+
+\end_inset
+
+equivalently
+\begin_inset Formula 
+\[
+S\left(j\omega\right)+T\left(j\omega\right)=I_{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+cannot do well in all aspects: e.g., if 
+\begin_inset Formula $S\left(j\omega\right)\approx0$
+\end_inset
+
+ (good disturbance rejection), 
+\begin_inset Formula $T\left(j\omega\right)$
+\end_inset
+
+ will be close to identity (bad sensor-noise rejection)
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Loop shaping
+\end_layout
+
+\begin_layout Subsection
+SISO case
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Goals of SISO control design
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+single-input single-output (SISO) control design:
+\begin_inset Formula 
+\[
+S\left(j\omega\right)=\frac{1}{1+G_{\text{open}}\left(j\omega\right)},\ T\left(j\omega\right)=\frac{G_{\text{open}}\left(j\omega\right)}{1+G_{\text{open}}\left(j\omega\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+goals: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+nominal stability
+\end_layout
+
+\begin_layout Enumerate
+stability robustness
+\end_layout
+
+\begin_layout Enumerate
+command following and disturbance rejection
+\end_layout
+
+\begin_layout Enumerate
+sensor-noise rejection
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+feedback achieves: 1 (Nyquist theorem), 2 (sufficient (gain and phase) margins),
+ and
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+3: small 
+\begin_inset Formula $S\left(j\omega\right)$
+\end_inset
+
+ at relevant frequencies (usually low frequency)
+\end_layout
+
+\begin_layout Itemize
+4: small 
+\begin_inset Formula $T\left(j\omega\right)$
+\end_inset
+
+ at relevant frequencies (usually high frequency)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+additional control design for meeting the performance goals: feedforward,
+ predictive, preview controls, etc
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SISO loop shaping
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+typical loop shape (magnitude response of 
+\begin_inset Formula $G_{\text{open }}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (0,2) -- node[pos=0.99,right]{$
+\backslash
+omega$}(8,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (0,0) -- node[pos=0.8,left]{$Gain$}(0,4.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a) at (-0.5,2){$0dB$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+path [thick,-] (0,4) edge [bend left](7,0.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,-] (0.5,4) ..
+ controls(2,3.5) and (5,3.5) ..
+ (7,0.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+draw [thick,-](0.5,5.8) ..
+ controls(2,5) and (4,4) ..
+ (5,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (b) at (4,3.8){$|G_
+\backslash
+text{open}(j
+\backslash
+omega)|$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (0,3.5) to node[pos=0.5,below]{$Low 
+\backslash
+  freq.
+  
+\backslash
+ boundary$}(5,2) [snake=border, segment angle=-45](0,3.5) to (5,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path [->] (4.5,1.2) edge [bend right](5.5,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (c) at (4,1){$Crossover 
+\backslash
+ freq.$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (6,2) -- node[pos=0.5,right]{$High
+\backslash
+  freq.
+ 
+\backslash
+ boundary$}(8,0.2) [snake=border,segment angle=135](6,2) -- (8,0.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SISO loop shaping: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+the idea of stability margins:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm,scale = 0.97]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](-3,0) to node[pos=0.99,below]{$Re$}(3,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](0,-3) to node[pos=0.99,right]{$Im$}(0,3);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](0,2) arc (90:270:2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(a) at (-2,0)[left,below]{$-1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,->](0,-2.7) ..
+ controls(-1.5,-2) and (-2,-1) ..
+ (-1.5,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,-](-1.5,0) to (-1,0.6);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-] (-1.5,0)--(-1.5,0.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](-0.5,0) arc (180:210:0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (c) at (-0.6,0)[below]{$
+\backslash
+alpha$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-] (0,0)--(-1.87,-1.21);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[snake=brace] (-1.5,0.7) -- node[above]{$a$}(0,0.7); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(b) at (0,0.7)[right]{$
+\backslash
+displaystyle{
+\backslash
+frac{1}{a}}=Gain 
+\backslash
+ margin$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(d) at (0,-0.7)[right]{$
+\backslash
+alpha=Phase 
+\backslash
+ margin$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(e) at (-1.3,-1.7)[left]{$G_
+\backslash
+text{open}(j
+\backslash
+omega)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SISO loop shaping: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+the idea of stability margins:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm, scale = 0.8]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](0,0) to node[pos=0.99,below]{$
+\backslash
+omega$}(6,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](0,-2) to node[pos=0.8,left]{$Phase$}(0,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](0,5) to node[pos=0.99,below]{$
+\backslash
+omega$}(6,5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](0,3) to node[pos=0.8,left]{$Gain$}(0,7);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a) at (-0.5,5){$0dB$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (b) at (-0.5,0){$-180
+\backslash
+textdegree $};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](2,6) to node[pos=-0.04,right]{$
+\backslash
+omega_g$(Gain crossover freq.)}(2,-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](4,6) to node[pos=0.9999,right]{$
+\backslash
+omega_p$(Phase crossover freq.)}(4,-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,-](0.5,5.8) ..
+ controls(2,5) and (4,4) ..
+ (5,2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [<->](4,5) to node[right]{Gain margin}(4,3.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,-](0.5,2.0) ..
+ controls(4,0) ..
+ (5.5,-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [<->](2,0) to node[right]{Phase margin}(2,1.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SISO loop shaping: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-1.3in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $G_{\textnormal{open}}\left(j\omega\right)$
+\end_inset
+
+ should be sufficiently far away from 
+\begin_inset Formula $\left(-1,0\right)$
+\end_inset
+
+ for robust stability.
+\end_layout
+
+\begin_layout Plain Layout
+Commonly there are uncertainties and the actual case is
+\begin_inset Formula 
+\[
+\tilde{G}_{\textnormal{open }}\left(s\right)=G_{\textnormal{open}}\left(s\right)\left[1+\Delta\left(s\right)\right]
+\]
+
+\end_inset
+
+e.g.
+ ignored actuator dynamics in a positioning system:
+\begin_inset Formula 
+\[
+\tilde{G}_{\textnormal{open }}\left(s\right)=G_{\textnormal{open}}\left(s\right)\frac{1}{T_{a}s+1}=G_{\textnormal{open}}\left(s\right)\left[1-\frac{T_{a}s}{T_{a}s+1}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta\left(j\omega\right)=-\frac{T_{a}j\omega}{T_{a}j\omega+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm,scale = 0.97]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](-3,0) to node[pos=0.99,below]{$Re$}(0.5,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](0,-3) to node[pos=0.99,right]{$Im$}(0,3);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](0,2) arc (90:270:2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(a) at (-2,0)[left,below]{$-1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,->](0,-2.7) ..
+ controls(-1.5,-2) and (-2,-1) ..
+ (-1.5,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,-](-1.5,0) to (-1,0.6);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-] (-1.5,0)--(-1.5,0.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-](-0.5,0) arc (180:210:0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (c) at (-0.6,0)[below]{$
+\backslash
+alpha$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[-] (0,0)--(-1.87,-1.21);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[snake=brace] (-1.5,0.7) -- node[above]{$a$}(0,0.7); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+node(b) at (0,0.7)[right]{$
+\backslash
+displaystyle{
+\backslash
+frac{1}{a}}=Gain 
+\backslash
+ margin$};
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+node(d) at (0,-0.7)[right]{$
+\backslash
+alpha=Phase 
+\backslash
+ margin$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(e) at (-1.3,-1.7)[left]{$G_
+\backslash
+text{open}(j
+\backslash
+omega)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SISO loop shaping: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](-3,0) to node[pos=0.99,below]{$Re$}(3,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](0,-3) to node[pos=0.99,right]{$Im$}(0,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node(a) at (-2.2,0)[left,above]{$-1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [thick,-](2,-1.5) ..
+ controls(0,-2) and (-1,-1) ..
+ node[right]{$G_
+\backslash
+text{open}(j
+\backslash
+omega)$}(-1.5,0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [dashed,-](2.2,-1.7) ..
+ controls(0,-3) and (-2,-2) ..
+ node[right]{$
+\backslash
+tilde G_
+\backslash
+text{open}(j
+\backslash
+omega)$}(-1.9,0.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](-2,0) to node[left]{$d(j
+\backslash
+omega)$}(-1,-0.6);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->](-1,-0.6) to node[left]{$
+\backslash
+Delta(j
+\backslash
+omega) G_
+\backslash
+text{open}(j
+\backslash
+omega)$}(-1.6,-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if nominal stability holds, robust stability needs
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2in}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left|\Delta\left(j\omega\right)G_{open}\left(j\omega\right)\right|=\left|\tilde{G}_{open}\left(j\omega\right)-G_{open}\left(j\omega\right)\right|<\overbrace{\left|1+G_{open}\left(j\omega\right)\right|}^{\left|d\left(j\omega\right)\right|}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Leftrightarrow\boxed{\left|\Delta\left(j\omega\right)\frac{G_{open}\left(j\omega\right)}{1+G_{open}\left(j\omega\right)}\right|<1\Leftrightarrow\left|\Delta\left(j\omega\right)T\left(j\omega\right)\right|<1,\ \forall\omega}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SISO loop shaping: stability robustness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+if 
+\begin_inset Formula $\left|G_{open}\left(j\omega\right)\right|\ll1$
+\end_inset
+
+ then
+\begin_inset Formula 
+\[
+\boxed{\left|\Delta\left(j\omega\right)\frac{G_{open}\left(j\omega\right)}{1+G_{open}\left(j\omega\right)}\right|<1}
+\]
+
+\end_inset
+
+approximately means
+\begin_inset Formula 
+\[
+\left|G_{open}\left(j\omega\right)\right|<\frac{1}{\left|\Delta\left(j\omega\right)\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[auto,>=latex' new, arrow head = 3mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (0,0) -- node[pos=0.99,right]{$
+\backslash
+omega$}(6,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (0,-2) -- node[pos=0.8,left]{$Gain$}(0,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a) at (-0.5,0){$0dB$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[thick,-] (0,0) to (1,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path [thick,-] (1,0) edge [bend left](5.8,-1.8);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (b) at (2,0)[below]{$|T(j
+\backslash
+omega)|$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [-] (0.5,1.5) ..
+ controls(3,1) ..
+ node[pos=0.99,above,right]{$
+\backslash
+displaystyle{
+\backslash
+frac{1}{|
+\backslash
+bigtriangleup(j
+\backslash
+omega)|}}$}(5.8,-1.0);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (4,-1.8) -- node[left]{{
+\backslash
+scriptsize $|T(j
+\backslash
+omega)|
+\backslash
+approx|G_{open}(j
+\backslash
+omega)|$ at high freq.}}(5.0,-1.0);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+MIMO stability and robust stability
+\end_layout
+
+\begin_layout Subsection
+MIMO Nyquist criterion
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO Nyquist criterion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xymatrix{{\textstyle r}\arr\sp(0.8)+ & \cblk\arr^{e\qquad} & \bblk{G_{\text{open}}}\arline[r] & \dotblk\arline[d]\arr & {\textstyle y}\\
+ & \dotblk\aru\sb(0.8)- &  & \dotblk\arline[ll]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+assume 
+\begin_inset Formula $G_{\text{open}}$
+\end_inset
+
+ is 
+\begin_inset Formula $m\times m$
+\end_inset
+
+ and realized by
+\begin_inset Formula 
+\begin{align*}
+\frac{\d x\left(t\right)}{\d t} & =Ax\left(t\right)+Be\left(t\right),\ x\in\mathbb{R}^{m\times1}\\
+y\left(t\right) & =Cx\left(t\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the closed-loop dynamics is
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\frac{\d x\left(t\right)}{\d t} & =\left(A-BC\right)x\left(t\right)+Br\left(t\right)\\
+y\left(t\right) & =Cx\left(t\right)
+\end{cases}\label{eq:cl}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO Nyquist criterion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cl"
+
+\end_inset
+
+) gives the closed-loop transfer function
+\begin_inset Formula 
+\[
+G_{\text{closed}}\left(s\right)=C\left(sI-A+BC\right)^{-1}B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+closed-loop stability depends on the eigenvalues 
+\begin_inset Formula $\eig\left(A-BC\right)$
+\end_inset
+
+, which come from
+\begin_inset Formula 
+\begin{align*}
+\phi_{\text{closed}}\left(s\right) & =\det\left(sI-A+BC\right)=\det\left\{ \left(sI-A\right)\left[I+\left(sI-A\right)^{-1}BC\right]\right\} \\
+ & =\det\left(sI-A\right)\det\left(I+C\left(sI-A\right)^{-1}B\right)\\
+ & =\underbrace{\det\left(sI-A\right)}_{\text{open loop }\phi_{\text{open}}\left(s\right)}\det\left(I+G_{\text{open}}\left(s\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+hence
+\begin_inset Formula 
+\[
+\boxed{\frac{\phi_{\text{closed}}\left(s\right)}{\phi_{\tf{open}}\left(s\right)}=\det\left(I+G_{\tf{open}}\left(s\right)\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO Nyquist criterion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\frac{\phi_{\text{closed}}\left(s\right)}{\phi_{\tf{open}}\left(s\right)}=\det\left(I+G_{\tf{open}}\left(s\right)\right)=\frac{\prod_{j=1}^{n_{1}}\left(s-p_{\textnormal{cl}}\right)}{\prod_{i=1}^{n_{2}}\left(s-p_{\textnormal{ol}}\right)}}
+\]
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+evaluate 
+\begin_inset Formula $\det\left(I+G_{\textnormal{open}}\left(s\right)\right)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (i.e., let 
+\begin_inset Formula $s$
+\end_inset
+
+ take values)
+\end_layout
+
+\end_inset
+
+ along the D contour (
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Z$
+\end_inset
+
+ closed-loop 
+\begin_inset Quotes eld
+\end_inset
+
+unstable
+\begin_inset Quotes erd
+\end_inset
+
+ eigen values in 
+\begin_inset Formula $\prod_{j=1}^{n_{1}}\left(s-p_{\textnormal{cl}}\right)$
+\end_inset
+
+ contribute to 
+\begin_inset Formula $2\pi Z$
+\end_inset
+
+ net increase in phase
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P$
+\end_inset
+
+ open-loop 
+\begin_inset Quotes eld
+\end_inset
+
+unstable
+\begin_inset Quotes erd
+\end_inset
+
+ eigen values in 
+\begin_inset Formula $\prod_{j=1}^{n_{2}}\left(s-p_{\textnormal{ol}}\right)$
+\end_inset
+
+ contribute to 
+\begin_inset Formula $-2\pi P$
+\end_inset
+
+ net increase in phase
+\end_layout
+
+\begin_layout Itemize
+stable eigen values do not contribute to net phase change
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "20col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename src/Dcontour.eps
+	width 3cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO Nyquist criterion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+the number of counter clockwise encirclements of the origin by 
+\begin_inset Formula $\det\left(I+G_{\textnormal{open}}\left(s\right)\right)$
+\end_inset
+
+ is: 
+\begin_inset Formula 
+\[
+\boxed{\textnormal{N}\left(0,\det\left(I+G_{\textnormal{open}}\left(s\right)\right),\textnormal{D}\right)=P-Z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+stability condition: 
+\begin_inset Formula $Z=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Multivariable Nyquist Stability Criterion
+\end_layout
+
+\end_inset
+
+ the closed-loop system
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MIMO-closed-loop-system"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ is asymptotically stable if and only if 
+\begin_inset Formula 
+\[
+\textnormal{N}\left(0,\det\left(I+G_{\textnormal{open}}\left(s\right)\right),\textnormal{D}\right)=P
+\]
+
+\end_inset
+
+i.e., the number of counterclockwise encirclements of the origin by 
+\begin_inset Formula $\det\left(I+G_{\textnormal{open}}\left(s\right)\right)$
+\end_inset
+
+ along the 
+\begin_inset Formula $\textnormal{D}$
+\end_inset
+
+ contour equals the number of open-loop unstable eigen values (of the 
+\begin_inset Formula $A$
+\end_inset
+
+ matrix).
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+MIMO robust stability
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO robust stability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Given the nominal model 
+\begin_inset Formula $G_{\textnormal{open}}$
+\end_inset
+
+, let the actual open loop be perturbed to
+\begin_inset Formula 
+\[
+\tilde{G}_{\textnormal{open }}\left(j\omega\right)=G_{\textnormal{open}}\left(j\omega\right)\left[I+\Delta\left(j\omega\right)\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta\left(j\omega\right)$
+\end_inset
+
+ is the uncertainty (bounded by 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sigma\left(\Delta\left(j\omega\right)\right)\leq\bar{\sigma}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xyR{1.5pc}\xyC{1.5pc}\xymatrix{ &  & \dotblk\arr & \bblk{\Delta}\arline[r] & \dotblk\ard\sp(0.8)+\\
+{\textstyle r}\arr\sp(0.8)+ & \cblk\arline[r]\sp(.8)e & \dotblk\arline[rr]\arline[u] &  & \cblk\arr\sb(-0.2)+ & \bblk{G_{\text{open}}}\arline[r] & \dotblk\arline[d]\arr & {\textstyle y}\\
+ & \dotblk\aru\sb(0.8)- &  &  &  &  & \dotblk\arline[lllll]
+}
+\xyR{2pc}\xyC{2pc}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+what properties should the nominal system possess in order to have robust
+ stability?
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO robust stability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+obviously need a stable nominal system to start with:
+\begin_inset Formula 
+\[
+\textnormal{N}\left(0,\det\left(I+G_{\textnormal{open}}\left(s\right)\right),\textnormal{D}\right)=P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+for robust stability, we need
+\begin_inset Formula 
+\[
+\textnormal{N}\left(0,\det\left(I+G_{\textnormal{open}}\left(s\right)\left(1+\Delta\left(s\right)\right)\right),\textnormal{D}\right)=P\ \textnormal{for all possible }\Delta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+under nominal stability, we need the boundary condition
+\begin_inset Formula 
+\[
+\boxed{\det\left(I+G_{\textnormal{open}}\left(j\omega\right)\left(1+\Delta\left(j\omega\right)\right)\right)\neq0}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-.27in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename src/MIMOrobu.pdf
+	width 4.8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Example Nyquist plot for robust stability analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO robust stability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+note the determinant equivalence:
+\begin_inset Formula 
+\begin{multline*}
+\det\left(I+G_{\textnormal{open}}\left(j\omega\right)\left(1+\Delta\left(j\omega\right)\right)\right)=\det\left(I+G_{\textnormal{open}}\left(j\omega\right)\right)\\
+\times\det\left[I+\left(I+G_{\textnormal{open}}\left(j\omega\right)\right)^{-1}G_{\textnormal{open}}\left(j\omega\right)\Delta\left(j\omega\right)\right]
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+as the system is open-loop asymptotically stable, no poles are on the imaginary,
+ i.e., 
+\begin_inset Formula 
+\[
+\det\left(I+G_{\textnormal{open}}\left(j\omega\right)\right)\neq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+hence 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\det\left(I+G_{\textnormal{open}}\left(j\omega\right)\left(1+\Delta\left(j\omega\right)\right)\right)\neq0\Longleftrightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\det\left[I+\underbrace{\left(I+G_{\textnormal{open}}\left(j\omega\right)\right)^{-1}G_{\textnormal{open}}\left(j\omega\right)}_{T\left(j\omega\right)}\Delta\left(j\omega\right)\right]\neq0\label{eq:MIMOrobo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MIMO robust stability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+intuitively, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MIMOrobo"
+
+\end_inset
+
+) means 
+\begin_inset Formula $T\left(j\omega\right)\Delta\left(j\omega\right)$
+\end_inset
+
+ should be 
+\begin_inset Quotes eld
+\end_inset
+
+smaller than
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mathematically, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MIMOrobo"
+
+\end_inset
+
+) will be violated if 
+\begin_inset Formula $\exists$
+\end_inset
+
+ 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ that achieves
+\begin_inset Formula 
+\begin{align}
+\left[I+T\left(j\omega\right)\Delta\left(j\omega\right)\right]x & =0\nonumber \\
+\Leftrightarrow T\left(j\omega\right)\Delta\left(j\omega\right)x & =-x\label{eq:mimorobo_eq}
+\end{align}
+
+\end_inset
+
+which will make the singular value
+\begin_inset Formula 
+\[
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\sigma_{\textnormal{max}}\left[T\left(j\omega\right)\Delta\left(j\omega\right)\right]=\max_{v\neq0}\frac{||T\left(j\omega\right)\Delta\left(j\omega\right)v||_{2}}{||v||_{2}}\geq\frac{||T\left(j\omega\right)\Delta\left(j\omega\right)x||_{2}}{||x||_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+as this cannot happen, we must have
+\begin_inset Formula 
+\[
+\sigma_{\max}\left[T\left(j\omega\right)\Delta\left(j\omega\right)\right]<1
+\]
+
+\end_inset
+
+It turns out this is both necessary and sufficient if 
+\begin_inset Formula $\Delta\left(j\omega\right)$
+\end_inset
+
+ is unstructured (can 'attack' from any directions).
+ Message: we can design 
+\begin_inset Formula $G_{\text{open}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sigma_{\max}\left[\Delta\left(j\omega\right)\right]<\sigma_{\min}\left[T^{-1}\left(j\omega\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
