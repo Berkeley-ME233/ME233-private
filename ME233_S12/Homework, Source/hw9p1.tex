@@ -1,0 +1,33 @@
+\item
+Let $N_1$ and $N_2$ be two P-class nonlinearities:
+\begin{align*}
+    y_1(k) & = N_1(u_1(k))\\
+    y_2(k) & = N_2(u_2(k))
+\end{align*}
+such that each satisfies the Popov inequality, i.e.
+\begin{align*}
+    \sum_{j=0}^k y_1^T(j)u_1(j) & \geq - \gamma_1^2
+        & \sum_{j=0}^k y_2^T(j)u_2(j) & \geq  - \gamma_2^2
+\end{align*}
+Prove the following two propositions:
+\begin{description}
+    \item[Proposition 1:]
+    The parallel combination of $N_1$ and $N_2$,
+    \begin{align*}
+    y(k) = N_1(u(k)) + N_2(u(k))
+    \end{align*}
+    satisfies the Popov inequality
+    \begin{equation}
+        \label{eq:Pine}
+        \sum_{j=0}^k y^T(j)u(j)  \ge  - \gamma^2
+    \end{equation}
+    for some $\gamma \in \mathcal{R}$.
+
+    \item[Proposition 2:]
+    The negative feedback combination  of $N_1$ and $N_2$,
+    \begin{align*}
+        y(k) & = N_1(u(k) - y_1(k))\\
+        y_1(k) & = N_2(y(k))
+    \end{align*}
+    satisfies the Popov inequality \eqref{eq:Pine} for some $\gamma \in \mathcal{R}$.
+\end{description} 

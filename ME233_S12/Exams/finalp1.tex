@@ -1,0 +1,43 @@
+\section*{Problem 1}
+
+Consider the discrete-time linear time-invariant system
+\begin{align*}
+    \begin{bmatrix}
+            x_1(k+1) \\
+            x_2(k+1)
+        \end{bmatrix} & = \begin{bmatrix}
+            0 & 1 \\
+            0.4 & 0.3
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + \begin{bmatrix}
+            0 \\
+            1
+        \end{bmatrix} u(k),
+        & x(0) & = x_0 \\
+    y(k) & = Cx(k)
+\end{align*}
+and the optimal linear quadratic regulator problem
+\begin{align*}
+    J & = \min_{u(0),u(1),\ldots} \left\{ \sum_{k=0}^\infty \left[ x^T(k) C^T Cx(k) + R u^2(k) \right] \right\}
+\end{align*}
+where $R > 0$. For this problem, both $u(k)$ and $y(k)$ are scalar. The control design objective for this problem is to find a controller that minimizes $J$ (for some choice of $C$ and $R$) and achieves $|p_i|<0.5$ for $i=1,2$ where $p_1$ and $p_2$ are the closed-loop eigenvalues of the system.
+
+\begin{enumerate}
+    \item
+    Show that if $C$ is chosen as
+    \begin{align*}
+        C = \begin{bmatrix}
+                -1.25 & 1
+            \end{bmatrix}
+    \end{align*}
+    it is not possible to choose $R$ to meet the control design objective.
+
+    \item
+    Choose a value of $C$ such that it \underline{is} possible to meet the control design objective for some value of $R$. You do not need to explicitly find a corresponding value of $R$ that meets the control design objective.
+
+    
+\end{enumerate}
+
+

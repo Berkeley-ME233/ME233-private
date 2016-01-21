@@ -1,0 +1,46 @@
+\section*{Problem 2}
+
+Consider the discrete-time linear time-invariant system
+\begin{align*}
+    x(k+1) & = Ax(k) + Bu(k) + B_w w(k) \\
+    y(k) & = Cx(k) + v(k)
+\end{align*}
+where $w(k)$ and $v(k)$ are independent zero-mean white Gaussian sequences, $u(k)$ is the control sequence to be designed, and $y(k)$ is the measurement sequence available to the controller. The sequences $u(k)$ and $y(k)$ are both scalar. Also, $(A,B)$ is stabilizable and $(C,A)$ is detectable.
+
+In this problem, we investigate two control design problems. The first control design problem is a standard optimal linear quadratic Gaussian control problem
+\begin{align}
+    J(\rho) = \min_{K \in \mathcal{K}} E\{ x^T(k) Q x(k) + \rho u^2(k) \}
+        \label{eq:p2_LQG}
+\end{align}
+where $\mathcal{K}$ is the set of causal output feedback controllers for the system. The second control design problem is an optimal linear quadratic Gaussian control problem with a variance constraint on the control sequence
+\begin{align}
+    \bar{J} = \min_{K \in \mathcal{K}} E\{ x^T(k) Qx(k)\}
+        \qquad \textrm{subject to} \qquad E\{u^2(k)\} \leq \alpha
+        \label{eq:p2_constrLQG}
+\end{align}
+The control design parameters satisfy $Q \succeq 0$ and $\rho > 0$.
+
+\begin{enumerate}
+    \item
+    Suppose that, for a particular value of $\rho > 0$, we have determined the value of $J(\rho)$. Prove that for any causal output feedback controller that achieves
+    \begin{align*}
+        E\{ u^2(k) \} \leq \alpha
+    \end{align*}
+    it must hold that
+    \begin{align*}
+        E\{ x^T(k) Qx(k) \} \geq  J(\rho) - \alpha \rho
+    \end{align*}
+
+
+    \item
+    Suppose that, for $\rho = \rho_* > 0$, the controller that solves \eqref{eq:p2_LQG} satisfies
+    \begin{align*}
+        E \{ u^2(k) \} = \alpha
+    \end{align*}
+    Show that this controller solves \eqref{eq:p2_constrLQG} and $\bar{J} = J(\rho_*) - \alpha \rho_*$.
+
+
+
+\end{enumerate}
+
+

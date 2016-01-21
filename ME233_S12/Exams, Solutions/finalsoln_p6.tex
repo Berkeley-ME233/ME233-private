@@ -1,0 +1,60 @@
+\section*{Problem 6}
+
+\begin{enumerate}
+    \item
+    We first define $d_k = d(k)$ for $k=0,1,2$ and note that the sequence $d(k)$ is fully prescribed by $d_0$, $d_1$, and $d_2$. We now express the sequence $d(k)$ as
+    \begin{align*}
+        d(k) = d_0 f(k) + d_1 f(k-1) + d_2 f(k-2)
+            \label{eq:finalp6_d}
+    \end{align*}
+    where $f(k)$ is the indicator function defined in the problem statement. We now express the system dynamics as
+    \begin{gather*}
+        (1 + a_1 q^{-1} + a_2 q^{-2}) y(k+1) = q^{-2} (b_0 + b_1 q^{-1}) u(k+1) + q^{-1} d(k+1) \\
+        \Rightarrow \quad y(k+1) = -a_1 y(k) - a_2 y(k-1) + b_0 u(k-1) + b_1 u(k-2) + d(k)
+    \end{gather*}
+    Using \eqref{eq:finalp6_d}, we express
+    \begin{align*}
+        y(k+1) = -a_1 y(k) - a_2 y(k-1) + b_0 u(k-1) + b_1 u(k-2) + d_0 f(k) + d_1 f(k-1) + d_2 f(k-2)
+    \end{align*}
+    Therefore, defining
+    \begin{align*}
+        \theta = \begin{bmatrix}
+                a_1 & a_2 & b_0 & b_1 & d_0 & d_1 & d_2
+            \end{bmatrix}^T
+    \end{align*}
+    we can write $y(k+1) = \phi^T(k) \theta$.
+    
+    \item
+    This is in the standard form for adaptive identification, so we use the general PAA presented in lecture
+    \begin{align*}
+        e^o(k+1) & = y(k+1) - \phi^T(k) \hat{\theta}(k) \\
+        e(k+1) & = \frac{ \lambda_1(k) }{ \lambda_1(k) + \phi^T(k) F(k) \phi(k) } \\
+        \hat{\theta}(k+1) & = \hat{\theta}(k) + F(k) \phi(k) e(k+1) \\
+        F(k+1) & = \frac{1}{\lambda_1(k)} \left[ F(k) 
+            - \lambda_2(k) \frac{ F(k) \phi(k) \phi^T(k) F(k) }
+            { \lambda_1(k) + \lambda_2(k) \phi^T(k) F(k) \phi(k) } \right]
+    \end{align*}
+    where
+    \begin{align*}
+        F(0) & \succ 0
+            & 0 & < \underline{\lambda}_1 \leq \lambda_1(k) \leq 2
+            & 0 & \leq \lambda_2(k) \leq \overline{\lambda}_2 < 2
+    \end{align*}
+    and $\lambda_1(k)$ is the forgetting factor.
+    
+    \item
+    As in lecture, we can guarantee that $e^o(k)$ converges to zero if $F(k)$ and $\phi(k)$ remain bounded. We can guarantee this if:
+    \begin{itemize}
+        \item
+        $\lambda_{max}(F(k)) < K_{max} < \infty$
+        
+        \item
+        $u(k)$ is bounded
+        
+        \item
+        $A(q^{-1})$ is an anti-Schur polynomial of $q^{-1}$
+        
+    \end{itemize}
+    
+    
+\end{enumerate} 

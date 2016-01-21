@@ -1,0 +1,50 @@
+\section*{Problem 2}
+
+Consider the discrete-time linear time-invariant system
+\begin{align*}
+    x(k+1) & = Ax(k) + Bu(k) \\
+    y(k) & = Cx(k) + Du(k)
+\end{align*}
+where $D$ is square, i.e.\ the system has the same number of inputs as outputs. In this problem, we are interested in the smallest possible values of the cost functions 
+\begin{align*}
+    J_m[N] = \sum_{k=m}^{N-1} 2u^T(k) y(k)
+\end{align*}
+over all possible choices of $u(m),\ldots,u(N-1)$ for $m = 0,1,\ldots,N-1$. Thus, we are interested in solving the optimization problems
+\begin{align*}
+    J_m^o[x_m,N] = \min_{u(m),\ldots,u(N-1)} J_m[N] \quad \textrm{s.t.} \quad x(m) = x_m
+\end{align*}
+for $m = 0,1,\ldots,N-1$.
+
+%\noindent
+Let the sequence of matrices $P_0, P_1, P_2, \ldots$ satisfy the discrete Riccati difference equation
+\begin{align*}
+    P_{k+1} = A^T P_k A - (A^T P_k B + C^T) (B^T P_k B + D + D^T)^{-1} (B^T P_k A + C) \; .
+\end{align*}
+with the initial condition $P_0 = 0$. Also assume that this sequence of matrices satisfies the conditions
+
+\begin{itemize}
+    \item
+    $B^T P_k B + D + D^T \succ 0, \quad k = 0,1,2,\ldots$
+
+    \item
+    $\displaystyle{\lim_{k \rightarrow \infty} P_k = P_\infty}$
+%
+%    \item
+%    $B^T P_\infty B - I \prec 0$
+\end{itemize}
+
+\begin{enumerate}
+    \item
+    Use dynamic programming to prove that $J_m^o[x_m,N] = x_m^T P_{(N-m)}^{\,} \, x_m$. You may find it convenient to define $J_N^o[x_N,N] = x_N^T P_0^{\,} \, x_N = 0$ to facilitate the proof.
+    
+    \item
+    Prove that $J_0^o[x_0,N] \leq 0$ for all $x_0, N$.
+
+    \item
+    Suppose that $\| x(0) \| \leq \alpha$. Find a value of $\gamma$ such that
+    \begin{align*}
+        \sum_{k=0}^\infty 2 u^T(k) y(k) \geq \gamma
+    \end{align*}
+    regardless of how $u(0),u(1),u(2),\ldots$ are chosen.
+\end{enumerate}
+

@@ -1,0 +1,69 @@
+\section*{Problem 3}
+
+\begin{enumerate}
+\item
+We first define the extended state $x_e(k) = [x^T(k) \ x_f^T(k)]^T$ so that the system and cost function dynamics can be written
+\begin{align}
+    x_e(k+1) & = A_e x_e(k) + B_e u(k) 
+        \label{eq:m1p3_syse1} \\
+    y_f(k) & = C_e x_e(k)
+        \label{eq:m1p3_syse2}
+\end{align}
+where
+\begin{align*}
+    A_e & = \begin{bmatrix}
+            A & 0 \\
+            B_f C & A_f
+        \end{bmatrix}
+        & B_e & = \begin{bmatrix}
+            B \\
+            0
+        \end{bmatrix}
+        & C_e & = \begin{bmatrix}
+            D_f C & C_f 
+        \end{bmatrix}
+        & x_e(0) & = \begin{bmatrix}
+            x(0) \\
+            0
+        \end{bmatrix}
+\end{align*}
+With this, the cost function can now be written as
+\begin{align}
+    J = x_e^T(N) C_e^T C_e x_e(N) + \sum_{k=0}^{N-1} \left[ x_e^T(k) C_e^T C_e x_e(k) + u^T(k) R u(k) \right]
+        \label{eq:m1p3_cost}
+\end{align}
+We now note that minimizing \eqref{eq:m1p3_cost} subject to \eqref{eq:m1p3_syse1}--\eqref{eq:m1p3_syse2} is a standard LQR problem. We can therefore immediately write down the solution:
+\begin{align*}
+    u_1^o(k) & = -K(k+1) x_e(k) \\
+    K(k) & = [B_e^T P(k) B_e + R]^{-1} B_e^T P(k) A_e \\
+    P(k-1) & = A_e^T P(k) A_e + C_e^T C_e - A_e^T P(k) B_e [ B_e^T P(k) B_e + R]^{-1} B_e^T P(k) A_e \\
+    P(N) & = C_e^T C_e
+\end{align*}
+The corresponding optimal cost is
+\begin{align*}
+    J^o = x_e^T(0) P(0) x_e(0)
+\end{align*}
+
+
+
+\item
+We first partition $K(k) = [K_x(k) \ K_f(k)]$ so that the optimal control law from the previous part can be written as
+\begin{align*}
+    u_1^o(k) = -K_x(k+1) x(k) - K_f(k+1) x_f(k)
+\end{align*}
+Now we note that the value of $x_f(k)$ can be constructed from $x(0),\ldots,x(k-1)$ using the recursive relationship
+\begin{align*}
+    x_f(k+1) & = A_f x_f(k) + B_f C x(k),
+        & x_f(0) & = 0
+\end{align*}
+With this, we see that $u_1^o(k)$ can be regarded as a function of $x(0),\ldots,x(k)$. In particular,
+\begin{align*}
+    x_f(k+1) & = A_f x_f(k) + B_f C x(k),
+        & x_f(0) & = 0 \\
+    u_2^o(k) & = -K_f(k+1) x_f(k) - K_x(k+1) x(k)
+\end{align*}
+Note that the optimal control law is expressed as the output of a state space model with input $x(k)$. Since $u_1^o(k) = u_2^o(k)$, the optimal cost is the same as in the previous part, i.e.\ $J^o = x_e^T(0) P(0) x_e(0)$.
+
+\end{enumerate}
+
+

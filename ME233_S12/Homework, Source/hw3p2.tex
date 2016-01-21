@@ -1,0 +1,123 @@
+\item
+
+Consider the system
+\begin{align*}
+    \begin{bmatrix}
+            x_1(k+1) \\
+            x_2(k+1)
+        \end{bmatrix} & = \begin{bmatrix}
+            -0.08 & -1 \\
+            0.7 & 0.1
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + \begin{bmatrix}
+            0.34 \\
+            0.3
+        \end{bmatrix} (u(k) + w(k)) \\
+    y(k) & = \begin{bmatrix}
+            0 & 3
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + v(k)
+\end{align*}
+where $u(k)$ is a deterministic input and
+\begin{itemize}
+    \item
+    $E \{ X(0) \} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ and $E \{ X(0) X^T(0) \} = \begin{bmatrix} 0.1 & 0 \\ 0 & 0.1 \end{bmatrix}$
+
+    \item
+    $X(0)$ is Gaussian and $W(k)$ and $V(k)$ are white Gaussian sequences
+
+    \item
+    $m_{w} = E \{ W(k) \} = 10, \quad E \{ V(k) \} = 0$
+
+    \item
+    $E \left\{ \begin{bmatrix}
+        W(k+j) - m_w  \\
+        V(k+j)
+    \end{bmatrix} \begin{bmatrix}
+        (W(k) - m_w) &
+        V(k)
+    \end{bmatrix} \right\} = \begin{bmatrix}
+        W & 0 \\
+        0 & V
+    \end{bmatrix} \delta(j) = \begin{bmatrix}
+        1 & 0 \\
+        0 & 0.5
+    \end{bmatrix} \delta(j)$
+
+    \item
+    $E \left\{ \begin{bmatrix}
+        W(k) - m_w  \\
+        V(k)
+    \end{bmatrix} X^T(0) \right\} = 0$
+
+\end{itemize}
+A Kalman filter is used to estimate the state of the system using the measurement sequence $y(k)$.
+
+\begin{enumerate}
+
+    \item
+    Find the steady state values of the following time varying matrices and scalars:
+    \begin{itemize}
+
+        \item
+        The a priori state estimation error covariance $M(k)$
+
+        \item
+        The a posteriori state estimation error covariance $Z(k)$
+
+        \item
+        The a priori output estimation error covariance
+        \begin{align*}
+            \Lambda_{\tilde{y}^o \tilde{y}^o}(k,0) = E \{ | \tilde{y}^o(k) |^2 \} = CM(k) C^T + V \; .
+        \end{align*}
+
+        \item
+        The Kalman filter gains $L(k)$ and $F(k)$
+
+    \end{itemize}
+    You should find the steady state values of these quantities by recursively computing their values forwards in time until they converge to their respective steady state values.
+
+    \item
+    Plot the response of $\Lambda_{\tilde{y}^o \tilde{y}^o}(k,0)$.
+\end{enumerate}
+%\balphlist
+%\item
+%Starting from the initial conditions, recursively compute the following time varying matrices and scalars, until their respective steady state values are reached:
+%\bitem
+%\item
+%The a-priori and a-posteriori state estimation error covariances, respectively $M(k)$ and $Z(k)$.
+%\item
+%The  a-priori and a-posteriorly output estimation error covariances, respectively
+%\footnote{The a-priori output estimation error $\yt^o(k) = y(k) - \yh^o(k)$ is often called the {\em innovation sequence}.}
+%\beqns
+%\Lambda_{\yt^o \yt^o }(k) &=& E \{ |\yt^o(k)|^2\} = C M(k) C^T + V,\:\:\:
+%\yt^o(k) = y(k) - \yh^o(k)\\
+%\Lambda_{\yt  \yt  }(k) &=& E \{ |\yt (k)|^2\} = C Z(k) C^T - V
+%+ 2V[CM(k) C +V]^{-1} V,\:\:\:\\\yt(k) &=& y(k) - \yh(k)\\
+%\eeqns
+%%\item
+%%The Kalman filter feedback gains $L(k) =  A M(k) C^T   [ C M(k) C^T + R ] ^{-1}$  and $F(k) = M(k) C^T   [ C M(k) C^T + R ] ^{-1}$
+%%\footnote{$F(k)$ is often called the innovation gain.}.
+%%\noindent
+%\eitem
+%
+%\item Plot the response of $\Lambda_{\yt^o \yt^o }(k)$.
+
+
+%\item
+%Compute the steady state covariances $M$, $Z$, $\Lambda_{\yt^o \yt^o }$ and $\Lambda_{\yt  \yt  }$, and Kalman filter gains $L$ and $F$ by solving the algebraic Riccati equation
+%\beqns
+%A M A^T  - M +   B W B^{T}   - A  M  C^T
+%    \left [  C M  C^T + V \right ]^{-1}  C M  A^T  = 0
+%\eeqns
+%using either the Matlab commands {\tt dare} or {\tt kalman}. Read the Matlab help entries on these functions to understand what they do. Also compute the close loop eigenvalues $A_c = A - L C$.
+%\item
+%Perform a simulation by running the plant and the {\bf steady state} Kalman filter (i.e. only use the steady state Kalman filter gains $L$ and $F$)
+%\footnote{Notice that the steady state Kalman filter is returned as the first output argument of the matlab function {\tt kalman}.} for a sufficiently long period of time, so that expected values and covariances can be approximated by time averages. Use $u(k) = 10$ as the deterministic input and generate a set of sample outcomes $x(0)$, $w(k)$ and $v(k)$.
+%\item
+%From the resulting simulation data, calculate, using the function  {\tt cov}, the approximate steady state values of $\Lyy$, $\Lambda_{\yt^o  \yt^o  }$ and $\Lambda_{\yt  \yt  }$, and compare them with their actual values, which were previously calculated.
+%\item Repeat steps (a)-(e) but change the measurement noise intensity as follows i) $V = 0.05$, ii) $V = 5$. Discuss your results for all three cases.

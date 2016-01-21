@@ -1,0 +1,42 @@
+\item
+A random variable $X$ is repeatedly measured, but the measurements are noisy.  Assume that the measurement process can be described by
+\begin{equation*}
+    Y(k) = X + V(k)
+\end{equation*}
+where $X, V(0), V(1), V(2), \ldots$ are jointly Gaussian random variables with
+\begin{align*}
+    E \{ X \} & = 0
+        & E \{ X^2 \} & = X_0 \\
+    E \{ V(k) \} & = 0
+        & E \{ V(k+j) V(k) \} & = \Sigma_{_{V}} \delta(j) \\
+    E \{ X V(k) \} & = 0 \; .
+\end{align*}
+Let $y(k)$ be the k-th measurement (i.e. outcome of $Y(k)$) and let $\bar{y}(k) = \{ y(0),\ldots,y(k) \}$.
+
+\begin{enumerate}
+
+\item
+Obtain the least squares estimate of $X$ given the $k+1$ measurements $y(0), \ldots, y(k)$ and the corresponding estimation error covariance, i.e.\ find $\hat{x}_{|\bar{y}(k)}$ and $\Lambda_{\tilde{X}_{|\bar{y}(k)} \tilde{X}_{|\bar{y}(k)}}$.
+
+\textbf{Hint:} You do not need to invert a $(k+1) \times (k+1)$ matrix to find these quantities. Instead express
+\begin{align*}
+    \Lambda_{\bar{y}(k) \bar{y}(k)} = A + uv^T
+\end{align*}
+where $A$ is a matrix that is easy to invert and $u$ and $v$ are vectors. In this case, the matrix inversion lemma says that
+\begin{align*}
+    \Lambda_{\bar{y}(k) \bar{y}(k)}^{-1} %& = A^{-1} - A^{-1} u (I + v^T A^{-1} u)^{-1} v^T A^{-1} \\
+    & = A^{-1} - \frac{1}{1+v^T A^{-1} u} A^{-1} u v^T A^{-1} \; .
+\end{align*}
+
+\item
+We now examine the case when $X_0  \to \infty$, i.e. when no prior information is available on $X$. Show the following:
+\begin{gather*}
+    \lim_{X_0  \to \infty} \left( \hat{x}_{_{|\bar{y}(k)}} \right)
+        = \frac{1}{k+1}\, [ y(0) + y(1) + \cdots + y(k) ] \\
+    \lim_{X_0  \to \infty} \left( \Lambda_{_{\tilde{X}_{|\bar{y}(k)} \tilde{X}_{|\bar{y}(k)}}} \right)
+        = \frac{\Sigma_{_V}}{k+1} \; .
+\end{gather*}
+
+\end{enumerate}
+
+

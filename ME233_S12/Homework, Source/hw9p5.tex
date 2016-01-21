@@ -1,0 +1,39 @@
+\item
+In problem 3, you conducted a simulation study of the series-parallel identification algorithm that has been discussed in class. In this problem you are asked to conduct a similar simulation study of the parallel identification algorithm that you analyzed in problem 4.
+
+The system that we want to identify is the same as the one in problem 3, i.e.
+\begin{align*}
+    y(k) = \frac{b_1q^{-1} + b_2 q^{-2}}{1 + a_1 q^{-1} + a_2 q^{-2}}\, u(k) + w(k)
+\end{align*}
+where $u(k)$ is the input and $w(k)$ is measurement noise. The plant parameters are $a_1 = 1.7$, $a_2 = 0.72$, $b_1 =0.1$ and $b_2=0.05$.
+
+\begin{enumerate}
+    \item
+    Select $\bar{\lambda} \leq 1$ and a set of constants $c_1$ and $c_2$ so that:
+    \begin{itemize}
+        \item $c_i \neq a_i$, $i=1,2$ and
+        \item $G(z^{-1})$ in \eqref{eq:gq} satisfies the conditions that you determined in problem 2(c).
+    \end{itemize}
+
+    \item
+    Using the matlab file {\tt sp$\_$predict.m} as your starting point, create a MATLAB file
+    %{\tt p$\_$predict$\_${\em your-last-name}.m}
+    that implements the parallel RLS PAA in Eqs.~\eqref{eq:parallel_PAA_first}--\eqref{eq:parallel_PAA_last}. Compare the parameter convergence of the parallel algorithm with that of the series-parallel algorithm, using similar initial conditions, under the following cases:
+    \begin{enumerate}
+        \item
+        Random input $u(k)$, no measurement noise, and least square gain (without forgetting factor).
+
+        \item
+        Random input $u(k)$, no measurement noise, and least square gain with forgetting factor.
+        \item
+        Random input $u(k)$, white measurement noise, and least square gain (without forgetting factor).
+
+        \item
+        Random input $u(k)$, colored measurement noise, and least square gain (without forgetting factor).
+    \end{enumerate}
+    Write a short summary of your findings. (You do not need to submit your modified version of {\tt sp$\_$predict.m})
+
+%    \textbf{Note:} To perform the simulations for the parallel RLS PAA, it will be easiest to create a new function based on {\texttt sp$\_$predict.m}.
+\end{enumerate}
+
+

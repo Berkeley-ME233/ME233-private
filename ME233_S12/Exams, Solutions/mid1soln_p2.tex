@@ -1,0 +1,67 @@
+\section*{Problem 2}
+
+\begin{enumerate}
+\item
+The Bellman equation for this optimization problem is
+\begin{align*}
+    J_m^o[x_m,N] & = \min_{u(m)} \Big[ 2 u^T(m) y(m) + J_{m+1}^o[Ax_m + Bu(m),N] \Big] \\
+    & = \min_{u(m)} \Big[ u^T(m) y(m) + y^T(m) u(m) + J_{m+1}^o[Ax_m + Bu(m),N] \Big]
+\end{align*}
+By the induction hypothesis, we have 
+\begin{align*}
+    J_{m+1}^o[Ax_m + Bu(m),N] = [Ax_m + Bu(m)]^T P_{(N-m-1)} [Ax_m + Bu(m)]
+\end{align*}
+Substituting the expressions for $y(m)$ and $J_{m+1}^o$ into the Bellman equation, we have
+\begin{align*}
+    J_m^o[x_m,N] & = \min_{u(m)} \Big[ u^T(m)[Cx_m + Du(m)] + [Cx_m + Du(m)]^T u(m) \\
+    & \phantom{= \min_{u(m)} \Big[} + [Ax_m + Bu(m)]^T P_{(N-m-1)} [Ax_m + Bu(m)] \Big] \\
+    & = \min_{u(m)} \Big[ x_m^T (A^T P_{(N-m-1)} A) x_m + u^T(m)(B^T P_{(N-m-1)} A + C) x_m \\
+    & \phantom{= \min_{u(m)} \Big[} + x_m^T (A^T P_{(N-m-1)} B + C^T) u(m)
+        + u^T(m) (B^T P_{(N-m-1)} B + D + D^T) u(m) \Big]
+\end{align*}
+Performing the minimization yields
+\begin{align*}
+    u^o(m) & = - (B^T P_{(N-m-1)} B + D + D^T)^{-1} (B^T P_{(N-m-1)} A + C) x_m \\
+    J_m^o[x_m,N] & = x_m^T \Big[ A^T P_{(N-m-1)} A \\
+    & \quad - (A^T P_{(N-m-1)} B + C^T) (B^T P_{(N-m-1)} B + D + D^T)^{-1}
+        (B^T P_{(N-m-1)} A + C) \Big] x_m \\
+    & = x_m^T P_{(N-m)} x_m
+\end{align*}
+
+
+
+\item
+There are two ways to do this problem. The first way is to notice that when $u(k) = 0, \ \forall k$, we have $J_0[N] = 0$. Therefore, it must hold that
+\begin{align*}
+    J_0^o[x_0,N] & = \min_{u(0),\ldots,u(N-1)} J_0[N] \qquad \textrm{ s.t. } \qquad x(0) = x_0 \\
+    & \leq J_0[N] \Big|_{x(0) = x_0, u(k) = 0, \forall k} = 0
+\end{align*}
+
+The second method for solving this problem involves showing that $P_k \preceq 0, \ \forall k$ by using induction. To show this, we first note that the base case is trivially satisfied because $P_0 = 0 \preceq 0$. We now show that if $P_{(k-1)} \preceq 0$, then $P_k \preceq 0$. Note that
+\begin{gather*}
+    B^T P_{(k-1)} B + D + D^T \succ 0 \\
+    \Rightarrow \qquad - (A^T P_{(k-1)} B + C^T) (B^T P_{(k-1)} B + D + D^T)^{-1}
+        (B^T P_{(k-1)} A + C) \preceq 0
+\end{gather*}
+By the induction hypothesis, we know that $P_{(k-1)} \preceq 0$, which implies that $A^T P_{(k-1)} A \preceq 0$, which in turn implies that $P_k \preceq 0$ because it is the sum of two negative semi-definite matrices. Using the fact that $P_k \preceq 0, \ \forall k$, we now conclude that
+\begin{align*}
+    J_0^o[x_0,N] = x_0^T P_N x_0 \preceq 0, \qquad \forall x_0,N
+\end{align*}
+
+
+
+\item
+\begin{align*}
+    \sum_{k=0}^\infty 2u^T(k) y(k) & \geq \min_{u(0),u(1),\ldots} \left[ \sum_{k=0}^\infty 2u^T(k) y(k) \right] \\
+    & = J_0^o[x_0,\infty] = x_0^T P_\infty x_0 \\
+    & \geq \lambda_{min}(P_\infty) \| x_0 \|^T
+\end{align*}
+From the previous part, we know that $P_\infty \preceq 0$, which implies that $\lambda_{min}(P_\infty) \leq 0$. Therefore,
+\begin{align*}
+    \sum_{k=0}^\infty 2u^T(k) y(k) & \geq \alpha^2 \lambda_{min}(P_\infty)
+\end{align*}
+regardless of how $u(0),u(1),\ldots$ are chosen.
+
+\end{enumerate}
+
+

@@ -1,0 +1,17 @@
+\item
+In this problem, we revisit problem 5 of homework 2.
+
+A random variable $X$ is repeatedly measured, but the measurements are noisy.  Assume that the measurement process can be described by
+\begin{equation*}
+    Y(k) = X + V(k)
+\end{equation*}
+where $X, V(0), V(1), V(2), \ldots$ are jointly Gaussian random variables with
+\begin{align*}
+    E \{ X \} & = 0
+        & E \{ X^2 \} & = X_0 \\
+    E \{ V(k) \} & = 0
+        & E \{ V(k+j) V(k) \} & = \Sigma_{_{V}} \delta(j) \\
+    E \{ X V(k) \} & = 0 \; .
+\end{align*}
+Let $y(k)$ be the k-th measurement (i.e. outcome of $Y(k)$) and let $\bar{y}(k) = \{ y(0),\ldots,y(k) \}$. Using a Kalman filter, obtain the least squares estimate of $X$ given the $k+1$ measurements $y(0), \ldots, y(k)$ and the corresponding estimation error covariance, i.e.\ find $\hat{x}_{|\bar{y}(k)}$ and $\Lambda_{\tilde{X}_{|\bar{y}(k)} \tilde{X}_{|\bar{y}(k)}}$. You may leave your expressions for $\hat{x}_{|\bar{y}(k)}$ and $\Lambda_{\tilde{X}_{|\bar{y}(k)} \tilde{X}_{|\bar{y}(k)}}$ in a recursive form.
+

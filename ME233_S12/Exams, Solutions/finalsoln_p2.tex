@@ -1,0 +1,33 @@
+\section*{Problem 2}
+
+\begin{enumerate}
+    \item
+    Suppose a causal output feedback controller achieves $E\{u^2(k)\} \leq \alpha$. Since the control law is suboptimal in terms of the cost function $J(\rho)$, we have
+    \begin{align*}
+        J(\rho) & \leq E \{ x^T(k) Qx(k) + \rho u^T(k) u(k) \} \\
+        & = E \{ x^T(k) Qx(k) \} + \rho E \{ u^T(k) u(k) \} \\
+        & \leq E \{ x^T(k) Qx(k) \} + \alpha \rho
+    \end{align*}
+    Rearranging terms, we have
+    \begin{align*}
+        E \{ x^T(k) Q x(k) \} \geq J(\rho) - \alpha \rho
+    \end{align*}
+
+    \item
+    From the previous part, we know that any control law that satisfies $E\{u^2(k)\} \leq \alpha$ must also satisfy $E \{ x^T(k) Q x(k) \} \geq J(\rho_*) - \alpha \rho_*$. This implies that $\bar{J} \geq J(\rho_*) - \alpha \rho_*$.
+
+    It now remains to show that the control law that optimizes $J(\rho_*)$ achieves this lower bound on $\bar{J}$. For the control law that optimizes $J(\rho_*)$, we have $E\{u^2(k)\} = \alpha$ and
+    \begin{align*}
+        J(\rho_*) & = E \{ x^T(k) Qx(k) + \rho_* u^T(k) u(k) \} \\
+        & = E \{ x^T(k) Qx(k) \} + \rho_* E \{ u^T(k) u(k) \} \\
+        & = E \{ x^T(k) Qx(k) \} + \alpha \rho_*
+    \end{align*}
+    which implies that
+    \begin{align*}
+        E \{ x^T(k) Q x(k) \} & = J(\rho_*) - \alpha \rho_*
+            & E\{u^2(k)\} & \leq \alpha
+    \end{align*}
+    Therefore, this control law satisfies the variance constraint on the control input and achieves the lower bound on $\bar{J}$ given by $J(\rho_*) - \alpha \rho_*$. Therefore, this control law optimizes the linear quadratic Gaussian control problem with a variance constraint and the corresponding cost is $\bar{J} = J(\rho_*) - \alpha \rho_*$.
+    
+    
+\end{enumerate}

@@ -1,0 +1,53 @@
+\section*{Problem 1}
+
+This problem is a pole placement, disturbance rejection, tracking control problem. We first define
+\begin{align*}
+    A(q^{-1}) & = 1 - 0.7 q^{-1}
+        & B(q^{-1}) & = 1 - 0.5 q^{-1}
+        & \drm & = 1
+\end{align*}
+so that the plant model can be written as
+\begin{align*}
+    A(q^{-1}) y(k) = q^{-\drm} B(q^{-1}) [u(k) + d(k)]
+\end{align*}
+Since perfect tracking is desired, we must cancel all plant zeros. This corresponds to factoring $B(q^{-1})$ as $B^s(q^{-1}) B^u(q^{-1})$ where
+\begin{align*}
+    B^s(q^{-1}) & = 1 - 0.5 q^{-1}
+        & B^u(q^{-1}) & = 1
+\end{align*}
+Since we would like the closed-loop poles to only include poles at the origin and the plant zeros, we choose
+\begin{align*}
+    A_c^{'} = 1
+\end{align*}
+As for the disturbance annihilating polynomial, there are two choices that make sense:
+\begin{align*}
+    A_{d1}(q^{-1}) & = 1 - q^{-6} \\
+        A_{d2}(q^{-1}) & = (1 - q^{-2})(1-q^{-3})
+\end{align*}
+The first one has the benefit of having fewer terms, whereas the second one has the benefit of being lower order.
+
+To design the controller, we must first solve the Diophantine equation
+\begin{align*}
+    A_c^{'}(q^{-1}) = A(q^{-1}) A_d(q^{-1}) R^{'}(q^{-1}) + q^{-\drm} B^u(q^{-1}) S(q^{-1})
+\end{align*}
+Since $\drm = 1$ and the order of $B^u(q^{-1})$ is zero, we see that $R^{'}(q^{-1})$ must have order 0. In particular, this means that $R^{'}(q^{-1}) = 1$. Plugging this into the Diophantine along with $B^u(q^{-1}) = 1$, we have
+\begin{gather*}
+    A_c^{'}(q^{-1}) = A(q^{-1}) A_d(q^{-1}) + q^{-1} S(q^{-1}) \\
+    \Rightarrow \qquad S(q^{-1}) = q [A_c^{'}(q^{-1}) - A(q^{-1}) A_d(q^{-1})]
+\end{gather*}
+Therefore if we choose $A_d(q^{-1}) = A_{d1}(q^{-1})$, we obtain $S(q^{-1})$ as
+\begin{align*}
+    S_1(q^{-1}) = 0.7 + q^{-5} - 0.7 q^{-6}
+\end{align*}
+whereas if we choose $A_d(q^{-1}) = A_{d2}(q^{-1})$, we instead obtain $S(q^{-1})$ as
+\begin{align*}
+    S_2(q^{-1}) = 0.7 + q^{-1} + 0.3 q^{-2} - 0.7 q^{-3} - q^{-4} + 0.7 q^{-5}
+\end{align*}
+
+The feedforward part of the controller is given by $T(q,q^{-1}) = A_c^{'}(q^{-1}) q^{+\drm} = q$. The control law is thus given by
+\begin{align*}
+    B^s(q^{-1}) A_{di}(q^{-1}) u(k) & = q \, y_d(k) - S_i(q^{-1}) y(k) \\
+    & = y_d(k+1) - S_i(q^{-1}) y(k)
+\end{align*}
+where $i \in \{1,2\}$.
+

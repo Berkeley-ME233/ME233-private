@@ -1,0 +1,25 @@
+\section*{Problem 1}
+
+Consider the state space system
+\begin{align*}
+    X(k+1) & = AX(k) + BW(k) \\
+    Y(k) & = CX(k) + V(k)
+\end{align*}
+where $X(0), W(0), W(1), \ldots, V(0), V(1), \ldots$ are independent Gaussian random vectors and
+\begin{align*}
+    E\{X(0)\} & = x_0 
+        & E\{ (X(0) - x_0) (X(0) - x_0)^T \} & = X_0 \\
+    E\{W(k)\} & = 0
+        & E\{ W(k+j) W^T(k) \} & = \Sigma_W \delta(j) \\
+    E\{V(k)\} & = 0
+        & E\{ V(k+j) V^T(k) \} & = \Sigma_V \delta(j) \\
+\end{align*}
+
+\begin{enumerate}
+    \item
+    Find $\Lambda_{XY}(k,j)$ and $\Lambda_{YY}(k,j)$ in terms of $\Lambda_{XX}(k,j)$.
+    
+    \item
+    Find the least squares estimator of $X(0)$ given $Y(0)$ and $Y(1)$.
+    
+\end{enumerate}

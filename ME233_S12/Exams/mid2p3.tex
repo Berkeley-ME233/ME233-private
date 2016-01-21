@@ -1,0 +1,49 @@
+\section*{Problem 3}
+
+Consider the state space system
+\begin{align*}
+    x(k+1) & = Ax(k) + Bu(k) + B_w w(k) \\
+    y(k) & = Cx(k) + v(k)
+\end{align*}
+where $w(k)$ and $v(k)$ are zero-mean white Gaussian random sequences satisfying
+\begin{align*}
+    E \left\{ \begin{bmatrix}
+            w(k+j) \\
+            v(k+j)
+        \end{bmatrix} \begin{bmatrix}
+            w^T(k) & v^T(k)
+        \end{bmatrix} \right\} = \begin{bmatrix}
+            W & 0 \\
+            0 & V
+        \end{bmatrix} \delta(j)
+\end{align*}
+$y(k)$ is the measurement signal available to the controller, and $u(k)$ is the control sequence to be designed. We are interested in finding an \underline{output feedback} controller\footnote{$u(k)$ is allowed to be a function of $y(k),y(k-1),y(k-2),\ldots$} that minimizes the cost function
+\begin{align*}
+    J = \operatorname{trace} \left[ \frac{1}{2\pi} \int_{-\pi}^\pi
+        \left( Q_f(e^{j\omega}) \Phi_{XX}(\omega) Q_f^*(e^{j\omega})
+        + \rho \Phi_{UU}(\omega) \right) d\omega \right]
+\end{align*}
+where $\Phi_{XX}(\omega)$ and $\Phi_{UU}(\omega)$ are respectively the power spectral densities of $x(k)$ and $u(k)$, $Q_f(z)$ has the realization $C_f (zI - A_f)^{-1} B_f + D_f$, and $\rho > 0$.
+
+\begin{enumerate}
+    \item
+    Define $x_f(k)$ so that cost function can be written
+    \begin{align*}
+        J = E \{ x_f^T(k) x_f(k) + \rho u^T(k) u(k) \}
+    \end{align*}
+
+    \item
+    Reformulate the problem of finding the output feedback controller that minimizes $J$ as a standard \underline{output feedback} LQG optimal control problem, i.e.\ reformulate the cost function as
+    \begin{align*}
+        J = E \left\{ x_e^T(k) Q x_e(k) + u^T(k) R u(k) \right\}
+    \end{align*}
+    where
+    \begin{align*}
+        x_e(k+1) & = A_e x_e(k) + B_e u(k) + B_{we} \, w(k) \\
+        y(k) & = C_e x_e(k) + v(k)
+    \end{align*}
+
+    \item
+    Find the controller that optimizes this cost under the assumption that all relevant existence conditions are met. You are not asked to find the optimal cost.
+
+\end{enumerate} 

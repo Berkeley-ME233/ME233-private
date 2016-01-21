@@ -1,0 +1,51 @@
+\item
+{\bf Kalman filter with correlated input and measurement noise:}
+
+Consider the discrete-time system given by
+\begin{align}
+    x(k+1) & = A x(k) + B u(k) + w(k)
+        \label{ds1} \\
+    y(k) & = C x(k) + v(k)
+        \label{ds2}
+\end{align}
+where $E \{x(0)\} = x_o$, $E\{ w(k) \} = 0$, $E\{v(k)\} = 0$, $E \{ (x(0) - x_o)(x(0) - x_o)^T \} = X_o$, $E\{ (x(0) - x_o) w^T(k) \} = 0$, $E \{(x(0) - x_o) v^T(k) \} = 0$, and
+\begin{align*}
+    E \left \{ \begin{bmatrix}
+            w(k) \\
+            v(k)
+        \end{bmatrix} \begin{bmatrix}
+            w(j)^T & v(j)^T
+        \end{bmatrix} \right \} = \begin{bmatrix}
+            W & S \\
+            S^T & V
+        \end{bmatrix} \, \delta(k-j)
+\end{align*}
+%and $W \in \mathbb{R} ^{n \times n}$ is a positive semi-definite matrix
+where $V \in \mathbb{R} ^{m \times m}$ is positive definite matrix. The a-priori Kalman filter for this system can be written as
+\begin{align}
+    \hat{x}^o(k+1) & = A \hat{x}^o(k) + B u(k) + L(k) [ y(k) - C \hat{x}^o(k) ]
+        \label{kf-1} \\
+    L(k) & = [ A M(k) C^T + S ] [ C M(k) C^T + V ] ^{-1}\\
+    M(k+1) & = A M(k) A^T + W - [AM(k) C^T + S] [ C M(k) C^T + V ]^{-1} [CM(k) A^T + S^T]
+        \label{kf-3}
+\end{align}
+with initial conditions $\hat{x}^o(0) = x_o$ and $M(0) = X_o$.
+
+Derive Eqs.~\eqref{kf-1}--\eqref{kf-3} using previously-derived results in Kalman filtering and noticing that Eqs.~\eqref{ds1}--\eqref{ds2} can be written as
+\begin{align*}
+    x(k+1) & = A^{'} x(k) + B u(k) + w^{'}(k) + SV^{-1} y(k) \, ,
+\end{align*}
+where $A^{'} = A - SV^{-1}C$ and
+\begin{align*}
+    E \left \{ \begin{bmatrix}
+            w^{'}(k) \\
+            v(k)
+        \end{bmatrix} \begin{bmatrix}
+            w^{'}(j)^T & v(j)^T
+        \end{bmatrix} \right \} = \begin{bmatrix}
+            W^{'} & 0 \\
+            0 & V
+        \end{bmatrix} \, \delta(k-j),\hspace{3em}W^{'} = W - S V^{-1} S^T \; .
+\end{align*}
+
+

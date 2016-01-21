@@ -1,0 +1,27 @@
+\section*{Problem 3}
+
+\begin{enumerate}
+    \item
+    Since $B(q^{-1})$ is a Schur polynomial of $q^{-1}$, none of the plant zeros should be canceled. Therefore, we use a standard zero phase error tracking compensator, which is given by
+    \begin{align*}
+        T(q,q^{-1}) = \frac{ q^{+\drm} A(q^{-1}) B(q) }{ B^2(1) }
+    \end{align*}
+    
+    \item
+    When the control policy $u(k) = T(q,q^{-1}) u_d(k)$ is used, the system output is given by
+    \begin{align*}
+        y(k) & = \left( \frac{ q^{-\drm} B(q^{-1}) }{ A(q^{-1}) } \right)
+            \left( \frac{ q^{+\drm} A(q^{-1}) B(q) }{ B^2(1) } \right) u_d(k) \\
+        & = \frac{ B(q^{-1}) B(q) }{ B^2(1) } u_d(k)
+    \end{align*}
+    Since the desired system output is expressed as a sum of discrete-time sinusoids, it is appropriate to use frequency domain analysis. The frequency response from $u_d(k)$ to $y(k)$ is
+    \begin{align*}
+        \frac{ B(e^{-j\omega}) B(e^{j\omega}) }{ B^2(1) } = \frac{ |B(e^{j\omega})|^2 }{ B^2(1) }
+    \end{align*}
+    Therefore, if we choose
+    \begin{align*}
+        u_d(k) = \sum_{i=1}^r \frac{ B^2(1) }{ |B(e^{j\omega})|^2 } c_i \sin(\omega_i k + \phi_i)
+    \end{align*}
+    the output $y(k)$ will perfectly track $y_d(k)$.
+    
+\end{enumerate}

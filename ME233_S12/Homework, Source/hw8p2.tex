@@ -1,0 +1,38 @@
+\item
+Consider the following stationary stochastic system
+\begin{align}
+    \begin{bmatrix}
+            x_1(k+1) \\
+            x_2(k+1)
+        \end{bmatrix} & = \begin{bmatrix}
+            0.8 & 1 \\
+            0 & 0
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + \begin{bmatrix}
+            1 \\
+            -2
+        \end{bmatrix} u(k) + \begin{bmatrix}
+            1 \\
+            0
+        \end{bmatrix} w(k)
+        \label{eq:sysx} \\
+    y(k) & = x_1(k) + v(k) \nonumber %\\
+%    x_0 & = E \{ x(0) \} \nonumber \\
+%    X_0 & = E\{ (x(0) - x_o) (x(0) - x_o)^T \} \nonumber
+\end{align}
+where
+$u(k)$ is a deterministic (known) input,
+$y(k)$ is the measured output,
+$w(k)$ and $v(k)$ are zero-mean, jointly Gaussian WSS random sequences with
+\begin{gather*}
+    E \left \{ \begin{bmatrix} w(k+j) \\ v(k+j) \end{bmatrix} \begin{bmatrix} w(k) & v(k) \end{bmatrix} \right\}
+        = \begin{bmatrix} 0.225 & 0 \\ 0 & 0.625 \end{bmatrix} \delta(j) %\\
+    %E \left \{ \begin{bmatrix} w(k) \\ v(k) \end{bmatrix} (x(0) - x_o)^T  \right \} = 0
+\end{gather*}
+
+Design a minimum variance regulator for this system. 
+
+
+

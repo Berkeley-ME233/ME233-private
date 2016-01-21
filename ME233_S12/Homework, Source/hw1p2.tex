@@ -1,0 +1,10 @@
+\item
+In the ``Monty Hall'' three-door problem, a contestant is asked to choose one of three doors. One of the three doors conceals a prize while the other two do not. After the contestant chooses, Monty Hall (the master of ceremonies of the Let's Make a Deal television show) opens one of the two doors the player did not choose to reveal one door that does not conceal the prize. The contestant is then permitted to either stay with their original choice or switch to the other unopened door. Determine the contestant's probability of getting the prize if she switches. Assume that before Monty Hall opens one of the doors, the prize is equally likely to be hidden behind each of the three doors.
+
+Hint: Let the doors be called $x$, $y$, and $z$. Let $C_x$ be the event that the prize is behind door $x$ and so on. Let $H_x$ be the event that the host opens door $x$ and so on. Assuming that you choose door $x$, the probability that you win a car if you then switch your choice is given by
+\begin{align*}
+    P((H_z \cap C_y) \cup (H_y \cap C_z)) \; .
+\end{align*}
+Notice that, by Baye's rule, $P(H_z \cap C_y) = P(H_z|C_y) P(C_y)$.
+
+

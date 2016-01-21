@@ -1,0 +1,154 @@
+\section*{Problem 5}
+
+\begin{enumerate}
+    \item
+    To find the $A(q^{-1})$ and $B(q^{-1})$ polynomials and the value of $\drm$, we find the transfer function from $u(k)$ to $y(k)$:
+    \begin{align*}
+        \frac{ z^{-\drm} B(z^{-1}) }{ A(z^{-1}) } & = \begin{bmatrix}
+                1 & 0
+            \end{bmatrix} \begin{bmatrix}
+                z - 1 & -1 \\
+                0 & z
+            \end{bmatrix}^{-1} \begin{bmatrix}
+                1 \\
+                -2
+            \end{bmatrix} = \frac{1}{z^2 - z} \begin{bmatrix}
+                1 & 0
+            \end{bmatrix} \begin{bmatrix}
+                z & 1 \\
+                0 & z-1
+            \end{bmatrix}^{-1} \begin{bmatrix}
+                1 \\
+                -2
+            \end{bmatrix} = \frac{z - 2}{z^2 - z} \\
+        & = \frac{z - 2}{z^2 - z} \frac{z^{-2}}{z^{-2}} = \frac{ z^{-1} (1 - 2z^{-1}) }{ 1 - z^{-1} }
+    \end{align*}
+    Therefore, we have
+    \begin{align*}
+        A(q^{-1}) & = 1 - q^{-1}
+            & B(q^{-1}) & = 1 - 2q^{-1}
+            & \drm & = 1
+    \end{align*}
+    To find the $C(q^{-1})$ polynomial, we first find the stationary Kalman filter for the system. The relevant DARE is
+    \begin{align*}
+        \begin{bmatrix}
+                m_1 & m_2 \\
+                m_2 & m_3
+            \end{bmatrix} & = \begin{bmatrix}
+                1 & 1 \\
+                0 & 0
+            \end{bmatrix} \begin{bmatrix}
+                m_1 & m_2 \\
+                m_2 & m_3
+            \end{bmatrix} \begin{bmatrix}
+                1 & 0 \\
+                1 & 0
+            \end{bmatrix} + \begin{bmatrix}
+                1 \\
+                0
+            \end{bmatrix} 1 \begin{bmatrix}
+                1 & 0
+            \end{bmatrix} \\
+        & \quad - \begin{bmatrix}
+                1 & 1 \\
+                0 & 0
+            \end{bmatrix} \begin{bmatrix}
+                m_1 & m_2 \\
+                m_2 & m_3
+            \end{bmatrix} \begin{bmatrix}
+                1 \\
+                0
+            \end{bmatrix} \left( \begin{bmatrix}
+                1 & 0
+            \end{bmatrix} \begin{bmatrix}
+                m_1 & m_2 \\
+                m_2 & m_3
+            \end{bmatrix} \begin{bmatrix}
+                1 \\
+                0
+            \end{bmatrix} + 2 \right)^{-1} \begin{bmatrix}
+                1 & 0
+            \end{bmatrix} \begin{bmatrix}
+                m_1 & m_2 \\
+                m_2 & m_3
+            \end{bmatrix} \begin{bmatrix}
+                1 & 0 \\
+                1 & 0
+            \end{bmatrix}
+    \end{align*}
+    By examining the $(1,2)$ and $(2,2)$ blocks of the DARE, we immediately see that $m_2 = 0$ and $m_3 = 0$. Thus, it only remains to find a value of $m_1$ that satisfies the $(1,1)$ block of the DARE, i.e.\ we need to find $m_1$ such that
+    \begin{align*}
+        m_1 = m_1 + 1 - m_1 (m_1 + 2)^{-1} m_1
+    \end{align*}
+    This is equivalent to finding $m_1 \neq -2$ that satisfies 
+    \begin{align*}
+        m_1 + 2 = m_1^2
+    \end{align*}
+    The two solutions of this equation are $m_1 = 2$ and $m_1 = -1$. Since we are interested in the positive semi-definite solution of the DARE, we take $m_1 = 2$. The corresponding Kalman filter gain is
+    \begin{align*}
+        L = \begin{bmatrix}
+                m_1 \\
+                0
+            \end{bmatrix} (m_1 + 2)^{-1} = \begin{bmatrix}
+                0.5 \\
+                0
+            \end{bmatrix}
+    \end{align*}
+    Therefore, we have
+    \begin{align*}
+        C(z^{-1}) & = z^{-2} \det \left( \begin{bmatrix}
+                z & 0 \\
+                0 & z
+            \end{bmatrix} - \begin{bmatrix}
+                1 & 1 \\
+                0 & 0
+            \end{bmatrix} + \begin{bmatrix}
+                0.5 \\
+                0
+            \end{bmatrix} \begin{bmatrix}
+                1 & 0
+            \end{bmatrix} \right) = z^{-2} \det \begin{bmatrix}
+                z - 0.5 & -1 \\
+                0 & z
+            \end{bmatrix} \\
+        & = z^{-2} (z^2-0.5z)
+    \end{align*}
+    This yields $C(q^{-1}) = 1 - 0.5 z^{-1}$, which is anti-Schur as desired.
+
+    \item
+    To solve the minimum variance regulator problem, we first factor $B(q^{-1}) = B^s(q^{-1}) B^u(q^{-1})$ where $B^s(q^{-1})$ is anti-Schur, $B^u(q^{-1})$ is Schur, and $B^u(q^{-1})$ is monic. This corresponds to choosing
+    \begin{align*}
+        B^s(q^{-1}) & = -2
+            & B^u(q^{-1}) & = -\frac{1}{2} + q^{-1}
+    \end{align*}
+    We also define 
+    \begin{align*}
+        \bar{B}^u(q) = q B^u(q^{-1}) = -\frac{1}{2} q + 1
+    \end{align*}
+    and note that
+    \begin{align*}
+        \bar{B}^u(q^{-1}) = 1 - \frac{1}{2} q^{-1}
+    \end{align*}
+    To design the minimum variance regulator, we must solve the Diophantine equation
+    \begin{align*}
+        C(q^{-1}) \bar{B}^u(q^{-1}) & = A(q^{-1}) R(q^{-1}) + q^{-\drm} B^u(q^{-1}) S(q^{-1})
+    \end{align*}
+    for $R(q^{-1})$ and $S(q^{-1})$. The orders of these polynomials are $n_r = 1$ and $n_s = 0$. Therefore, we need to solve for values of $r_1$ and $s_0$ that satisfy
+    \begin{align*}
+        (1 - 0.5 q^{-1})(1-0.5 q^{-1}) = (1 - q^{-1}) (1 + r_1 q^{-1}) + q^{-1} (-0.5 + q^{-1}) s_0
+    \end{align*}
+    Equating coefficients for the $q^{-1}$ and $q^{-2}$ terms on both sides of the equation respectively yields the equations
+    \begin{align*}
+        -1 & = r_1 - 1 - 0.5 s_0 \\
+        0.25 & = -r_1 + s_0
+    \end{align*}
+    Solving these equations yields $s_0 = 0.5$ and $r_1 = 0.25$. The optimal controller is given by
+    \begin{gather*}
+        B^s(q^{-1}) R(q^{-1}) u(k) = - S(q^{-1}) y(k)
+    \end{gather*}
+    Plugging in all relevant values yields the optimal control law
+    \begin{align*}
+        -2 (1 + 0.25 q^{-1}) u(k) = -0.5 y(k)
+    \end{align*}
+
+\end{enumerate}

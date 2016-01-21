@@ -1,0 +1,60 @@
+\item
+Consider the design of an optimal LQR for the SISO controllable and observable LTI discrete-time system described by Eq.~\eqref{abc1},
+\begin{align*}
+    x(k+1) & = A \: x(k) + B \: u(k)\\
+    y(k) & = C \: x(k) \, \nonumber
+\end{align*}
+where $u(k) = -K \: x(k)$ is the optimal control input that minimizes the following cost criteria
+\begin{align*}
+    %\label{cost1}
+    J = \sum_{k=0}^\infty \: \left \{ y^2(k) + u^T(k) R u(k) \right \} \:,
+\end{align*}
+$R \in (0,\infty)$ is the input weight and
+\begin{align}
+    \label{gz1}
+    G(z) = C(zI - A)^{-1}B = \frac{z(z+2)}{(z-1)(z+0.5)(z-2)}\\[1em] \nonumber
+\end{align}
+
+\begin{enumerate}
+    \item
+    Draw (by hand) the locus of the eigenvalues of $A_c = A - BK$ and their respective reciprocals for $R \in (0,\infty)$.
+
+    \item
+    What are the eigenvalues of $A_c = A - BK$ for $R \to 0$?
+
+    \item
+    What are the eigenvalues of $A_c = A - BK$ for $R \to \infty$?
+
+    \item
+    Use the MATLAB function {\tt rlocus} to verify your answers to parts (a)-(c).
+
+    \item
+    Use the MATLAB function {\tt rlocfind} (or {\tt rlocus}) to
+    determine the unique value of the input weight $R_o$ for which all closed-loop eigenvalues are real and two eigenvalues are equal (i.e. double roots) and nonzero.
+
+    \item
+    Find the controllable canonical realization for the transfer function $G(z)$ in Eq.~\eqref{gz1}.
+
+    \item
+    Using the canonical realization obtained in (f), compute the following quantities (using MATLAB) for the LQR problem defined above with $R = R_o$ (the value determined in part (e)): the solution of the algebraic Riccati equation $P_o$, the optimal gain $K_o$ and the location of the closed-loop eigenvalues.
+
+    %\item
+    %Using either the MATLAB function {\tt bode} or {\tt nyquist}, determine the gain and phase margins of the LQR open loop transfer function
+    %\begin{align*}
+    %    G_o(z) = K_o ( z I - A)^{-1} B
+    %\end{align*}
+    %for the optimal gain $K_o$ determined in part (g). Use the MATLAB function {\tt rlocus} to verify your gain margin calculations by plotting the root locus of $1 + \gamma G_o(z)$, for $\gamma \in (0,\infty)$.
+    %
+    %\item
+    %Compute the guaranteed LQR phase and gain margins of the open loop transfer function $G_o(z)$ in part (g) using the results based on the return difference inequality in lecture 10 (also in the ME232 class notes pages 137--138).
+    %
+    %\item
+    %The guaranteed phase and gain margin results for a continuous-time LQR in the ME232 class note pages 135--137 are independent of the input weight $R$ and the state space realization of the transfer function $G(s) = C(sI-A)^{-1}B$. However, the corresponding results for discrete-time systems do depend on $R$. Show that the guaranteed discrete-time LQR phase and gain margin results are, in fact, independent of the state-space realization of $G(z)$ in Eq.~\eqref{gz1}, provided that the realizations are related by a similarity transformation.
+    %
+    %\textbf{Hint:}
+    %Let $A,\,B,\,C$ and $\bar A,\,\bar B,\,\bar C$ be two state space realizations of $G(z)$ that are related by a similarity transformation. For a given value of $R$, let $P$ and $\bar P$ respectively be the solutions of the discrete algebraic Riccati equation for the two realizations. Show that $B^TPB =
+    %\bar B^T \bar P \bar B$.
+
+\end{enumerate}
+
+

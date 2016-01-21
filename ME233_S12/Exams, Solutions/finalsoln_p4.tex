@@ -1,0 +1,14 @@
+\section*{Problem 4}
+
+Since the system is stable, there is no need to do any pole placement. Moreover, note that $d(k)$ and $r(k)$ are both periodic with period $N = 35$. Therefore, to make the tracking error asymptotically converge to zero, we only need to use the repetitive controller
+\begin{gather*}
+    u(k) = C_R(q^{-1}) [r(k) - y(k)] \\
+    C_R(q^{-1}) = \frac{k_r}{b} \frac{q^{-N}}{1-q^{-N}} q^{+\drm} A(q^{-1})
+\end{gather*} 
+where
+\begin{align*}
+    0 & < k_r < 2
+        & b & \geq 1
+        & \drm & = 2
+        & A(q^{-1}) & = 1 - 0.8q^{-1}
+\end{align*}

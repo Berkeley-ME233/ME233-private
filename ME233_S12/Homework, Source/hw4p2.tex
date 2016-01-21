@@ -1,0 +1,36 @@
+\item
+We wish to determine how to split a positive number $L$ into $N$ pieces, so that the product of the $N$ pieces is maximized. The problem can be solved using dynamic programming by formulating it as follows. Consider a first-order ``pure integrator"
+\begin{align*}
+    x(k+1) = x(k) + u(k)\hspace{3em} x(0) = 0,
+\end{align*}
+we wish to determine the optimal control sequence
+\begin{align*}
+    U_0^o = \{ u^o(0),\,u^o(1),\,\cdots,\, u^o(N-1)\}
+\end{align*}
+such that:
+
+\begin{enumerate}
+    \item
+    $u^o(k) \ge 0$.
+
+    \item
+    $x(N) = L$.
+
+    \item
+    The following cost function is maximized:
+    \begin{align*}
+        J  = \prod_{k=0}^{N-1}\, u (k) = u (0) \,u (1) \,\cdots \, u(N-1)
+    \end{align*}
+\end{enumerate}
+
+To use dynamic programming, it is convenient to define the following optimal value function
+\begin{align*}
+    J_m^o[x(m)]  = \max_{U_m} \prod_{k=m}^{N-1}\, u(k)
+\end{align*}
+where $U_m  = \{ u(m),\,u(m+1),\,\cdots,\, u(N-1)\}$ is the set of all  feasible control sequences from the instance $m$.
+
+\textbf{Hint:} Notice that, because of the terminal condition $x(N) = L$, and the state equation, the optimal value function at $x(N-1)$ is given by
+\begin{align*}
+    J^o[x(N-1)] = u^o(N-1) = L - x(N-1)
+\end{align*}
+Use the Bellman equation starting from this boundary condition.

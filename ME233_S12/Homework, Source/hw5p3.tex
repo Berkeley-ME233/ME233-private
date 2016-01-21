@@ -1,0 +1,111 @@
+\item
+In this problem we will verify some results concerning the convergence of the LQR's discrete Riccati equation (DRE) to a steady state solution and the existence, uniqueness and closed loop stability of the discrete algebraic Riccati equation (DARE) solution.
+
+
+Consider the design of an optimal LQR for the LTI discrete-time system
+\begin{align}
+    \label{abc1}
+    x(k+1) & = A \: x(k) + B \: u(k) \\
+    y(k) & = C \: x(k) \, \nonumber
+\end{align}
+where $u(k) = -K(k+1) \: x(k)$ is the optimal control input that minimizes the following cost criteria
+\begin{align*}
+    %\label{cost1}
+    J[x_o, m, Q_{_f},N] = x^T(N)\, Q_{_f} \, x(N) + \sum_{k=m}^{N-1} \: \left \{ y^2(k) + R\,u^2(k) \right \}
+        \quad \textrm{s.t.} \quad x(m) = x_o\,,
+\end{align*}
+for $m = 0$, $Q_{_f} = Q_{_f}^T \succeq 0$ and $R = R^T \succ 0$, and any arbitrary initial condition $x_o \in \mathcal{R}^n$.
+
+Define the optimal value value function
+\begin{align*}
+    J^o[x_o, m, Q_{_f},N] = \min_{U_{[m,N-1]}} \, J[x_o, m, Q_{_f},N]
+\end{align*}
+where $U_{[m,N-1]} = \left \{ u(m),\, \cdots , \, u(N-1)\right \}$ is the set of all possible control actions from $k=m$ to $k=N-1$.
+
+\begin{enumerate}
+
+\item
+\label{case:a}
+Let
+\begin{align*}
+    A = \begin{bmatrix}
+            1.2  & 0 & 0 \\
+            0 & 0 & 1 \\
+            0 & -2 & 0
+        \end{bmatrix} \hspace{2em}
+        B = \begin{bmatrix}
+            1 & 0 \\
+            0 & 0 \\
+            0 & 1 \end{bmatrix} \hspace{2em}
+        C = \begin{bmatrix}
+            10 & 0 & 0
+        \end{bmatrix} \hspace{2em} R = \begin{bmatrix}
+            10 & 0 \\
+            0 & 10
+        \end{bmatrix}
+\end{align*}
+and verify that $(A,B)$ is stabilizable but $(C,A)$ is not detectable. Let $P(N) = Q_{_f}$. For each of the four cases
+\begin{enumerate}
+    \item $Q_{_f} = 0$
+    \item $Q_{_f} = {\rm diag}(0,\,0,\,1)$,
+    \item $Q_{_f} = {\rm diag}(1,\,1,\,1)$,
+    \item $Q_{_f} = {\rm diag}(10,\,1,\,1)$,
+\end{enumerate}
+do the following:
+
+\begin{itemize}
+    \item
+    For $x_o = [1 \ \ 0 \ \ 1]^T$, plot $J^o[x_o, N - m, Q_{_f}, N] $  vs $m$. (Note that this will require computing $P(k)$, the solution of the Riccati difference equation, backwards from $P(50) = Q_{_f}$.)
+
+    \item
+    Compute the solution of the DARE using the MATLAB command {\tt dare} and compare it with values of $P(0)$ and $P(1)$.
+
+\end{itemize}
+Discuss your results.
+
+
+%\item
+%Let
+%\begin{align*}
+%    A = \begin{bmatrix}
+%            1.2  & 1 & 0 \\
+%            0 & 0 & 1 \\
+%            0 & -2 & 0
+%        \end{bmatrix}
+%\end{align*}
+%and everything else be the same as in part (a). Repeat part (a) for the two cases
+%\begin{enumerate}
+%    \item $Q_{_f} = 0$
+%    \item $Q_{_f} = {\rm diag}(0,\,0,\,1)$.
+%\end{enumerate}
+%Discuss your results.
+
+\item
+Let
+\begin{align*}
+    A & = \begin{bmatrix}
+            0.8 & 1 & 1 \\
+            0 & -1 & 1 \\
+            0 & 0 & -1
+        \end{bmatrix}
+        & B & = \begin{bmatrix}
+            0 \\
+            0 \\
+            1
+        \end{bmatrix}
+        & C & = \begin{bmatrix}
+            0 & 1 & 0
+        \end{bmatrix}
+        & R & = 0.1 \; .
+\end{align*}
+Repeat part (a) for the two cases
+
+\begin{enumerate}
+    \item $Q_{_f} = 0$
+    \item $Q_{_f} = {\rm diag}(0,\,0,\,1)$.
+\end{enumerate}
+Discuss your results.
+
+\end{enumerate}
+
+

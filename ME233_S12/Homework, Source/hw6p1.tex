@@ -1,0 +1,80 @@
+\item
+The model of a hard disk drive with dual-stage actuation is given by
+\begin{align*}
+    x(k+1) & = Ax(k) + Bu(k) + B_w w(k) \\
+    y(k) & = \begin{bmatrix}
+            C_1 \\
+            C_2
+        \end{bmatrix} x(k) + v(k)
+\end{align*}
+where $w(k)$ and $v(k)$ are jointly Gaussian WSS zero-mean random vector sequences that satisfy
+\begin{align*}
+    E \left\{ \begin{bmatrix}
+            w(k+j) \\
+            v(k+j)
+        \end{bmatrix} \begin{bmatrix}
+            w^T(k) & v^T(k)
+        \end{bmatrix} \right\} = \begin{bmatrix}
+            I & 0 \\
+            0 & I
+        \end{bmatrix} \delta(j) \; .
+\end{align*}
+The relevant state-space matrices are included in the file \verb|hw6p1_model.mat|, which is located in the ``MATLAB code'' folder in the Resources section of bSpace.
+
+The signals $u$ and $y$ respectively represent the control action and the measurements available to the controller. Two other signals of interest are
+\begin{align*}
+        p_1(k) & = C_1 x(k) \\
+        p_2(k) & = C_2 x(k)
+\end{align*}
+The signal $p_1(k)$ represents the position error of the read/write head and the signal $p_2(k)$ represents the displacement of the secondary actuator. Our control design goal is to make the variance of $p_1(k)$ as small as possible while maintaining
+\begin{align}
+    3\sqrt{ E \{ p_2^2(k) \} } & \leq 500,
+        & 3\sqrt{ E \{ u_1^2(k) \} }& \leq 5,
+        & 3\sqrt{E \{ u_2^2(k) \} } & \leq 20 \; .
+        \label{eq:constrLQG_constraints}
+\end{align}
+
+Find \underline{positive} values of $\alpha_1$, $\alpha_2$, and $\alpha_3$ so that the controller that optimizes the infinite-horizon LQG cost function
+\begin{align*}
+    J = E \{ p_1^2(k) + \alpha_1 p_2^2(k) + \alpha_2 u_1^2(k) + \alpha_3 u_2^2(k) \}
+\end{align*}
+meets the constraints in \eqref{eq:constrLQG_constraints} and makes the variance of $p_1^2(k)$ ``small.'' (Try to achieve the performance  $3\sqrt{ E \{ p_1^2(k) \} } \leq 21.9$.)
+
+\textbf{Hints and comments:}
+\begin{itemize}
+    \item
+    This controller design will require a trial-and-error approach. For each chosen $\alpha_1$, $\alpha_2$, and $\alpha_3$, you will need to do the following in MATLAB:
+    \begin{enumerate}
+        \item
+        Design an LQR using the \verb|lqr| function.
+
+        \item
+        Design a Kalman filter using the \verb|kalman| function.
+
+        \item
+        Connect the LQR and the Kalman filter together using the \verb|lqgreg| function with the \verb|'current'| option.
+
+        \item
+        Form the closed-loop system \verb|syscl| from $\begin{bmatrix} w \\ v \end{bmatrix}$ to $\begin{bmatrix} p_1 \\ p_2 \\ u \end{bmatrix}$.
+
+        \item
+        For $i = 1,2,3,4$, use the command the \verb|norm(syscl(i,:))|. This computes $\sqrt{ E \{ p_1^2(k) \}}$, $\sqrt{ E \{ p_2^2(k) \}}$, $\sqrt{ E \{ u_1^2(k) \}}$, and $\sqrt{ E \{ u_2^2(k) \}}$ for the closed-loop system. Note that this will require 4 separate calls to the \verb|norm| command.
+    \end{enumerate}
+    Alternatively, steps (a)--(c) could be performed by directly solving the relevant discrete algebraic Riccati equations and forming the state space controller using the formulas given in lecture.
+
+    \item
+    \underline{Do not} use the function \verb|lqg| in MATLAB to find the optimal LQG controller for chosen values of $\alpha_1$, $\alpha_2$, and $\alpha_3$; you will get the wrong answer if you do! The \verb|lqg| function uses the a-priori state estimate in the control scheme rather than the a-posteriori state estimate, which results in suboptimal closed-loop performance.
+
+    \item
+    Note that the functions \verb|lqr| and \verb|kalman| take different systems as their input; be very careful when setting up the inputs into these functions.
+
+    \item
+    To verify that your algorithms are working correctly, verify that the closed-loop performance achieved when $\alpha_1 = \alpha_2 = \alpha_3 = 1$ is
+    \begin{align*}
+        3\sqrt{ E \{ p_1^2(k) \} } &  = 29.80
+            & 3\sqrt{ E \{ p_2^2(k) \} } &  = 42.26, \\
+        3\sqrt{ E \{ u_1^2(k) \} } & = 23.00,
+            & 3\sqrt{E \{ u_2^2(k) \} } & = 12.78 \; .
+    \end{align*}
+\end{itemize}
+

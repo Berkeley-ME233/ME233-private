@@ -1,0 +1,37 @@
+\section*{Problem 3}
+
+In this problem, we consider the discrete-time linear time-invariant system
+\begin{equation}
+\begin{aligned}
+    x(k+1) & = Ax(k) + Bu(k) \\
+    y(k) & = Cx(k)
+\end{aligned} \label{eq:p3_system}
+\end{equation}
+where $u(k)$ is the control input and $y(k)$ is the output of the system.
+
+\begin{enumerate}
+    \item
+    Find the optimal control policy $u_1^o(k)$ that minimizes the cost function
+    \begin{align}
+        J = y_f^T(N) \, y_f(N) + \sum_{k=0}^{N-1} \left[ y_f^T(k) \, y_f(k) + u^T(k) R \, u(k) \right]
+        \label{eq:p3_cost}
+    \end{align}
+    for the system \eqref{eq:p3_system} where $R \succ 0$, $y_f(k)$ is defined by
+    \begin{align*}
+        x_f(k+1) & = A_f \, x_f(k) + B_f \, y(k) \\
+        y_f(k) & = C_f \, x_f(k) + D_f \, y(k)
+    \end{align*}
+    and $x_f(0) = 0$. 
+    
+    Also find the corresponding value of the optimal cost.
+    
+    \item
+    Suppose we now make the restriction for $k=0,\ldots,N-1$ that $u(k)$ can only be an explicit function of $x(0),\ldots,x(k)$. Under this restriction, find the optimal control policy $u_2^o(k)$ that minimizes the cost function \eqref{eq:p3_cost} for the system \eqref{eq:p3_system}. 
+    
+    Also find the corresponding value of the optimal cost.
+    
+    \textbf{Hint: } The optimal control policy can be written as the output of a state space system that has $x(k)$ as its input.
+    
+    
+\end{enumerate}
+

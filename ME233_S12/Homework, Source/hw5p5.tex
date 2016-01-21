@@ -1,0 +1,62 @@
+\item
+(Former midterm problem) Consider the following stationary stochastic system
+\begin{align}
+    \begin{bmatrix}
+            x_1(k+1) \\
+            x_2(k+1)
+        \end{bmatrix} & = \begin{bmatrix}
+            0.8 & 1 \\
+            0 & 0
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + \begin{bmatrix}
+            0 \\
+            1
+        \end{bmatrix} u(k) + \begin{bmatrix}
+            1 \\
+            0
+        \end{bmatrix} w(k)
+        \label{eq:sysx} \\
+    y(k) & = x_1(k) + v(k) \nonumber
+%    x_0 & = E \{ x(0) \} \nonumber \\
+%    X_0 & = E\{ (x(0) - x_o) (x(0) - x_o)^T \} \nonumber
+\end{align}
+where
+$u(k)$ is a deterministic (known) input,
+$y(k)$ is the measured output,
+$w(k)$ and $v(k)$ are both white, zero mean, Gaussian and stationary random noises, and
+\begin{gather*}
+    E \left \{ \begin{bmatrix} w(k+j) \\ v(k+j) \end{bmatrix} \begin{bmatrix} w(k) & v(k) \end{bmatrix} \right\}
+        = \begin{bmatrix} W & 0 \\ 0 & V \end{bmatrix} \delta(j)
+%    E \left \{ \begin{bmatrix} w(k) \\ v(k) \end{bmatrix} (x(0) - x_o)^T  \right \} = 0
+\end{gather*}
+
+\begin{enumerate}
+    \item
+    Determine if there exists a unique steady state solution to the Riccati difference equation governing the Kalman filter a-priori state estimation error covariance, $M(k)$.
+
+    \item
+    Sketch the  root locus of the stationary Kalman filter closed-loop poles and their reciprocals for
+    $\frac{W}{V} \in (0 \in \infty)$.
+
+    \item
+    The system in Eq.~\eqref{eq:sysx} can be described by the following ARMAX model:
+    \begin{align*}
+        (1 - 0.8 z^{-1}) Y(z) = z^{-2} U(z) + (1 - 0.5 z^{-1}) \tilde{Y}^o(z)
+    \end{align*}
+    where
+    \begin{itemize}
+        \item
+        $Y(z) = \mathcal{Z} \{y(k)\}$, $U(z) = \mathcal{Z} \{u(k)\}$, $\tilde{Y}^o(z) = \mathcal{Z} \{\tilde y^o(k)\}$.
+
+        \item
+        $\tilde y^o(k) = y(k) - \hat{y}^o(k)$ is the steady state Kalman filter residual (i.e. a-priori output estimation error) and
+        \begin{align*}
+            E\{ (\tilde{y}^o(k))^2 \} = 1\,.\\
+        \end{align*}
+    \end{itemize}
+    Determine the values of noise variances $W$ and $V$.
+\end{enumerate}
+
+

@@ -1,0 +1,38 @@
+\item
+{\bf Finite-Horizon Optimal Tracking Problem:}
+
+Consider the discrete time system
+\begin{align*}
+    x(k+1) & = A\, x(k) + B \, u(k) \\
+    y(k) & = C\, x(k)
+\end{align*}
+where $x \in \mathbb{R}^n$ and $y, \;u \in \mathbb{R}^m$.
+Assume the existence of a {\em known} reference output sequence
+\begin{align*}
+    \big( y_d(0),\, y_d(1),\, \ldots,\, y_d(N) \big)
+\end{align*}
+
+The optimal control is sought to minimize the finite-horizon quadratic performance index:
+\begin{align*}
+    J & = [ y_d(N) - y(N) ]^T \, \bar{Q}_f \, [ y_d(N) - y(N) ] \\
+    & \quad + \sum_{k=0}^{N-1} \left \{ [ y_d(k) - y(k) ]^T \, \bar{Q} \, [ y_d(k) - y(k) ]
+        + u^T(k) \, R u(k) \right \}
+\end{align*}
+where $\bar{Q}_f$, $\bar{Q}$ and $R$ are symmetric and positive definite matrices of the appropriate
+dimensions. Find the optimal control law by applying dynamic programming and utilizing the
+Bellman equation
+\begin{align*}
+    J_k^o[x(k)] = \min_{u(k)} \left( L[x(k),u(k)] + J_{k+1}^o[x(k+1)] \right)
+\end{align*}
+where
+\begin{align*}
+    L[x(k),u(k)] & = [ y_d(k) - y(k) ]^T \, \bar{Q} \, [ y_d(k) - y(k) ] + u^T(k) R u(k) \\
+    J_N^o[x(N)] & = [ y_d(N) - y(N) ]^T \, \bar{Q}_f \, [ y_d(N) - y(N) ] \; .
+\end{align*}
+\textbf{Hint:} Show that the optimal cost from state $x(k)$ to the final state can be expressed as
+\begin{align*}
+    J_k^o[x(k)] = x^T(k)P(k)x(k) + x^T(k)b(k) + c(k) \:.
+\end{align*}
+Obtain recursive expressions for $P(k)$, $b(k)$, and $c(k)$ (from $k=N$ to $k=0$).
+
+

@@ -1,0 +1,92 @@
+\section*{Problem 1}
+
+\begin{enumerate}
+\item
+For convenience, define $\tilde{X}(k) = X(k) - m_{_X}(k)$ and $\tilde{Y}(k) = Y(k) - m_{_Y}(k)$. Since $m_{_W}(k) = 0$ and $m_{_V}(k) = 0$, we have
+\begin{align*}
+    m_{_X}(k+1) & = A m_{_X}(k) \\
+    m_{_Y}(k) & = C m_{_X}(k)
+\end{align*}
+As a result, we have
+\begin{align*}
+    \tilde{X}(k+1) & = A\tilde{X}(k) + BW(k) \\
+    \tilde{Y}(k) & = C\tilde{X}(k) + V(k)
+\end{align*}
+Using the definition of $\Lambda$, we have
+\begin{align*}
+    \Lambda_{XY}(k,j) & = E \{ \tilde{X}(k+j) \tilde{Y}^T(k) \} \\
+    & = E \{ \tilde{X}(k+j) [C\tilde{X}(k) + V(k)]^T \} \\
+    & = E \{ \tilde{X}(k+j) \tilde{X}^T(k) \} C^T + E \{ \tilde{X}(k+j) V^T(k) \} \\
+    & = \Lambda_{XX}(k,j) C^T
+\end{align*}
+Similarly, we have
+\begin{align*}
+    \Lambda_{YY}(k,j) & = E \{ \tilde{Y}(k+j) \tilde{Y}^T(k) \} \\
+    & = E \{ [C\tilde{X}(k+j) + V(k+j)] [C\tilde{X}(k) + V(k)]^T \} \\
+    & = C E \{ \tilde{X}(k+j) \tilde{X}^T(k) \} C^T + C E \{ \tilde{X}(k+j) V^T(k) \}
+        + E\{ V(k+j) \tilde{X}^T(k) \} + E \{ V(k+j) V^T(k) \} \\
+    & = C \Lambda_{XX}(k,j) C^T + \Sigma_V \delta(j)
+\end{align*}
+
+
+
+\item
+We begin by defining
+\begin{align*}
+    Z = \begin{bmatrix}
+            Y(0) \\
+            Y(1)
+        \end{bmatrix}
+\end{align*}
+We thus have
+\begin{align*}
+    m_{_Z} = \begin{bmatrix}
+            m_{_Y}(0) \\
+            m_{_Y}(1)
+        \end{bmatrix} = \begin{bmatrix}
+            C m_{_X}(0) \\
+            C m_{_X}(1)
+        \end{bmatrix} = \begin{bmatrix}
+            C x_0 \\
+            CA x_0
+        \end{bmatrix}
+\end{align*}
+and, using the results from the first part,
+\begin{align*}
+    \Lambda_{ZZ} & = E \left\{ \begin{bmatrix}
+            \tilde{Y}(0) \tilde{Y}^T(0) & \tilde{Y}(0) \tilde{Y}^T(1) \\
+            \tilde{Y}(1) \tilde{Y}^T(0) & \tilde{Y}(1) \tilde{Y}^T(1)
+        \end{bmatrix} \right\} = \begin{bmatrix}
+            C \Lambda_{XX}(0,0) C^T + \Sigma_V & C \Lambda_{XX}(1,-1) C \\
+            C \Lambda_{XX}(0,1) C^T & C \Lambda_{XX}(1,0) C^T + \Sigma_V
+        \end{bmatrix} \\
+    & = \begin{bmatrix}
+            C X_0 C^T + V & C X_0 A^T C \\
+            C A X_0 C^T & C [AX_0 A^T + B \Sigma_W B^T] C + \Sigma_V
+        \end{bmatrix} \\
+    \Lambda_{X(0)Z} & = E \left\{ \begin{bmatrix}
+            \tilde{X}(0) \tilde{Y}^T(0) & \tilde{X}(0) \tilde{Y}^T(1)
+        \end{bmatrix} \right\} = \begin{bmatrix}
+            \Lambda_{XX}(0,0) C^T & \Lambda_{XX}(1,-1) C^T
+        \end{bmatrix} \\
+    & = \begin{bmatrix}
+            X_0 C^T & X_0 A^T C^T
+        \end{bmatrix}
+\end{align*}
+We now use standard least squares results to say that the least squares estimator of $X(0)$ given $Y(0)$ and $Y(1)$ is
+\begin{multline*}
+    E\{X(0)| Y(0),Y(1) \} = E\{X(0)|Z\} = m_{_X}(0) + \Lambda_{XZ} \Lambda_{ZZ}^{-1} (Z - m_{_Z}) \\
+    = x_0 + \begin{bmatrix}
+            X_0 C^T & X_0 A^T C^T
+        \end{bmatrix} \begin{bmatrix}
+            C X_0 C^T + V & C X_0 A^T C \\
+            C A X_0 C^T & C [AX_0 A^T + B \Sigma_W B^T] C + \Sigma_V
+        \end{bmatrix}^{-1} \begin{bmatrix}
+            Y(0) - Cx_0 \\
+            Y(1) - CAx_0
+        \end{bmatrix}
+\end{multline*}
+
+\end{enumerate}
+
+

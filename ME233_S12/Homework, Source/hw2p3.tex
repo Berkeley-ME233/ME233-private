@@ -1,0 +1,100 @@
+\item
+Consider a second order discrete time system described by
+\begin{align*}
+    \begin{bmatrix}
+            X_1(k+1) \\
+            X_2(k+1)
+        \end{bmatrix} & = \begin{bmatrix}
+            -0.08 & -1 \\
+            0.7 & 0.1
+        \end{bmatrix} \begin{bmatrix}
+            X_1(k) \\
+            X_2(k)
+        \end{bmatrix} + \begin{bmatrix}
+            0.34 \\
+            0.3
+        \end{bmatrix} W(k) \\
+    Y(k) & = \begin{bmatrix}
+            0 & 3
+        \end{bmatrix} \begin{bmatrix}
+            X_1(k) \\
+            X_2(k)
+        \end{bmatrix} + V(k)
+\end{align*}
+where
+\begin{itemize}
+    \item
+    $E \{ X(0) \} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ and $E \{ X(0) X^T(0) \} = \begin{bmatrix} 0.1 & 0 \\ 0 & 0.1 \end{bmatrix}$
+
+    \item
+    $W(k)$ and $V(k)$ are white Gaussian sequences
+
+    \item
+    $m_{w} = E \{ W(k) \} = 10, \quad E \{ V(k) \} = 0$
+
+    \item
+    $E \left\{ \begin{bmatrix}
+        W(k+j) - m_w  \\
+        V(k+j)
+    \end{bmatrix} \begin{bmatrix}
+        (W(k) - m_w) &
+        V(k)
+    \end{bmatrix} \right\} = \begin{bmatrix}
+        \Sigma_{ww} & 0 \\
+        0 & \Sigma_{vv}
+    \end{bmatrix} \delta(j)$ where \newline
+    $\Sigma_{ww} = 1$ and $\Sigma_{vv} = 0.5$.
+    
+    \item
+    $E \left\{ \begin{bmatrix}
+        W(k) - m_w  \\
+        V(k)
+    \end{bmatrix} X^T(0) \right\} = 0$
+
+\end{itemize}
+
+\begin{enumerate}
+    \item
+    Use MATLAB to  plot $m_y(k) = E\{Y(k) \}$ for $k=0,\,1,\,\ldots$ until $m_y(k)$ reaches its steady state value $\bar m_y$.
+
+    \item
+    Using MATLAB, compute
+    \begin{align*}
+        \Lambda_{XX}(k,0) = E\{ (X(k) - m_{_X}(k))(X(k) - m_{_X}(k))^T\}
+    \end{align*}
+    utilizing the covariance propagation Lyapunov equation and plot
+    \begin{align*}
+        \Lambda_{YY}(k,0) = E\{(Y(k)-m_{_{Y}}(k))^2 \}
+    \end{align*}
+    for $k=0,\,1,\,\ldots$ until $\Lambda_{YY}(k,0)$ reaches its steady state value $\bar \Lambda_{YY}(0)$.
+
+    \item
+    Using MATLAB, compute
+    \begin{align*}
+        \Lambda_{XX}(k,5) = E\{ (X(k+5) - m_x(k+5))(X(k) - m_x(k))^T\}
+    \end{align*}
+    and plot
+    \begin{align*}
+        \Lambda_{YY}(k,5) = E\{(Y(k+5)-m_y(k+5))(Y(k)-m_y(k)) \}
+    \end{align*}
+    for $k=0,\,1,\,\ldots$, until it reaches its steady state value $\bar \Lambda_{YY}(5)$.
+
+    \item
+    Use the MATLAB function {\tt dlyap} to compute $\bar \Lambda_{XX}(0)$. Then compute and plot the steady state covariances $\bar \Lambda_{YY}(j)$ for $j=\{-10,\,-9,\, \cdots,\, 0,\, 1,\,\cdots 10\}$.
+
+    \item
+    Let $G(z) = C (z I - A)^{-1} B$ be the transfer function from $W$ to $Y$.
+    %so that
+%    \begin{align*}
+%        \mathcal{Z}\{Y(k)\} = G(z) \mathcal{Z}\{W(k)\} + \mathcal{Z}\{V(k)\} \; .
+%    \end{align*}
+    Obtain an expression for the (steady state) output spectral density,  $\Phi_{YY}(\omega)$ in terms of $G$, $\Sigma_{ww}$ and $\Sigma_{vv}$. (Do not explicitly determine $G(z)$ or substitute in the numerical values for $\Sigma_{ww}$ and $\Sigma_{vv}$ in this problem.)
+
+    \item
+    Use MATLAB to plot the output spectral density $\Phi_{YY}(\omega)$ for $\omega \in [-\pi,\,\pi]$.
+
+\end{enumerate}
+
+
+
+

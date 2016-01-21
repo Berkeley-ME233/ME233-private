@@ -1,0 +1,69 @@
+\section*{Problem 2}
+
+\begin{enumerate}
+    \item
+    We first rewrite the cost function as
+    \begin{align*}
+        J = \sum_{k=0}^\infty x^T(k) C^T Cx(k) = x_0^T C^T Cx_0 + \sum_{k=1}^\infty x^T(k) C^T Cx(k)
+    \end{align*}
+    Plugging in the state dynamics, we have
+    \begin{align*}
+        J = x_0^T C^T Cx_0 + \sum_{k=0}^\infty [Ax(k) + Bu(k)]^T C^T C [Ax(k) + Bu(k)]
+    \end{align*}
+    Defining $\alpha = x_0^T C^T C x_0$, $Q = A^T C^T CA$, $R = B^T C^T CB$, and $S = A^T C^T CB$, we rewrite $J$ as
+    \begin{align}
+        J = \alpha + \sum_{k=0}^\infty \begin{bmatrix}
+                x(k) \\
+                u(k)
+            \end{bmatrix}^T \begin{bmatrix}
+                Q & S \\
+                S^T & R
+            \end{bmatrix} \begin{bmatrix}
+                x(k) \\
+                u(k)
+            \end{bmatrix}
+            \label{eq:mid2p2_cost}
+    \end{align}
+    Since $C^T C \succeq 0$, we have that
+    \begin{align*}
+        \begin{bmatrix}
+                Q & S \\
+                S^T & R
+            \end{bmatrix} = \begin{bmatrix}
+                A^T \\
+                B^T
+            \end{bmatrix} C^T C \begin{bmatrix}
+                A & B
+            \end{bmatrix} \succeq 0
+    \end{align*}
+    Also, since $CB \neq 0$ and $CB$ is scalar, we see that $R = (CB)^2 > 0$.
+
+    \item
+    Since $\alpha$ does not depend on the choice of the control, minimizing $J$ is equivalent to minimizing $J - \alpha$. Now note that the problem of minimizing $J$ via choice of $u(0),u(1),\ldots$ is a standard infinite-horizon LQR problem. Therefore, under the assumptions that $(A,B)$ is stabilizable and the state space realization $C_J(zI-A)^{-1} B + D_J$ has no transmission zeros on or outside the unit circle, the solution is given by
+    \begin{align*}
+        u^o(k) & = -Kx(k) \\
+        K & = [B^T PB + R]^{-1} [B^T PA + S^T] \\
+        P & = A^T PA + Q - [A^T PB + S] [B^T PB + R]^{-1} [B^T PA + S^T] \\
+        P & \succeq 0
+    \end{align*}
+    If the condition that the state space realization $C_J(zI-A)^{-1} B + D_J$ has no transmission zeros on or outside the unit circle were relaxed to the condition that $C_J(zI-A)^{-1} B + D_J$ has no transmission zeros on the unit circle, the condition $P \succeq 0$ should be strengthened to the condition that $A-BK$ is Schur.
+
+    \item
+    Plugging in the definitions of $Q$, $R$, and $S$ into the DARE from the previous part yields
+    \begin{align*}
+        P & = A^T PA + A^T C^T CA - [A^T PB + A^T C^T CB] [B^T PB + B^T C^T CB]^{-1} 
+            [B^T PA + B^T C^T CA] \\
+        & = A^T (P + C^T C) A - [A^T (P + C^T C) B][B^T (P + C^T C) B]^{-1} [B^T (P + C^T C) A]
+    \end{align*}
+    Defining $\bar{P} = P + C^T C$, we therefore rewrite the DARE in terms of $\bar{P}$ as
+    \begin{gather*}
+        \bar{P} - C^T C = A^T \bar{P} A - A^T \bar{P} B (B^T \bar{P} B)^{-1} B^T \bar{P} A \\
+        \Rightarrow \bar{P} = A^T \bar{P} A + C^T C - A^T \bar{P} B (B^T \bar{P} B)^{-1} B^T \bar{P} A \\
+    \end{gather*}
+    It should be noted that $\bar{P} = P + C^T C \succeq P \succeq 0$, i.e.\ that $\bar{P} \succeq 0$. Similarly to how we rewrote the DARE, we rewrite the optimal control law as
+    \begin{align*}
+        u^o(k) & = -[B^T PB + B^T C^T CB]^{-1} [B^T P A + B^T C^T CA] x(k) \\
+        & = -(B^T \bar{P}B)^{-1} B^T \bar{P}A x(k)
+    \end{align*}
+
+\end{enumerate} 

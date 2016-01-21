@@ -1,0 +1,52 @@
+%HW8, 2006, problem 2
+
+\item
+In this problem we conduct a minimum variance, model reference stochastic control design exercise.
+Consider the following ARMAX system
+\begin{equation}
+    \label{eq:ARMAX}
+    A(q^{-1}) y(k) = q^{-d}\, B(q^{-1})u(k) + C(q^{-1}) \epsilon(k)
+\end{equation}
+where
+\begin{align*}
+    A(q^{-1}) & = 1 + a_1 q^{-1} + \cdots + a_n q^{-n} \\
+    C(q^{-1}) & = 1 + c_1 q^{-1} + \cdots + c_L q^{-L} \\
+    B(q^{-1}) & = b_o + b_1 q^{-1} + \cdots + b_m q^{-m}
+\end{align*}
+and
+$\epsilon(k)$ is the steady state Kalman filter residual, which satisfies
+\begin{align*}
+    E\{ \epsilon(k) \} & = 0,
+        & E\{ \epsilon(k+j)\epsilon(k)\} & = \sigma \delta(j), \\
+    && E \{ \epsilon(k+j)y(k) \} & = 0, \quad \forall j > 0 \; .
+\end{align*}
+Assume that $B(q^{-1})$ and $C(q^{-1})$ are anti-Schur polynomials (i.e.\ the roots of the polynomials $q^m B(q^{-1})$ and $q^L C(q^{-1})$ are all strictly inside the unit circle). Define the model reference
+\begin{equation}
+    \label{eq:model}
+    A_m(q^{-1}) y_m(k) = q^{-d}\, B_m(q^{-1})r_m(k)
+\end{equation}
+where $A_m(q^{-1})$ is an anti-Schur polynomial of the form
+\begin{equation}
+    \label{eq:am}
+    A_m(q^{-1}) = 1 + {a_m}_1 q^{-1} + \cdots + {a_m}_t q^{-t}
+\end{equation}
+$y_m(k)$ is the reference model output, and $r_m(k)$ is the deterministic reference model input. The goal is to obtain the optimal control $u^o(k)$ that minimizes the cost
+\begin{equation}
+    \label{eq:cost}
+    J = E \left \{ \left [ A_m(q^{-1}) \,( y(k) - y_m(k)\, ) \right ]^2\right \} \,.
+\end{equation}
+Show that
+%for $y_m(d-1) = y_m(d-2) = \cdots y(0) = 0$,
+$u^o(k)$ satisfies
+\begin{equation}
+    \label{eq:uot_min}
+    \beta(q^{-1}) u^o(k) =  C(q^{-1}) B_m(q^{-1})r_m(k)  - S(q^{-1}) y(k)
+\end{equation}
+where
+\begin{align*}
+    & C(q^{-1})\, A_m(q^{-1}) = A(q^{-1}) \,R(q^{-1}) + q^{-d}\, S(q^{-1})\\
+    & R(q^{-1}) = 1 + r_1 q^{-1} + \cdots + r_{d-1} q^{-d+1} \\
+    & \beta(q^{-1}) =  B(q^{-1}) \, R(q^{-1}) \\
+    & S(q^{-1}) = s_o + s_1 \, q^{-1} + \cdots + s_p q^{-p}
+        & p & = \max(L+t-d,n-1)\,.
+\end{align*}

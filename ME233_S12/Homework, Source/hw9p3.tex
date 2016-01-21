@@ -1,0 +1,35 @@
+\item
+In this problem, you will conduct a simulation study of the series-parallel  identification algorithm that has been discussed in class. To this end, use the MATLAB file {\tt sp$\_$predict.m}, which is posted on bSpace.
+
+The system that we want to identify is the second-order system given by
+\begin{align*}
+    y(k) = \frac{b_1q^{-1} + b_2 q^{-2}}{1 + a_1 q^{-1} + a_2 q^{-2}}\, u(k) + w(k)
+\end{align*}
+where $u(k)$ is the input and $w(k)$ is the measurement noise.
+The PAA uses a series-parallel model and is governed by the equations
+\begin{align*}
+    e^o(k+1) & =  y(k+1) - \hat{\theta}^T(k) \, \phi(k) \\
+    \phi(k) & = \begin{bmatrix}
+            -y(k) & -y(k-1) & u(k) & u(k-1)
+        \end{bmatrix}^T \\
+    \hat{\theta}(k+1) & = \hat{\theta}(k) 
+        + \frac{1}{\lambda_1(k) + \phi^T(k) F(k) \phi(k)} F(k) \phi(k)\,e^0(k+1) \\
+    F(k+1) & = \frac{1}{\lambda_1(k)} \, \left[ F(k) - \lambda_2(k) 
+        \frac{ F(k)\phi(k)\phi^T(k)F(k) }{ \lambda_1(k) + \lambda_2(k) \phi^T(k)F(k) \phi(k) } \right] \;
+\end{align*}
+The plant parameters are $a_1 = 1.7$, $a_2 = 0.72$, $b_1 =0.1$ and $b_2=0.05$. (Note that $A(q^{-1})$ is anti-Schur.)
+
+Do the following and write a summary of your findings:
+\begin{itemize}
+    \item
+    Try the least squares adaptation gain, least square adaptation  gains with a forgetting factor, and constant adaptation gains. For the cases when you are testing constant diagonal adaptation gains
+    $F = {\rm Diag}(F_{11},\,F_{22},\,F_{33},\,F_{44})$, analyze the effect on the parameter convergence of the relative magnitude between  the submatrices ${\rm Diag}(F_{11},\,F_{22})$ and ${\rm Diag}(F_{33},\,F_{44}$).  Try ratios such as 1/100, 1/10, 1/1, 10/1, etc.
+
+    \textbf{Note:} When the adaptation gain is constant, the correction terms for $a_i$'s are proportional to  ${\rm Diag}(F_{11},\,F_{22}) \times y$, while those for the $b_i$'s are proportional to  ${\rm Diag}(F_{33},\,F_{44}) \times u$. You should see that balanced, and hence faster, convergence takes place when all correction terms are more or less of the same size.
+
+    \item
+    Verify the effect of the persistence of excitation (or lack thereof) of the input sequence $u(k)$ on the parameter error convergence.
+
+    \item
+    Check what the effect of white measurement noise $w(k)$ is on the parameter error convergence (i.e.\ turn  the noise term on and off).
+\end{itemize}

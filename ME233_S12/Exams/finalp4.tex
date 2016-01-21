@@ -1,0 +1,29 @@
+\section*{Problem 4}
+
+Consider the system
+\begin{align*}
+    (1-0.8q^{-1}) y(k) & = q^{-2} u(k) + q^{-1} d(k) \\
+    e(k) & = r(k) - y(k)
+\end{align*}
+where 
+\begin{itemize}
+    \item
+    $u(k)$ is the controlling input
+
+    \item
+    $y(k)$ is the measured output
+    
+    \item
+    $d(k)$ is the periodic disturbance, which satisfies $d(k) = d(k-5)$
+    
+    \item
+    $r(k)$ is the periodic reference, which satisfies $r(k) = r(k-7)$
+    
+    \item
+    $e(k)$ is the tracking error
+\end{itemize}
+
+$\,$
+
+\noindent
+Design a repetitive controller that will make the tracking error asymptotically converge to zero.
