@@ -1,0 +1,21 @@
+\section*{Problem 1}
+
+Consider the discrete-time linear time-invariant system
+\begin{align*}
+    x(k+1) & = Ax(k) + Bu(k) \\
+    y(k) & = Cx(k) + Du(k)
+\end{align*}
+where $D$ is square, i.e.\ the system has the same number of inputs as outputs. $D$ is not necessarily symmetric, but assume here that $D + D^T \succ 0$. We would like to design an optimal control policy to minimize
+\begin{align*}
+    \sum_{k=0}^{N-1} 2 u^T(k) y(k) .
+\end{align*}
+Solve this problem by dynamic programming, introducing a cost-to-go function
+\begin{align*}
+    J_m^o[x_m,N] = \min_{u(m),\ldots,u(N-1)} \sum_{k=m}^{N-1} 2u^T(k) y(k) \quad \textrm{s.t.} \quad x(m) = x_m
+\end{align*}
+for $m = 0,1,\ldots,N$. The solution can be expressed using a Riccati recurrence that depends on $A$, $B$, $C$, and $D$.
+
+~\\
+\noindent
+Extra credit: Prove that $J_0^o[x_0,N] \leq 0$ for all $x_0, N$.
+
