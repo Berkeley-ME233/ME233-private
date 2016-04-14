@@ -1,0 +1,62 @@
+\section*{Problem 2}
+
+Consider the state space system
+\begin{align*}
+    x(k+1) & = Ax(k) + Bu(k) \\
+    y(k) & = Cx(k)
+\end{align*}
+where $x(0) = x_0$ is given and both $u(k)$ and $y(k)$ are scalar signals. Assume that $(A,B)$ is stabilizable and $CB \neq 0$. In this problem, we will find the controller that minimizes
+\begin{align}
+    J = \sum_{k=0}^\infty y^T(k) y(k)
+    \label{eq:m2p1_cost}
+\end{align}
+
+\begin{enumerate}
+    \item
+    Rewrite the cost function \eqref{eq:m2p1_cost} in the form
+    \begin{align}
+        J = \alpha + \sum_{k=0}^\infty \begin{bmatrix}
+                x(k) \\
+                u(k)
+            \end{bmatrix}^T \begin{bmatrix}
+                Q & S \\
+                S^T & R
+            \end{bmatrix} \begin{bmatrix}
+                x(k) \\
+                u(k)
+            \end{bmatrix}
+            \label{eq:m2p1_cost2}
+    \end{align}
+    where $\alpha$ does not depend on the control, $R \succ 0$, and
+    \begin{align*}
+        \begin{bmatrix}
+                Q & S \\
+                S^T & R
+            \end{bmatrix} \succeq 0
+    \end{align*}
+
+    \item
+    Find the optimal control $u^o(k)$ that minimizes the cost function \eqref{eq:m2p1_cost2}. You may assume that the state space realization $C_J (zI-A)^{-1}B + D_J$ has no transmission zeros on or outside the unit circle where
+    \begin{align*}
+        \begin{bmatrix}
+                Q & S \\
+                S^T & R
+            \end{bmatrix} = \begin{bmatrix}
+                C_J^T \\
+                D_J^T
+            \end{bmatrix} \begin{bmatrix}
+                C_J & D_J
+            \end{bmatrix}
+    \end{align*}
+
+    \item
+    The solution of the previous part depends on the solution of a discrete algebraic Riccati equation (DARE). Relate the solution of the DARE from the previous part to the solution of the DARE
+    \begin{align*}
+        \bar{P} = A^T \bar{P} A + C^T C - A^T \bar{P} B (B^T \bar{P} B)^{-1} B^T \bar{P} A
+    \end{align*}
+    and show that the optimal control from part 2 can be expressed as
+    \begin{align*}
+        u^o(k) = -(B^T \bar{P} B)^{-1} B^T \bar{P} A x(k)
+    \end{align*}
+
+\end{enumerate}

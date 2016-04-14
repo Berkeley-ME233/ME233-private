@@ -1,0 +1,25 @@
+\section*{Problem 1}
+
+Consider the discrete-time system
+\begin{align*}
+    (1 - 0.7 q^{-1}) y(k) = q^{-1} (1 - 0.5q^{-1}) (u(k) + d(k))
+\end{align*}
+where $q^{-1}$ is the one-step delay operator, $u(k)$ is the controlling input, $y(k)$ is the measured
+output, and $d(k)$ is the disturbance acting on the system. For this problem, $d(k)$ satisfies
+\begin{align*}
+    d(k) & = d_1(k) + d_2(k)
+\end{align*}
+where $d_1(k) = d_1(k+2)$ and $d_2(k) = d_2(k+3)$ for all $k$.
+
+$\,$
+
+\noindent Design a controller that achieves the following:
+\begin{itemize}
+    \item
+    The system output perfectly tracks an arbitrary desired output $y_d(k)$, which is known at least one step in advance.
+
+    \item
+    The set of closed-loop poles of the system only includes poles at the origin and any plant zeros that are being canceled by the control scheme.
+    
+\end{itemize}
+Clearly indicate all steps of your design process, which includes solving a Diophantine (Bezout) equation.
