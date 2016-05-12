@@ -1,0 +1,53 @@
+\section*{Problem 4}
+
+Consider the state-space system
+\begin{align*}
+    \begin{bmatrix}
+            x_1(k+1) \\
+            x_2(k+1)
+        \end{bmatrix} & = \begin{bmatrix}
+            1 & 1 \\
+            0 & 0
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + \begin{bmatrix}
+            1 \\
+            -2
+        \end{bmatrix} u(k) + \begin{bmatrix}
+            1 \\
+            0
+        \end{bmatrix} w(k) \\
+    y(k) & = \begin{bmatrix}
+            1 & 0
+        \end{bmatrix} \begin{bmatrix}
+            x_1(k) \\
+            x_2(k)
+        \end{bmatrix} + v(k)
+\end{align*}
+where $y(k)$ is the output and $u(k)$ is the control input. The signals $w(k)$ and $v(k)$ are jointly Gaussian WSS random sequences that satisfy the usual assumptions:
+\begin{align*}
+    E \{ w(k) \} & = 0
+        & E \{ v(k) \} & = 0 \\
+    E \{ w(k+j) w(k) \} & = W \delta(j)
+        & E \{ v(k+j) v(k) \} & = V \delta(j) \\
+    E \{ w(k+j) v(k) \} & = 0 \; .
+\end{align*}
+In this problem, $W = 1$, $V = 2$.
+
+\begin{enumerate}
+    \item
+    Rewrite the system dynamics in the form
+    \begin{align}
+        A(q^{-1}) y(k) = q^{-\drm} B(q^{-1}) u(k) + C(q^{-1}) \epsilon(k)
+            \label{eq:p5_ARMAX}
+    \end{align}
+    where $C(q^{-1})$ is an anti-Schur polynomial of $q^{-1}$ and $\epsilon(k)$ is a zero-mean white Gaussian random sequence.
+
+    \item
+    Find the minimum variance regulator for \eqref{eq:p5_ARMAX}. To receive full credit, you must explicitly find all of the controller parameters.
+
+\end{enumerate}
+
+
+

@@ -1,0 +1,35 @@
+\section*{Problem 3}
+
+Consider the system
+\begin{align*}
+    A(q^{-1}) y(k) = q^{-\drm} B(q^{-1}) u(k)
+\end{align*}
+where $A(q^{-1})$ is an anti-Schur polynomial of $q^{-1}$ and $B(q^{-1})$ is a Schur polynomial of $q^{-1}$. We would like the system output $y(k)$ to track a desired trajectory $y_d(k)$, which is known at least $\drm + m$ steps in advance, where $m$ is the order of $B(q^{-1})$.
+
+\begin{enumerate}
+    \item
+    Design a feedforward controller of the form
+    \begin{align*}
+        u(k) = T(q,q^{-1}) y_d(k)
+    \end{align*}
+    such that $y(k)$ follows $y_d(k)$ with zero phase error when $y_d(k)$ is a discrete-time sinusoid.
+
+    \item
+    Suppose now that $y_d(k)$ has the form
+    \begin{align*}
+        y_d(k) = \sum_{i=1}^r c_i \sin(\omega_i k + \phi_i)
+    \end{align*}
+    where $0 \leq \omega_1 < \ldots < \omega_r < \pi$. Also suppose that we now use the feedforward control scheme
+    \begin{align*}
+        u(k) = T(q,q^{-1}) u_d(k)
+    \end{align*}
+    where $T(q,q^{-1})$ is the feedforward controller designed in the previous part.
+
+    $\,$
+
+    Choose $u_d(k)$ so that $y(k)$ perfectly tracks $y_d(k)$.
+
+
+\end{enumerate}
+
+

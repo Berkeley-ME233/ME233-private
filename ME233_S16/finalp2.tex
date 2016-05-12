@@ -1,0 +1,40 @@
+\section*{Problem 2}
+
+A LTI discrete-time system is described by
+\begin{align*}
+    x(k+1) = A \, x(k) + B\, u(k) + B_w \, w(k)
+\end{align*}
+where $x(k) \in \mathcal{R}^{p_1}$ is the state, $u(k) \in \mathcal{R}^{p_2}$ is the control input and $w(k) \in \mathcal{R}^{p_3}$ is stationary colored noise given by the output of the state space model
+\begin{align*}
+    x_w(k+1) & = A_w \, x_w(k) + B_n \, \eta(k) \\
+    w(k) & = C_w \, x_w(k)
+\end{align*}
+where $n(k) \in \mathcal{R}^{p_5}$ is stationary and white and $x_w(k) \in \mathcal{R}^{p_4}$. Assume that $x(0)$, $x_w(0)$  and $\eta(k)$ are independent and normally distributed with
+\begin{align*}
+    &E\{ x(0) \} = x_o, \hspace{1em} E\{ (x(0) - x_o)(x(0) - x_o)^T \} = X_o\\
+    &E\{ x_w(0) \} = x_{wo}, \hspace{1em} E\{ (x_{w}(0) - x_{wo})(x_{w}(0) - x_{wo})^T \} = X_{wo}\\
+    &E\{ \eta(k) \} = 0, \hspace{1em} E\{ \eta(k)\eta(k+l)^T \} = \Gamma \delta(l)
+\end{align*}
+The performance index to be minimized is
+\begin{align*}
+    J = E \left \{ x^T(N)\,  Q_{_f} \, x(N) + \sum_{k=0}^{N-1}
+        \left [x^T(k)\,  Q \, x(k) + u^T(k)\,  R \, u(k) \right ] \right \}
+\end{align*}
+where the expectation must be taken over all underlying  random quantities in each of the following situations that will be described below. For each situation obtain the equations that must be solved to find the optimal control:
+%and the resulting optimal cost:
+
+\begin{enumerate}
+\item
+$u(k)$ is allowed to be a function of $x(0),\ldots,x(k)$ in addition to $x_w(0),\ldots,x_w(k)$
+
+\item
+$u(k)$ is allowed to be a function of $y(0),\ldots,y(k)$ where $y(k) = C \, x(k) + v(k)$ and $v(k)$ is a zero-mean, white and Gaussian noise with covariance $E\{ v(k) v(k+l) \} = V\,\delta(l)$ and is independent from $x(0)$, $x_w(0)$ and $\eta(k)$.
+
+\item
+$x(k)$ is measurable for all $k$. Notice that in this case, since
+\begin{align*}
+x(k) - A \, x(k-1) - B \, u(k-1) = B_w C_w\, x_w(k-1)
+\end{align*}
+$x_w(k-1)$ can be determined without being contaminated by measurement noise at the instance $k$. Therefore, if you set the measurement covariance to zero and obtain the equations for the Kalman filter, you will obtain $\hat x_w(k-1 |k)$.
+
+\end{enumerate}

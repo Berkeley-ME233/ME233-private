@@ -1,0 +1,50 @@
+\section*{Problem 5}
+
+Consider the identification of the system
+\begin{align*}
+    A(q^{-1}) y(k) = q^{-2} B(q^{-1}) u(k) + q^{-1} d(k)
+\end{align*}
+where $u(k)$ is the control input, $y(k)$ is the system output, and $d(k)$ is the disturbance acting on the system, which satisfies
+\begin{align*}
+    d(k+3) = d(k)
+\end{align*}
+Although the plant polynomials
+\begin{align*}
+    A(q^{-1}) & = 1 + a_1 q^{-1} + a_2 q^{-2}
+        & B(q^{-1}) & = b_0 + b_1 q^{-1}
+\end{align*}
+are unknown, their order is known and it is known that $b_0 \neq 0$.
+
+\begin{enumerate}
+    \item
+    Define $\theta$ so that the system dynamics can be expressed in the form
+    \begin{align*}
+        y(k+1) = \phi^T(k) \theta
+    \end{align*}
+    where
+    \begin{align*}
+        \phi(k) = \begin{bmatrix}
+                -y(k) & -y(k-1) & u(k-1) & u(k-2) & f(k) & f(k-1) & f(k-2)
+            \end{bmatrix}^T
+    \end{align*}
+    and $f(k)$ is the indicator function
+    \begin{align*}
+        f(k) = \begin{cases}
+                1, & k \in \{ \ldots, -3, 0, 3, 6, \ldots \} \\
+                0, & \textrm{otherwise}
+            \end{cases}
+    \end{align*}
+
+    \item
+    Write down a parameter adaptation algorithm that estimates $\theta$ using recursive least squares with a forgetting factor.
+
+    \item
+    Write down a set of sufficient conditions for the a priori output estimation error $e^o(k)$ to converge to zero.
+
+    \item
+    Describe the steps in how you would apply indirect adaptive control to close the loop on this system.
+
+    \item
+    Describe the steps in how you would apply direct adaptive control to close the loop on this system.
+
+\end{enumerate}

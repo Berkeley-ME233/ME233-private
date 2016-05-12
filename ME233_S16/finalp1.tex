@@ -1,0 +1,47 @@
+\section*{Problem 1}
+
+Consider the state-space system
+\begin{align*}
+x(k+1) & = A x(k) + B u(k) + B_w w(k) \\
+y(k)   & = C x(k) + v(k)
+\end{align*}
+where
+\begin{equation*}
+A = \begin{bmatrix}
+    \sqrt{\frac{3}{4}} & 1 \\
+    0 & 0
+\end{bmatrix},
+B = \begin{bmatrix}
+    0 \\
+    1
+\end{bmatrix},
+B_w = \begin{bmatrix}
+    0 \\
+    1
+\end{bmatrix},
+C = \begin{bmatrix}
+    1 & 0
+\end{bmatrix}
+\end{equation*}
+The sequences $w(k)$ and $v(k)$ are jointly Gaussian WSS
+random sequences that satisfy the usual assumptions:
+\begin{align*}
+    E \{ w(k) \} & = 0
+        & E \{ v(k) \} & = 0 \\
+    E \{ w(k+j) w(k) \} & = W \delta(j)
+        & E \{ v(k+j) v(k) \} & = V \delta(j) \\
+    E \{ w(k+j) v(k) \} & = 0 \; .
+\end{align*}
+
+\begin{enumerate}
+\item What do the closed-loop poles of the stationary Kalman
+filter converge to as $\frac{W}{V} \rightarrow 0$ ?
+\item Find the Kalman filter for this system when $W = 1$ and $V = 4$.
+(Remember to include the a-posteriori state estimate.)
+\item Determine whether or not there exists a unique asymptotically
+stabilizing output feedback controller that optimizes the cost function
+\begin{equation*}
+J = E\{x^T(k) C^T C x(k) + \rho u^2(k)\}
+\end{equation*}
+where $\rho > 0$.
+\end{enumerate}
